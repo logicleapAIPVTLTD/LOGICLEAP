@@ -1,0 +1,301 @@
+dimension_id,category,item_type,length_ft,width_ft,height_ft,area_sqft,perimeter_ft,wall_area_sqft,spec_details
+DIM-0001,Painting,Ceiling Painting,31.24,21.76,4.24,679.78,106.0,449.44,Exterior Emulsion
+DIM-0002,Electrical,Concealed Wiring,25.37,26.46,4.18,671.29,103.66,433.3,6sqmm wire
+DIM-0003,False Ceiling,Grid Ceiling,28.25,12.67,2.53,357.93,81.84,207.06,12.5mm board
+DIM-0004,Plumbing,UPVC Pipeline,33.87,16.36,3.08,554.11,100.46,309.42,2in pipe
+DIM-0005,Painting,Ceiling Painting,25.23,18.29,3.42,461.46,87.04,297.68,Primer
+DIM-0006,Flooring,Marble Flooring,6.69,5.69,4.05,38.07,24.76,100.28,16mm slabs
+DIM-0007,Tiling,Wall Tile,37.53,7.27,3.36,272.84,89.6,301.06,"800x800mm, 12mm thick"
+DIM-0008,Woodwork,Wardrobe Shutter,35.88,11.15,4.24,400.06,94.06,398.81,"8x4 ft, 25mm plywood"
+DIM-0009,Electrical,Concealed Wiring,13.76,13.04,4.3,179.43,53.6,230.48,1.5sqmm wire
+DIM-0010,Plumbing,UPVC Pipeline,26.9,22.6,3.99,607.94,99.0,395.01,0.5in pipe
+DIM-0011,False Ceiling,Gypsum Ceiling,8.33,8.76,2.56,72.97,34.18,87.5,15mm board
+DIM-0012,Tiling,Wall Tile,5.28,12.28,2.65,64.84,35.12,93.07,"800x800mm, 10mm thick"
+DIM-0013,Tiling,Floor Tile,13.01,5.41,4.09,70.38,36.84,150.68,"300x600mm, 10mm thick"
+DIM-0014,Electrical,Concealed Wiring,9.8,23.88,3.98,234.02,67.36,268.09,2.5sqmm wire
+DIM-0015,Tiling,Wall Tile,23.57,3.23,3.77,76.13,53.6,202.07,"300x600mm, 12mm thick"
+DIM-0016,Woodwork,Modular Box,26.98,7.09,3.26,191.29,68.14,222.14,"6x3 ft, 12mm plywood"
+DIM-0017,Tiling,Wall Tile,36.38,6.78,2.66,246.66,86.32,229.61,"300x600mm, 10mm thick"
+DIM-0018,Electrical,Concealed Wiring,32.69,9.69,3.75,316.77,84.76,317.85,4sqmm wire
+DIM-0019,Flooring,Marble Flooring,37.94,3.72,4.18,141.14,83.32,348.28,16mm slabs
+DIM-0020,Painting,Wall Painting,26.24,8.09,3.22,212.28,68.66,221.09,Interior Emulsion
+DIM-0021,Plumbing,CPVC Pipeline,18.51,9.51,3.74,176.03,56.04,209.59,0.5in pipe
+DIM-0022,Electrical,Surface Wiring,37.69,6.56,4.21,247.25,88.5,372.58,4sqmm wire
+DIM-0023,Painting,Wall Painting,28.9,23.59,4.4,681.75,104.98,461.91,Interior Emulsion
+DIM-0024,Painting,Wall Painting,7.36,10.08,2.48,74.19,34.88,86.5,Exterior Emulsion
+DIM-0025,Painting,Ceiling Painting,15.03,22.24,4.01,334.27,74.54,298.91,Primer
+DIM-0026,Plumbing,UPVC Pipeline,7.88,17.49,3.69,137.82,50.74,187.23,0.5in pipe
+DIM-0027,Electrical,Concealed Wiring,7.77,27.86,4.45,216.47,71.26,317.11,4sqmm wire
+DIM-0028,Plumbing,CPVC Pipeline,25.53,23.61,3.76,602.76,98.28,369.53,2in pipe
+DIM-0029,False Ceiling,Gypsum Ceiling,20.31,28.74,2.9,583.71,98.1,284.49,12.5mm board
+DIM-0030,Plumbing,CPVC Pipeline,9.06,19.53,2.52,176.94,57.18,144.09,0.5in pipe
+DIM-0031,Tiling,Wall Tile,29.78,21.94,2.74,653.37,103.44,283.43,"300x600mm, 8mm thick"
+DIM-0032,Electrical,Concealed Wiring,9.44,24.09,2.96,227.41,67.06,198.5,1.5sqmm wire
+DIM-0033,Electrical,Concealed Wiring,33.25,10.34,2.53,343.81,87.18,220.57,6sqmm wire
+DIM-0034,Plumbing,CPVC Pipeline,22.88,4.5,4.2,102.96,54.76,229.99,2in pipe
+DIM-0035,Woodwork,Modular Box,13.93,5.78,3.61,80.52,39.42,142.31,"8x4 ft, 12mm plywood"
+DIM-0036,False Ceiling,Gypsum Ceiling,22.81,4.19,4.21,95.57,54.0,227.34,12.5mm board
+DIM-0037,Plumbing,CPVC Pipeline,17.74,27.85,2.78,494.06,91.18,253.48,3in pipe
+DIM-0038,Woodwork,Wardrobe Shutter,16.26,14.24,3.91,231.54,61.0,238.51,"8x4 ft, 25mm plywood"
+DIM-0039,Electrical,Concealed Wiring,9.18,21.18,2.51,194.43,60.72,152.41,1.5sqmm wire
+DIM-0040,Plumbing,UPVC Pipeline,7.41,15.56,2.99,115.3,45.94,137.36,2in pipe
+DIM-0041,Tiling,Wall Tile,24.36,3.22,2.82,78.44,55.16,155.55,"800x800mm, 10mm thick"
+DIM-0042,Electrical,Concealed Wiring,25.71,16.32,4.02,419.59,84.06,337.92,2.5sqmm wire
+DIM-0043,Woodwork,Wardrobe Shutter,5.22,14.07,2.89,73.45,38.58,111.5,"7x4 ft, 25mm plywood"
+DIM-0044,Tiling,Wall Tile,38.28,3.04,3.78,116.37,82.64,312.38,"600x600mm, 8mm thick"
+DIM-0045,Painting,Wall Painting,39.41,14.34,4.42,565.14,107.5,475.15,Primer
+DIM-0046,Electrical,Surface Wiring,8.26,27.87,4.28,230.21,72.26,309.27,4sqmm wire
+DIM-0047,Plumbing,CPVC Pipeline,39.11,5.29,2.6,206.89,88.8,230.88,3in pipe
+DIM-0048,Tiling,Floor Tile,25.72,4.68,3.79,120.37,60.8,230.43,"800x800mm, 10mm thick"
+DIM-0049,Electrical,Surface Wiring,34.78,28.0,3.23,973.84,125.56,405.56,4sqmm wire
+DIM-0050,Plumbing,CPVC Pipeline,14.52,5.02,2.83,72.89,39.08,110.6,1in pipe
+DIM-0051,Tiling,Wall Tile,10.75,15.58,3.25,167.49,52.66,171.14,"800x800mm, 10mm thick"
+DIM-0052,Electrical,Surface Wiring,21.22,26.02,2.59,552.14,94.48,244.7,1.5sqmm wire
+DIM-0053,Woodwork,Plywood Panel,34.26,11.85,2.59,405.98,92.22,238.85,"6x3 ft, 18mm plywood"
+DIM-0054,Painting,Wall Painting,6.71,11.07,4.12,74.28,35.56,146.51,Interior Emulsion
+DIM-0055,Plumbing,CPVC Pipeline,34.91,18.01,3.56,628.73,105.84,376.79,3in pipe
+DIM-0056,Tiling,Floor Tile,33.14,6.77,2.43,224.36,79.82,193.96,"800x800mm, 8mm thick"
+DIM-0057,Flooring,Granite Flooring,19.02,21.53,4.37,409.5,81.1,354.41,20mm slabs
+DIM-0058,Painting,Wall Painting,14.06,24.94,2.45,350.66,78.0,191.1,Interior Emulsion
+DIM-0059,False Ceiling,Grid Ceiling,20.52,6.48,4.3,132.97,54.0,232.2,12.5mm board
+DIM-0060,Tiling,Wall Tile,37.98,4.37,4.34,165.97,84.7,367.6,"600x1200mm, 10mm thick"
+DIM-0061,Tiling,Floor Tile,18.4,14.52,3.14,267.17,65.84,206.74,"300x600mm, 10mm thick"
+DIM-0062,Plumbing,CPVC Pipeline,35.92,3.94,3.7,141.52,79.72,294.96,2in pipe
+DIM-0063,Plumbing,UPVC Pipeline,19.42,17.87,2.53,347.04,74.58,188.69,3in pipe
+DIM-0064,Woodwork,Plywood Panel,19.67,20.35,4.07,400.28,80.04,325.76,"7x4 ft, 25mm plywood"
+DIM-0065,Flooring,Marble Flooring,5.68,13.33,3.9,75.71,38.02,148.28,20mm slabs
+DIM-0066,Flooring,Marble Flooring,21.96,27.64,3.46,606.97,99.2,343.23,18mm slabs
+DIM-0067,Woodwork,Wardrobe Shutter,5.91,19.12,2.46,113.0,50.06,123.15,"8x4 ft, 18mm plywood"
+DIM-0068,Painting,Wall Painting,17.51,18.77,2.89,328.66,72.56,209.7,Interior Emulsion
+DIM-0069,Woodwork,Modular Box,27.99,10.2,4.11,285.5,76.38,313.92,"8x4 ft, 12mm plywood"
+DIM-0070,Painting,Wall Painting,34.63,24.53,3.15,849.47,118.32,372.71,Interior Emulsion
+DIM-0071,Woodwork,Modular Box,25.74,24.77,3.87,637.58,101.02,390.95,"8x4 ft, 25mm plywood"
+DIM-0072,False Ceiling,Gypsum Ceiling,17.31,18.33,2.7,317.29,71.28,192.46,15mm board
+DIM-0073,Painting,Wall Painting,15.82,16.24,2.59,256.92,64.12,166.07,Primer
+DIM-0074,Woodwork,Modular Box,5.7,15.91,3.1,90.69,43.22,133.98,"8x4 ft, 12mm plywood"
+DIM-0075,Electrical,Surface Wiring,30.09,27.81,4.17,836.8,115.8,482.89,1.5sqmm wire
+DIM-0076,Tiling,Floor Tile,10.17,22.03,2.7,224.05,64.4,173.88,"300x600mm, 8mm thick"
+DIM-0077,Electrical,Surface Wiring,29.66,20.88,3.63,619.3,101.08,366.92,4sqmm wire
+DIM-0078,Electrical,Surface Wiring,9.78,7.25,4.39,70.91,34.06,149.52,4sqmm wire
+DIM-0079,Woodwork,Modular Box,29.75,18.17,4.27,540.56,95.84,409.24,"6x3 ft, 12mm plywood"
+DIM-0080,False Ceiling,Grid Ceiling,25.61,7.73,3.04,197.97,66.68,202.71,12.5mm board
+DIM-0081,Woodwork,Wardrobe Shutter,30.51,28.62,4.39,873.2,118.26,519.16,"7x4 ft, 12mm plywood"
+DIM-0082,Woodwork,Plywood Panel,26.08,27.87,4.43,726.85,107.9,478.0,"7x4 ft, 25mm plywood"
+DIM-0083,Tiling,Floor Tile,37.78,6.8,3.97,256.9,89.16,353.97,"300x600mm, 10mm thick"
+DIM-0084,Woodwork,Modular Box,27.27,29.0,4.13,790.83,112.54,464.79,"7x4 ft, 25mm plywood"
+DIM-0085,Electrical,Concealed Wiring,20.63,10.16,2.92,209.6,61.58,179.81,4sqmm wire
+DIM-0086,Electrical,Surface Wiring,32.55,22.45,2.5,730.75,110.0,275.0,6sqmm wire
+DIM-0087,Woodwork,Modular Box,35.96,16.31,3.2,586.51,104.54,334.53,"6x3 ft, 12mm plywood"
+DIM-0088,Flooring,Granite Flooring,21.78,26.33,3.77,573.47,96.22,362.75,16mm slabs
+DIM-0089,Plumbing,UPVC Pipeline,7.58,25.84,3.02,195.87,66.84,201.86,2in pipe
+DIM-0090,Tiling,Floor Tile,7.6,7.59,3.19,57.68,30.38,96.91,"600x600mm, 10mm thick"
+DIM-0091,Painting,Ceiling Painting,39.48,27.12,3.88,1070.7,133.2,516.82,Primer
+DIM-0092,Woodwork,Wardrobe Shutter,26.26,14.72,2.51,386.55,81.96,205.72,"8x4 ft, 12mm plywood"
+DIM-0093,Plumbing,UPVC Pipeline,29.4,22.5,3.93,661.5,103.8,407.93,2in pipe
+DIM-0094,Electrical,Surface Wiring,13.31,4.34,3.6,57.77,35.3,127.08,2.5sqmm wire
+DIM-0095,Tiling,Wall Tile,17.63,14.55,3.02,256.52,64.36,194.37,"800x800mm, 8mm thick"
+DIM-0096,Tiling,Wall Tile,12.24,20.23,4.45,247.62,64.94,288.98,"600x600mm, 10mm thick"
+DIM-0097,Flooring,Granite Flooring,18.91,16.21,3.79,306.53,70.24,266.21,20mm slabs
+DIM-0098,Painting,Wall Painting,18.56,13.02,3.2,241.65,63.16,202.11,Exterior Emulsion
+DIM-0099,Tiling,Wall Tile,14.22,15.56,2.88,221.26,59.56,171.53,"600x600mm, 8mm thick"
+DIM-0100,Flooring,Marble Flooring,29.38,5.61,3.8,164.82,69.98,265.92,20mm slabs
+DIM-0101,Woodwork,Wardrobe Shutter,24.38,25.7,4.12,626.57,100.16,412.66,"7x4 ft, 25mm plywood"
+DIM-0102,Flooring,Marble Flooring,37.77,18.46,2.89,697.23,112.46,325.01,16mm slabs
+DIM-0103,Plumbing,CPVC Pipeline,36.6,22.29,3.45,815.81,117.78,406.34,0.5in pipe
+DIM-0104,Flooring,Granite Flooring,20.72,28.62,2.75,593.01,98.68,271.37,16mm slabs
+DIM-0105,Woodwork,Plywood Panel,6.49,5.12,3.83,33.23,23.22,88.93,"7x4 ft, 12mm plywood"
+DIM-0106,Flooring,Granite Flooring,25.83,11.63,3.93,300.4,74.92,294.44,16mm slabs
+DIM-0107,Plumbing,UPVC Pipeline,24.47,17.91,4.2,438.26,84.76,355.99,0.5in pipe
+DIM-0108,Flooring,Granite Flooring,29.51,18.86,4.04,556.56,96.74,390.83,18mm slabs
+DIM-0109,Woodwork,Plywood Panel,10.19,18.87,3.99,192.29,58.12,231.9,"8x4 ft, 25mm plywood"
+DIM-0110,Flooring,Marble Flooring,8.53,10.72,3.52,91.44,38.5,135.52,18mm slabs
+DIM-0111,Electrical,Concealed Wiring,18.41,16.11,3.68,296.59,69.04,254.07,2.5sqmm wire
+DIM-0112,Electrical,Surface Wiring,19.1,19.69,3.83,376.08,77.58,297.13,1.5sqmm wire
+DIM-0113,Plumbing,UPVC Pipeline,36.14,11.95,2.9,431.87,96.18,278.92,2in pipe
+DIM-0114,Electrical,Surface Wiring,5.71,25.07,3.04,143.15,61.56,187.14,6sqmm wire
+DIM-0115,Flooring,Granite Flooring,29.37,5.65,4.22,165.94,70.04,295.57,18mm slabs
+DIM-0116,False Ceiling,Grid Ceiling,20.51,25.3,2.97,518.9,91.62,272.11,12.5mm board
+DIM-0117,Woodwork,Wardrobe Shutter,20.46,27.66,3.26,565.92,96.24,313.74,"7x4 ft, 18mm plywood"
+DIM-0118,Flooring,Marble Flooring,6.97,24.37,2.54,169.86,62.68,159.21,16mm slabs
+DIM-0119,Flooring,Granite Flooring,34.8,26.74,2.46,930.55,123.08,302.78,16mm slabs
+DIM-0120,Flooring,Marble Flooring,7.02,3.89,2.51,27.31,21.82,54.77,20mm slabs
+DIM-0121,Woodwork,Modular Box,14.59,25.23,3.46,368.11,79.64,275.55,"8x4 ft, 25mm plywood"
+DIM-0122,Tiling,Wall Tile,13.47,16.2,3.34,218.21,59.34,198.2,"300x600mm, 10mm thick"
+DIM-0123,Woodwork,Plywood Panel,34.32,9.98,4.14,342.51,88.6,366.8,"6x3 ft, 12mm plywood"
+DIM-0124,Plumbing,CPVC Pipeline,6.74,26.05,4.04,175.58,65.58,264.94,1in pipe
+DIM-0125,False Ceiling,Gypsum Ceiling,12.88,8.58,3.77,110.51,42.92,161.81,12.5mm board
+DIM-0126,Plumbing,CPVC Pipeline,36.9,20.48,3.66,755.71,114.76,420.02,1in pipe
+DIM-0127,Electrical,Surface Wiring,26.29,28.46,3.9,748.21,109.5,427.05,6sqmm wire
+DIM-0128,Plumbing,UPVC Pipeline,34.81,15.39,2.86,535.73,100.4,287.14,3in pipe
+DIM-0129,Painting,Ceiling Painting,8.58,16.81,3.79,144.23,50.78,192.46,Primer
+DIM-0130,False Ceiling,Grid Ceiling,25.78,10.63,3.84,274.04,72.82,279.63,12.5mm board
+DIM-0131,Electrical,Surface Wiring,39.59,20.3,4.21,803.68,119.78,504.27,4sqmm wire
+DIM-0132,Woodwork,Modular Box,10.25,23.67,4.29,242.62,67.84,291.03,"6x3 ft, 25mm plywood"
+DIM-0133,Electrical,Surface Wiring,28.83,22.47,3.78,647.81,102.6,387.83,4sqmm wire
+DIM-0134,Plumbing,CPVC Pipeline,19.16,22.89,3.62,438.57,84.1,304.44,2in pipe
+DIM-0135,False Ceiling,Grid Ceiling,29.97,21.53,3.74,645.25,103.0,385.22,15mm board
+DIM-0136,Painting,Wall Painting,15.51,7.59,3.78,117.72,46.2,174.64,Exterior Emulsion
+DIM-0137,Tiling,Floor Tile,21.48,23.0,3.92,494.04,88.96,348.72,"300x600mm, 12mm thick"
+DIM-0138,Tiling,Wall Tile,12.78,9.03,4.23,115.4,43.62,184.51,"300x600mm, 10mm thick"
+DIM-0139,Electrical,Concealed Wiring,25.49,15.52,2.65,395.6,82.02,217.35,1.5sqmm wire
+DIM-0140,Plumbing,UPVC Pipeline,36.13,16.51,4.22,596.51,105.28,444.28,2in pipe
+DIM-0141,Plumbing,CPVC Pipeline,6.89,26.06,2.69,179.55,65.9,177.27,2in pipe
+DIM-0142,Plumbing,CPVC Pipeline,39.55,27.11,4.47,1072.2,133.32,595.94,2in pipe
+DIM-0143,Flooring,Granite Flooring,30.05,24.03,3.42,722.1,108.16,369.91,18mm slabs
+DIM-0144,False Ceiling,Gypsum Ceiling,7.03,15.21,2.84,106.93,44.48,126.32,12.5mm board
+DIM-0145,Plumbing,UPVC Pipeline,32.48,24.05,2.67,781.14,113.06,301.87,3in pipe
+DIM-0146,Plumbing,CPVC Pipeline,20.02,15.89,2.41,318.12,71.82,173.09,2in pipe
+DIM-0147,Tiling,Floor Tile,36.22,23.43,3.52,848.63,119.3,419.94,"600x600mm, 12mm thick"
+DIM-0148,False Ceiling,Gypsum Ceiling,13.71,21.73,3.12,297.92,70.88,221.15,12.5mm board
+DIM-0149,Plumbing,CPVC Pipeline,22.62,11.27,2.54,254.93,67.78,172.16,2in pipe
+DIM-0150,Electrical,Surface Wiring,20.96,17.05,3.5,357.37,76.02,266.07,2.5sqmm wire
+DIM-0151,Electrical,Concealed Wiring,39.86,16.23,3.98,646.93,112.18,446.48,6sqmm wire
+DIM-0152,Tiling,Floor Tile,12.99,22.63,2.68,293.96,71.24,190.92,"800x800mm, 8mm thick"
+DIM-0153,Electrical,Surface Wiring,29.89,24.39,3.19,729.02,108.56,346.31,1.5sqmm wire
+DIM-0154,Painting,Wall Painting,39.81,20.87,3.77,830.83,121.36,457.53,Interior Emulsion
+DIM-0155,False Ceiling,Grid Ceiling,9.05,15.0,2.66,135.75,48.1,127.95,15mm board
+DIM-0156,False Ceiling,Grid Ceiling,10.36,21.77,3.72,225.54,64.26,239.05,15mm board
+DIM-0157,False Ceiling,Gypsum Ceiling,8.53,17.05,3.71,145.44,51.16,189.8,15mm board
+DIM-0158,Flooring,Marble Flooring,36.45,16.81,3.7,612.72,106.52,394.12,16mm slabs
+DIM-0159,Flooring,Marble Flooring,8.72,8.36,2.82,72.9,34.16,96.33,20mm slabs
+DIM-0160,Woodwork,Modular Box,17.53,14.06,2.74,246.47,63.18,173.11,"6x3 ft, 12mm plywood"
+DIM-0161,False Ceiling,Gypsum Ceiling,37.66,11.93,2.41,449.28,99.18,239.02,12.5mm board
+DIM-0162,Flooring,Granite Flooring,25.1,16.34,4.39,410.13,82.88,363.84,20mm slabs
+DIM-0163,False Ceiling,Grid Ceiling,8.55,9.91,2.89,84.73,36.92,106.7,15mm board
+DIM-0164,Plumbing,UPVC Pipeline,6.75,24.96,4.24,168.48,63.42,268.9,2in pipe
+DIM-0165,Flooring,Granite Flooring,28.69,14.5,2.64,416.0,86.38,228.04,16mm slabs
+DIM-0166,Flooring,Marble Flooring,9.84,20.47,3.09,201.42,60.62,187.32,20mm slabs
+DIM-0167,Electrical,Concealed Wiring,35.75,5.51,4.11,196.98,82.52,339.16,1.5sqmm wire
+DIM-0168,Plumbing,UPVC Pipeline,19.01,15.33,4.15,291.42,68.68,285.02,3in pipe
+DIM-0169,False Ceiling,Gypsum Ceiling,36.01,7.5,2.68,270.07,87.02,233.21,12.5mm board
+DIM-0170,Tiling,Wall Tile,19.56,18.95,4.08,370.66,77.02,314.24,"800x800mm, 12mm thick"
+DIM-0171,Plumbing,CPVC Pipeline,32.27,19.51,4.21,629.59,103.56,435.99,3in pipe
+DIM-0172,Plumbing,UPVC Pipeline,8.95,14.1,2.5,126.19,46.1,115.25,2in pipe
+DIM-0173,Tiling,Floor Tile,29.66,21.3,4.01,631.76,101.92,408.7,"300x600mm, 12mm thick"
+DIM-0174,Painting,Wall Painting,29.09,19.69,3.31,572.78,97.56,322.92,Exterior Emulsion
+DIM-0175,Electrical,Concealed Wiring,28.23,20.32,2.71,573.63,97.1,263.14,1.5sqmm wire
+DIM-0176,False Ceiling,Grid Ceiling,37.7,16.65,3.39,627.71,108.7,368.49,12.5mm board
+DIM-0177,Tiling,Wall Tile,31.3,11.66,3.09,364.96,85.92,265.49,"600x600mm, 12mm thick"
+DIM-0178,Woodwork,Plywood Panel,24.27,13.22,4.12,320.85,74.98,308.92,"6x3 ft, 18mm plywood"
+DIM-0179,Flooring,Marble Flooring,25.06,5.38,3.45,134.82,60.88,210.04,16mm slabs
+DIM-0180,Plumbing,CPVC Pipeline,31.08,3.48,3.25,108.16,69.12,224.64,0.5in pipe
+DIM-0181,Flooring,Marble Flooring,8.18,19.31,3.7,157.96,54.98,203.43,20mm slabs
+DIM-0182,Painting,Ceiling Painting,12.24,21.13,4.4,258.63,66.74,293.66,Interior Emulsion
+DIM-0183,Flooring,Marble Flooring,12.8,15.27,3.58,195.46,56.14,200.98,20mm slabs
+DIM-0184,False Ceiling,Gypsum Ceiling,17.72,15.22,2.6,269.7,65.88,171.29,12.5mm board
+DIM-0185,Electrical,Surface Wiring,17.43,20.11,4.08,350.52,75.08,306.33,1.5sqmm wire
+DIM-0186,Tiling,Wall Tile,36.39,16.3,4.13,593.16,105.38,435.22,"600x600mm, 10mm thick"
+DIM-0187,Painting,Wall Painting,11.86,6.26,4.19,74.24,36.24,151.85,Exterior Emulsion
+DIM-0188,Flooring,Marble Flooring,32.35,22.35,2.63,723.02,109.4,287.72,16mm slabs
+DIM-0189,False Ceiling,Grid Ceiling,34.31,18.9,4.02,648.46,106.42,427.81,15mm board
+DIM-0190,False Ceiling,Gypsum Ceiling,25.63,16.61,4.42,425.71,84.48,373.4,12.5mm board
+DIM-0191,Painting,Wall Painting,37.74,25.65,3.41,968.03,126.78,432.32,Primer
+DIM-0192,Painting,Ceiling Painting,11.08,25.01,2.62,277.11,72.18,189.11,Primer
+DIM-0193,Plumbing,CPVC Pipeline,19.65,19.44,3.85,382.0,78.18,300.99,2in pipe
+DIM-0194,Plumbing,CPVC Pipeline,38.73,29.2,3.35,1130.92,135.86,455.13,1in pipe
+DIM-0195,Plumbing,UPVC Pipeline,26.09,26.93,3.48,702.6,106.04,369.02,1in pipe
+DIM-0196,Woodwork,Modular Box,12.34,22.29,3.84,275.06,69.26,265.96,"8x4 ft, 25mm plywood"
+DIM-0197,False Ceiling,Grid Ceiling,39.13,7.8,3.54,305.21,93.86,332.26,12.5mm board
+DIM-0198,Flooring,Marble Flooring,17.33,15.97,3.6,276.76,66.6,239.76,20mm slabs
+DIM-0199,False Ceiling,Grid Ceiling,36.29,17.42,4.24,632.17,107.42,455.46,12.5mm board
+DIM-0200,Painting,Wall Painting,8.73,13.28,2.51,115.93,44.02,110.49,Interior Emulsion
+DIM-0201,Electrical,Surface Wiring,31.26,7.35,3.0,229.76,77.22,231.66,2.5sqmm wire
+DIM-0202,Flooring,Granite Flooring,7.17,24.18,2.83,173.37,62.7,177.44,18mm slabs
+DIM-0203,Flooring,Granite Flooring,20.84,19.63,3.82,409.09,80.94,309.19,20mm slabs
+DIM-0204,False Ceiling,Grid Ceiling,24.64,9.42,4.05,232.11,68.12,275.89,12.5mm board
+DIM-0205,Plumbing,UPVC Pipeline,18.56,28.83,4.45,535.08,94.78,421.77,0.5in pipe
+DIM-0206,Tiling,Wall Tile,31.03,8.48,4.22,263.13,79.02,333.46,"800x800mm, 12mm thick"
+DIM-0207,False Ceiling,Gypsum Ceiling,29.83,12.93,3.64,385.7,85.52,311.29,12.5mm board
+DIM-0208,Electrical,Concealed Wiring,20.71,29.55,2.56,611.98,100.52,257.33,1.5sqmm wire
+DIM-0209,Plumbing,CPVC Pipeline,6.42,10.54,2.95,67.67,33.92,100.06,2in pipe
+DIM-0210,Tiling,Floor Tile,16.57,22.16,2.73,367.19,77.46,211.47,"300x600mm, 12mm thick"
+DIM-0211,Tiling,Wall Tile,32.08,19.88,4.17,637.75,103.92,433.35,"600x1200mm, 12mm thick"
+DIM-0212,Painting,Wall Painting,17.53,24.17,3.07,423.7,83.4,256.04,Interior Emulsion
+DIM-0213,Painting,Ceiling Painting,7.39,16.64,3.27,122.97,48.06,157.16,Interior Emulsion
+DIM-0214,Electrical,Surface Wiring,12.74,8.76,3.1,111.6,43.0,133.3,4sqmm wire
+DIM-0215,Woodwork,Modular Box,38.26,19.69,3.4,753.34,115.9,394.06,"7x4 ft, 12mm plywood"
+DIM-0216,Tiling,Floor Tile,28.41,15.03,4.3,427.0,86.88,373.58,"600x600mm, 12mm thick"
+DIM-0217,Electrical,Surface Wiring,18.35,24.5,2.64,449.58,85.7,226.25,4sqmm wire
+DIM-0218,Tiling,Wall Tile,36.9,25.2,3.19,929.88,124.2,396.2,"600x1200mm, 8mm thick"
+DIM-0219,Electrical,Concealed Wiring,36.44,8.2,3.48,298.81,89.28,310.69,2.5sqmm wire
+DIM-0220,Flooring,Granite Flooring,23.83,3.2,2.54,76.26,54.06,137.31,20mm slabs
+DIM-0221,Plumbing,UPVC Pipeline,34.25,8.55,4.14,292.84,85.6,354.38,0.5in pipe
+DIM-0222,False Ceiling,Gypsum Ceiling,29.01,3.64,3.91,105.6,65.3,255.32,12.5mm board
+DIM-0223,Tiling,Floor Tile,6.9,24.44,3.57,168.64,62.68,223.77,"300x600mm, 10mm thick"
+DIM-0224,Plumbing,UPVC Pipeline,20.79,13.92,3.06,289.4,69.42,212.43,0.5in pipe
+DIM-0225,Painting,Wall Painting,5.21,22.45,2.53,116.96,55.32,139.96,Primer
+DIM-0226,Flooring,Marble Flooring,7.54,28.06,2.62,211.57,71.2,186.54,20mm slabs
+DIM-0227,Tiling,Floor Tile,14.85,28.02,3.2,416.1,85.74,274.37,"600x1200mm, 8mm thick"
+DIM-0228,Painting,Ceiling Painting,12.7,23.16,4.07,294.13,71.72,291.9,Primer
+DIM-0229,Woodwork,Modular Box,15.43,26.95,4.43,415.84,84.76,375.49,"7x4 ft, 18mm plywood"
+DIM-0230,Tiling,Floor Tile,24.37,17.99,2.66,438.42,84.72,225.36,"600x1200mm, 12mm thick"
+DIM-0231,Painting,Ceiling Painting,38.14,11.23,3.97,428.31,98.74,392.0,Interior Emulsion
+DIM-0232,Plumbing,CPVC Pipeline,36.7,25.99,2.7,953.83,125.38,338.53,1in pipe
+DIM-0233,Painting,Wall Painting,34.22,8.25,2.78,282.31,84.94,236.13,Primer
+DIM-0234,Plumbing,UPVC Pipeline,27.56,4.97,3.81,136.97,65.06,247.88,0.5in pipe
+DIM-0235,Woodwork,Plywood Panel,30.4,16.15,3.09,490.96,93.1,287.68,"7x4 ft, 25mm plywood"
+DIM-0236,Woodwork,Wardrobe Shutter,8.5,19.73,4.29,167.71,56.46,242.21,"6x3 ft, 18mm plywood"
+DIM-0237,Electrical,Surface Wiring,26.57,11.25,3.63,298.91,75.64,274.57,4sqmm wire
+DIM-0238,Plumbing,UPVC Pipeline,10.9,11.46,4.05,124.91,44.72,181.12,2in pipe
+DIM-0239,Flooring,Marble Flooring,17.58,21.35,3.1,375.33,77.86,241.37,18mm slabs
+DIM-0240,Plumbing,CPVC Pipeline,17.56,11.25,3.56,197.55,57.62,205.13,0.5in pipe
+DIM-0241,Flooring,Granite Flooring,14.82,25.31,4.27,375.09,80.26,342.71,18mm slabs
+DIM-0242,False Ceiling,Gypsum Ceiling,36.02,5.06,2.56,182.26,82.16,210.33,12.5mm board
+DIM-0243,Flooring,Granite Flooring,25.37,13.94,3.64,353.66,78.62,286.18,20mm slabs
+DIM-0244,Electrical,Concealed Wiring,24.02,29.97,3.39,719.88,107.98,366.05,4sqmm wire
+DIM-0245,Plumbing,UPVC Pipeline,12.82,23.85,3.94,305.76,73.34,288.96,1in pipe
+DIM-0246,Plumbing,CPVC Pipeline,22.54,5.44,3.16,122.62,55.96,176.83,1in pipe
+DIM-0247,Flooring,Granite Flooring,38.74,29.51,3.84,1143.22,136.5,524.16,18mm slabs
+DIM-0248,Woodwork,Plywood Panel,11.27,28.62,3.78,322.55,79.78,301.57,"7x4 ft, 25mm plywood"
+DIM-0249,Plumbing,CPVC Pipeline,37.87,4.09,4.0,154.89,83.92,335.68,0.5in pipe
+DIM-0250,Electrical,Surface Wiring,17.93,4.16,2.83,74.59,44.18,125.03,6sqmm wire
+DIM-0251,Plumbing,UPVC Pipeline,37.13,26.8,2.48,995.08,127.86,317.09,0.5in pipe
+DIM-0252,False Ceiling,Grid Ceiling,38.9,20.11,2.97,782.28,118.02,350.52,12.5mm board
+DIM-0253,Plumbing,CPVC Pipeline,27.88,12.86,3.77,358.54,81.48,307.18,2in pipe
+DIM-0254,Plumbing,UPVC Pipeline,39.04,9.02,3.25,352.14,96.12,312.39,3in pipe
+DIM-0255,Flooring,Granite Flooring,21.87,19.31,3.45,422.31,82.36,284.14,18mm slabs
+DIM-0256,Woodwork,Plywood Panel,13.05,16.89,2.99,220.41,59.88,179.04,"8x4 ft, 12mm plywood"
+DIM-0257,Electrical,Surface Wiring,26.07,25.06,3.79,653.31,102.26,387.57,4sqmm wire
+DIM-0258,False Ceiling,Gypsum Ceiling,8.97,21.23,3.41,190.43,60.4,205.96,15mm board
+DIM-0259,Tiling,Floor Tile,13.53,6.45,3.64,87.27,39.96,145.45,"600x600mm, 12mm thick"
+DIM-0260,Woodwork,Wardrobe Shutter,6.96,9.97,2.78,69.39,33.86,94.13,"7x4 ft, 25mm plywood"
+DIM-0261,False Ceiling,Grid Ceiling,5.65,22.43,3.79,126.73,56.16,212.85,12.5mm board
+DIM-0262,Woodwork,Plywood Panel,20.72,29.8,4.22,617.46,101.04,426.39,"8x4 ft, 18mm plywood"
+DIM-0263,Painting,Ceiling Painting,9.99,18.73,4.01,187.11,57.44,230.33,Interior Emulsion
+DIM-0264,False Ceiling,Gypsum Ceiling,29.0,27.9,3.65,809.1,113.8,415.37,12.5mm board
+DIM-0265,Plumbing,UPVC Pipeline,18.49,5.93,2.82,109.65,48.84,137.73,1in pipe
+DIM-0266,Painting,Wall Painting,8.37,15.85,3.69,132.66,48.44,178.74,Primer
+DIM-0267,Painting,Wall Painting,31.33,5.52,3.78,172.94,73.7,278.59,Primer
+DIM-0268,False Ceiling,Grid Ceiling,20.1,14.36,4.24,288.64,68.92,292.22,12.5mm board
+DIM-0269,Flooring,Granite Flooring,21.87,23.75,3.14,519.41,91.24,286.49,18mm slabs
+DIM-0270,Woodwork,Plywood Panel,13.91,23.68,4.31,329.39,75.18,324.03,"6x3 ft, 25mm plywood"
+DIM-0271,Painting,Wall Painting,19.3,8.1,3.89,156.33,54.8,213.17,Primer
+DIM-0272,Painting,Ceiling Painting,9.12,3.19,3.77,29.09,24.62,92.82,Exterior Emulsion
+DIM-0273,Electrical,Surface Wiring,8.73,14.5,3.63,126.59,46.46,168.65,6sqmm wire
+DIM-0274,Painting,Wall Painting,17.8,10.44,3.83,185.83,56.48,216.32,Exterior Emulsion
+DIM-0275,Painting,Ceiling Painting,32.43,16.03,3.18,519.85,96.92,308.21,Exterior Emulsion
+DIM-0276,Electrical,Concealed Wiring,25.22,23.9,3.24,602.76,98.24,318.3,1.5sqmm wire
+DIM-0277,False Ceiling,Gypsum Ceiling,13.04,24.14,4.39,314.79,74.36,326.44,12.5mm board
+DIM-0278,Painting,Wall Painting,19.02,12.14,3.56,230.9,62.32,221.86,Interior Emulsion
+DIM-0279,Plumbing,CPVC Pipeline,38.76,3.14,2.59,121.71,83.8,217.04,3in pipe
+DIM-0280,Painting,Wall Painting,20.24,4.73,2.87,95.74,49.94,143.33,Primer
+DIM-0281,Tiling,Wall Tile,30.36,28.13,3.24,854.03,116.98,379.02,"600x600mm, 8mm thick"
+DIM-0282,False Ceiling,Grid Ceiling,22.3,3.29,4.19,73.37,51.18,214.44,12.5mm board
+DIM-0283,Tiling,Floor Tile,32.44,16.78,3.87,544.34,98.44,380.96,"600x600mm, 10mm thick"
+DIM-0284,Woodwork,Wardrobe Shutter,27.93,29.34,2.58,819.47,114.54,295.51,"6x3 ft, 18mm plywood"
+DIM-0285,False Ceiling,Gypsum Ceiling,18.83,18.82,3.49,354.38,75.3,262.8,12.5mm board
+DIM-0286,Painting,Ceiling Painting,14.96,25.4,4.32,379.98,80.72,348.71,Exterior Emulsion
+DIM-0287,Flooring,Marble Flooring,14.68,19.37,2.81,284.35,68.1,191.36,20mm slabs
+DIM-0288,Tiling,Floor Tile,14.14,13.99,2.62,197.82,56.26,147.4,"300x600mm, 10mm thick"
+DIM-0289,Tiling,Wall Tile,33.1,28.83,4.24,954.27,123.86,525.17,"600x1200mm, 10mm thick"
+DIM-0290,Painting,Ceiling Painting,21.93,9.57,3.11,209.87,63.0,195.93,Primer
+DIM-0291,Plumbing,UPVC Pipeline,36.38,26.27,3.41,955.7,125.3,427.27,0.5in pipe
+DIM-0292,Plumbing,CPVC Pipeline,27.18,29.84,3.82,811.05,114.04,435.63,2in pipe
+DIM-0293,Plumbing,UPVC Pipeline,38.44,16.95,2.42,651.56,110.78,268.09,1in pipe
+DIM-0294,Electrical,Concealed Wiring,8.26,21.19,4.12,175.03,58.9,242.67,2.5sqmm wire
+DIM-0295,Plumbing,CPVC Pipeline,15.99,8.9,3.6,142.31,49.78,179.21,1in pipe
+DIM-0296,Plumbing,UPVC Pipeline,30.8,9.34,2.91,287.67,80.28,233.61,1in pipe
+DIM-0297,Woodwork,Plywood Panel,12.1,9.74,3.7,117.85,43.68,161.62,"8x4 ft, 12mm plywood"
+DIM-0298,Tiling,Floor Tile,28.65,20.91,3.69,599.07,99.12,365.75,"600x1200mm, 10mm thick"
+DIM-0299,Painting,Ceiling Painting,16.04,27.25,4.25,437.09,86.58,367.96,Exterior Emulsion
+DIM-0300,Woodwork,Plywood Panel,39.45,27.73,2.99,1093.95,134.36,401.74,"7x4 ft, 12mm plywood"

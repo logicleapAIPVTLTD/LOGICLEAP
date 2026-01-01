@@ -1,0 +1,1201 @@
+bom_id,category,material_name,base_quantity,unit,wastage_percent,final_quantity,unit_rate_inr,total_cost_inr,region,season,grade
+BOM-0001,Electrical,Wires,37.84,sqft,20.61,45.64,250.61,11437.84,south,monsoon,Standard
+BOM-0002,Electrical,Wires,223.5,sqft,17.27,262.1,547.82,143583.62,south,summer,Standard
+BOM-0003,Carpentry,Edge Band,73.63,sqft,18.23,87.05,522.67,45498.42,west,monsoon,Premium
+BOM-0004,Carpentry,Edge Band,137.52,sqft,12.73,155.03,787.6,122101.63,south,monsoon,Premium
+BOM-0005,Painting,Emulsion Paint,86.97,sqft,11.66,97.11,696.6,67646.83,south,summer,Premium
+BOM-0006,Carpentry,Laminate,110.9,sqft,13.85,126.26,267.49,33773.29,south,monsoon,Premium
+BOM-0007,Plumbing,CPVC Pipe,41.82,sqft,23.68,51.72,107.77,5573.86,north,monsoon,Premium
+BOM-0008,Plumbing,UPVC Pipe,61.73,sqft,9.18,67.4,608.69,41025.71,north,summer,Standard
+BOM-0009,Carpentry,Laminate,117.14,sqft,15.71,135.54,757.33,102648.51,south,normal,Premium
+BOM-0010,Carpentry,Edge Band,202.7,sqft,19.93,243.1,627.85,152630.33,south,monsoon,Standard
+BOM-0011,Plumbing,CPVC Pipe,220.09,sqft,10.78,243.82,366.33,89318.58,west,monsoon,Standard
+BOM-0012,Electrical,Wires,100.66,sqft,21.06,121.86,88.11,10737.08,south,normal,Premium
+BOM-0013,Carpentry,Hinges,24.53,sqft,23.52,30.3,527.77,15991.43,west,normal,Standard
+BOM-0014,Electrical,Wires,152.27,sqft,23.04,187.35,592.85,111070.45,south,normal,Standard
+BOM-0015,Carpentry,Edge Band,224.77,sqft,17.16,263.34,682.43,179711.12,north,monsoon,Premium
+BOM-0016,Painting,Emulsion Paint,69.7,sqft,24.96,87.1,478.19,41650.35,south,summer,Standard
+BOM-0017,Carpentry,Adhesive,190.1,kg,21.47,230.91,403.06,93070.58,south,normal,Premium
+BOM-0018,Plumbing,UPVC Pipe,298.86,sqft,16.99,349.64,875.13,305980.45,south,monsoon,Standard
+BOM-0019,Electrical,Wires,266.01,sqft,20.76,321.23,700.99,225179.02,north,summer,Premium
+BOM-0020,Painting,Primer,51.66,sqft,8.06,55.82,661.0,36897.02,west,normal,Standard
+BOM-0021,Plumbing,CPVC Pipe,274.23,sqft,22.8,336.75,296.66,99900.26,west,monsoon,Standard
+BOM-0022,Carpentry,Adhesive,115.3,kg,10.75,127.69,860.01,109814.68,west,summer,Premium
+BOM-0023,Painting,Putty,10.75,kg,23.79,13.31,795.7,10590.77,north,summer,Standard
+BOM-0024,Carpentry,Edge Band,264.01,sqft,24.1,327.64,113.66,37239.56,north,summer,Standard
+BOM-0025,Carpentry,Adhesive,199.63,kg,24.1,247.74,182.01,45091.16,west,monsoon,Premium
+BOM-0026,Carpentry,Edge Band,279.03,sqft,20.84,337.18,633.29,213532.72,west,normal,Premium
+BOM-0027,Electrical,Wires,196.71,sqft,15.45,227.1,485.12,110170.75,south,summer,Standard
+BOM-0028,Carpentry,Laminate,104.74,sqft,18.0,123.59,237.9,29402.06,south,summer,Standard
+BOM-0029,Electrical,Switches,191.18,sqft,11.89,213.91,818.66,175119.56,north,summer,Standard
+BOM-0030,Carpentry,Hinges,202.35,sqft,11.64,225.9,153.79,34741.16,west,monsoon,Premium
+BOM-0031,Carpentry,Edge Band,236.46,sqft,21.73,287.84,203.75,58647.4,south,monsoon,Premium
+BOM-0032,Painting,Emulsion Paint,129.96,sqft,15.94,150.68,667.01,100505.07,west,monsoon,Standard
+BOM-0033,Carpentry,Plywood,123.77,sqft,13.77,140.81,781.04,109978.24,south,summer,Standard
+BOM-0034,Plumbing,CPVC Pipe,137.34,sqft,15.17,158.17,279.55,44216.42,south,summer,Premium
+BOM-0035,Plumbing,CPVC Pipe,33.88,sqft,19.09,40.35,504.91,20373.12,south,summer,Standard
+BOM-0036,Carpentry,Adhesive,124.89,kg,16.18,145.1,783.6,113700.36,south,summer,Premium
+BOM-0037,Carpentry,Plywood,295.67,sqft,12.51,332.66,714.3,237619.04,north,normal,Premium
+BOM-0038,Electrical,Switches,287.41,sqft,24.92,359.03,517.96,185963.18,west,normal,Standard
+BOM-0039,Carpentry,Edge Band,92.53,sqft,24.47,115.17,538.1,61972.98,west,summer,Premium
+BOM-0040,Carpentry,Plywood,19.79,sqft,16.11,22.98,830.67,19088.8,west,summer,Standard
+BOM-0041,Plumbing,CPVC Pipe,28.63,sqft,11.16,31.83,551.73,17561.57,west,summer,Premium
+BOM-0042,Carpentry,Laminate,282.77,sqft,17.68,332.76,537.87,178981.62,south,monsoon,Standard
+BOM-0043,Painting,Primer,198.93,sqft,17.61,233.96,312.08,73014.24,north,summer,Premium
+BOM-0044,Carpentry,Edge Band,83.36,sqft,10.22,91.88,595.13,54680.54,north,normal,Standard
+BOM-0045,Carpentry,Plywood,140.19,sqft,24.97,175.2,896.64,157091.33,south,monsoon,Standard
+BOM-0046,Plumbing,CPVC Pipe,83.23,sqft,23.87,103.1,797.54,82226.37,south,normal,Premium
+BOM-0047,Carpentry,Adhesive,134.26,kg,17.23,157.39,300.16,47242.18,west,monsoon,Standard
+BOM-0048,Electrical,Wires,246.05,sqft,13.09,278.26,610.51,169880.51,south,normal,Standard
+BOM-0049,Carpentry,Laminate,224.01,sqft,10.64,247.84,282.31,69967.71,south,monsoon,Premium
+BOM-0050,Carpentry,Edge Band,207.81,sqft,22.5,254.57,474.65,120831.65,north,summer,Standard
+BOM-0051,Electrical,Wires,129.95,sqft,12.7,146.45,43.05,6304.67,south,monsoon,Premium
+BOM-0052,Carpentry,Adhesive,223.66,kg,17.38,262.53,407.81,107062.36,south,summer,Standard
+BOM-0053,Electrical,Switches,271.66,sqft,17.28,318.6,757.75,241419.15,west,monsoon,Standard
+BOM-0054,Painting,Primer,42.6,sqft,13.24,48.24,813.12,39224.91,south,normal,Standard
+BOM-0055,Electrical,Wires,78.61,sqft,9.75,86.27,710.9,61329.34,north,monsoon,Standard
+BOM-0056,Carpentry,Edge Band,260.06,sqft,24.6,324.03,737.26,238894.36,north,summer,Standard
+BOM-0057,Electrical,Switches,277.72,sqft,21.3,336.87,394.07,132750.36,west,monsoon,Standard
+BOM-0058,Carpentry,Hinges,51.96,sqft,19.92,62.31,368.99,22991.77,south,normal,Standard
+BOM-0059,Carpentry,Edge Band,245.89,sqft,15.83,284.81,302.46,86143.63,south,summer,Standard
+BOM-0060,Electrical,Wires,61.97,sqft,13.58,70.39,783.34,55139.3,north,normal,Premium
+BOM-0061,Electrical,Wires,294.44,sqft,17.12,344.85,847.74,292343.14,south,normal,Standard
+BOM-0062,Plumbing,UPVC Pipe,288.95,sqft,12.51,325.1,133.23,43313.07,north,normal,Premium
+BOM-0063,Painting,Primer,183.83,sqft,16.69,214.51,371.27,79641.13,west,summer,Premium
+BOM-0064,Carpentry,Plywood,214.09,sqft,8.03,231.28,835.99,193347.77,west,monsoon,Standard
+BOM-0065,Painting,Emulsion Paint,132.23,sqft,24.13,164.14,831.86,136541.5,west,normal,Standard
+BOM-0066,Electrical,Switches,270.51,sqft,16.62,315.47,613.53,193550.31,north,normal,Premium
+BOM-0067,Plumbing,CPVC Pipe,42.55,sqft,15.15,49.0,848.71,41586.79,west,monsoon,Standard
+BOM-0068,Plumbing,UPVC Pipe,172.89,sqft,14.9,198.65,757.0,150378.05,north,normal,Standard
+BOM-0069,Painting,Primer,236.8,sqft,18.31,280.16,317.13,88847.14,north,normal,Standard
+BOM-0070,Plumbing,CPVC Pipe,144.59,sqft,23.32,178.31,724.58,129199.86,south,monsoon,Standard
+BOM-0071,Carpentry,Hinges,157.06,sqft,18.76,186.52,328.26,61227.06,south,monsoon,Premium
+BOM-0072,Carpentry,Edge Band,242.94,sqft,10.51,268.47,79.74,21407.8,north,monsoon,Standard
+BOM-0073,Painting,Putty,127.26,kg,18.71,151.07,207.21,31303.21,west,normal,Premium
+BOM-0074,Painting,Primer,76.98,sqft,19.15,91.72,44.77,4106.3,south,normal,Standard
+BOM-0075,Carpentry,Adhesive,242.21,kg,19.83,290.24,439.51,127563.38,west,summer,Standard
+BOM-0076,Painting,Putty,44.34,kg,15.9,51.39,496.77,25529.01,west,monsoon,Premium
+BOM-0077,Painting,Putty,185.73,kg,20.23,223.3,474.11,105868.76,west,normal,Standard
+BOM-0078,Electrical,Switches,259.14,sqft,15.65,299.7,686.53,205753.04,west,normal,Premium
+BOM-0079,Electrical,Wires,75.58,sqft,15.48,87.28,653.65,57050.57,south,normal,Premium
+BOM-0080,Painting,Emulsion Paint,268.44,sqft,9.37,293.59,169.71,49825.16,north,monsoon,Standard
+BOM-0081,Electrical,Switches,68.12,sqft,15.05,78.37,324.56,25435.77,north,normal,Standard
+BOM-0082,Carpentry,Edge Band,250.7,sqft,14.62,287.35,702.02,201725.45,west,summer,Premium
+BOM-0083,Painting,Putty,6.74,kg,13.98,7.68,687.99,5283.76,north,monsoon,Standard
+BOM-0084,Painting,Putty,69.73,kg,15.41,80.48,64.96,5227.98,north,monsoon,Premium
+BOM-0085,Electrical,Switches,53.69,sqft,15.95,62.25,149.76,9322.56,west,monsoon,Standard
+BOM-0086,Painting,Primer,179.61,sqft,19.27,214.22,112.19,24033.34,north,summer,Premium
+BOM-0087,Carpentry,Adhesive,19.83,kg,14.44,22.69,222.03,5037.86,north,normal,Premium
+BOM-0088,Carpentry,Hinges,226.84,sqft,22.14,277.06,256.95,71190.57,south,normal,Standard
+BOM-0089,Electrical,Switches,164.13,sqft,25.0,205.16,340.97,69953.41,west,summer,Standard
+BOM-0090,Carpentry,Plywood,285.14,sqft,11.39,317.62,57.53,18272.68,south,summer,Standard
+BOM-0091,Painting,Putty,202.49,kg,17.59,238.11,227.45,54158.12,west,normal,Premium
+BOM-0092,Carpentry,Adhesive,183.74,kg,24.38,228.54,657.79,150331.33,south,normal,Standard
+BOM-0093,Plumbing,UPVC Pipe,12.58,sqft,13.3,14.25,622.52,8870.91,north,normal,Standard
+BOM-0094,Carpentry,Laminate,179.67,sqft,22.12,219.41,248.85,54600.18,west,normal,Standard
+BOM-0095,Plumbing,UPVC Pipe,235.88,sqft,13.9,268.67,408.41,109727.51,north,summer,Premium
+BOM-0096,Carpentry,Plywood,255.62,sqft,21.98,311.81,130.76,40772.28,north,monsoon,Premium
+BOM-0097,Electrical,Switches,50.13,sqft,10.99,55.64,488.7,27191.27,west,normal,Premium
+BOM-0098,Painting,Putty,133.49,kg,20.43,160.76,270.82,43537.02,south,summer,Premium
+BOM-0099,Painting,Putty,76.94,kg,15.9,89.17,564.89,50371.24,north,normal,Standard
+BOM-0100,Painting,Putty,256.03,kg,11.09,284.42,222.42,63260.7,north,normal,Premium
+BOM-0101,Plumbing,UPVC Pipe,211.85,sqft,12.7,238.75,48.73,11634.29,south,summer,Standard
+BOM-0102,Electrical,Switches,124.9,sqft,17.44,146.68,246.68,36183.02,north,monsoon,Premium
+BOM-0103,Painting,Putty,238.92,kg,9.58,261.81,230.57,60365.53,west,summer,Premium
+BOM-0104,Electrical,Wires,176.56,sqft,16.05,204.9,496.59,101751.29,north,monsoon,Premium
+BOM-0105,Painting,Emulsion Paint,212.34,sqft,12.61,239.12,256.21,61264.94,south,monsoon,Standard
+BOM-0106,Painting,Emulsion Paint,40.27,sqft,17.11,47.16,695.48,32798.84,south,summer,Standard
+BOM-0107,Electrical,Switches,147.84,sqft,20.32,177.88,879.88,156513.05,west,monsoon,Premium
+BOM-0108,Carpentry,Laminate,250.63,sqft,13.04,283.31,350.36,99260.49,north,summer,Standard
+BOM-0109,Carpentry,Hinges,18.43,sqft,8.93,20.08,291.24,5848.1,south,monsoon,Premium
+BOM-0110,Carpentry,Laminate,262.45,sqft,17.76,309.06,443.68,137123.74,north,normal,Standard
+BOM-0111,Carpentry,Plywood,79.48,sqft,22.65,97.48,138.11,13462.96,south,normal,Premium
+BOM-0112,Carpentry,Laminate,175.22,sqft,19.67,209.69,170.49,35750.05,west,normal,Standard
+BOM-0113,Carpentry,Edge Band,39.94,sqft,21.0,48.33,561.43,27133.91,west,summer,Premium
+BOM-0114,Painting,Putty,273.01,kg,13.06,308.67,546.13,168573.95,north,normal,Standard
+BOM-0115,Plumbing,UPVC Pipe,288.23,sqft,9.69,316.16,695.95,220031.55,west,summer,Premium
+BOM-0116,Electrical,Wires,28.95,sqft,12.08,32.45,514.71,16702.34,south,summer,Premium
+BOM-0117,Painting,Putty,208.36,kg,15.99,241.68,68.07,16451.16,north,monsoon,Premium
+BOM-0118,Electrical,Switches,258.58,sqft,9.21,282.4,240.74,67984.98,north,monsoon,Standard
+BOM-0119,Painting,Primer,38.86,sqft,11.82,43.45,168.13,7305.25,north,summer,Standard
+BOM-0120,Carpentry,Plywood,53.95,sqft,13.23,61.09,684.1,41791.67,west,normal,Premium
+BOM-0121,Carpentry,Laminate,143.27,sqft,13.17,162.14,386.16,62611.98,north,monsoon,Premium
+BOM-0122,Painting,Putty,28.73,kg,8.68,31.22,411.54,12848.28,north,monsoon,Premium
+BOM-0123,Carpentry,Plywood,31.94,sqft,24.35,39.72,758.92,30144.3,west,monsoon,Standard
+BOM-0124,Electrical,Wires,247.32,sqft,17.8,291.34,696.27,202851.3,south,normal,Premium
+BOM-0125,Carpentry,Hinges,58.54,sqft,17.95,69.05,585.91,40457.09,north,summer,Premium
+BOM-0126,Painting,Emulsion Paint,125.46,sqft,13.46,142.35,129.96,18499.81,south,normal,Premium
+BOM-0127,Electrical,Switches,151.16,sqft,19.26,180.27,384.39,69293.99,west,summer,Premium
+BOM-0128,Carpentry,Laminate,97.78,sqft,13.5,110.98,874.36,97036.47,north,monsoon,Standard
+BOM-0129,Electrical,Wires,261.46,sqft,15.85,302.9,86.62,26237.2,west,normal,Premium
+BOM-0130,Electrical,Wires,135.4,sqft,8.88,147.42,269.67,39754.75,south,normal,Premium
+BOM-0131,Electrical,Switches,147.99,sqft,8.49,160.55,581.82,93411.2,south,monsoon,Standard
+BOM-0132,Carpentry,Hinges,167.5,sqft,17.39,196.63,120.16,23627.06,south,normal,Standard
+BOM-0133,Electrical,Wires,250.48,sqft,16.47,291.73,656.28,191456.56,west,monsoon,Premium
+BOM-0134,Painting,Primer,251.24,sqft,24.66,313.2,249.61,78177.85,west,summer,Premium
+BOM-0135,Carpentry,Edge Band,276.95,sqft,16.64,323.03,796.22,257202.95,south,normal,Premium
+BOM-0136,Painting,Emulsion Paint,280.6,sqft,16.63,327.26,745.67,244027.96,north,monsoon,Premium
+BOM-0137,Plumbing,UPVC Pipe,176.08,sqft,19.22,209.92,784.12,164602.47,north,monsoon,Premium
+BOM-0138,Painting,Emulsion Paint,103.07,sqft,20.97,124.68,364.4,45433.39,north,summer,Standard
+BOM-0139,Plumbing,UPVC Pipe,117.98,sqft,22.55,144.58,393.27,56858.98,north,monsoon,Premium
+BOM-0140,Electrical,Switches,274.46,sqft,14.48,314.2,890.04,279650.57,west,summer,Premium
+BOM-0141,Carpentry,Plywood,42.24,sqft,24.41,52.55,325.52,17106.08,south,normal,Standard
+BOM-0142,Plumbing,CPVC Pipe,273.58,sqft,8.26,296.18,163.97,48564.63,west,summer,Standard
+BOM-0143,Painting,Putty,235.55,kg,12.51,265.02,576.0,152651.52,north,monsoon,Standard
+BOM-0144,Painting,Emulsion Paint,256.44,sqft,22.61,314.42,366.81,115332.4,north,monsoon,Premium
+BOM-0145,Plumbing,CPVC Pipe,15.59,sqft,9.16,17.02,582.8,9919.26,north,summer,Standard
+BOM-0146,Painting,Primer,293.61,sqft,20.93,355.06,645.35,229137.97,south,normal,Standard
+BOM-0147,Electrical,Switches,93.34,sqft,8.49,101.26,318.96,32297.89,south,normal,Premium
+BOM-0148,Painting,Emulsion Paint,132.05,sqft,12.15,148.09,394.36,58400.77,west,summer,Standard
+BOM-0149,Carpentry,Adhesive,28.3,kg,22.8,34.75,572.95,19910.01,south,normal,Standard
+BOM-0150,Carpentry,Edge Band,141.04,sqft,12.32,158.42,259.58,41122.66,south,normal,Premium
+BOM-0151,Electrical,Wires,166.25,sqft,9.26,181.64,852.9,154920.76,west,normal,Premium
+BOM-0152,Electrical,Switches,78.78,sqft,22.37,96.4,211.33,20372.21,north,normal,Standard
+BOM-0153,Carpentry,Edge Band,117.5,sqft,14.1,134.07,294.45,39476.91,west,normal,Standard
+BOM-0154,Electrical,Wires,121.76,sqft,8.14,131.67,783.96,103224.01,west,summer,Premium
+BOM-0155,Carpentry,Hinges,233.84,sqft,11.91,261.69,729.66,190944.73,south,monsoon,Standard
+BOM-0156,Plumbing,UPVC Pipe,78.93,sqft,20.84,95.38,700.02,66767.91,west,summer,Standard
+BOM-0157,Electrical,Wires,195.67,sqft,13.25,221.6,419.11,92874.78,west,normal,Standard
+BOM-0158,Carpentry,Laminate,273.34,sqft,13.55,310.38,397.33,123323.29,south,summer,Premium
+BOM-0159,Plumbing,CPVC Pipe,153.03,sqft,12.63,172.36,181.51,31285.06,north,normal,Premium
+BOM-0160,Carpentry,Laminate,143.16,sqft,9.28,156.45,688.57,107726.78,south,monsoon,Premium
+BOM-0161,Plumbing,CPVC Pipe,112.9,sqft,21.44,137.11,51.97,7125.61,west,summer,Premium
+BOM-0162,Painting,Emulsion Paint,203.48,sqft,19.43,243.02,542.72,131891.81,west,normal,Standard
+BOM-0163,Electrical,Wires,73.98,sqft,8.43,80.22,800.44,64211.3,west,normal,Standard
+BOM-0164,Electrical,Wires,23.65,sqft,22.01,28.86,822.07,23724.94,north,monsoon,Premium
+BOM-0165,Carpentry,Laminate,46.23,sqft,24.09,57.37,301.75,17311.4,north,summer,Standard
+BOM-0166,Carpentry,Edge Band,266.74,sqft,10.31,294.24,430.13,126561.45,west,monsoon,Premium
+BOM-0167,Plumbing,UPVC Pipe,223.97,sqft,10.63,247.78,396.8,98319.1,south,normal,Premium
+BOM-0168,Carpentry,Hinges,14.65,sqft,14.3,16.74,421.31,7052.73,south,normal,Standard
+BOM-0169,Electrical,Wires,113.36,sqft,23.33,139.81,594.55,83124.04,south,normal,Premium
+BOM-0170,Carpentry,Edge Band,290.62,sqft,24.13,360.75,748.8,270129.6,south,monsoon,Standard
+BOM-0171,Electrical,Wires,193.65,sqft,24.51,241.11,83.5,20132.69,north,summer,Standard
+BOM-0172,Plumbing,UPVC Pipe,65.54,sqft,22.11,80.03,516.62,41345.1,west,summer,Standard
+BOM-0173,Painting,Emulsion Paint,233.44,sqft,21.41,283.42,552.54,156600.89,north,summer,Standard
+BOM-0174,Plumbing,CPVC Pipe,78.94,sqft,10.97,87.6,608.51,53305.48,south,summer,Standard
+BOM-0175,Painting,Emulsion Paint,238.05,sqft,12.04,266.71,318.44,84931.13,south,normal,Standard
+BOM-0176,Carpentry,Adhesive,223.81,kg,16.94,261.72,681.27,178301.98,north,normal,Premium
+BOM-0177,Plumbing,CPVC Pipe,180.13,sqft,15.68,208.37,230.53,48035.54,west,summer,Premium
+BOM-0178,Painting,Putty,194.79,kg,8.53,211.41,898.78,190011.08,north,normal,Standard
+BOM-0179,Painting,Putty,215.16,kg,15.54,248.6,813.37,202203.78,north,monsoon,Standard
+BOM-0180,Carpentry,Laminate,42.23,sqft,18.61,50.09,543.41,27219.41,west,normal,Premium
+BOM-0181,Plumbing,UPVC Pipe,161.51,sqft,15.71,186.88,560.67,104778.01,south,monsoon,Standard
+BOM-0182,Electrical,Wires,197.02,sqft,21.07,238.53,659.92,157410.72,south,normal,Premium
+BOM-0183,Carpentry,Edge Band,127.08,sqft,22.07,155.13,382.91,59400.83,west,summer,Premium
+BOM-0184,Painting,Primer,97.19,sqft,12.33,109.17,860.09,93896.03,west,normal,Standard
+BOM-0185,Carpentry,Laminate,250.37,sqft,9.58,274.36,123.05,33760.0,west,normal,Standard
+BOM-0186,Plumbing,CPVC Pipe,22.69,sqft,24.26,28.19,523.05,14744.78,west,summer,Premium
+BOM-0187,Painting,Emulsion Paint,262.71,sqft,24.0,325.76,403.73,131519.08,west,summer,Premium
+BOM-0188,Plumbing,UPVC Pipe,97.17,sqft,9.76,106.65,476.37,50804.86,south,monsoon,Premium
+BOM-0189,Carpentry,Edge Band,254.95,sqft,13.95,290.52,518.39,150602.66,south,normal,Standard
+BOM-0190,Painting,Primer,254.32,sqft,24.57,316.81,743.85,235659.12,west,monsoon,Standard
+BOM-0191,Plumbing,UPVC Pipe,279.08,sqft,22.1,340.76,270.01,92008.61,south,normal,Premium
+BOM-0192,Painting,Emulsion Paint,108.55,sqft,11.08,120.58,163.2,19678.66,west,normal,Standard
+BOM-0193,Carpentry,Adhesive,223.59,kg,24.52,278.41,118.91,33105.73,west,summer,Premium
+BOM-0194,Painting,Primer,138.83,sqft,10.68,153.66,308.01,47328.82,north,monsoon,Standard
+BOM-0195,Carpentry,Plywood,50.9,sqft,20.83,61.5,82.8,5092.2,south,normal,Premium
+BOM-0196,Electrical,Wires,130.08,sqft,18.32,153.91,396.2,60979.14,south,monsoon,Standard
+BOM-0197,Painting,Emulsion Paint,131.82,sqft,12.82,148.72,623.5,92726.92,north,monsoon,Premium
+BOM-0198,Carpentry,Plywood,70.05,sqft,24.74,87.38,87.11,7611.67,south,normal,Standard
+BOM-0199,Carpentry,Adhesive,230.43,kg,12.92,260.2,143.19,37258.04,north,monsoon,Premium
+BOM-0200,Carpentry,Adhesive,43.11,kg,17.05,50.46,237.9,12004.43,west,monsoon,Premium
+BOM-0201,Carpentry,Laminate,122.14,sqft,20.61,147.31,415.15,61155.75,north,summer,Premium
+BOM-0202,Plumbing,UPVC Pipe,131.64,sqft,14.88,151.23,590.52,89304.34,north,summer,Premium
+BOM-0203,Carpentry,Plywood,290.03,sqft,10.92,321.7,854.95,275037.41,north,monsoon,Premium
+BOM-0204,Carpentry,Laminate,133.83,sqft,9.8,146.95,414.68,60937.23,north,monsoon,Standard
+BOM-0205,Painting,Primer,261.8,sqft,20.68,315.94,230.55,72839.97,south,summer,Standard
+BOM-0206,Plumbing,CPVC Pipe,155.44,sqft,23.4,191.81,340.46,65303.63,west,monsoon,Standard
+BOM-0207,Carpentry,Edge Band,35.33,sqft,12.35,39.69,189.21,7509.74,south,monsoon,Standard
+BOM-0208,Carpentry,Adhesive,285.63,kg,18.68,338.99,439.0,148816.61,west,monsoon,Premium
+BOM-0209,Electrical,Wires,277.63,sqft,17.6,326.49,586.36,191440.68,west,normal,Premium
+BOM-0210,Carpentry,Adhesive,134.73,kg,15.97,156.25,582.99,91092.19,north,monsoon,Standard
+BOM-0211,Painting,Emulsion Paint,154.66,sqft,13.28,175.2,428.65,75099.48,south,normal,Premium
+BOM-0212,Carpentry,Laminate,195.18,sqft,24.62,243.23,117.65,28616.01,west,monsoon,Premium
+BOM-0213,Painting,Putty,176.2,kg,24.22,218.88,675.47,147846.87,south,normal,Standard
+BOM-0214,Painting,Emulsion Paint,183.48,sqft,16.52,213.79,863.64,184637.6,north,summer,Premium
+BOM-0215,Electrical,Switches,29.88,sqft,18.98,35.55,73.66,2618.61,west,normal,Premium
+BOM-0216,Plumbing,CPVC Pipe,159.21,sqft,10.7,176.25,360.65,63564.56,north,normal,Premium
+BOM-0217,Painting,Emulsion Paint,205.27,sqft,8.89,223.52,582.56,130213.81,north,summer,Premium
+BOM-0218,Carpentry,Laminate,169.6,sqft,14.57,194.31,256.72,49883.26,west,monsoon,Standard
+BOM-0219,Painting,Emulsion Paint,29.04,sqft,19.28,34.64,828.4,28695.78,north,monsoon,Premium
+BOM-0220,Carpentry,Adhesive,180.54,kg,23.95,223.78,306.24,68530.39,north,monsoon,Premium
+BOM-0221,Carpentry,Adhesive,202.68,kg,22.09,247.45,675.35,167115.36,west,monsoon,Standard
+BOM-0222,Electrical,Wires,202.78,sqft,16.64,236.52,55.68,13169.43,north,summer,Standard
+BOM-0223,Painting,Emulsion Paint,284.56,sqft,16.27,330.86,234.83,77695.85,south,summer,Standard
+BOM-0224,Carpentry,Hinges,254.11,sqft,9.72,278.81,702.95,195989.49,west,monsoon,Standard
+BOM-0225,Electrical,Wires,104.35,sqft,21.03,126.29,152.7,19284.48,north,summer,Standard
+BOM-0226,Carpentry,Adhesive,250.25,kg,21.11,303.08,735.78,223000.2,south,monsoon,Premium
+BOM-0227,Carpentry,Plywood,126.2,sqft,19.5,150.81,244.28,36839.87,north,monsoon,Premium
+BOM-0228,Electrical,Switches,236.22,sqft,11.98,264.52,245.68,64987.27,north,summer,Premium
+BOM-0229,Electrical,Wires,284.4,sqft,24.74,354.76,437.04,155044.31,north,normal,Premium
+BOM-0230,Carpentry,Adhesive,245.98,kg,21.62,299.16,159.02,47572.42,north,summer,Premium
+BOM-0231,Painting,Emulsion Paint,168.59,sqft,9.74,185.01,767.47,141989.62,south,normal,Standard
+BOM-0232,Carpentry,Adhesive,85.47,kg,23.39,105.46,166.72,17582.29,north,summer,Standard
+BOM-0233,Painting,Putty,265.97,kg,23.82,329.32,396.81,130677.47,north,monsoon,Premium
+BOM-0234,Carpentry,Edge Band,118.92,sqft,9.39,130.09,233.1,30323.98,north,summer,Premium
+BOM-0235,Carpentry,Adhesive,45.59,kg,12.88,51.46,753.59,38779.74,west,summer,Premium
+BOM-0236,Painting,Putty,186.53,kg,23.4,230.18,56.34,12968.34,south,summer,Premium
+BOM-0237,Carpentry,Laminate,233.97,sqft,12.04,262.14,144.79,37955.25,south,normal,Premium
+BOM-0238,Carpentry,Laminate,37.7,sqft,23.39,46.52,553.2,25734.86,south,monsoon,Standard
+BOM-0239,Electrical,Switches,47.36,sqft,15.3,54.61,568.74,31058.89,south,monsoon,Premium
+BOM-0240,Carpentry,Adhesive,200.99,kg,9.46,220.0,878.2,193204.0,south,monsoon,Standard
+BOM-0241,Painting,Primer,262.63,sqft,8.74,285.58,372.72,106441.38,north,normal,Standard
+BOM-0242,Painting,Emulsion Paint,237.61,sqft,13.86,270.54,670.33,181351.08,west,summer,Premium
+BOM-0243,Carpentry,Adhesive,18.08,kg,17.28,21.2,739.62,15679.94,south,monsoon,Premium
+BOM-0244,Electrical,Switches,146.17,sqft,11.1,162.39,155.97,25327.97,west,normal,Standard
+BOM-0245,Carpentry,Hinges,64.47,sqft,21.45,78.3,801.78,62779.37,north,normal,Premium
+BOM-0246,Plumbing,CPVC Pipe,144.65,sqft,8.62,157.12,596.33,93695.37,north,normal,Standard
+BOM-0247,Electrical,Wires,102.92,sqft,10.12,113.34,356.5,40405.71,north,monsoon,Premium
+BOM-0248,Painting,Primer,105.02,sqft,11.18,116.76,635.18,74163.62,north,monsoon,Premium
+BOM-0249,Carpentry,Laminate,219.49,sqft,9.34,239.99,558.11,133940.82,south,monsoon,Premium
+BOM-0250,Painting,Emulsion Paint,35.27,sqft,13.57,40.06,294.25,11787.66,north,monsoon,Premium
+BOM-0251,Carpentry,Adhesive,208.48,kg,13.98,237.63,76.43,18162.06,north,monsoon,Premium
+BOM-0252,Carpentry,Hinges,193.64,sqft,21.46,235.2,89.33,21010.42,west,monsoon,Premium
+BOM-0253,Painting,Emulsion Paint,156.36,sqft,20.75,188.8,177.59,33528.99,south,summer,Premium
+BOM-0254,Carpentry,Plywood,42.24,sqft,12.01,47.31,594.84,28141.88,north,normal,Standard
+BOM-0255,Plumbing,UPVC Pipe,50.26,sqft,15.65,58.13,359.03,20870.41,north,summer,Standard
+BOM-0256,Plumbing,CPVC Pipe,113.25,sqft,13.34,128.36,279.67,35898.44,south,summer,Standard
+BOM-0257,Painting,Putty,157.73,kg,23.53,194.84,141.27,27525.05,north,monsoon,Premium
+BOM-0258,Carpentry,Edge Band,298.93,sqft,12.85,337.34,828.17,279374.87,north,summer,Standard
+BOM-0259,Carpentry,Adhesive,256.58,kg,15.68,296.81,812.86,241264.98,north,summer,Premium
+BOM-0260,Electrical,Wires,107.49,sqft,9.1,117.27,506.27,59370.28,north,summer,Standard
+BOM-0261,Painting,Emulsion Paint,155.08,sqft,10.06,170.68,212.84,36327.53,south,summer,Premium
+BOM-0262,Carpentry,Plywood,111.46,sqft,17.73,131.22,441.97,57995.3,west,summer,Standard
+BOM-0263,Carpentry,Laminate,96.24,sqft,24.99,120.29,658.23,79178.49,west,normal,Premium
+BOM-0264,Plumbing,UPVC Pipe,26.76,sqft,24.53,33.32,592.41,19739.1,north,normal,Premium
+BOM-0265,Carpentry,Adhesive,264.0,kg,21.26,320.13,590.22,188947.13,south,summer,Premium
+BOM-0266,Plumbing,CPVC Pipe,273.66,sqft,8.94,298.13,146.78,43759.52,south,normal,Standard
+BOM-0267,Carpentry,Adhesive,100.18,kg,20.06,120.28,337.58,40604.12,west,normal,Standard
+BOM-0268,Carpentry,Hinges,62.91,sqft,24.26,78.17,276.03,21577.27,west,normal,Standard
+BOM-0269,Plumbing,CPVC Pipe,194.09,sqft,18.06,229.14,539.36,123588.95,south,monsoon,Premium
+BOM-0270,Plumbing,UPVC Pipe,17.15,sqft,22.68,21.04,109.85,2311.24,west,monsoon,Premium
+BOM-0271,Electrical,Wires,67.19,sqft,17.73,79.1,571.57,45211.19,south,normal,Premium
+BOM-0272,Electrical,Wires,287.21,sqft,16.21,333.77,732.03,244329.65,west,normal,Premium
+BOM-0273,Painting,Putty,26.53,kg,9.02,28.92,418.06,12090.3,north,normal,Standard
+BOM-0274,Painting,Emulsion Paint,183.96,sqft,13.31,208.45,657.79,137116.33,west,normal,Premium
+BOM-0275,Carpentry,Adhesive,229.4,kg,16.75,267.82,131.32,35170.12,south,normal,Standard
+BOM-0276,Carpentry,Hinges,137.63,sqft,10.39,151.93,83.52,12689.19,north,monsoon,Premium
+BOM-0277,Carpentry,Edge Band,288.99,sqft,23.34,356.44,739.59,263619.46,west,monsoon,Premium
+BOM-0278,Carpentry,Edge Band,230.12,sqft,16.47,268.02,482.66,129362.53,north,normal,Premium
+BOM-0279,Carpentry,Plywood,31.56,sqft,14.69,36.2,433.22,15682.56,south,summer,Premium
+BOM-0280,Carpentry,Plywood,19.91,sqft,16.41,23.18,798.81,18516.42,west,monsoon,Premium
+BOM-0281,Carpentry,Hinges,163.32,sqft,22.4,199.9,410.6,82078.94,north,monsoon,Premium
+BOM-0282,Painting,Primer,112.95,sqft,14.81,129.68,530.44,68787.46,south,normal,Premium
+BOM-0283,Carpentry,Laminate,118.97,sqft,15.66,137.6,512.88,70572.29,west,monsoon,Standard
+BOM-0284,Carpentry,Adhesive,292.65,kg,14.7,335.67,723.61,242894.17,north,monsoon,Premium
+BOM-0285,Carpentry,Adhesive,63.72,kg,16.66,74.34,470.07,34945.0,south,summer,Standard
+BOM-0286,Electrical,Switches,103.25,sqft,16.05,119.82,433.01,51883.26,west,monsoon,Standard
+BOM-0287,Painting,Emulsion Paint,279.75,sqft,13.42,317.29,377.94,119916.58,west,monsoon,Premium
+BOM-0288,Plumbing,UPVC Pipe,104.23,sqft,22.08,127.24,497.81,63341.34,west,monsoon,Premium
+BOM-0289,Painting,Putty,245.65,kg,14.26,280.68,619.47,173872.84,north,monsoon,Premium
+BOM-0290,Electrical,Switches,262.27,sqft,18.7,311.31,553.34,172260.28,north,monsoon,Standard
+BOM-0291,Electrical,Switches,20.15,sqft,16.17,23.41,490.84,11490.56,west,monsoon,Premium
+BOM-0292,Carpentry,Adhesive,247.39,kg,12.12,277.37,532.41,147674.56,west,summer,Standard
+BOM-0293,Carpentry,Plywood,135.11,sqft,15.12,155.54,395.15,61461.63,south,normal,Premium
+BOM-0294,Electrical,Switches,219.58,sqft,20.0,263.5,486.07,128079.44,west,normal,Premium
+BOM-0295,Plumbing,CPVC Pipe,116.16,sqft,24.26,144.34,435.31,62832.65,west,normal,Premium
+BOM-0296,Electrical,Wires,232.74,sqft,20.26,279.89,593.25,166044.74,west,normal,Premium
+BOM-0297,Carpentry,Edge Band,287.41,sqft,12.74,324.03,296.71,96142.94,north,normal,Standard
+BOM-0298,Electrical,Switches,212.97,sqft,13.39,241.49,339.97,82099.36,west,normal,Premium
+BOM-0299,Carpentry,Laminate,174.18,sqft,17.23,204.19,810.35,165465.37,north,normal,Standard
+BOM-0300,Carpentry,Hinges,17.41,sqft,24.24,21.63,107.97,2335.39,north,monsoon,Premium
+BOM-0301,Electrical,Switches,146.33,sqft,11.44,163.07,503.18,82053.56,west,monsoon,Premium
+BOM-0302,Carpentry,Adhesive,37.22,kg,20.6,44.89,245.78,11033.06,south,monsoon,Standard
+BOM-0303,Electrical,Wires,73.69,sqft,9.7,80.84,324.05,26196.2,north,summer,Standard
+BOM-0304,Carpentry,Plywood,289.53,sqft,24.62,360.81,175.83,63441.22,west,normal,Premium
+BOM-0305,Electrical,Wires,63.84,sqft,24.39,79.41,316.2,25109.44,west,summer,Standard
+BOM-0306,Electrical,Wires,174.37,sqft,17.1,204.19,661.88,135149.28,south,summer,Premium
+BOM-0307,Carpentry,Adhesive,280.51,kg,8.62,304.69,759.13,231299.32,north,summer,Premium
+BOM-0308,Carpentry,Plywood,7.73,sqft,17.66,9.1,132.28,1203.75,north,normal,Premium
+BOM-0309,Electrical,Wires,165.27,sqft,16.4,192.37,847.16,162968.17,west,normal,Premium
+BOM-0310,Carpentry,Edge Band,243.6,sqft,13.62,276.78,668.76,185099.39,west,normal,Standard
+BOM-0311,Carpentry,Plywood,222.3,sqft,21.44,269.96,528.29,142617.17,south,summer,Premium
+BOM-0312,Painting,Primer,157.01,sqft,9.47,171.88,615.56,105802.45,south,summer,Premium
+BOM-0313,Painting,Emulsion Paint,281.07,sqft,8.12,303.89,369.87,112399.79,north,normal,Premium
+BOM-0314,Carpentry,Hinges,176.83,sqft,17.74,208.2,264.94,55160.51,north,monsoon,Standard
+BOM-0315,Carpentry,Plywood,202.0,sqft,15.91,234.14,177.36,41527.07,west,monsoon,Premium
+BOM-0316,Electrical,Switches,39.64,sqft,23.57,48.98,293.73,14386.9,west,summer,Standard
+BOM-0317,Carpentry,Adhesive,146.06,kg,15.73,169.04,890.4,150513.22,north,normal,Premium
+BOM-0318,Plumbing,CPVC Pipe,241.59,sqft,22.04,294.84,695.2,204972.77,west,monsoon,Standard
+BOM-0319,Plumbing,CPVC Pipe,136.79,sqft,19.96,164.09,107.17,17585.53,west,summer,Standard
+BOM-0320,Plumbing,CPVC Pipe,271.35,sqft,11.44,302.39,501.53,151657.66,south,normal,Premium
+BOM-0321,Carpentry,Laminate,205.69,sqft,20.19,247.22,460.39,113817.62,west,normal,Standard
+BOM-0322,Painting,Putty,43.92,kg,15.06,50.53,524.96,26526.23,west,normal,Premium
+BOM-0323,Electrical,Switches,11.42,sqft,12.33,12.83,42.59,546.43,south,monsoon,Standard
+BOM-0324,Carpentry,Plywood,129.99,sqft,19.91,155.87,505.4,78776.7,south,summer,Premium
+BOM-0325,Carpentry,Plywood,89.69,sqft,11.06,99.61,156.47,15585.98,west,monsoon,Premium
+BOM-0326,Painting,Emulsion Paint,297.89,sqft,14.5,341.08,787.87,268726.7,north,normal,Standard
+BOM-0327,Electrical,Wires,289.42,sqft,22.87,355.61,154.37,54895.52,north,summer,Standard
+BOM-0328,Plumbing,CPVC Pipe,120.95,sqft,10.16,133.24,881.7,117477.71,south,summer,Premium
+BOM-0329,Painting,Putty,203.68,kg,17.26,238.84,497.46,118813.35,south,summer,Premium
+BOM-0330,Painting,Emulsion Paint,50.76,sqft,11.2,56.45,792.68,44746.79,south,summer,Premium
+BOM-0331,Plumbing,UPVC Pipe,230.99,sqft,23.02,284.16,53.46,15191.19,south,summer,Standard
+BOM-0332,Plumbing,UPVC Pipe,14.91,sqft,18.16,17.62,644.83,11361.9,south,summer,Standard
+BOM-0333,Painting,Primer,134.49,sqft,17.18,157.6,688.77,108550.15,south,summer,Premium
+BOM-0334,Carpentry,Edge Band,245.66,sqft,20.44,295.87,314.26,92980.11,west,monsoon,Premium
+BOM-0335,Carpentry,Edge Band,94.02,sqft,10.44,103.84,607.78,63111.88,south,normal,Premium
+BOM-0336,Carpentry,Hinges,22.98,sqft,24.12,28.52,796.55,22717.61,south,monsoon,Premium
+BOM-0337,Plumbing,CPVC Pipe,151.21,sqft,24.53,188.3,849.76,160009.81,west,normal,Premium
+BOM-0338,Electrical,Switches,127.82,sqft,10.54,141.29,363.76,51395.65,west,normal,Standard
+BOM-0339,Carpentry,Edge Band,93.72,sqft,20.03,112.49,732.97,82451.8,south,monsoon,Premium
+BOM-0340,Painting,Primer,169.4,sqft,10.28,186.81,248.86,46489.54,south,normal,Standard
+BOM-0341,Painting,Putty,254.9,kg,9.57,279.29,663.14,185208.37,south,summer,Premium
+BOM-0342,Painting,Primer,203.73,sqft,18.25,240.91,791.31,190634.49,south,monsoon,Standard
+BOM-0343,Painting,Putty,66.62,kg,23.42,82.22,300.74,24726.84,south,summer,Standard
+BOM-0344,Electrical,Switches,39.61,sqft,24.99,49.51,451.87,22372.08,south,monsoon,Standard
+BOM-0345,Painting,Primer,274.96,sqft,17.39,322.78,706.94,228186.09,north,normal,Premium
+BOM-0346,Carpentry,Hinges,82.16,sqft,16.72,95.9,467.66,44848.59,south,monsoon,Premium
+BOM-0347,Painting,Emulsion Paint,274.73,sqft,14.3,314.02,395.98,124345.64,west,summer,Standard
+BOM-0348,Carpentry,Plywood,81.93,sqft,23.89,101.5,538.06,54613.09,north,normal,Standard
+BOM-0349,Carpentry,Edge Band,102.31,sqft,14.46,117.1,756.69,88608.4,north,monsoon,Premium
+BOM-0350,Carpentry,Hinges,230.19,sqft,16.31,267.73,662.26,177306.87,west,normal,Premium
+BOM-0351,Carpentry,Adhesive,221.17,kg,13.99,252.11,160.36,40428.36,west,normal,Standard
+BOM-0352,Plumbing,CPVC Pipe,297.15,sqft,24.27,369.27,490.59,181160.17,south,monsoon,Standard
+BOM-0353,Carpentry,Plywood,126.66,sqft,22.32,154.93,239.03,37032.92,west,summer,Standard
+BOM-0354,Carpentry,Edge Band,154.19,sqft,14.34,176.3,571.34,100727.24,west,monsoon,Premium
+BOM-0355,Electrical,Wires,148.92,sqft,8.11,161.0,514.41,82820.01,south,summer,Premium
+BOM-0356,Plumbing,CPVC Pipe,293.36,sqft,8.29,317.68,739.32,234867.18,west,normal,Standard
+BOM-0357,Carpentry,Laminate,275.82,sqft,16.91,322.46,247.23,79721.79,west,monsoon,Premium
+BOM-0358,Painting,Emulsion Paint,83.86,sqft,14.75,96.23,360.82,34721.71,north,normal,Standard
+BOM-0359,Electrical,Switches,71.63,sqft,19.63,85.69,769.17,65910.18,west,monsoon,Standard
+BOM-0360,Carpentry,Laminate,124.56,sqft,14.41,142.51,449.36,64038.29,west,summer,Standard
+BOM-0361,Carpentry,Laminate,152.46,sqft,15.38,175.91,714.56,125698.25,west,summer,Standard
+BOM-0362,Carpentry,Edge Band,67.37,sqft,22.76,82.7,803.3,66432.91,north,normal,Standard
+BOM-0363,Carpentry,Laminate,206.91,sqft,12.77,233.33,507.01,118300.64,west,summer,Standard
+BOM-0364,Painting,Emulsion Paint,9.62,sqft,11.52,10.73,164.0,1759.72,west,normal,Standard
+BOM-0365,Carpentry,Hinges,52.92,sqft,12.09,59.32,757.8,44952.7,north,monsoon,Premium
+BOM-0366,Painting,Primer,227.9,sqft,10.38,251.56,890.09,223911.04,west,summer,Premium
+BOM-0367,Carpentry,Plywood,33.82,sqft,11.95,37.86,105.38,3989.69,west,monsoon,Premium
+BOM-0368,Painting,Emulsion Paint,13.74,sqft,12.65,15.48,893.62,13833.24,north,summer,Premium
+BOM-0369,Plumbing,CPVC Pipe,282.64,sqft,15.34,326.0,624.54,203600.04,west,normal,Standard
+BOM-0370,Plumbing,UPVC Pipe,92.14,sqft,12.19,103.37,103.22,10669.85,north,summer,Premium
+BOM-0371,Electrical,Switches,236.25,sqft,10.62,261.34,375.07,98020.79,north,summer,Standard
+BOM-0372,Carpentry,Plywood,283.17,sqft,15.56,327.23,694.76,227346.31,south,summer,Standard
+BOM-0373,Carpentry,Adhesive,132.14,kg,17.47,155.22,480.7,74614.25,south,summer,Standard
+BOM-0374,Painting,Emulsion Paint,168.49,sqft,18.15,199.07,714.62,142259.4,north,summer,Premium
+BOM-0375,Painting,Primer,119.4,sqft,9.44,130.67,814.98,106493.44,south,monsoon,Standard
+BOM-0376,Electrical,Wires,117.32,sqft,10.36,129.47,298.97,38707.65,north,summer,Standard
+BOM-0377,Carpentry,Adhesive,133.23,kg,15.16,153.43,456.44,70031.59,south,normal,Premium
+BOM-0378,Carpentry,Edge Band,217.67,sqft,16.43,253.43,570.34,144541.27,north,summer,Standard
+BOM-0379,Carpentry,Hinges,7.0,sqft,14.73,8.03,763.79,6133.23,north,normal,Premium
+BOM-0380,Painting,Emulsion Paint,132.03,sqft,22.0,161.08,599.89,96630.28,west,summer,Premium
+BOM-0381,Painting,Emulsion Paint,182.95,sqft,19.82,219.21,451.95,99071.96,south,normal,Premium
+BOM-0382,Carpentry,Hinges,221.79,sqft,18.76,263.4,872.28,229758.55,south,normal,Premium
+BOM-0383,Carpentry,Hinges,245.87,sqft,14.68,281.96,137.94,38893.56,west,summer,Standard
+BOM-0384,Electrical,Wires,231.45,sqft,8.46,251.03,665.4,167035.36,west,summer,Premium
+BOM-0385,Carpentry,Hinges,250.23,sqft,9.18,273.2,769.1,210118.12,north,monsoon,Premium
+BOM-0386,Carpentry,Adhesive,191.83,kg,12.11,215.06,606.45,130423.14,west,normal,Premium
+BOM-0387,Carpentry,Laminate,137.47,sqft,18.16,162.43,540.73,87830.77,west,monsoon,Premium
+BOM-0388,Plumbing,CPVC Pipe,15.85,sqft,24.46,19.73,643.41,12694.48,west,monsoon,Standard
+BOM-0389,Carpentry,Laminate,231.84,sqft,19.18,276.31,345.31,95412.61,west,monsoon,Standard
+BOM-0390,Plumbing,UPVC Pipe,295.16,sqft,19.52,352.78,383.67,135351.1,north,normal,Standard
+BOM-0391,Carpentry,Plywood,34.09,sqft,11.77,38.1,682.29,25995.25,west,monsoon,Standard
+BOM-0392,Painting,Putty,115.37,kg,15.87,133.68,624.42,83472.47,west,monsoon,Standard
+BOM-0393,Painting,Emulsion Paint,299.32,sqft,16.21,347.84,294.07,102289.31,south,summer,Standard
+BOM-0394,Painting,Emulsion Paint,97.01,sqft,15.74,112.28,217.91,24466.93,north,normal,Premium
+BOM-0395,Carpentry,Laminate,134.26,sqft,19.84,160.9,314.26,50564.43,north,summer,Standard
+BOM-0396,Carpentry,Plywood,255.51,sqft,19.02,304.11,622.34,189259.82,south,monsoon,Standard
+BOM-0397,Plumbing,CPVC Pipe,56.46,sqft,10.72,62.51,521.47,32597.09,north,summer,Premium
+BOM-0398,Electrical,Wires,59.41,sqft,18.89,70.63,411.64,29074.13,south,monsoon,Standard
+BOM-0399,Painting,Putty,179.7,kg,14.61,205.95,646.07,133058.12,south,normal,Standard
+BOM-0400,Plumbing,UPVC Pipe,35.02,sqft,22.82,43.01,200.79,8635.98,north,summer,Premium
+BOM-0401,Carpentry,Laminate,82.39,sqft,22.66,101.06,493.83,49906.46,west,normal,Premium
+BOM-0402,Plumbing,UPVC Pipe,120.8,sqft,9.94,132.81,342.71,45515.32,north,monsoon,Standard
+BOM-0403,Electrical,Wires,213.27,sqft,13.06,241.12,568.46,137067.08,south,monsoon,Standard
+BOM-0404,Painting,Emulsion Paint,39.77,sqft,13.19,45.02,197.42,8887.85,west,summer,Premium
+BOM-0405,Painting,Primer,180.95,sqft,17.77,213.1,403.81,86051.91,north,monsoon,Standard
+BOM-0406,Plumbing,CPVC Pipe,54.23,sqft,12.91,61.23,200.9,12301.11,north,monsoon,Standard
+BOM-0407,Painting,Emulsion Paint,285.79,sqft,16.24,332.2,207.81,69034.48,north,monsoon,Premium
+BOM-0408,Painting,Primer,206.99,sqft,15.07,238.18,762.31,181567.0,north,summer,Standard
+BOM-0409,Plumbing,UPVC Pipe,14.1,sqft,20.94,17.05,291.2,4964.96,north,summer,Premium
+BOM-0410,Carpentry,Adhesive,235.32,kg,17.62,276.78,704.39,194961.06,north,monsoon,Standard
+BOM-0411,Plumbing,UPVC Pipe,38.69,sqft,21.18,46.88,748.02,35067.18,north,monsoon,Standard
+BOM-0412,Electrical,Switches,135.2,sqft,11.72,151.05,405.63,61270.41,west,monsoon,Standard
+BOM-0413,Carpentry,Hinges,263.07,sqft,8.55,285.56,266.02,75964.67,south,normal,Standard
+BOM-0414,Carpentry,Edge Band,66.91,sqft,20.54,80.65,632.65,51023.22,west,monsoon,Premium
+BOM-0415,Carpentry,Adhesive,186.76,kg,21.34,226.61,739.64,167609.82,south,monsoon,Premium
+BOM-0416,Plumbing,CPVC Pipe,87.92,sqft,17.16,103.01,318.34,32792.2,west,normal,Premium
+BOM-0417,Plumbing,UPVC Pipe,83.87,sqft,22.59,102.82,887.52,91254.81,west,summer,Standard
+BOM-0418,Painting,Primer,276.04,sqft,24.87,344.69,785.66,270809.15,south,monsoon,Standard
+BOM-0419,Carpentry,Edge Band,48.14,sqft,13.48,54.63,252.9,13815.93,west,normal,Premium
+BOM-0420,Carpentry,Adhesive,175.34,kg,12.57,197.38,396.23,78207.88,north,summer,Standard
+BOM-0421,Painting,Primer,157.11,sqft,12.73,177.11,845.25,149702.23,north,normal,Premium
+BOM-0422,Painting,Emulsion Paint,176.68,sqft,22.77,216.91,768.56,166708.35,south,monsoon,Premium
+BOM-0423,Electrical,Wires,200.92,sqft,14.09,229.23,94.46,21653.07,west,normal,Standard
+BOM-0424,Painting,Primer,248.33,sqft,16.41,289.08,317.66,91829.15,north,normal,Standard
+BOM-0425,Plumbing,UPVC Pipe,256.46,sqft,21.4,311.34,808.97,251864.72,south,summer,Standard
+BOM-0426,Electrical,Wires,236.25,sqft,15.81,273.6,146.84,40175.42,south,normal,Premium
+BOM-0427,Carpentry,Plywood,297.59,sqft,15.27,343.03,896.3,307457.79,south,monsoon,Premium
+BOM-0428,Carpentry,Adhesive,262.95,kg,22.9,323.17,120.27,38867.66,north,normal,Standard
+BOM-0429,Painting,Emulsion Paint,201.03,sqft,19.03,239.29,84.54,20229.58,west,normal,Standard
+BOM-0430,Painting,Primer,198.37,sqft,19.96,237.96,40.93,9739.7,north,summer,Standard
+BOM-0431,Plumbing,UPVC Pipe,71.73,sqft,19.56,85.76,47.99,4115.62,west,normal,Standard
+BOM-0432,Painting,Primer,209.74,sqft,16.12,243.55,236.89,57694.56,south,monsoon,Standard
+BOM-0433,Carpentry,Laminate,97.44,sqft,22.98,119.83,157.93,18924.75,south,monsoon,Standard
+BOM-0434,Carpentry,Laminate,161.5,sqft,8.14,174.65,599.02,104618.84,north,normal,Standard
+BOM-0435,Electrical,Wires,225.74,sqft,23.64,279.1,569.83,159039.55,north,summer,Standard
+BOM-0436,Carpentry,Laminate,46.3,sqft,10.09,50.97,667.81,34038.28,north,normal,Premium
+BOM-0437,Carpentry,Adhesive,78.1,kg,18.96,92.91,253.42,23545.25,west,monsoon,Premium
+BOM-0438,Electrical,Switches,12.91,sqft,22.4,15.8,793.21,12532.72,south,monsoon,Standard
+BOM-0439,Electrical,Switches,120.57,sqft,18.98,143.45,714.07,102433.34,south,normal,Premium
+BOM-0440,Carpentry,Laminate,76.12,sqft,18.85,90.47,101.07,9143.8,south,normal,Premium
+BOM-0441,Carpentry,Adhesive,119.12,kg,22.26,145.64,401.94,58538.54,west,monsoon,Standard
+BOM-0442,Painting,Putty,286.56,kg,21.1,347.02,54.35,18860.54,south,summer,Premium
+BOM-0443,Carpentry,Edge Band,16.75,sqft,9.03,18.26,718.79,13125.11,west,normal,Premium
+BOM-0444,Painting,Primer,212.03,sqft,9.4,231.96,501.45,116316.34,west,summer,Premium
+BOM-0445,Carpentry,Laminate,96.42,sqft,16.69,112.51,214.75,24161.52,south,monsoon,Premium
+BOM-0446,Painting,Primer,178.0,sqft,20.97,215.33,598.86,128952.52,west,summer,Premium
+BOM-0447,Electrical,Switches,134.06,sqft,24.21,166.52,245.23,40835.7,south,summer,Premium
+BOM-0448,Carpentry,Laminate,138.74,sqft,18.35,164.2,305.99,50243.56,west,monsoon,Standard
+BOM-0449,Carpentry,Laminate,8.74,sqft,10.33,9.64,49.76,479.69,north,normal,Premium
+BOM-0450,Carpentry,Adhesive,114.7,kg,20.75,138.5,791.18,109578.43,west,summer,Standard
+BOM-0451,Painting,Emulsion Paint,243.1,sqft,12.62,273.78,94.93,25989.94,west,monsoon,Standard
+BOM-0452,Painting,Putty,139.28,kg,14.12,158.95,469.66,74652.46,west,summer,Premium
+BOM-0453,Carpentry,Adhesive,80.26,kg,9.75,88.09,533.56,47001.3,west,summer,Standard
+BOM-0454,Electrical,Switches,155.1,sqft,8.75,168.67,782.12,131920.18,south,summer,Premium
+BOM-0455,Painting,Emulsion Paint,117.98,sqft,10.55,130.43,840.8,109665.54,south,monsoon,Premium
+BOM-0456,Carpentry,Edge Band,99.93,sqft,15.08,115.0,659.45,75836.75,north,summer,Premium
+BOM-0457,Carpentry,Laminate,153.1,sqft,23.33,188.82,194.24,36676.4,west,summer,Premium
+BOM-0458,Carpentry,Laminate,263.71,sqft,22.72,323.62,705.23,228226.53,north,normal,Standard
+BOM-0459,Plumbing,CPVC Pipe,139.74,sqft,14.27,159.68,290.77,46430.15,north,monsoon,Standard
+BOM-0460,Painting,Putty,113.64,kg,24.52,141.5,898.1,127081.15,south,monsoon,Standard
+BOM-0461,Carpentry,Adhesive,6.88,kg,14.97,7.91,240.38,1901.41,north,monsoon,Standard
+BOM-0462,Painting,Emulsion Paint,5.43,sqft,19.17,6.47,770.15,4982.87,west,normal,Standard
+BOM-0463,Carpentry,Edge Band,161.3,sqft,12.05,180.74,463.14,83707.92,south,summer,Premium
+BOM-0464,Carpentry,Laminate,17.95,sqft,11.94,20.09,767.13,15411.64,north,monsoon,Premium
+BOM-0465,Painting,Putty,292.49,kg,9.44,320.1,122.2,39116.22,south,monsoon,Premium
+BOM-0466,Carpentry,Laminate,179.61,sqft,9.06,195.88,609.7,119428.04,south,summer,Premium
+BOM-0467,Carpentry,Hinges,256.02,sqft,23.74,316.8,377.94,119731.39,west,normal,Premium
+BOM-0468,Painting,Putty,85.23,kg,9.27,93.13,214.33,19960.55,west,summer,Standard
+BOM-0469,Carpentry,Laminate,53.49,sqft,15.92,62.01,389.6,24159.1,west,normal,Standard
+BOM-0470,Painting,Putty,95.95,kg,12.51,107.95,143.13,15450.88,south,monsoon,Premium
+BOM-0471,Electrical,Switches,210.58,sqft,8.69,228.88,758.9,173697.03,north,summer,Standard
+BOM-0472,Electrical,Switches,78.22,sqft,14.05,89.21,481.58,42961.75,west,normal,Premium
+BOM-0473,Carpentry,Adhesive,14.17,kg,14.87,16.28,428.89,6982.33,west,monsoon,Standard
+BOM-0474,Carpentry,Laminate,141.3,sqft,21.67,171.92,160.22,27545.02,south,summer,Standard
+BOM-0475,Carpentry,Adhesive,63.45,kg,14.81,72.85,630.21,45910.8,west,summer,Premium
+BOM-0476,Carpentry,Laminate,11.43,sqft,9.1,12.47,816.15,10177.39,north,summer,Standard
+BOM-0477,Painting,Emulsion Paint,41.15,sqft,24.02,51.03,83.55,4263.56,west,normal,Premium
+BOM-0478,Painting,Putty,13.7,kg,19.61,16.39,188.61,3091.32,south,summer,Premium
+BOM-0479,Carpentry,Hinges,136.57,sqft,10.53,150.95,568.13,85759.22,west,summer,Premium
+BOM-0480,Painting,Putty,126.54,kg,17.36,148.51,92.44,13728.26,north,normal,Standard
+BOM-0481,Painting,Primer,63.84,sqft,23.04,78.55,492.2,38662.31,west,monsoon,Standard
+BOM-0482,Painting,Primer,235.67,sqft,14.1,268.9,508.29,136679.18,north,normal,Premium
+BOM-0483,Painting,Primer,84.78,sqft,8.44,91.94,553.52,50890.63,south,normal,Standard
+BOM-0484,Painting,Putty,161.18,kg,21.04,195.09,899.66,175514.67,south,summer,Standard
+BOM-0485,Electrical,Wires,76.14,sqft,17.07,89.14,720.46,64221.8,west,summer,Standard
+BOM-0486,Plumbing,UPVC Pipe,254.72,sqft,21.56,309.64,345.13,106866.05,south,summer,Standard
+BOM-0487,Plumbing,UPVC Pipe,98.81,sqft,20.55,119.12,348.55,41519.28,west,summer,Premium
+BOM-0488,Plumbing,UPVC Pipe,171.26,sqft,17.57,201.35,201.88,40648.54,north,monsoon,Premium
+BOM-0489,Carpentry,Adhesive,149.68,kg,9.53,163.94,240.06,39355.44,south,summer,Premium
+BOM-0490,Carpentry,Plywood,102.86,sqft,18.44,121.83,733.54,89367.18,north,monsoon,Standard
+BOM-0491,Painting,Emulsion Paint,22.57,sqft,10.51,24.94,646.04,16112.24,south,summer,Premium
+BOM-0492,Carpentry,Laminate,115.21,sqft,24.01,142.87,380.21,54320.6,south,normal,Premium
+BOM-0493,Painting,Emulsion Paint,45.25,sqft,10.68,50.08,855.88,42862.47,west,normal,Premium
+BOM-0494,Carpentry,Adhesive,213.62,kg,17.55,251.11,805.06,202158.62,west,normal,Standard
+BOM-0495,Electrical,Wires,178.74,sqft,10.98,198.37,303.87,60278.69,west,normal,Standard
+BOM-0496,Carpentry,Adhesive,220.01,kg,24.13,273.1,855.88,233740.83,north,monsoon,Standard
+BOM-0497,Carpentry,Adhesive,182.7,kg,23.66,225.93,872.08,197029.03,south,monsoon,Standard
+BOM-0498,Painting,Putty,46.49,kg,20.67,56.1,244.68,13726.55,north,summer,Standard
+BOM-0499,Electrical,Switches,202.66,sqft,20.4,244.0,328.74,80212.56,south,normal,Standard
+BOM-0500,Carpentry,Edge Band,209.49,sqft,13.96,238.73,716.84,171131.21,west,summer,Standard
+BOM-0501,Painting,Primer,134.27,sqft,15.13,154.59,183.05,28297.7,north,normal,Premium
+BOM-0502,Painting,Emulsion Paint,166.08,sqft,9.72,182.22,452.36,82429.04,west,monsoon,Standard
+BOM-0503,Carpentry,Adhesive,138.13,kg,21.59,167.95,68.73,11543.2,south,normal,Premium
+BOM-0504,Carpentry,Laminate,26.89,sqft,10.89,29.82,362.89,10821.38,west,summer,Standard
+BOM-0505,Painting,Emulsion Paint,180.24,sqft,18.43,213.46,455.15,97156.32,south,normal,Standard
+BOM-0506,Plumbing,UPVC Pipe,267.48,sqft,10.67,296.02,127.08,37618.22,south,summer,Premium
+BOM-0507,Electrical,Switches,168.46,sqft,23.73,208.44,504.51,105160.06,west,normal,Premium
+BOM-0508,Carpentry,Edge Band,33.3,sqft,14.68,38.19,512.71,19580.39,north,summer,Standard
+BOM-0509,Painting,Emulsion Paint,6.13,sqft,9.49,6.71,748.55,5022.77,west,monsoon,Premium
+BOM-0510,Carpentry,Edge Band,33.61,sqft,11.52,37.48,588.84,22069.72,south,normal,Standard
+BOM-0511,Carpentry,Hinges,236.54,sqft,16.01,274.41,809.59,222159.59,north,summer,Premium
+BOM-0512,Carpentry,Adhesive,114.45,kg,14.48,131.02,200.46,26264.27,south,normal,Premium
+BOM-0513,Painting,Putty,82.7,kg,22.23,101.08,525.25,53092.27,south,monsoon,Standard
+BOM-0514,Carpentry,Laminate,202.1,sqft,21.74,246.04,396.03,97439.22,west,summer,Standard
+BOM-0515,Painting,Primer,246.43,sqft,15.12,283.69,500.54,141998.19,north,monsoon,Standard
+BOM-0516,Painting,Putty,93.16,kg,14.71,106.86,774.39,82751.32,south,monsoon,Standard
+BOM-0517,Carpentry,Laminate,285.03,sqft,15.63,329.58,856.19,282183.1,south,summer,Standard
+BOM-0518,Carpentry,Adhesive,17.59,kg,9.33,19.23,627.49,12066.63,south,monsoon,Standard
+BOM-0519,Plumbing,UPVC Pipe,81.08,sqft,23.48,100.12,826.19,82718.14,south,summer,Premium
+BOM-0520,Plumbing,CPVC Pipe,122.22,sqft,13.54,138.77,277.53,38512.84,north,summer,Premium
+BOM-0521,Carpentry,Laminate,127.26,sqft,10.52,140.65,545.62,76741.45,south,summer,Standard
+BOM-0522,Carpentry,Hinges,260.91,sqft,22.96,320.81,794.99,255040.74,north,normal,Premium
+BOM-0523,Plumbing,UPVC Pipe,184.64,sqft,8.64,200.59,276.86,55535.35,south,monsoon,Premium
+BOM-0524,Carpentry,Plywood,121.76,sqft,22.94,149.69,633.84,94879.51,south,monsoon,Premium
+BOM-0525,Carpentry,Hinges,269.62,sqft,8.34,292.11,742.95,217023.12,north,normal,Premium
+BOM-0526,Painting,Putty,258.18,kg,19.64,308.89,876.35,270695.75,south,summer,Premium
+BOM-0527,Electrical,Switches,135.72,sqft,22.04,165.63,271.7,45001.67,north,monsoon,Standard
+BOM-0528,Carpentry,Edge Band,135.31,sqft,23.53,167.15,390.17,65216.92,north,monsoon,Premium
+BOM-0529,Carpentry,Plywood,157.0,sqft,10.7,173.8,307.57,53455.67,west,normal,Standard
+BOM-0530,Plumbing,CPVC Pipe,264.4,sqft,8.49,286.85,205.78,59027.99,south,summer,Standard
+BOM-0531,Carpentry,Plywood,139.65,sqft,23.61,172.62,645.99,111510.79,north,normal,Premium
+BOM-0532,Plumbing,CPVC Pipe,122.1,sqft,23.69,151.03,625.81,94516.08,south,normal,Premium
+BOM-0533,Plumbing,UPVC Pipe,136.6,sqft,24.33,169.83,448.14,76107.62,west,normal,Premium
+BOM-0534,Carpentry,Adhesive,252.11,kg,12.4,283.37,754.55,213816.83,south,normal,Standard
+BOM-0535,Painting,Primer,19.65,sqft,22.51,24.07,710.65,17105.35,south,summer,Standard
+BOM-0536,Electrical,Wires,65.99,sqft,19.08,78.58,481.42,37829.98,west,summer,Premium
+BOM-0537,Carpentry,Adhesive,195.97,kg,18.22,231.68,47.28,10953.83,north,monsoon,Premium
+BOM-0538,Electrical,Switches,290.27,sqft,18.93,345.22,404.47,139631.13,north,normal,Premium
+BOM-0539,Carpentry,Hinges,69.37,sqft,13.14,78.49,487.75,38283.5,west,normal,Standard
+BOM-0540,Carpentry,Plywood,155.9,sqft,19.26,185.93,765.22,142277.35,north,monsoon,Premium
+BOM-0541,Carpentry,Hinges,206.9,sqft,16.19,240.4,329.2,79139.68,north,monsoon,Premium
+BOM-0542,Carpentry,Hinges,82.04,sqft,20.09,98.52,807.44,79548.99,north,summer,Standard
+BOM-0543,Plumbing,CPVC Pipe,230.81,sqft,23.29,284.57,732.67,208495.9,west,normal,Premium
+BOM-0544,Electrical,Wires,46.28,sqft,8.43,50.18,467.74,23471.19,north,normal,Premium
+BOM-0545,Painting,Primer,119.54,sqft,8.6,129.82,648.94,84245.39,west,summer,Premium
+BOM-0546,Electrical,Switches,215.44,sqft,19.67,257.82,588.95,151843.09,north,monsoon,Premium
+BOM-0547,Plumbing,CPVC Pipe,93.56,sqft,10.89,103.75,605.55,62825.81,west,summer,Premium
+BOM-0548,Carpentry,Laminate,143.88,sqft,20.6,173.52,663.66,115158.28,west,summer,Premium
+BOM-0549,Electrical,Wires,31.34,sqft,14.04,35.74,680.02,24303.91,north,normal,Premium
+BOM-0550,Painting,Emulsion Paint,81.86,sqft,13.0,92.5,772.04,71413.7,north,summer,Standard
+BOM-0551,Painting,Putty,267.38,kg,16.51,311.52,786.05,244870.3,north,monsoon,Premium
+BOM-0552,Painting,Primer,20.95,sqft,22.52,25.67,158.13,4059.2,south,normal,Premium
+BOM-0553,Plumbing,UPVC Pipe,268.39,sqft,24.77,334.87,163.17,54640.74,west,summer,Standard
+BOM-0554,Painting,Putty,103.13,kg,24.77,128.68,309.54,39831.61,south,summer,Premium
+BOM-0555,Carpentry,Hinges,66.77,sqft,21.15,80.89,535.6,43324.68,south,normal,Standard
+BOM-0556,Carpentry,Adhesive,186.27,kg,18.77,221.23,386.92,85598.31,north,normal,Standard
+BOM-0557,Carpentry,Plywood,162.47,sqft,20.42,195.65,857.06,167683.79,north,monsoon,Standard
+BOM-0558,Carpentry,Plywood,204.64,sqft,18.65,242.81,253.99,61671.31,west,normal,Premium
+BOM-0559,Carpentry,Adhesive,35.3,kg,16.56,41.15,303.26,12479.15,south,summer,Premium
+BOM-0560,Carpentry,Hinges,139.5,sqft,16.84,162.99,490.74,79985.71,north,monsoon,Standard
+BOM-0561,Painting,Emulsion Paint,298.86,sqft,16.33,347.66,685.1,238181.87,south,normal,Standard
+BOM-0562,Carpentry,Edge Band,71.17,sqft,24.74,88.78,221.62,19675.42,south,monsoon,Standard
+BOM-0563,Carpentry,Laminate,113.14,sqft,19.06,134.7,72.13,9715.91,west,normal,Standard
+BOM-0564,Plumbing,UPVC Pipe,298.43,sqft,19.25,355.88,602.07,214264.67,south,summer,Standard
+BOM-0565,Painting,Primer,136.07,sqft,10.1,149.81,257.35,38553.6,west,summer,Standard
+BOM-0566,Electrical,Switches,207.29,sqft,8.16,224.2,401.95,90117.19,south,monsoon,Premium
+BOM-0567,Plumbing,UPVC Pipe,183.66,sqft,10.33,202.63,754.36,152855.97,south,monsoon,Standard
+BOM-0568,Carpentry,Hinges,38.63,sqft,9.81,42.42,210.84,8943.83,south,normal,Standard
+BOM-0569,Painting,Emulsion Paint,212.51,sqft,13.02,240.18,73.89,17746.9,north,summer,Premium
+BOM-0570,Painting,Emulsion Paint,74.18,sqft,8.22,80.28,116.54,9355.83,south,monsoon,Premium
+BOM-0571,Carpentry,Adhesive,285.09,kg,21.25,345.67,104.54,36136.34,west,summer,Premium
+BOM-0572,Electrical,Wires,73.19,sqft,24.81,91.35,294.58,26909.88,north,summer,Standard
+BOM-0573,Carpentry,Adhesive,262.87,kg,22.49,321.99,349.78,112625.66,west,normal,Premium
+BOM-0574,Electrical,Switches,39.19,sqft,22.47,48.0,805.65,38671.2,south,summer,Standard
+BOM-0575,Painting,Emulsion Paint,110.47,sqft,15.44,127.53,574.75,73297.87,west,summer,Premium
+BOM-0576,Painting,Emulsion Paint,58.95,sqft,14.81,67.68,867.59,58718.49,north,normal,Premium
+BOM-0577,Painting,Primer,196.41,sqft,21.55,238.74,137.23,32762.29,west,monsoon,Standard
+BOM-0578,Carpentry,Adhesive,35.6,kg,23.49,43.96,455.1,20006.2,west,monsoon,Premium
+BOM-0579,Carpentry,Adhesive,185.34,kg,21.25,224.72,565.77,127139.83,west,monsoon,Standard
+BOM-0580,Painting,Putty,276.52,kg,9.92,303.95,393.7,119665.11,south,summer,Premium
+BOM-0581,Electrical,Wires,97.7,sqft,19.98,117.22,623.02,73030.4,west,monsoon,Standard
+BOM-0582,Electrical,Wires,262.58,sqft,16.82,306.75,631.89,193832.26,west,summer,Premium
+BOM-0583,Electrical,Wires,219.36,sqft,16.19,254.87,610.79,155672.05,west,normal,Standard
+BOM-0584,Plumbing,CPVC Pipe,268.16,sqft,18.42,317.56,50.01,15881.18,south,monsoon,Premium
+BOM-0585,Painting,Putty,261.48,kg,9.27,285.72,462.82,132236.93,south,normal,Premium
+BOM-0586,Carpentry,Plywood,154.54,sqft,17.36,181.37,365.63,66314.31,south,summer,Premium
+BOM-0587,Painting,Putty,241.37,kg,15.62,279.07,776.67,216745.3,north,normal,Standard
+BOM-0588,Painting,Putty,224.85,kg,8.3,243.51,386.96,94228.63,south,monsoon,Standard
+BOM-0589,Carpentry,Laminate,238.58,sqft,24.37,296.72,588.28,174554.44,west,monsoon,Standard
+BOM-0590,Electrical,Wires,203.08,sqft,24.16,252.14,352.47,88871.79,south,summer,Premium
+BOM-0591,Painting,Emulsion Paint,170.24,sqft,18.54,201.8,446.89,90182.4,west,normal,Premium
+BOM-0592,Carpentry,Laminate,33.74,sqft,19.2,40.22,41.89,1684.82,north,monsoon,Premium
+BOM-0593,Plumbing,CPVC Pipe,158.99,sqft,19.94,190.69,79.37,15135.07,south,normal,Standard
+BOM-0594,Electrical,Switches,224.04,sqft,14.96,257.56,258.69,66628.2,south,summer,Standard
+BOM-0595,Painting,Primer,68.6,sqft,22.02,83.71,203.9,17068.47,north,summer,Premium
+BOM-0596,Carpentry,Plywood,278.35,sqft,22.24,340.26,546.38,185911.26,north,normal,Standard
+BOM-0597,Painting,Putty,6.28,kg,20.52,7.57,515.77,3904.38,north,monsoon,Premium
+BOM-0598,Plumbing,CPVC Pipe,235.42,sqft,23.47,290.67,634.96,184563.82,south,monsoon,Standard
+BOM-0599,Carpentry,Laminate,119.28,sqft,18.21,141.0,799.12,112675.92,west,normal,Premium
+BOM-0600,Plumbing,UPVC Pipe,275.19,sqft,20.96,332.87,275.29,91635.78,north,normal,Premium
+BOM-0601,Carpentry,Adhesive,45.76,kg,18.24,54.11,802.34,43414.62,west,normal,Premium
+BOM-0602,Electrical,Switches,222.36,sqft,17.41,261.07,226.91,59239.39,south,monsoon,Premium
+BOM-0603,Electrical,Wires,106.86,sqft,19.43,127.62,883.95,112809.7,west,summer,Premium
+BOM-0604,Electrical,Switches,39.04,sqft,13.99,44.5,453.12,20163.84,west,monsoon,Premium
+BOM-0605,Electrical,Wires,225.62,sqft,22.3,275.93,285.9,78888.39,north,summer,Standard
+BOM-0606,Carpentry,Plywood,117.36,sqft,8.9,127.81,88.68,11334.19,north,summer,Premium
+BOM-0607,Electrical,Wires,78.92,sqft,22.27,96.5,633.91,61172.31,north,summer,Standard
+BOM-0608,Painting,Emulsion Paint,245.14,sqft,9.74,269.02,786.51,211586.92,west,monsoon,Standard
+BOM-0609,Electrical,Switches,195.9,sqft,14.61,224.52,479.39,107632.64,west,normal,Standard
+BOM-0610,Painting,Primer,119.33,sqft,24.26,148.28,879.21,130369.26,north,monsoon,Standard
+BOM-0611,Carpentry,Plywood,224.38,sqft,11.45,250.07,787.21,196857.6,north,summer,Premium
+BOM-0612,Plumbing,UPVC Pipe,166.25,sqft,18.26,196.61,707.49,139099.61,south,normal,Premium
+BOM-0613,Carpentry,Adhesive,295.12,kg,9.27,322.48,867.73,279825.57,west,monsoon,Standard
+BOM-0614,Painting,Primer,16.99,sqft,12.74,19.15,267.25,5117.84,south,monsoon,Premium
+BOM-0615,Carpentry,Plywood,102.52,sqft,20.06,123.09,173.13,21310.57,south,normal,Standard
+BOM-0616,Electrical,Wires,186.6,sqft,19.25,222.52,461.87,102775.31,west,monsoon,Premium
+BOM-0617,Carpentry,Laminate,236.29,sqft,13.4,267.95,229.17,61406.1,south,monsoon,Standard
+BOM-0618,Plumbing,CPVC Pipe,52.01,sqft,17.23,60.97,386.94,23591.73,north,summer,Standard
+BOM-0619,Electrical,Wires,102.91,sqft,14.13,117.45,227.86,26762.16,west,monsoon,Premium
+BOM-0620,Plumbing,CPVC Pipe,247.99,sqft,24.68,309.19,47.57,14708.17,west,normal,Premium
+BOM-0621,Carpentry,Edge Band,271.83,sqft,18.43,321.93,574.17,184842.55,south,monsoon,Premium
+BOM-0622,Painting,Primer,275.2,sqft,24.06,341.41,371.85,126953.31,west,monsoon,Premium
+BOM-0623,Carpentry,Plywood,273.84,sqft,21.98,334.03,362.46,121072.51,west,normal,Premium
+BOM-0624,Carpentry,Plywood,92.45,sqft,19.08,110.09,315.47,34730.09,south,summer,Standard
+BOM-0625,Plumbing,CPVC Pipe,162.3,sqft,18.66,192.59,221.27,42614.39,west,summer,Premium
+BOM-0626,Carpentry,Laminate,65.65,sqft,22.09,80.15,795.63,63769.74,west,normal,Standard
+BOM-0627,Electrical,Switches,207.38,sqft,8.4,224.8,656.51,147583.45,south,summer,Standard
+BOM-0628,Carpentry,Plywood,57.51,sqft,12.28,64.57,100.58,6494.45,south,normal,Premium
+BOM-0629,Painting,Primer,138.08,sqft,14.88,158.63,312.11,49510.01,north,monsoon,Standard
+BOM-0630,Plumbing,CPVC Pipe,6.74,sqft,20.24,8.1,94.38,764.48,west,monsoon,Standard
+BOM-0631,Electrical,Switches,255.23,sqft,14.08,291.17,472.44,137560.35,north,monsoon,Premium
+BOM-0632,Plumbing,UPVC Pipe,30.52,sqft,21.01,36.93,416.4,15377.65,north,monsoon,Standard
+BOM-0633,Painting,Putty,51.12,kg,11.74,57.12,682.21,38967.84,west,normal,Standard
+BOM-0634,Carpentry,Hinges,204.8,sqft,23.54,253.01,723.71,183105.87,west,monsoon,Premium
+BOM-0635,Carpentry,Plywood,168.29,sqft,17.44,197.64,145.98,28851.49,south,monsoon,Premium
+BOM-0636,Plumbing,CPVC Pipe,166.52,sqft,9.45,182.26,220.65,40215.67,west,monsoon,Premium
+BOM-0637,Carpentry,Edge Band,126.73,sqft,18.98,150.78,480.8,72495.02,south,summer,Standard
+BOM-0638,Plumbing,UPVC Pipe,251.25,sqft,11.3,279.64,195.97,54801.05,west,summer,Premium
+BOM-0639,Electrical,Wires,167.15,sqft,12.94,188.78,97.93,18487.23,south,summer,Premium
+BOM-0640,Painting,Emulsion Paint,110.36,sqft,19.41,131.78,241.7,31851.23,north,monsoon,Standard
+BOM-0641,Carpentry,Edge Band,98.75,sqft,15.66,114.21,570.05,65105.41,north,monsoon,Standard
+BOM-0642,Plumbing,UPVC Pipe,172.22,sqft,21.73,209.64,864.45,181223.3,south,summer,Premium
+BOM-0643,Carpentry,Edge Band,236.77,sqft,20.11,284.38,591.12,168102.71,north,normal,Standard
+BOM-0644,Electrical,Wires,221.23,sqft,22.92,271.94,438.05,119123.32,north,normal,Premium
+BOM-0645,Plumbing,CPVC Pipe,37.11,sqft,18.97,44.15,110.5,4878.57,north,summer,Standard
+BOM-0646,Carpentry,Hinges,221.4,sqft,18.65,262.69,665.59,174843.84,south,monsoon,Standard
+BOM-0647,Plumbing,UPVC Pipe,175.78,sqft,21.08,212.83,222.97,47454.71,south,monsoon,Premium
+BOM-0648,Plumbing,CPVC Pipe,268.73,sqft,17.17,314.87,602.36,189665.09,south,normal,Premium
+BOM-0649,Carpentry,Edge Band,267.97,sqft,18.02,316.26,777.16,245784.62,south,normal,Standard
+BOM-0650,Painting,Primer,112.34,sqft,8.18,121.53,245.44,29828.32,west,monsoon,Standard
+BOM-0651,Plumbing,CPVC Pipe,46.41,sqft,10.71,51.38,527.07,27080.86,west,monsoon,Standard
+BOM-0652,Electrical,Switches,220.94,sqft,23.97,273.9,74.76,20476.76,north,summer,Standard
+BOM-0653,Carpentry,Hinges,113.98,sqft,8.73,123.93,217.83,26995.67,north,normal,Premium
+BOM-0654,Painting,Putty,265.06,kg,8.68,288.07,597.73,172188.08,south,monsoon,Premium
+BOM-0655,Electrical,Switches,82.68,sqft,17.25,96.94,189.51,18371.1,west,normal,Premium
+BOM-0656,Plumbing,UPVC Pipe,197.73,sqft,22.2,241.63,484.33,117028.66,north,summer,Premium
+BOM-0657,Painting,Emulsion Paint,246.08,sqft,13.87,280.21,721.69,202224.75,west,summer,Standard
+BOM-0658,Painting,Putty,53.85,kg,9.31,58.86,593.39,34926.94,south,summer,Standard
+BOM-0659,Carpentry,Adhesive,111.86,kg,20.19,134.44,141.76,19058.21,south,normal,Premium
+BOM-0660,Electrical,Switches,38.43,sqft,19.48,45.92,451.96,20754.0,west,summer,Premium
+BOM-0661,Carpentry,Plywood,76.88,sqft,10.17,84.7,549.42,46535.87,south,monsoon,Standard
+BOM-0662,Plumbing,UPVC Pipe,48.33,sqft,10.83,53.56,833.3,44631.55,west,normal,Standard
+BOM-0663,Electrical,Switches,219.75,sqft,21.96,268.01,854.64,229052.07,south,normal,Premium
+BOM-0664,Painting,Putty,55.32,kg,22.12,67.56,556.72,37612.0,west,summer,Premium
+BOM-0665,Carpentry,Adhesive,218.64,kg,13.83,248.88,429.98,107013.42,west,summer,Standard
+BOM-0666,Painting,Primer,118.71,sqft,9.85,130.4,214.02,27908.21,west,monsoon,Premium
+BOM-0667,Carpentry,Adhesive,183.63,kg,11.02,203.87,815.38,166231.52,west,summer,Standard
+BOM-0668,Carpentry,Laminate,147.26,sqft,10.22,162.31,558.99,90729.67,south,monsoon,Premium
+BOM-0669,Plumbing,CPVC Pipe,129.1,sqft,22.87,158.63,639.97,101518.44,north,summer,Premium
+BOM-0670,Painting,Primer,108.4,sqft,21.68,131.9,820.76,108258.24,west,monsoon,Standard
+BOM-0671,Painting,Primer,44.5,sqft,16.11,51.67,239.96,12398.73,south,normal,Premium
+BOM-0672,Carpentry,Hinges,60.76,sqft,20.06,72.95,718.9,52443.75,west,monsoon,Standard
+BOM-0673,Plumbing,CPVC Pipe,7.12,sqft,19.13,8.48,631.48,5354.95,north,normal,Premium
+BOM-0674,Carpentry,Laminate,50.66,sqft,19.08,60.33,258.12,15572.38,west,normal,Premium
+BOM-0675,Plumbing,UPVC Pipe,86.29,sqft,19.57,103.18,689.28,71119.91,north,monsoon,Premium
+BOM-0676,Carpentry,Adhesive,114.21,kg,17.43,134.12,258.25,34636.49,north,monsoon,Premium
+BOM-0677,Electrical,Switches,122.45,sqft,10.35,135.12,782.89,105784.1,south,monsoon,Standard
+BOM-0678,Painting,Putty,236.02,kg,24.14,293.0,126.24,36988.32,west,normal,Premium
+BOM-0679,Plumbing,CPVC Pipe,186.14,sqft,19.64,222.7,84.77,18878.28,north,monsoon,Standard
+BOM-0680,Carpentry,Laminate,247.86,sqft,16.02,287.57,556.21,159949.31,south,summer,Premium
+BOM-0681,Carpentry,Edge Band,114.4,sqft,18.35,135.39,663.07,89773.05,north,monsoon,Premium
+BOM-0682,Electrical,Switches,289.24,sqft,8.98,315.21,705.3,222317.61,south,monsoon,Premium
+BOM-0683,Painting,Putty,8.16,kg,22.46,9.99,840.45,8396.1,west,normal,Standard
+BOM-0684,Carpentry,Plywood,236.27,sqft,16.68,275.68,640.67,176619.91,west,summer,Standard
+BOM-0685,Painting,Emulsion Paint,75.58,sqft,8.0,81.63,175.4,14317.9,north,normal,Premium
+BOM-0686,Electrical,Wires,121.57,sqft,17.96,143.4,485.26,69586.28,west,monsoon,Standard
+BOM-0687,Carpentry,Laminate,167.13,sqft,20.34,201.12,520.84,104751.34,west,normal,Premium
+BOM-0688,Carpentry,Hinges,71.76,sqft,24.37,89.25,431.09,38474.78,north,monsoon,Standard
+BOM-0689,Carpentry,Hinges,56.64,sqft,16.61,66.05,520.42,34373.74,west,normal,Premium
+BOM-0690,Carpentry,Laminate,241.87,sqft,24.26,300.55,793.46,238474.4,west,normal,Premium
+BOM-0691,Painting,Primer,171.13,sqft,21.09,207.22,691.43,143278.12,north,monsoon,Premium
+BOM-0692,Plumbing,UPVC Pipe,259.3,sqft,16.19,301.28,261.72,78851.0,north,monsoon,Standard
+BOM-0693,Electrical,Wires,211.85,sqft,21.6,257.61,394.69,101676.09,north,monsoon,Standard
+BOM-0694,Electrical,Switches,250.49,sqft,12.22,281.1,119.99,33729.19,west,monsoon,Premium
+BOM-0695,Carpentry,Laminate,168.59,sqft,11.03,187.19,309.93,58015.8,south,monsoon,Premium
+BOM-0696,Carpentry,Adhesive,284.4,kg,19.61,340.17,822.54,279803.43,north,monsoon,Standard
+BOM-0697,Carpentry,Edge Band,221.95,sqft,22.84,272.64,217.83,59389.17,south,summer,Premium
+BOM-0698,Carpentry,Adhesive,234.79,kg,10.04,258.36,107.5,27773.7,west,normal,Standard
+BOM-0699,Plumbing,CPVC Pipe,287.61,sqft,22.42,352.09,359.23,126481.29,north,normal,Premium
+BOM-0700,Painting,Putty,58.95,kg,20.99,71.32,479.57,34202.93,north,summer,Standard
+BOM-0701,Carpentry,Plywood,160.09,sqft,15.19,184.41,848.1,156398.12,south,monsoon,Premium
+BOM-0702,Painting,Primer,258.82,sqft,21.19,313.66,433.19,135874.38,south,monsoon,Premium
+BOM-0703,Painting,Emulsion Paint,208.32,sqft,8.2,225.4,221.25,49869.75,west,summer,Premium
+BOM-0704,Painting,Emulsion Paint,185.77,sqft,12.41,208.82,511.76,106865.72,south,normal,Premium
+BOM-0705,Plumbing,UPVC Pipe,106.21,sqft,11.13,118.03,404.59,47753.76,north,monsoon,Premium
+BOM-0706,Painting,Emulsion Paint,257.03,sqft,12.75,289.8,194.7,56424.06,south,monsoon,Standard
+BOM-0707,Carpentry,Laminate,217.64,sqft,21.67,264.8,517.59,137057.83,north,summer,Standard
+BOM-0708,Electrical,Switches,49.12,sqft,21.7,59.78,191.88,11470.59,north,summer,Premium
+BOM-0709,Painting,Putty,93.51,kg,17.56,109.93,528.34,58080.42,north,summer,Standard
+BOM-0710,Carpentry,Plywood,68.56,sqft,12.32,77.01,761.52,58644.66,south,normal,Premium
+BOM-0711,Carpentry,Hinges,111.48,sqft,17.53,131.02,841.39,110238.92,north,normal,Standard
+BOM-0712,Painting,Primer,40.77,sqft,22.75,50.05,868.28,43457.41,south,monsoon,Standard
+BOM-0713,Carpentry,Hinges,109.76,sqft,19.44,131.1,459.24,60206.36,west,normal,Standard
+BOM-0714,Painting,Primer,186.03,sqft,15.88,215.57,862.67,185965.77,south,monsoon,Premium
+BOM-0715,Painting,Primer,191.23,sqft,17.72,225.12,770.05,173353.66,south,summer,Standard
+BOM-0716,Painting,Emulsion Paint,72.32,sqft,13.39,82.0,290.57,23826.74,north,monsoon,Premium
+BOM-0717,Carpentry,Hinges,266.87,sqft,21.28,323.66,847.34,274250.06,west,monsoon,Premium
+BOM-0718,Painting,Primer,54.36,sqft,22.52,66.6,147.53,9825.5,south,monsoon,Premium
+BOM-0719,Electrical,Switches,211.71,sqft,9.36,231.53,183.54,42495.02,south,summer,Standard
+BOM-0720,Painting,Putty,166.79,kg,8.45,180.88,381.43,68993.06,south,summer,Premium
+BOM-0721,Plumbing,UPVC Pipe,50.81,sqft,19.13,60.53,801.51,48515.4,north,summer,Standard
+BOM-0722,Electrical,Switches,88.83,sqft,18.65,105.4,152.9,16115.66,south,summer,Standard
+BOM-0723,Electrical,Wires,110.27,sqft,23.56,136.25,783.25,106717.81,north,monsoon,Premium
+BOM-0724,Plumbing,CPVC Pipe,136.23,sqft,24.48,169.58,639.96,108524.42,south,monsoon,Premium
+BOM-0725,Electrical,Wires,225.93,sqft,22.91,277.69,414.08,114985.88,west,monsoon,Premium
+BOM-0726,Painting,Emulsion Paint,147.09,sqft,11.86,164.53,117.02,19253.3,north,normal,Premium
+BOM-0727,Carpentry,Hinges,50.94,sqft,8.18,55.11,490.05,27006.66,south,normal,Premium
+BOM-0728,Painting,Putty,162.85,kg,19.69,194.92,463.06,90259.66,north,normal,Standard
+BOM-0729,Painting,Primer,240.4,sqft,18.15,284.03,725.22,205984.24,west,normal,Standard
+BOM-0730,Painting,Primer,265.24,sqft,15.43,306.17,254.91,78045.79,west,monsoon,Premium
+BOM-0731,Painting,Primer,70.07,sqft,9.35,76.62,577.78,44269.5,west,monsoon,Premium
+BOM-0732,Carpentry,Hinges,196.29,sqft,17.04,229.74,271.19,62303.19,south,summer,Standard
+BOM-0733,Carpentry,Adhesive,90.43,kg,18.83,107.46,571.25,61386.52,north,monsoon,Premium
+BOM-0734,Carpentry,Edge Band,99.59,sqft,10.59,110.14,873.96,96257.95,south,summer,Standard
+BOM-0735,Carpentry,Hinges,84.41,sqft,20.16,101.43,665.31,67482.39,south,summer,Standard
+BOM-0736,Carpentry,Plywood,150.61,sqft,13.81,171.41,307.96,52787.42,north,normal,Premium
+BOM-0737,Electrical,Switches,238.47,sqft,13.61,270.93,765.45,207383.37,south,summer,Premium
+BOM-0738,Painting,Primer,26.06,sqft,15.99,30.23,205.29,6205.92,north,normal,Standard
+BOM-0739,Carpentry,Laminate,292.51,sqft,20.15,351.45,370.93,130363.35,north,summer,Standard
+BOM-0740,Carpentry,Edge Band,140.95,sqft,21.11,170.7,488.18,83332.33,south,normal,Premium
+BOM-0741,Electrical,Wires,288.56,sqft,23.92,357.58,176.41,63080.69,west,summer,Standard
+BOM-0742,Carpentry,Hinges,146.96,sqft,13.08,166.18,349.97,58158.01,south,monsoon,Standard
+BOM-0743,Carpentry,Laminate,74.61,sqft,15.38,86.09,52.96,4559.33,north,monsoon,Standard
+BOM-0744,Painting,Primer,237.8,sqft,8.15,257.18,76.11,19573.97,west,normal,Standard
+BOM-0745,Painting,Emulsion Paint,232.39,sqft,12.23,260.81,469.93,122562.44,west,monsoon,Premium
+BOM-0746,Electrical,Wires,22.72,sqft,14.04,25.91,172.37,4466.11,west,summer,Standard
+BOM-0747,Painting,Putty,73.64,kg,24.69,91.82,718.16,65941.45,north,normal,Standard
+BOM-0748,Carpentry,Plywood,208.33,sqft,14.09,237.68,155.87,37047.18,south,normal,Premium
+BOM-0749,Plumbing,CPVC Pipe,91.94,sqft,19.85,110.19,203.21,22391.71,south,monsoon,Premium
+BOM-0750,Painting,Emulsion Paint,221.06,sqft,12.68,249.09,754.96,188052.99,west,summer,Standard
+BOM-0751,Plumbing,CPVC Pipe,50.73,sqft,13.03,57.34,266.48,15279.96,north,normal,Standard
+BOM-0752,Electrical,Wires,154.26,sqft,20.47,185.84,799.32,148545.63,west,normal,Standard
+BOM-0753,Painting,Emulsion Paint,217.7,sqft,19.19,259.48,503.5,130648.18,north,summer,Premium
+BOM-0754,Plumbing,CPVC Pipe,50.47,sqft,12.81,56.94,392.43,22344.96,north,summer,Standard
+BOM-0755,Plumbing,CPVC Pipe,199.37,sqft,8.74,216.79,846.51,183514.9,south,summer,Standard
+BOM-0756,Carpentry,Laminate,148.18,sqft,9.68,162.52,531.07,86309.5,north,monsoon,Premium
+BOM-0757,Plumbing,CPVC Pipe,189.07,sqft,18.04,223.18,82.21,18347.63,south,monsoon,Standard
+BOM-0758,Carpentry,Plywood,279.41,sqft,11.55,311.68,462.61,144186.28,south,normal,Standard
+BOM-0759,Painting,Emulsion Paint,169.62,sqft,23.95,210.24,397.72,83616.65,north,monsoon,Standard
+BOM-0760,Plumbing,UPVC Pipe,83.42,sqft,8.69,90.67,100.53,9115.06,north,summer,Standard
+BOM-0761,Plumbing,CPVC Pipe,33.65,sqft,20.33,40.49,497.23,20132.84,south,summer,Standard
+BOM-0762,Plumbing,UPVC Pipe,189.47,sqft,11.04,210.39,684.31,143971.98,north,monsoon,Standard
+BOM-0763,Electrical,Wires,175.09,sqft,19.47,209.18,644.19,134751.66,north,summer,Standard
+BOM-0764,Carpentry,Adhesive,167.24,kg,16.58,194.97,605.48,118050.44,west,monsoon,Premium
+BOM-0765,Painting,Emulsion Paint,271.23,sqft,17.35,318.29,897.29,285598.43,north,normal,Premium
+BOM-0766,Electrical,Switches,100.42,sqft,12.09,112.56,509.24,57320.05,north,monsoon,Premium
+BOM-0767,Painting,Emulsion Paint,288.69,sqft,15.61,333.75,381.5,127325.62,west,summer,Premium
+BOM-0768,Plumbing,UPVC Pipe,9.81,sqft,10.3,10.82,805.68,8717.46,south,normal,Standard
+BOM-0769,Carpentry,Edge Band,257.44,sqft,8.37,278.99,746.87,208369.26,west,normal,Standard
+BOM-0770,Carpentry,Laminate,16.13,sqft,14.05,18.4,159.03,2926.15,north,monsoon,Standard
+BOM-0771,Carpentry,Edge Band,80.59,sqft,13.11,91.16,530.62,48371.32,west,summer,Standard
+BOM-0772,Electrical,Switches,100.78,sqft,16.2,117.11,459.92,53861.23,west,monsoon,Standard
+BOM-0773,Plumbing,UPVC Pipe,194.47,sqft,8.64,211.27,735.17,155319.37,north,summer,Standard
+BOM-0774,Painting,Emulsion Paint,107.64,sqft,21.89,131.2,398.21,52245.15,south,summer,Standard
+BOM-0775,Electrical,Wires,234.34,sqft,14.5,268.32,302.11,81062.16,south,normal,Standard
+BOM-0776,Painting,Emulsion Paint,153.21,sqft,11.75,171.21,83.45,14287.47,west,normal,Premium
+BOM-0777,Plumbing,UPVC Pipe,174.7,sqft,9.53,191.35,411.46,78732.87,north,summer,Standard
+BOM-0778,Painting,Emulsion Paint,29.35,sqft,17.71,34.55,82.41,2847.27,north,normal,Standard
+BOM-0779,Painting,Primer,153.04,sqft,21.16,185.42,152.12,28206.09,south,normal,Standard
+BOM-0780,Painting,Putty,121.62,kg,17.71,143.16,522.6,74815.42,west,monsoon,Standard
+BOM-0781,Carpentry,Edge Band,26.13,sqft,21.21,31.67,318.13,10075.18,west,summer,Standard
+BOM-0782,Electrical,Wires,127.01,sqft,14.21,145.06,203.82,29566.13,north,monsoon,Standard
+BOM-0783,Carpentry,Hinges,54.93,sqft,13.95,62.59,746.56,46727.19,north,monsoon,Standard
+BOM-0784,Painting,Putty,18.24,kg,21.91,22.24,211.73,4708.88,north,summer,Standard
+BOM-0785,Carpentry,Laminate,223.18,sqft,12.13,250.25,574.06,143658.51,south,normal,Standard
+BOM-0786,Painting,Emulsion Paint,209.67,sqft,9.89,230.41,427.05,98396.59,south,normal,Standard
+BOM-0787,Electrical,Switches,163.71,sqft,11.46,182.47,490.01,89412.12,north,monsoon,Premium
+BOM-0788,Plumbing,UPVC Pipe,220.33,sqft,10.4,243.24,640.93,155899.81,south,normal,Standard
+BOM-0789,Carpentry,Hinges,55.24,sqft,12.83,62.33,718.7,44796.57,west,normal,Standard
+BOM-0790,Painting,Putty,198.15,kg,8.14,214.28,374.23,80190.0,north,monsoon,Premium
+BOM-0791,Carpentry,Laminate,10.63,sqft,22.75,13.05,598.49,7810.29,south,normal,Standard
+BOM-0792,Painting,Emulsion Paint,147.98,sqft,18.15,174.84,115.7,20228.99,south,monsoon,Premium
+BOM-0793,Plumbing,CPVC Pipe,278.27,sqft,8.37,301.56,252.76,76222.31,west,normal,Premium
+BOM-0794,Painting,Putty,121.05,kg,10.67,133.97,338.23,45312.67,north,normal,Premium
+BOM-0795,Carpentry,Edge Band,298.82,sqft,24.64,372.45,277.26,103265.49,south,monsoon,Premium
+BOM-0796,Painting,Primer,267.67,sqft,21.85,326.16,65.34,21311.29,west,normal,Standard
+BOM-0797,Carpentry,Adhesive,105.83,kg,14.68,121.37,158.04,19181.31,west,normal,Standard
+BOM-0798,Painting,Primer,75.91,sqft,10.6,83.96,874.66,73436.45,west,normal,Premium
+BOM-0799,Plumbing,CPVC Pipe,43.87,sqft,19.09,52.24,539.69,28193.41,west,summer,Standard
+BOM-0800,Carpentry,Hinges,208.12,sqft,23.28,256.57,822.22,210956.99,north,summer,Standard
+BOM-0801,Painting,Emulsion Paint,25.01,sqft,17.06,29.28,658.72,19287.32,south,normal,Standard
+BOM-0802,Electrical,Switches,13.7,sqft,13.42,15.54,876.69,13623.76,north,normal,Premium
+BOM-0803,Electrical,Switches,280.46,sqft,23.2,345.53,842.6,291143.58,north,summer,Standard
+BOM-0804,Carpentry,Laminate,43.81,sqft,8.45,47.51,887.92,42185.08,west,normal,Standard
+BOM-0805,Plumbing,UPVC Pipe,73.49,sqft,19.69,87.96,348.96,30694.52,west,normal,Standard
+BOM-0806,Plumbing,CPVC Pipe,254.61,sqft,15.97,295.27,598.63,176757.48,south,normal,Premium
+BOM-0807,Painting,Putty,45.57,kg,11.29,50.71,67.72,3434.08,south,normal,Premium
+BOM-0808,Carpentry,Edge Band,224.0,sqft,24.8,279.55,691.69,193361.94,south,summer,Premium
+BOM-0809,Plumbing,UPVC Pipe,149.53,sqft,13.52,169.75,433.49,73584.93,south,normal,Premium
+BOM-0810,Carpentry,Plywood,184.34,sqft,22.01,224.91,659.37,148298.91,north,monsoon,Standard
+BOM-0811,Plumbing,CPVC Pipe,37.25,sqft,15.77,43.12,794.88,34275.23,south,monsoon,Premium
+BOM-0812,Electrical,Switches,16.58,sqft,14.59,19.0,698.04,13262.76,south,summer,Premium
+BOM-0813,Painting,Putty,122.42,kg,13.18,138.55,751.75,104154.96,north,summer,Premium
+BOM-0814,Carpentry,Hinges,185.87,sqft,8.93,202.47,484.59,98114.94,south,normal,Premium
+BOM-0815,Carpentry,Laminate,218.18,sqft,9.92,239.82,709.71,170202.65,west,monsoon,Standard
+BOM-0816,Painting,Primer,127.0,sqft,15.67,146.9,193.84,28475.1,west,monsoon,Standard
+BOM-0817,Painting,Putty,31.6,kg,13.51,35.87,597.78,21442.37,west,summer,Standard
+BOM-0818,Carpentry,Laminate,38.68,sqft,15.64,44.73,352.13,15750.77,west,monsoon,Premium
+BOM-0819,Electrical,Switches,238.36,sqft,16.7,278.17,856.79,238333.27,north,monsoon,Premium
+BOM-0820,Carpentry,Plywood,231.64,sqft,23.51,286.1,526.32,150580.15,west,summer,Standard
+BOM-0821,Carpentry,Adhesive,57.77,kg,20.1,69.38,400.84,27810.28,north,monsoon,Premium
+BOM-0822,Carpentry,Hinges,189.8,sqft,10.0,208.78,153.15,31974.66,south,summer,Premium
+BOM-0823,Carpentry,Plywood,140.3,sqft,22.54,171.92,507.41,87233.93,south,monsoon,Premium
+BOM-0824,Carpentry,Edge Band,68.98,sqft,19.21,82.23,430.22,35376.99,north,summer,Standard
+BOM-0825,Carpentry,Edge Band,265.24,sqft,12.73,299.01,580.63,173614.18,south,summer,Standard
+BOM-0826,Carpentry,Adhesive,21.24,kg,13.93,24.2,165.02,3993.48,south,monsoon,Premium
+BOM-0827,Painting,Emulsion Paint,276.51,sqft,8.83,300.93,398.58,119944.68,south,summer,Premium
+BOM-0828,Plumbing,UPVC Pipe,199.97,sqft,19.9,239.76,532.16,127590.68,west,summer,Premium
+BOM-0829,Electrical,Switches,175.8,sqft,23.84,217.71,120.09,26144.79,north,normal,Premium
+BOM-0830,Painting,Primer,246.98,sqft,20.89,298.57,765.25,228480.69,south,normal,Premium
+BOM-0831,Carpentry,Adhesive,41.0,kg,22.61,50.27,323.12,16243.24,north,monsoon,Standard
+BOM-0832,Electrical,Switches,66.67,sqft,8.99,72.66,531.38,38610.07,west,monsoon,Standard
+BOM-0833,Painting,Putty,218.6,kg,18.28,258.56,717.84,185604.71,west,normal,Premium
+BOM-0834,Plumbing,UPVC Pipe,255.1,sqft,12.41,286.76,534.62,153307.63,west,normal,Standard
+BOM-0835,Plumbing,UPVC Pipe,170.98,sqft,16.83,199.76,583.4,116539.98,north,summer,Standard
+BOM-0836,Electrical,Switches,90.69,sqft,11.29,100.93,141.66,14297.74,north,monsoon,Standard
+BOM-0837,Electrical,Switches,255.18,sqft,21.59,310.27,899.13,278973.07,north,summer,Premium
+BOM-0838,Painting,Emulsion Paint,170.32,sqft,18.84,202.41,49.72,10063.83,south,monsoon,Premium
+BOM-0839,Carpentry,Hinges,238.11,sqft,13.23,269.61,475.75,128266.96,north,summer,Standard
+BOM-0840,Electrical,Wires,103.32,sqft,14.73,118.54,529.27,62739.67,south,summer,Standard
+BOM-0841,Painting,Emulsion Paint,250.98,sqft,23.68,310.41,452.03,140314.63,north,summer,Standard
+BOM-0842,Painting,Putty,50.84,kg,15.83,58.89,784.09,46175.06,north,normal,Premium
+BOM-0843,Electrical,Switches,21.53,sqft,16.86,25.16,525.85,13230.39,west,normal,Standard
+BOM-0844,Carpentry,Edge Band,175.33,sqft,13.64,199.25,827.92,164963.06,north,summer,Standard
+BOM-0845,Carpentry,Hinges,253.02,sqft,13.77,287.86,362.71,104409.7,west,summer,Premium
+BOM-0846,Carpentry,Adhesive,180.58,kg,22.7,221.57,686.32,152067.92,west,normal,Standard
+BOM-0847,Carpentry,Hinges,127.09,sqft,16.45,148.0,244.37,36166.76,north,normal,Standard
+BOM-0848,Plumbing,CPVC Pipe,94.18,sqft,9.91,103.51,715.05,74014.83,south,summer,Premium
+BOM-0849,Plumbing,CPVC Pipe,12.36,sqft,16.21,14.36,470.05,6749.92,south,normal,Premium
+BOM-0850,Electrical,Switches,262.79,sqft,13.28,297.69,321.51,95710.31,south,monsoon,Standard
+BOM-0851,Carpentry,Edge Band,218.75,sqft,15.81,253.33,653.76,165617.02,west,summer,Standard
+BOM-0852,Carpentry,Hinges,280.04,sqft,19.68,335.15,551.09,184697.81,south,normal,Premium
+BOM-0853,Carpentry,Plywood,35.42,sqft,21.03,42.87,681.18,29202.19,south,monsoon,Premium
+BOM-0854,Electrical,Wires,268.18,sqft,13.45,304.25,205.59,62550.76,north,monsoon,Premium
+BOM-0855,Painting,Putty,202.98,kg,12.64,228.64,175.45,40114.89,south,summer,Standard
+BOM-0856,Carpentry,Edge Band,165.05,sqft,17.34,193.67,273.1,52891.28,west,normal,Standard
+BOM-0857,Carpentry,Adhesive,26.02,kg,18.43,30.82,331.32,10211.28,north,summer,Standard
+BOM-0858,Carpentry,Plywood,143.87,sqft,19.48,171.9,131.1,22536.09,south,summer,Premium
+BOM-0859,Painting,Primer,57.8,sqft,18.13,68.28,549.77,37538.3,west,monsoon,Premium
+BOM-0860,Plumbing,UPVC Pipe,109.91,sqft,13.65,124.91,210.41,26282.31,west,monsoon,Standard
+BOM-0861,Painting,Putty,172.5,kg,9.58,189.03,730.02,137995.68,west,normal,Standard
+BOM-0862,Painting,Putty,96.57,kg,18.96,114.88,699.18,80321.8,north,summer,Standard
+BOM-0863,Carpentry,Adhesive,259.02,kg,18.49,306.91,825.06,253219.16,north,summer,Premium
+BOM-0864,Painting,Emulsion Paint,138.72,sqft,8.51,150.53,448.79,67556.36,north,normal,Premium
+BOM-0865,Carpentry,Adhesive,88.27,kg,13.93,100.57,534.22,53726.51,west,summer,Premium
+BOM-0866,Electrical,Switches,240.04,sqft,13.54,272.54,598.53,163123.37,north,monsoon,Premium
+BOM-0867,Painting,Primer,179.21,sqft,12.06,200.82,249.57,50118.65,south,normal,Premium
+BOM-0868,Carpentry,Laminate,105.51,sqft,21.84,128.55,548.23,70474.97,north,monsoon,Premium
+BOM-0869,Plumbing,CPVC Pipe,209.77,sqft,10.94,232.72,615.86,143322.94,west,monsoon,Premium
+BOM-0870,Carpentry,Laminate,179.69,sqft,15.87,208.21,517.38,107723.69,north,summer,Premium
+BOM-0871,Painting,Primer,25.53,sqft,9.85,28.04,740.1,20752.4,north,normal,Premium
+BOM-0872,Electrical,Wires,199.75,sqft,9.54,218.81,742.65,162499.25,west,monsoon,Standard
+BOM-0873,Carpentry,Adhesive,199.96,kg,15.7,231.35,290.69,67251.13,west,monsoon,Premium
+BOM-0874,Carpentry,Edge Band,65.67,sqft,22.92,80.72,297.77,24035.99,west,normal,Premium
+BOM-0875,Electrical,Switches,294.86,sqft,13.85,335.7,116.79,39206.4,south,monsoon,Premium
+BOM-0876,Carpentry,Adhesive,256.49,kg,9.06,279.73,814.93,227960.37,south,summer,Premium
+BOM-0877,Carpentry,Laminate,259.07,sqft,22.72,317.93,242.31,77037.62,west,monsoon,Premium
+BOM-0878,Electrical,Wires,98.85,sqft,14.51,113.19,368.15,41670.9,west,summer,Standard
+BOM-0879,Painting,Putty,46.03,kg,17.44,54.06,765.26,41369.96,north,normal,Standard
+BOM-0880,Carpentry,Hinges,299.25,sqft,19.39,357.27,155.48,55548.34,south,monsoon,Standard
+BOM-0881,Carpentry,Adhesive,217.8,kg,16.27,253.24,415.59,105244.01,south,summer,Standard
+BOM-0882,Electrical,Wires,242.75,sqft,22.62,297.66,808.48,240652.16,west,monsoon,Premium
+BOM-0883,Plumbing,UPVC Pipe,58.04,sqft,16.66,67.71,514.76,34854.4,north,normal,Premium
+BOM-0884,Carpentry,Edge Band,59.81,sqft,18.28,70.74,537.03,37989.5,west,summer,Premium
+BOM-0885,Painting,Primer,278.34,sqft,17.8,327.88,68.78,22551.59,south,monsoon,Premium
+BOM-0886,Electrical,Switches,113.73,sqft,17.86,134.04,867.09,116224.74,south,summer,Premium
+BOM-0887,Painting,Putty,157.5,kg,16.9,184.12,564.66,103965.2,south,normal,Standard
+BOM-0888,Electrical,Wires,191.94,sqft,21.57,233.34,308.75,72043.73,south,normal,Standard
+BOM-0889,Painting,Putty,138.94,kg,23.4,171.45,533.61,91487.43,north,normal,Premium
+BOM-0890,Carpentry,Hinges,90.32,sqft,8.6,98.09,833.66,81773.71,west,normal,Premium
+BOM-0891,Carpentry,Plywood,190.64,sqft,17.83,224.63,532.66,119651.42,west,normal,Standard
+BOM-0892,Carpentry,Hinges,148.0,sqft,10.16,163.04,106.1,17298.54,north,normal,Standard
+BOM-0893,Plumbing,UPVC Pipe,87.89,sqft,22.58,107.74,52.21,5625.11,south,monsoon,Standard
+BOM-0894,Plumbing,UPVC Pipe,223.0,sqft,19.21,265.84,358.0,95170.72,south,normal,Standard
+BOM-0895,Painting,Putty,58.34,kg,16.97,68.24,68.46,4671.71,south,summer,Standard
+BOM-0896,Painting,Putty,227.06,kg,15.02,261.16,369.52,96503.84,west,normal,Standard
+BOM-0897,Carpentry,Edge Band,175.44,sqft,22.31,214.58,86.72,18608.38,north,summer,Standard
+BOM-0898,Carpentry,Adhesive,141.88,kg,16.1,164.72,449.59,74056.46,west,summer,Premium
+BOM-0899,Electrical,Wires,213.15,sqft,16.07,247.4,164.83,40778.94,north,summer,Premium
+BOM-0900,Painting,Putty,117.69,kg,13.37,133.43,496.02,66183.95,south,summer,Premium
+BOM-0901,Painting,Primer,185.09,sqft,19.09,220.42,274.43,60489.86,north,normal,Standard
+BOM-0902,Carpentry,Hinges,198.03,sqft,14.65,227.04,704.91,160042.77,west,summer,Standard
+BOM-0903,Plumbing,CPVC Pipe,104.53,sqft,19.73,125.15,194.73,24370.46,west,summer,Standard
+BOM-0904,Carpentry,Laminate,8.53,sqft,9.66,9.35,129.36,1209.52,north,normal,Standard
+BOM-0905,Electrical,Switches,88.57,sqft,11.28,98.56,60.38,5951.05,south,summer,Standard
+BOM-0906,Plumbing,UPVC Pipe,193.23,sqft,20.04,231.95,143.18,33210.6,west,summer,Premium
+BOM-0907,Electrical,Wires,230.34,sqft,19.01,274.13,730.75,200320.5,south,summer,Standard
+BOM-0908,Carpentry,Hinges,91.9,sqft,19.23,109.57,105.11,11516.9,north,normal,Premium
+BOM-0909,Electrical,Switches,271.5,sqft,21.09,328.76,318.13,104588.42,south,summer,Premium
+BOM-0910,Carpentry,Plywood,117.93,sqft,13.66,134.04,91.65,12284.77,north,summer,Premium
+BOM-0911,Carpentry,Laminate,150.06,sqft,23.79,185.76,564.86,104928.39,south,monsoon,Premium
+BOM-0912,Carpentry,Laminate,47.44,sqft,21.07,57.44,227.81,13085.41,west,summer,Premium
+BOM-0913,Electrical,Switches,81.4,sqft,8.59,88.39,100.55,8887.61,west,normal,Premium
+BOM-0914,Carpentry,Plywood,269.47,sqft,10.53,297.85,590.69,175937.02,south,monsoon,Premium
+BOM-0915,Carpentry,Hinges,49.72,sqft,13.61,56.49,376.54,21270.74,south,monsoon,Premium
+BOM-0916,Painting,Putty,133.64,kg,22.35,163.51,711.61,116355.35,south,monsoon,Standard
+BOM-0917,Carpentry,Plywood,118.41,sqft,19.72,141.76,710.65,100741.74,south,monsoon,Premium
+BOM-0918,Painting,Emulsion Paint,206.14,sqft,14.81,236.67,583.75,138156.11,west,summer,Premium
+BOM-0919,Plumbing,CPVC Pipe,256.74,sqft,13.78,292.12,763.42,223010.25,north,monsoon,Standard
+BOM-0920,Carpentry,Adhesive,168.57,kg,24.45,209.79,608.23,127600.57,north,monsoon,Premium
+BOM-0921,Carpentry,Laminate,191.03,sqft,14.11,217.98,112.98,24627.38,west,normal,Standard
+BOM-0922,Carpentry,Adhesive,15.53,kg,8.43,16.84,896.89,15103.63,south,normal,Premium
+BOM-0923,Carpentry,Laminate,238.86,sqft,18.94,284.1,469.73,133450.29,north,summer,Standard
+BOM-0924,Painting,Emulsion Paint,21.54,sqft,21.39,26.15,76.82,2008.84,south,summer,Premium
+BOM-0925,Electrical,Wires,261.71,sqft,17.12,306.51,677.3,207599.22,south,summer,Standard
+BOM-0926,Electrical,Switches,46.77,sqft,19.12,55.71,445.25,24804.88,west,summer,Standard
+BOM-0927,Electrical,Switches,196.39,sqft,8.24,212.57,584.09,124160.01,north,summer,Premium
+BOM-0928,Plumbing,UPVC Pipe,55.35,sqft,18.05,65.34,743.31,48567.88,south,summer,Premium
+BOM-0929,Plumbing,UPVC Pipe,240.76,sqft,11.75,269.05,731.83,196898.86,north,normal,Premium
+BOM-0930,Painting,Emulsion Paint,40.64,sqft,19.63,48.62,509.46,24769.95,north,summer,Standard
+BOM-0931,Plumbing,UPVC Pipe,56.17,sqft,9.07,61.26,275.55,16880.19,north,summer,Premium
+BOM-0932,Plumbing,CPVC Pipe,53.68,sqft,12.14,60.2,540.51,32538.7,south,summer,Premium
+BOM-0933,Carpentry,Adhesive,9.61,kg,16.28,11.17,45.46,507.79,south,summer,Premium
+BOM-0934,Painting,Primer,209.58,sqft,21.47,254.58,449.37,114400.61,south,summer,Standard
+BOM-0935,Electrical,Wires,84.93,sqft,15.66,98.23,245.76,24141.0,south,monsoon,Standard
+BOM-0936,Plumbing,UPVC Pipe,58.1,sqft,16.5,67.69,857.26,58027.93,west,normal,Premium
+BOM-0937,Painting,Primer,6.35,sqft,12.01,7.11,141.06,1002.94,west,summer,Premium
+BOM-0938,Plumbing,CPVC Pipe,154.72,sqft,15.89,179.31,578.76,103777.46,south,normal,Standard
+BOM-0939,Carpentry,Edge Band,38.24,sqft,10.54,42.27,765.65,32364.03,north,normal,Standard
+BOM-0940,Carpentry,Adhesive,202.69,kg,8.73,220.38,594.58,131033.54,north,summer,Premium
+BOM-0941,Carpentry,Hinges,103.62,sqft,21.69,126.1,692.23,87290.2,south,summer,Standard
+BOM-0942,Plumbing,CPVC Pipe,56.89,sqft,21.35,69.04,457.15,31561.64,south,summer,Standard
+BOM-0943,Electrical,Switches,136.22,sqft,17.86,160.55,400.4,64284.22,west,monsoon,Premium
+BOM-0944,Carpentry,Edge Band,234.8,sqft,13.54,266.59,124.34,33147.8,west,normal,Standard
+BOM-0945,Painting,Primer,267.95,sqft,9.25,292.74,543.18,159010.51,south,normal,Standard
+BOM-0946,Carpentry,Edge Band,278.73,sqft,15.73,322.57,373.1,120350.87,south,normal,Standard
+BOM-0947,Electrical,Wires,110.78,sqft,12.58,124.72,328.87,41016.67,south,monsoon,Standard
+BOM-0948,Carpentry,Hinges,45.27,sqft,22.48,55.45,434.38,24086.37,south,normal,Standard
+BOM-0949,Carpentry,Hinges,183.07,sqft,21.42,222.28,588.68,130851.79,west,summer,Standard
+BOM-0950,Carpentry,Laminate,126.45,sqft,16.87,147.78,781.49,115488.59,south,monsoon,Premium
+BOM-0951,Painting,Putty,87.36,kg,20.41,105.19,673.11,70804.44,south,summer,Premium
+BOM-0952,Painting,Primer,175.94,sqft,23.16,216.69,548.92,118945.47,south,monsoon,Standard
+BOM-0953,Painting,Primer,294.15,sqft,8.68,319.68,444.76,142180.88,west,summer,Premium
+BOM-0954,Plumbing,CPVC Pipe,121.32,sqft,21.77,147.73,639.12,94417.2,south,normal,Premium
+BOM-0955,Carpentry,Edge Band,29.51,sqft,20.8,35.65,636.12,22677.68,north,summer,Standard
+BOM-0956,Painting,Emulsion Paint,92.26,sqft,19.01,109.8,118.03,12959.69,north,monsoon,Premium
+BOM-0957,Carpentry,Adhesive,212.47,kg,22.58,260.45,682.67,177801.4,south,normal,Premium
+BOM-0958,Carpentry,Adhesive,262.89,kg,14.89,302.03,719.28,217244.14,north,monsoon,Premium
+BOM-0959,Electrical,Switches,191.85,sqft,22.63,235.27,100.8,23715.22,west,normal,Standard
+BOM-0960,Carpentry,Hinges,130.64,sqft,12.59,147.09,853.64,125561.91,west,monsoon,Standard
+BOM-0961,Electrical,Wires,28.88,sqft,22.97,35.51,672.75,23889.35,south,monsoon,Premium
+BOM-0962,Carpentry,Plywood,37.74,sqft,14.22,43.11,572.45,24678.32,north,normal,Standard
+BOM-0963,Electrical,Wires,169.84,sqft,9.14,185.36,650.03,120489.56,south,summer,Premium
+BOM-0964,Carpentry,Edge Band,164.19,sqft,19.03,195.44,674.15,131755.88,west,monsoon,Standard
+BOM-0965,Electrical,Switches,229.46,sqft,13.45,260.32,812.22,211437.11,west,monsoon,Premium
+BOM-0966,Carpentry,Hinges,21.07,sqft,14.34,24.09,429.07,10336.3,west,monsoon,Standard
+BOM-0967,Painting,Putty,214.4,kg,19.53,256.27,498.26,127689.09,north,normal,Premium
+BOM-0968,Electrical,Wires,283.88,sqft,21.75,345.62,849.15,293483.22,south,summer,Premium
+BOM-0969,Carpentry,Laminate,28.65,sqft,23.27,35.32,288.0,10172.16,south,summer,Standard
+BOM-0970,Carpentry,Hinges,38.05,sqft,10.52,42.05,169.43,7124.53,south,monsoon,Standard
+BOM-0971,Carpentry,Hinges,127.88,sqft,19.6,152.94,841.28,128665.36,north,normal,Premium
+BOM-0972,Painting,Putty,222.62,kg,8.37,241.25,202.59,48874.84,south,summer,Premium
+BOM-0973,Painting,Primer,175.72,sqft,19.15,209.37,716.67,150049.2,north,monsoon,Premium
+BOM-0974,Painting,Putty,94.7,kg,10.24,104.4,718.84,75046.9,south,normal,Standard
+BOM-0975,Painting,Putty,114.71,kg,12.9,129.51,767.14,99352.3,south,normal,Premium
+BOM-0976,Painting,Putty,287.08,kg,18.52,340.25,178.28,60659.77,west,normal,Standard
+BOM-0977,Carpentry,Adhesive,252.6,kg,19.78,302.56,613.07,185490.46,south,summer,Standard
+BOM-0978,Carpentry,Laminate,17.14,sqft,13.38,19.43,148.77,2890.6,north,normal,Standard
+BOM-0979,Carpentry,Edge Band,170.93,sqft,8.59,185.61,312.57,58016.12,north,summer,Premium
+BOM-0980,Painting,Putty,164.26,kg,10.76,181.93,299.34,54458.93,south,normal,Premium
+BOM-0981,Carpentry,Adhesive,284.6,kg,23.77,352.25,174.21,61365.47,west,monsoon,Premium
+BOM-0982,Electrical,Wires,213.11,sqft,16.06,247.34,289.25,71543.1,west,monsoon,Standard
+BOM-0983,Plumbing,UPVC Pipe,219.92,sqft,23.68,272.0,331.27,90105.44,south,monsoon,Premium
+BOM-0984,Carpentry,Plywood,46.13,sqft,17.37,54.14,304.95,16509.99,north,monsoon,Standard
+BOM-0985,Painting,Putty,110.43,kg,13.55,125.39,563.01,70595.82,south,monsoon,Standard
+BOM-0986,Carpentry,Hinges,62.74,sqft,9.42,68.65,770.53,52896.88,west,monsoon,Standard
+BOM-0987,Plumbing,CPVC Pipe,121.35,sqft,16.34,141.18,558.73,78881.5,west,summer,Premium
+BOM-0988,Painting,Primer,48.64,sqft,22.51,59.59,357.88,21326.07,north,summer,Premium
+BOM-0989,Painting,Emulsion Paint,108.65,sqft,24.62,135.4,791.9,107223.26,south,summer,Premium
+BOM-0990,Electrical,Switches,297.82,sqft,21.66,362.33,288.23,104434.38,west,normal,Premium
+BOM-0991,Carpentry,Adhesive,251.48,kg,18.16,297.15,163.53,48592.94,north,normal,Premium
+BOM-0992,Carpentry,Laminate,280.28,sqft,18.04,330.84,363.16,120147.85,south,normal,Premium
+BOM-0993,Painting,Primer,56.59,sqft,15.86,65.57,528.41,34647.84,south,summer,Standard
+BOM-0994,Painting,Primer,90.39,sqft,16.34,105.16,747.61,78618.67,north,monsoon,Premium
+BOM-0995,Painting,Putty,169.99,kg,15.88,196.98,63.08,12425.5,south,summer,Premium
+BOM-0996,Carpentry,Hinges,287.03,sqft,22.18,350.69,446.39,156544.51,west,monsoon,Premium
+BOM-0997,Painting,Primer,57.91,sqft,23.42,71.47,594.52,42490.34,south,summer,Premium
+BOM-0998,Painting,Putty,298.33,kg,9.13,325.57,681.19,221775.03,west,normal,Premium
+BOM-0999,Carpentry,Hinges,190.26,sqft,16.09,220.87,637.05,140705.23,south,normal,Standard
+BOM-1000,Carpentry,Hinges,53.04,sqft,8.99,57.81,314.93,18206.1,west,summer,Premium
+BOM-1001,Carpentry,Adhesive,20.6,kg,14.14,23.51,587.17,13804.37,north,summer,Premium
+BOM-1002,Carpentry,Hinges,161.24,sqft,23.92,199.81,481.93,96294.43,west,summer,Standard
+BOM-1003,Plumbing,UPVC Pipe,227.03,sqft,17.24,266.17,790.3,210354.15,west,normal,Premium
+BOM-1004,Electrical,Wires,210.9,sqft,14.16,240.76,499.6,120283.7,north,summer,Standard
+BOM-1005,Carpentry,Adhesive,157.86,kg,14.34,180.5,457.01,82490.3,north,summer,Standard
+BOM-1006,Carpentry,Edge Band,50.59,sqft,11.76,56.54,202.04,11423.34,west,monsoon,Standard
+BOM-1007,Painting,Primer,140.84,sqft,9.3,153.94,744.21,114563.69,south,normal,Premium
+BOM-1008,Carpentry,Hinges,208.86,sqft,10.36,230.5,420.07,96826.13,west,monsoon,Premium
+BOM-1009,Carpentry,Adhesive,214.42,kg,8.49,232.62,740.53,172262.09,south,summer,Standard
+BOM-1010,Electrical,Switches,71.84,sqft,10.13,79.12,151.99,12025.45,south,normal,Standard
+BOM-1011,Carpentry,Laminate,10.55,sqft,16.23,12.26,410.87,5037.27,south,summer,Standard
+BOM-1012,Electrical,Wires,156.48,sqft,9.01,170.58,142.27,24268.42,north,summer,Standard
+BOM-1013,Carpentry,Hinges,201.94,sqft,20.83,244.0,712.84,173932.96,west,summer,Standard
+BOM-1014,Carpentry,Adhesive,202.83,kg,8.5,220.07,165.18,36351.16,west,normal,Premium
+BOM-1015,Painting,Emulsion Paint,52.36,sqft,16.51,61.0,666.56,40660.16,south,monsoon,Standard
+BOM-1016,Carpentry,Laminate,246.78,sqft,20.98,298.55,494.8,147722.54,west,summer,Premium
+BOM-1017,Carpentry,Adhesive,270.99,kg,17.13,317.41,877.28,278457.44,south,summer,Premium
+BOM-1018,Painting,Emulsion Paint,210.95,sqft,11.15,234.47,619.23,145190.86,south,summer,Premium
+BOM-1019,Painting,Primer,130.11,sqft,16.74,151.89,390.52,59316.08,north,summer,Premium
+BOM-1020,Carpentry,Laminate,158.32,sqft,16.43,184.33,350.68,64640.84,north,monsoon,Standard
+BOM-1021,Carpentry,Laminate,101.79,sqft,9.97,111.94,283.91,31780.89,west,monsoon,Premium
+BOM-1022,Electrical,Wires,292.97,sqft,15.55,338.53,516.37,174806.74,north,normal,Standard
+BOM-1023,Carpentry,Laminate,268.95,sqft,21.64,327.15,847.61,277295.61,north,summer,Standard
+BOM-1024,Electrical,Wires,150.04,sqft,9.79,164.73,416.73,68647.93,west,monsoon,Standard
+BOM-1025,Carpentry,Laminate,47.29,sqft,14.81,54.29,547.88,29744.41,south,monsoon,Standard
+BOM-1026,Carpentry,Laminate,112.29,sqft,11.38,125.07,212.23,26543.61,north,summer,Standard
+BOM-1027,Painting,Primer,218.93,sqft,12.73,246.8,653.6,161308.48,west,monsoon,Premium
+BOM-1028,Electrical,Wires,283.25,sqft,14.05,323.05,613.34,198139.49,north,normal,Premium
+BOM-1029,Carpentry,Adhesive,231.56,kg,9.84,254.35,255.59,65009.32,north,summer,Standard
+BOM-1030,Carpentry,Plywood,34.38,sqft,8.9,37.44,98.68,3694.58,west,summer,Standard
+BOM-1031,Painting,Primer,183.35,sqft,13.56,208.21,300.37,62540.04,west,summer,Standard
+BOM-1032,Electrical,Wires,226.72,sqft,21.05,274.44,721.75,198077.07,south,normal,Premium
+BOM-1033,Painting,Putty,153.91,kg,17.22,180.41,736.15,132808.82,west,monsoon,Standard
+BOM-1034,Carpentry,Plywood,297.26,sqft,22.96,365.51,142.46,52070.55,north,normal,Premium
+BOM-1035,Painting,Putty,140.6,kg,8.56,152.64,518.73,79178.95,north,monsoon,Standard
+BOM-1036,Painting,Putty,132.05,kg,13.31,149.63,374.61,56052.89,south,monsoon,Premium
+BOM-1037,Electrical,Wires,168.37,sqft,17.17,197.28,444.04,87600.21,west,summer,Standard
+BOM-1038,Painting,Primer,82.7,sqft,18.05,97.63,364.91,35626.16,west,normal,Premium
+BOM-1039,Painting,Emulsion Paint,23.12,sqft,18.04,27.29,150.25,4100.32,north,normal,Standard
+BOM-1040,Electrical,Wires,105.67,sqft,9.65,115.87,336.82,39027.33,north,normal,Premium
+BOM-1041,Carpentry,Plywood,200.07,sqft,12.21,224.5,597.35,134105.08,west,summer,Standard
+BOM-1042,Carpentry,Hinges,38.77,sqft,10.89,42.99,503.04,21625.69,south,normal,Premium
+BOM-1043,Plumbing,UPVC Pipe,156.85,sqft,15.16,180.63,57.55,10395.26,north,monsoon,Standard
+BOM-1044,Painting,Emulsion Paint,116.43,sqft,14.64,133.48,532.38,71062.08,north,summer,Standard
+BOM-1045,Painting,Emulsion Paint,151.54,sqft,21.79,184.56,613.95,113310.61,south,monsoon,Premium
+BOM-1046,Painting,Emulsion Paint,290.98,sqft,11.43,324.24,586.48,190160.28,south,monsoon,Standard
+BOM-1047,Carpentry,Hinges,83.22,sqft,13.05,94.08,533.23,50166.28,south,monsoon,Standard
+BOM-1048,Electrical,Switches,254.04,sqft,9.61,278.45,329.68,91799.4,south,monsoon,Premium
+BOM-1049,Painting,Primer,66.87,sqft,21.53,81.27,600.32,48788.01,north,monsoon,Premium
+BOM-1050,Painting,Primer,200.72,sqft,13.33,227.48,396.31,90152.6,north,monsoon,Premium
+BOM-1051,Electrical,Wires,230.22,sqft,11.07,255.71,56.0,14319.76,west,monsoon,Standard
+BOM-1052,Plumbing,UPVC Pipe,152.27,sqft,19.23,181.55,748.56,135901.07,north,normal,Premium
+BOM-1053,Plumbing,UPVC Pipe,219.35,sqft,9.02,239.14,212.56,50831.6,north,summer,Standard
+BOM-1054,Carpentry,Adhesive,225.2,kg,21.01,272.51,765.94,208726.31,north,normal,Standard
+BOM-1055,Electrical,Wires,65.05,sqft,15.01,74.81,748.39,55987.06,west,summer,Premium
+BOM-1056,Electrical,Wires,182.36,sqft,14.9,209.53,137.66,28843.9,south,summer,Standard
+BOM-1057,Carpentry,Hinges,141.93,sqft,17.52,166.8,415.07,69233.68,west,summer,Standard
+BOM-1058,Carpentry,Adhesive,85.45,kg,8.5,92.71,719.12,66669.62,north,monsoon,Standard
+BOM-1059,Electrical,Wires,256.49,sqft,24.38,319.02,457.82,146053.74,south,summer,Standard
+BOM-1060,Painting,Emulsion Paint,182.47,sqft,22.74,223.96,814.49,182413.18,north,normal,Standard
+BOM-1061,Painting,Primer,283.23,sqft,20.31,340.75,160.88,54819.86,south,monsoon,Standard
+BOM-1062,Plumbing,CPVC Pipe,200.94,sqft,17.87,236.85,706.6,167358.21,west,normal,Premium
+BOM-1063,Carpentry,Laminate,75.23,sqft,10.08,82.81,733.75,60761.84,north,monsoon,Premium
+BOM-1064,Electrical,Switches,224.47,sqft,23.9,278.12,227.49,63269.52,south,summer,Standard
+BOM-1065,Carpentry,Hinges,134.65,sqft,12.32,151.24,546.95,82720.72,north,monsoon,Premium
+BOM-1066,Electrical,Switches,284.87,sqft,13.38,322.99,404.45,130633.31,west,summer,Premium
+BOM-1067,Carpentry,Adhesive,112.08,kg,20.17,134.69,746.37,100528.58,south,monsoon,Standard
+BOM-1068,Electrical,Switches,200.36,sqft,23.99,248.43,633.99,157502.14,west,summer,Premium
+BOM-1069,Plumbing,CPVC Pipe,118.48,sqft,18.86,140.83,642.53,90487.5,west,summer,Standard
+BOM-1070,Painting,Putty,119.6,kg,23.47,147.67,377.96,55813.35,north,normal,Standard
+BOM-1071,Carpentry,Edge Band,92.74,sqft,22.61,113.71,177.8,20217.64,north,monsoon,Premium
+BOM-1072,Electrical,Wires,124.86,sqft,8.58,135.57,785.14,106441.43,north,normal,Premium
+BOM-1073,Painting,Emulsion Paint,216.63,sqft,22.9,266.24,745.41,198457.96,south,monsoon,Premium
+BOM-1074,Plumbing,CPVC Pipe,24.58,sqft,15.15,28.3,667.14,18880.06,west,monsoon,Premium
+BOM-1075,Painting,Putty,210.09,kg,20.95,254.1,591.58,150320.48,south,monsoon,Premium
+BOM-1076,Electrical,Wires,45.15,sqft,14.81,51.84,580.33,30084.31,north,monsoon,Standard
+BOM-1077,Carpentry,Laminate,51.56,sqft,16.78,60.21,873.91,52618.12,west,summer,Premium
+BOM-1078,Painting,Emulsion Paint,138.19,sqft,22.85,169.77,154.82,26283.79,south,monsoon,Premium
+BOM-1079,Carpentry,Hinges,63.61,sqft,15.05,73.18,196.42,14374.02,north,monsoon,Standard
+BOM-1080,Carpentry,Plywood,284.69,sqft,23.69,352.13,596.51,210049.07,west,summer,Standard
+BOM-1081,Painting,Putty,63.49,kg,19.92,76.14,185.13,14095.8,north,monsoon,Premium
+BOM-1082,Plumbing,UPVC Pipe,81.75,sqft,9.51,89.52,356.41,31905.82,west,summer,Standard
+BOM-1083,Electrical,Switches,160.12,sqft,21.15,193.99,838.32,162625.7,west,normal,Standard
+BOM-1084,Carpentry,Edge Band,215.5,sqft,11.24,239.72,781.27,187286.04,north,normal,Premium
+BOM-1085,Painting,Primer,43.41,sqft,22.56,53.2,556.07,29582.92,north,monsoon,Standard
+BOM-1086,Painting,Primer,58.21,sqft,21.47,70.71,64.74,4577.77,north,summer,Premium
+BOM-1087,Carpentry,Edge Band,114.04,sqft,19.63,136.43,434.02,59213.35,south,normal,Standard
+BOM-1088,Painting,Emulsion Paint,292.45,sqft,14.76,335.62,222.51,74678.81,north,monsoon,Premium
+BOM-1089,Electrical,Switches,181.17,sqft,9.24,197.91,519.02,102719.25,south,normal,Standard
+BOM-1090,Painting,Putty,272.93,kg,24.94,341.0,847.82,289106.62,west,monsoon,Standard
+BOM-1091,Carpentry,Plywood,79.83,sqft,18.53,94.62,300.16,28401.14,north,monsoon,Premium
+BOM-1092,Carpentry,Adhesive,290.58,kg,17.51,341.46,539.22,184122.06,north,summer,Premium
+BOM-1093,Painting,Emulsion Paint,263.98,sqft,10.24,291.01,312.89,91054.12,west,normal,Standard
+BOM-1094,Carpentry,Hinges,39.47,sqft,8.75,42.92,149.97,6436.71,north,monsoon,Premium
+BOM-1095,Painting,Primer,88.46,sqft,22.91,108.73,567.12,61662.96,north,monsoon,Premium
+BOM-1096,Painting,Primer,268.34,sqft,13.36,304.19,895.33,272350.43,south,monsoon,Premium
+BOM-1097,Carpentry,Plywood,60.73,sqft,8.93,66.15,197.5,13064.63,north,normal,Standard
+BOM-1098,Electrical,Switches,142.8,sqft,9.97,157.04,809.85,127178.84,north,summer,Premium
+BOM-1099,Painting,Emulsion Paint,296.7,sqft,17.53,348.71,433.67,151225.07,south,monsoon,Standard
+BOM-1100,Carpentry,Laminate,108.13,sqft,11.46,120.52,284.34,34268.66,south,monsoon,Premium
+BOM-1101,Plumbing,UPVC Pipe,267.81,sqft,17.96,315.91,541.85,171175.83,south,monsoon,Standard
+BOM-1102,Painting,Primer,276.52,sqft,12.18,310.2,468.38,145291.48,south,normal,Standard
+BOM-1103,Carpentry,Hinges,205.99,sqft,19.57,246.3,378.99,93345.24,west,summer,Premium
+BOM-1104,Carpentry,Adhesive,13.52,kg,15.82,15.66,648.63,10157.55,north,normal,Premium
+BOM-1105,Plumbing,UPVC Pipe,199.11,sqft,13.6,226.19,77.71,17577.22,west,normal,Premium
+BOM-1106,Electrical,Switches,299.95,sqft,23.42,370.2,725.45,268561.59,south,summer,Standard
+BOM-1107,Electrical,Wires,88.47,sqft,21.57,107.55,679.67,73098.51,west,monsoon,Premium
+BOM-1108,Carpentry,Laminate,122.66,sqft,11.03,136.19,869.94,118477.13,north,summer,Standard
+BOM-1109,Carpentry,Edge Band,53.07,sqft,21.25,64.35,285.04,18342.32,west,summer,Standard
+BOM-1110,Carpentry,Hinges,149.8,sqft,15.35,172.79,733.46,126734.55,north,monsoon,Standard
+BOM-1111,Painting,Emulsion Paint,201.33,sqft,22.14,245.9,480.88,118248.39,north,normal,Premium
+BOM-1112,Painting,Putty,84.2,kg,18.21,99.53,117.59,11703.73,north,normal,Standard
+BOM-1113,Painting,Primer,191.05,sqft,9.58,209.35,481.47,100795.74,north,monsoon,Standard
+BOM-1114,Electrical,Wires,207.44,sqft,10.64,229.51,465.98,106947.07,west,monsoon,Standard
+BOM-1115,Carpentry,Hinges,143.12,sqft,9.35,156.5,729.33,114140.15,north,summer,Standard
+BOM-1116,Electrical,Wires,271.36,sqft,22.31,331.9,489.86,162584.53,north,monsoon,Standard
+BOM-1117,Plumbing,CPVC Pipe,27.58,sqft,8.77,30.0,132.56,3976.8,north,normal,Standard
+BOM-1118,Painting,Putty,199.95,kg,17.66,235.26,257.91,60675.91,north,monsoon,Standard
+BOM-1119,Plumbing,CPVC Pipe,9.8,sqft,20.59,11.82,438.08,5178.11,south,normal,Standard
+BOM-1120,Carpentry,Laminate,127.79,sqft,19.97,153.31,309.99,47524.57,west,normal,Premium
+BOM-1121,Plumbing,UPVC Pipe,243.31,sqft,13.8,276.89,829.58,229702.41,south,summer,Standard
+BOM-1122,Carpentry,Laminate,225.37,sqft,18.27,266.55,789.59,210465.21,south,normal,Standard
+BOM-1123,Carpentry,Plywood,121.51,sqft,8.23,131.51,603.99,79430.72,north,monsoon,Premium
+BOM-1124,Electrical,Wires,289.91,sqft,18.23,342.76,458.58,157182.88,west,monsoon,Premium
+BOM-1125,Electrical,Switches,203.77,sqft,19.73,243.97,379.7,92635.41,north,summer,Standard
+BOM-1126,Carpentry,Adhesive,9.09,kg,9.9,9.99,53.66,536.06,south,summer,Standard
+BOM-1127,Painting,Putty,196.34,kg,19.05,233.74,414.78,96950.68,west,monsoon,Standard
+BOM-1128,Carpentry,Laminate,93.77,sqft,15.88,108.66,447.63,48639.48,south,summer,Standard
+BOM-1129,Carpentry,Adhesive,222.94,kg,15.57,257.65,457.14,117782.12,south,normal,Standard
+BOM-1130,Carpentry,Edge Band,91.98,sqft,22.1,112.31,376.89,42328.52,north,summer,Standard
+BOM-1131,Electrical,Wires,255.05,sqft,15.34,294.17,397.49,116929.63,north,monsoon,Premium
+BOM-1132,Carpentry,Plywood,148.81,sqft,16.26,173.01,548.29,94859.65,west,monsoon,Premium
+BOM-1133,Carpentry,Edge Band,215.72,sqft,16.98,252.35,402.92,101676.86,north,monsoon,Standard
+BOM-1134,Carpentry,Hinges,268.4,sqft,15.09,308.9,447.07,138099.92,north,monsoon,Premium
+BOM-1135,Painting,Putty,210.77,kg,8.35,228.37,287.69,65699.77,south,normal,Premium
+BOM-1136,Painting,Putty,73.47,kg,11.73,82.09,821.8,67461.56,north,monsoon,Premium
+BOM-1137,Carpentry,Adhesive,265.54,kg,20.29,319.42,375.72,120012.48,north,monsoon,Premium
+BOM-1138,Painting,Putty,240.93,kg,22.36,294.8,574.78,169445.14,north,monsoon,Standard
+BOM-1139,Electrical,Wires,147.45,sqft,10.95,163.6,174.43,28536.75,north,summer,Premium
+BOM-1140,Painting,Putty,94.58,kg,11.56,105.51,80.46,8489.33,south,normal,Premium
+BOM-1141,Painting,Emulsion Paint,204.69,sqft,10.97,227.14,779.14,176973.86,west,summer,Standard
+BOM-1142,Painting,Emulsion Paint,132.03,sqft,18.5,156.46,143.79,22497.38,south,normal,Premium
+BOM-1143,Painting,Emulsion Paint,236.54,sqft,21.08,286.4,702.28,201132.99,west,normal,Standard
+BOM-1144,Electrical,Switches,262.74,sqft,18.27,310.74,129.56,40259.47,south,normal,Premium
+BOM-1145,Carpentry,Laminate,292.52,sqft,21.29,354.8,564.3,200213.64,south,monsoon,Standard
+BOM-1146,Plumbing,CPVC Pipe,36.1,sqft,18.71,42.85,788.95,33806.51,north,summer,Premium
+BOM-1147,Electrical,Switches,135.25,sqft,16.6,157.7,669.99,105657.42,south,summer,Premium
+BOM-1148,Painting,Emulsion Paint,246.65,sqft,10.09,271.54,213.63,58009.09,north,summer,Standard
+BOM-1149,Painting,Putty,105.69,kg,16.59,123.22,113.3,13960.83,north,monsoon,Premium
+BOM-1150,Painting,Emulsion Paint,190.68,sqft,12.17,213.89,687.76,147104.99,west,normal,Standard
+BOM-1151,Carpentry,Adhesive,241.52,kg,15.03,277.82,392.01,108908.22,north,monsoon,Premium
+BOM-1152,Carpentry,Plywood,135.56,sqft,21.09,164.15,657.16,107872.81,west,summer,Standard
+BOM-1153,Painting,Emulsion Paint,97.87,sqft,24.69,122.03,181.32,22126.48,south,normal,Standard
+BOM-1154,Electrical,Wires,277.14,sqft,10.57,306.43,534.12,163670.39,west,monsoon,Premium
+BOM-1155,Painting,Primer,123.59,sqft,19.57,147.78,516.1,76269.26,north,monsoon,Premium
+BOM-1156,Painting,Emulsion Paint,7.33,sqft,12.76,8.27,493.9,4084.55,south,monsoon,Premium
+BOM-1157,Painting,Putty,194.94,kg,23.09,239.95,576.95,138439.15,west,monsoon,Premium
+BOM-1158,Electrical,Switches,106.85,sqft,21.8,130.14,597.93,77814.61,south,normal,Standard
+BOM-1159,Carpentry,Plywood,163.54,sqft,14.63,187.47,658.24,123400.25,south,monsoon,Premium
+BOM-1160,Carpentry,Edge Band,32.38,sqft,17.38,38.01,488.35,18562.18,west,summer,Standard
+BOM-1161,Carpentry,Plywood,267.64,sqft,17.18,313.62,262.47,82315.84,north,monsoon,Premium
+BOM-1162,Plumbing,CPVC Pipe,37.58,sqft,9.02,40.97,360.76,14780.34,west,monsoon,Premium
+BOM-1163,Carpentry,Laminate,19.08,sqft,19.07,22.72,147.28,3346.2,north,monsoon,Standard
+BOM-1164,Painting,Putty,105.0,kg,12.01,117.61,681.35,80133.57,west,monsoon,Standard
+BOM-1165,Painting,Emulsion Paint,93.26,sqft,19.34,111.3,740.97,82469.96,west,monsoon,Standard
+BOM-1166,Electrical,Switches,116.41,sqft,20.54,140.32,130.5,18311.76,west,monsoon,Standard
+BOM-1167,Painting,Emulsion Paint,139.02,sqft,10.49,153.6,406.1,62376.96,north,summer,Standard
+BOM-1168,Carpentry,Plywood,130.34,sqft,10.21,143.65,224.71,32279.59,south,normal,Premium
+BOM-1169,Plumbing,UPVC Pipe,169.9,sqft,21.24,205.99,789.93,162717.68,west,normal,Premium
+BOM-1170,Painting,Putty,208.26,kg,24.11,258.47,669.28,172988.8,north,summer,Standard
+BOM-1171,Plumbing,CPVC Pipe,42.5,sqft,20.09,51.04,151.27,7720.82,west,monsoon,Standard
+BOM-1172,Electrical,Switches,67.73,sqft,16.05,78.6,681.99,53604.41,west,normal,Standard
+BOM-1173,Plumbing,UPVC Pipe,256.43,sqft,9.88,281.77,357.84,100828.58,north,summer,Standard
+BOM-1174,Carpentry,Laminate,114.58,sqft,24.85,143.05,300.8,43029.44,north,summer,Standard
+BOM-1175,Carpentry,Adhesive,236.22,kg,15.17,272.05,845.67,230064.52,north,normal,Standard
+BOM-1176,Carpentry,Adhesive,246.64,kg,16.31,286.87,145.2,41653.52,north,summer,Standard
+BOM-1177,Painting,Primer,146.95,sqft,13.26,166.44,429.04,71409.42,north,normal,Premium
+BOM-1178,Electrical,Switches,250.94,sqft,10.26,276.69,159.13,44029.68,west,normal,Premium
+BOM-1179,Electrical,Wires,137.48,sqft,22.73,168.73,319.69,53941.29,west,monsoon,Premium
+BOM-1180,Painting,Primer,73.68,sqft,14.72,84.53,505.26,42709.63,west,normal,Premium
+BOM-1181,Electrical,Wires,31.12,sqft,10.82,34.49,61.33,2115.27,west,monsoon,Premium
+BOM-1182,Plumbing,CPVC Pipe,195.32,sqft,18.95,232.33,113.23,26306.73,west,monsoon,Standard
+BOM-1183,Plumbing,UPVC Pipe,158.92,sqft,20.76,191.91,472.27,90633.34,south,summer,Standard
+BOM-1184,Carpentry,Plywood,86.11,sqft,11.5,96.01,753.53,72346.42,west,normal,Standard
+BOM-1185,Plumbing,CPVC Pipe,184.02,sqft,14.83,211.31,78.69,16627.98,south,normal,Premium
+BOM-1186,Carpentry,Adhesive,127.41,kg,22.61,156.22,312.95,48889.05,north,summer,Standard
+BOM-1187,Carpentry,Laminate,164.82,sqft,12.85,186.0,197.1,36660.6,south,summer,Premium
+BOM-1188,Painting,Primer,205.19,sqft,9.0,223.66,866.57,193817.05,south,summer,Standard
+BOM-1189,Carpentry,Hinges,120.03,sqft,13.44,136.16,395.03,53787.28,north,normal,Premium
+BOM-1190,Carpentry,Laminate,20.3,sqft,12.07,22.75,553.42,12590.3,south,normal,Premium
+BOM-1191,Carpentry,Laminate,84.44,sqft,13.41,95.76,515.68,49381.52,south,normal,Standard
+BOM-1192,Painting,Primer,191.89,sqft,23.53,237.04,56.02,13278.98,west,monsoon,Standard
+BOM-1193,Carpentry,Edge Band,230.08,sqft,19.08,273.98,147.99,40546.3,west,normal,Premium
+BOM-1194,Carpentry,Laminate,254.65,sqft,16.51,296.69,713.28,211623.04,south,normal,Standard
+BOM-1195,Carpentry,Edge Band,163.57,sqft,15.2,188.43,823.88,155243.71,north,summer,Standard
+BOM-1196,Painting,Putty,288.53,kg,18.55,342.05,601.63,205787.54,south,summer,Standard
+BOM-1197,Painting,Putty,85.62,kg,12.27,96.13,624.8,60062.02,north,monsoon,Standard
+BOM-1198,Plumbing,UPVC Pipe,253.0,sqft,12.78,285.33,178.82,51022.71,west,monsoon,Standard
+BOM-1199,Carpentry,Hinges,31.47,sqft,19.87,37.72,754.23,28449.56,west,monsoon,Premium
+BOM-1200,Painting,Primer,67.2,sqft,16.58,78.34,729.77,57170.18,west,normal,Premium

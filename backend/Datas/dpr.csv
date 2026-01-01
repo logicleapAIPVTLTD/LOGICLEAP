@@ -1,0 +1,550 @@
+item_name,date,achieved_qty
+Excavation in hard soil,14-02-2025,54.383
+Excavation in hard soil,15-02-2025,34.93
+Excavation in hard soil,16-02-2025,47.681
+Excavation in hard soil,17-02-2025,32.131
+Excavation in hard soil,18-02-2025,27.88
+Excavation in hard soil,19-02-2025,51.026
+PCC 1:4:8 using 40mm aggregate,06-01-2025,20.802
+PCC 1:4:8 using 40mm aggregate,07-01-2025,17.872
+PCC 1:4:8 using 40mm aggregate,08-01-2025,25.434
+PCC 1:4:8 using 40mm aggregate,09-01-2025,18.92
+PCC 1:4:8 using 40mm aggregate,10-01-2025,26.188
+PCC 1:4:8 using 40mm aggregate,11-01-2025,20.578
+PCC 1:4:8 using 40mm aggregate,12-01-2025,22.424
+PCC 1:4:8 using 40mm aggregate,13-01-2025,21.414
+PCC 1:4:8 using 40mm aggregate,14-01-2025,23.31
+RCC M20 using ready mix concrete,20-01-2025,80.12
+RCC M20 using ready mix concrete,21-01-2025,29.011
+RCC M20 using ready mix concrete,22-01-2025,46.913
+RCC M20 using ready mix concrete,23-01-2025,39.891
+RCC M20 using ready mix concrete,24-01-2025,26.976
+RCC M20 using ready mix concrete,25-01-2025,29.242
+RCC M20 using ready mix concrete,26-01-2025,27.01
+RCC M20 using ready mix concrete,27-01-2025,31.066
+cement,13-01-2025,5662.402
+cement,14-01-2025,8763.492
+cement,15-01-2025,11870.916
+cement,16-01-2025,10138.192
+cement,17-01-2025,8485.467
+cement,18-01-2025,6644.17
+Shuttering for beams,17-02-2025,1182.279
+Shuttering for beams,18-02-2025,335.116
+Shuttering for beams,19-02-2025,553.536
+Shuttering for beams,20-02-2025,498.444
+Shuttering for beams,21-02-2025,659.423
+Shuttering for beams,22-02-2025,391.728
+Shuttering for beams,23-02-2025,491.092
+Shuttering for beams,24-02-2025,292.234
+Shuttering for beams,25-02-2025,355.447
+Shuttering for beams,26-02-2025,373.819
+Shuttering for beams,27-02-2025,361.059
+Shuttering for beams,28-02-2025,325.267
+Shuttering for beams,01-03-2025,395.05
+Masonry work in CM 1:6,10-01-2025,425.095
+Masonry work in CM 1:6,11-01-2025,323.593
+Masonry work in CM 1:6,12-01-2025,451.85
+Masonry work in CM 1:6,13-01-2025,617.325
+Masonry work in CM 1:6,14-01-2025,482.094
+Masonry work in CM 1:6,15-01-2025,664.032
+Masonry work in CM 1:6,16-01-2025,314.678
+Masonry work in CM 1:6,17-01-2025,366.898
+Masonry work in CM 1:6,18-01-2025,467.463
+Masonry work in CM 1:6,19-01-2025,478.822
+Masonry work in CM 1:6,20-01-2025,519.922
+Masonry work in CM 1:6,21-01-2025,637.196
+Masonry work in CM 1:6,22-01-2025,487.258
+Masonry work in CM 1:6,23-01-2025,635.523
+cement,01-02-2025,3138.433
+cement,02-02-2025,2221.274
+cement,03-02-2025,1521.408
+cement,04-02-2025,1359.676
+cement,05-02-2025,2333.969
+granite,06-01-2025,192.03
+granite,07-01-2025,270.452
+granite,08-01-2025,301.983
+granite,09-01-2025,173.171
+granite,10-01-2025,347.74
+granite,11-01-2025,210.137
+Concrete curing compound,18-01-2025,14.714
+Concrete curing compound,19-01-2025,28.596
+Concrete curing compound,20-01-2025,31.589
+Concrete curing compound,21-01-2025,23.4
+Concrete curing compound,22-01-2025,23.553
+Concrete curing compound,23-01-2025,24.966
+Concrete curing compound,24-01-2025,19.142
+Concrete curing compound,25-01-2025,30.227
+Anti-termite treatment,06-02-2025,658.483
+Anti-termite treatment,07-02-2025,305.461
+Anti-termite treatment,08-02-2025,191.514
+Anti-termite treatment,09-02-2025,209.933
+Anti-termite treatment,10-02-2025,235.059
+Anti-termite treatment,11-02-2025,230.795
+Anti-termite treatment,12-02-2025,358.875
+Anti-termite treatment,13-02-2025,244.527
+Anti-termite treatment,14-02-2025,243.704
+Anti-termite treatment,15-02-2025,431.942
+Anti-termite treatment,16-02-2025,379.145
+Anti-termite treatment,17-02-2025,345.95
+Anti-termite treatment,18-02-2025,348.85
+Anti-termite treatment,19-02-2025,268.535
+Excavation in soft rock,06-01-2025,16.504
+Excavation in soft rock,07-01-2025,16.505
+Excavation in soft rock,08-01-2025,27.403
+Excavation in soft rock,09-01-2025,30.259
+Excavation in soft rock,10-01-2025,33.841
+Excavation in soft rock,11-01-2025,36.836
+Excavation in soft rock,12-01-2025,31.631
+Excavation in soft rock,13-01-2025,26.496
+Excavation in soft rock,14-01-2025,31.974
+Excavation in soft rock,15-01-2025,32.062
+Excavation in soft rock,16-01-2025,21.598
+Excavation in soft rock,17-01-2025,22.914
+Excavation in soft rock,18-01-2025,29.572
+Backfilling with excavated soil,17-01-2025,36.895
+Backfilling with excavated soil,18-01-2025,43.375
+Backfilling with excavated soil,19-01-2025,43.044
+Backfilling with excavated soil,20-01-2025,26.16
+Backfilling with excavated soil,21-01-2025,31.074
+Backfilling with excavated soil,22-01-2025,39.469
+Backfilling with excavated soil,23-01-2025,44.847
+Backfilling with excavated soil,24-01-2025,31.643
+Backfilling with excavated soil,25-01-2025,27.404
+Backfilling with excavated soil,26-01-2025,24.576
+Backfilling with excavated soil,27-01-2025,47.171
+Backfilling with excavated soil,28-01-2025,49.618
+Backfilling with excavated soil,29-01-2025,41.816
+Backfilling with excavated soil,30-01-2025,38.732
+Backfilling with excavated soil,31-01-2025,35.159
+Earth filling with red soil,18-02-2025,52.043
+Earth filling with red soil,19-02-2025,40.013
+Earth filling with red soil,20-02-2025,47.886
+Earth filling with red soil,21-02-2025,51.689
+Earth filling with red soil,22-02-2025,25.403
+Earth filling with red soil,23-02-2025,30.205
+Earth filling with red soil,24-02-2025,32.377
+Earth filling with red soil,25-02-2025,35.69
+Earth filling with red soil,26-02-2025,23.849
+Earth filling with red soil,27-02-2025,25.074
+Earth filling with red soil,28-02-2025,37.555
+Earth filling with red soil,01-03-2025,37.756
+Earth filling with red soil,02-03-2025,51.108
+PCC 1:3:6 bed concrete,31-01-2025,14.861
+PCC 1:3:6 bed concrete,01-02-2025,21.03
+PCC 1:3:6 bed concrete,02-02-2025,29.847
+PCC 1:3:6 bed concrete,03-02-2025,15.658
+PCC 1:3:6 bed concrete,04-02-2025,20.202
+PCC 1:3:6 bed concrete,05-02-2025,28.183
+PCC 1:3:6 bed concrete,06-02-2025,34.668
+PCC 1:3:6 bed concrete,07-02-2025,33.701
+RCC M25 footing concrete,02-02-2025,15.07
+RCC M25 footing concrete,03-02-2025,22.541
+RCC M25 footing concrete,04-02-2025,16.86
+RCC M25 footing concrete,05-02-2025,25.103
+RCC M25 footing concrete,06-02-2025,22.174
+RCC M25 footing concrete,07-02-2025,16.914
+RCC M25 footing concrete,08-02-2025,17.143
+RCC M25 footing concrete,09-02-2025,13.135
+RCC M25 footing concrete,10-02-2025,19.388
+RCC M25 footing concrete,11-02-2025,21.622
+RCC M25 footing concrete,12-02-2025,20.849
+RCC M25 footing concrete,13-02-2025,14.544
+RCC M25 footing concrete,14-02-2025,26.014
+RCC M25 footing concrete,15-02-2025,21.883
+RCC M30 column concrete,22-01-2025,16.314
+RCC M30 column concrete,23-01-2025,26.167
+RCC M30 column concrete,24-01-2025,34.01
+RCC M30 column concrete,25-01-2025,36.873
+RCC M30 column concrete,26-01-2025,22.583
+Centering and shuttering for columns,22-02-2025,1168.01
+Centering and shuttering for columns,23-02-2025,1164.483
+Centering and shuttering for columns,24-02-2025,1062.804
+Centering and shuttering for columns,25-02-2025,1584.005
+Centering and shuttering for columns,26-02-2025,988.307
+Centering and shuttering for columns,27-02-2025,980.244
+Centering and shuttering for columns,28-02-2025,1109.445
+cement,18-02-2025,2974.333
+cement,19-02-2025,3763.451
+cement,20-02-2025,5959.548
+cement,21-02-2025,5428.388
+cement,22-02-2025,5945.547
+cement,23-02-2025,4387.91
+cement,24-02-2025,3700.399
+cement,25-02-2025,4591.042
+cement,26-02-2025,5101.537
+cement,27-02-2025,5555.677
+cement,28-02-2025,6859.913
+Masonry work in CM 1:5,26-01-2025,356.002
+Masonry work in CM 1:5,27-01-2025,443.008
+Masonry work in CM 1:5,28-01-2025,645.014
+Masonry work in CM 1:5,29-01-2025,817.924
+Masonry work in CM 1:5,30-01-2025,413.639
+Masonry work in CM 1:5,31-01-2025,687.439
+Masonry work in CM 1:5,01-02-2025,563.962
+Masonry work in CM 1:5,02-02-2025,796.339
+Masonry work in CM 1:5,03-02-2025,616.699
+Wire cut brick masonry,14-01-2025,542.668
+Wire cut brick masonry,15-01-2025,639.081
+Wire cut brick masonry,16-01-2025,877.253
+Wire cut brick masonry,17-01-2025,919.101
+Wire cut brick masonry,18-01-2025,444.822
+Wire cut brick masonry,19-01-2025,686.983
+Wire cut brick masonry,20-01-2025,686.238
+Wire cut brick masonry,21-01-2025,479.201
+Block work using AAC blocks,22-02-2025,574.021
+Block work using AAC blocks,23-02-2025,756.291
+Block work using AAC blocks,24-02-2025,1324.263
+Block work using AAC blocks,25-02-2025,1212.887
+Block work using AAC blocks,26-02-2025,783.29
+Block work using AAC blocks,27-02-2025,963.493
+Block work using AAC blocks,28-02-2025,1122.482
+Block work using AAC blocks,01-03-2025,955.459
+Block work using AAC blocks,02-03-2025,1210.912
+Block work using AAC blocks,03-03-2025,663.925
+cement,11-01-2025,725.433
+cement,12-01-2025,1339.672
+cement,13-01-2025,1217.026
+cement,14-01-2025,1617.104
+cement,15-01-2025,1096.454
+cement,16-01-2025,1258.641
+Waterproof plaster,29-01-2025,381.753
+Waterproof plaster,30-01-2025,715.036
+Waterproof plaster,31-01-2025,592.96
+Waterproof plaster,01-02-2025,783.869
+Waterproof plaster,02-02-2025,522.364
+Waterproof plaster,03-02-2025,821.546
+granite,27-01-2025,165.085
+granite,28-01-2025,197.394
+granite,29-01-2025,137.653
+granite,30-01-2025,189.897
+granite,31-01-2025,267.909
+granite,01-02-2025,204.802
+granite,02-02-2025,160.625
+granite,03-02-2025,158.218
+granite,04-02-2025,240.588
+granite,05-02-2025,192.669
+vitrified tile,12-02-2025,576.955
+vitrified tile,13-02-2025,484.368
+vitrified tile,14-02-2025,530.431
+vitrified tile,15-02-2025,343.966
+vitrified tile,16-02-2025,392.749
+vitrified tile,17-02-2025,441.694
+vitrified tile,18-02-2025,473.973
+vitrified tile,19-02-2025,477.083
+vitrified tile,20-02-2025,401.304
+Anti-skid tile flooring,25-02-2025,676.064
+Anti-skid tile flooring,26-02-2025,695.689
+Anti-skid tile flooring,27-02-2025,369.392
+Anti-skid tile flooring,28-02-2025,710.043
+Anti-skid tile flooring,01-03-2025,457.785
+Wall tiling 300x600,20-02-2025,134.56
+Wall tiling 300x600,21-02-2025,135.853
+Wall tiling 300x600,22-02-2025,240.446
+Wall tiling 300x600,23-02-2025,224.677
+Wall tiling 300x600,24-02-2025,141.201
+Wall tiling 300x600,25-02-2025,223.428
+Wall tiling 300x600,26-02-2025,310.531
+Wall tiling 300x600,27-02-2025,281.812
+Wall tiling 300x600,28-02-2025,253.634
+Wall tiling 300x600,01-03-2025,203.827
+Wall tiling 300x600,02-03-2025,280.137
+Wall tiling 300x600,03-03-2025,261.087
+granite,08-02-2025,60.771
+granite,09-02-2025,117.704
+granite,10-02-2025,97.796
+granite,11-02-2025,103.389
+granite,12-02-2025,96.449
+granite,13-02-2025,131.606
+Marble flooring 20mm,05-03-2025,66.046
+Marble flooring 20mm,06-03-2025,93.286
+Marble flooring 20mm,07-03-2025,141.053
+Marble flooring 20mm,08-03-2025,123.271
+Marble flooring 20mm,09-03-2025,127.046
+Marble flooring 20mm,10-03-2025,95.86
+Marble flooring 20mm,11-03-2025,151.395
+Marble flooring 20mm,12-03-2025,107.39
+Marble flooring 20mm,13-03-2025,79.639
+Marble flooring 20mm,14-03-2025,123.707
+Marble flooring 20mm,15-03-2025,102.149
+Stone cladding external,10-01-2025,183.372
+Stone cladding external,11-01-2025,183.372
+Stone cladding external,12-01-2025,412.484
+Stone cladding external,13-01-2025,408.535
+Stone cladding external,14-01-2025,337.688
+Stone cladding external,15-01-2025,200.1
+Stone cladding external,16-01-2025,192.149
+Stone cladding external,17-01-2025,396.666
+Stone cladding external,18-01-2025,369.042
+Stone cladding external,19-01-2025,359.095
+Stone cladding external,20-01-2025,260.794
+Stone cladding external,21-01-2025,276.283
+Stone cladding external,22-01-2025,393.477
+External wall plastering 20mm,23-01-2025,605.997
+External wall plastering 20mm,24-01-2025,562.714
+External wall plastering 20mm,25-01-2025,547.85
+External wall plastering 20mm,26-01-2025,382.962
+External wall plastering 20mm,27-01-2025,481.002
+External wall plastering 20mm,28-01-2025,446.163
+External wall plastering 20mm,29-01-2025,661.158
+External wall plastering 20mm,30-01-2025,340.38
+External wall plastering 20mm,31-01-2025,707.034
+External wall plastering 20mm,01-02-2025,617.481
+External wall plastering 20mm,02-02-2025,510.438
+External wall plastering 20mm,03-02-2025,693.844
+External wall plastering 20mm,04-02-2025,591.715
+External wall plastering 20mm,05-02-2025,362.809
+External wall plastering 20mm,06-02-2025,506.287
+gypsum board,13-02-2025,748.963
+gypsum board,14-02-2025,621.284
+gypsum board,15-02-2025,458.143
+gypsum board,16-02-2025,852.982
+gypsum board,17-02-2025,508.266
+gypsum board,18-02-2025,702.621
+gypsum board,19-02-2025,831.442
+gypsum board,20-02-2025,425.236
+gypsum board,21-02-2025,471.924
+gypsum board,22-02-2025,791.267
+Aluminium window fabrication,10-02-2025,698.894
+Aluminium window fabrication,11-02-2025,375.52
+Aluminium window fabrication,12-02-2025,590.431
+Aluminium window fabrication,13-02-2025,682.907
+Aluminium window fabrication,14-02-2025,642.965
+Aluminium window fabrication,15-02-2025,314.071
+Aluminium window fabrication,16-02-2025,415.783
+Aluminium window fabrication,17-02-2025,415.225
+Door frame installation hardwood,19-02-2025,509.282
+Door frame installation hardwood,20-02-2025,455.875
+Door frame installation hardwood,21-02-2025,539.196
+Door frame installation hardwood,22-02-2025,519.255
+Door frame installation hardwood,23-02-2025,425.306
+Door frame installation hardwood,24-02-2025,462.638
+Flush door shutter installation,07-01-2025,89.837
+Flush door shutter installation,08-01-2025,125.894
+Flush door shutter installation,09-01-2025,98.011
+Flush door shutter installation,10-01-2025,134.724
+Flush door shutter installation,11-01-2025,165.311
+Flush door shutter installation,12-01-2025,99.996
+Flush door shutter installation,13-01-2025,166.722
+Flush door shutter installation,14-01-2025,126.744
+Flush door shutter installation,15-01-2025,126.467
+Flush door shutter installation,16-01-2025,94.445
+Flush door shutter installation,17-01-2025,117.98
+Flush door shutter installation,18-01-2025,108.555
+Flush door shutter installation,19-01-2025,90.811
+Flush door shutter installation,20-01-2025,152.621
+Flush door shutter installation,21-01-2025,95.679
+MS railing fabrication and installation,19-01-2025,112.11
+MS railing fabrication and installation,20-01-2025,220.781
+MS railing fabrication and installation,21-01-2025,154.89
+MS railing fabrication and installation,22-01-2025,247.262
+MS railing fabrication and installation,23-01-2025,186.36
+MS railing fabrication and installation,24-01-2025,202.755
+MS railing fabrication and installation,25-01-2025,119.441
+MS railing fabrication and installation,26-01-2025,223.422
+MS railing fabrication and installation,27-01-2025,214.622
+Structural steel welding,10-01-2025,584.684
+Structural steel welding,11-01-2025,884.363
+Structural steel welding,12-01-2025,1146.704
+Structural steel welding,13-01-2025,1113.055
+Structural steel welding,14-01-2025,1068.717
+Structural steel welding,15-01-2025,1080.978
+Structural steel welding,16-01-2025,859.346
+Structural steel welding,17-01-2025,1057.939
+RCC lintel 150mm thickness,01-03-2025,4.021
+RCC lintel 150mm thickness,02-03-2025,4.022
+RCC lintel 150mm thickness,03-03-2025,7.4
+RCC lintel 150mm thickness,04-03-2025,8.866
+RCC lintel 150mm thickness,05-03-2025,7.391
+RCC lintel 150mm thickness,06-03-2025,8.517
+RCC sunshade 75mm,29-01-2025,5.61
+RCC sunshade 75mm,30-01-2025,2.406
+RCC sunshade 75mm,31-01-2025,2.525
+RCC sunshade 75mm,01-02-2025,4.084
+RCC sunshade 75mm,02-02-2025,2.851
+RCC sunshade 75mm,03-02-2025,2.291
+RCC sunshade 75mm,04-02-2025,4.043
+RCC sunshade 75mm,05-02-2025,3.626
+RCC sunshade 75mm,06-02-2025,3.248
+Concrete paver block 60mm,03-02-2025,212.718
+Concrete paver block 60mm,04-02-2025,212.719
+Concrete paver block 60mm,05-02-2025,253.518
+Concrete paver block 60mm,06-02-2025,245.383
+Concrete paver block 60mm,07-02-2025,308.786
+Concrete paver block 60mm,08-02-2025,424.461
+Concrete paver block 60mm,09-02-2025,441.458
+Concrete paver block 60mm,10-02-2025,349.382
+Concrete paver block 60mm,11-02-2025,446.621
+Concrete paver block 60mm,12-02-2025,285.601
+Concrete paver block 60mm,13-02-2025,448.261
+Concrete paver block 60mm,14-02-2025,471.806
+Concrete paver block 60mm,15-02-2025,363.281
+Concrete paver block 60mm,16-02-2025,488.257
+Concrete paver block 60mm,17-02-2025,365.708
+Kerb stone supplying and fixing,27-02-2025,50.167
+Kerb stone supplying and fixing,28-02-2025,50.167
+Kerb stone supplying and fixing,01-03-2025,50.168
+Kerb stone supplying and fixing,02-03-2025,50.167
+Kerb stone supplying and fixing,03-03-2025,83.741
+Kerb stone supplying and fixing,04-03-2025,114.867
+Kerb stone supplying and fixing,05-03-2025,115.715
+Kerb stone supplying and fixing,06-03-2025,98.61
+Kerb stone supplying and fixing,07-03-2025,107.702
+Kerb stone supplying and fixing,08-03-2025,114.816
+Drain construction in CM 1:4,15-01-2025,5.449
+Drain construction in CM 1:4,16-01-2025,6.959
+Drain construction in CM 1:4,17-01-2025,6.236
+Drain construction in CM 1:4,18-01-2025,12.279
+Drain construction in CM 1:4,19-01-2025,11.423
+Drain construction in CM 1:4,20-01-2025,9.695
+Drain construction in CM 1:4,21-01-2025,10.333
+Drain construction in CM 1:4,22-01-2025,10.336
+Drain construction in CM 1:4,23-01-2025,8.752
+Drain construction in CM 1:4,24-01-2025,9.347
+Manhole construction complete,27-01-2025,2.607
+Manhole construction complete,28-01-2025,3.267
+Manhole construction complete,29-01-2025,1.688
+Manhole construction complete,30-01-2025,2.017
+Manhole construction complete,31-01-2025,3.457
+Manhole construction complete,01-02-2025,2.722
+Manhole construction complete,02-02-2025,3.393
+Manhole construction complete,03-02-2025,1.609
+Septic tank construction,16-02-2025,13.463
+Septic tank construction,17-02-2025,6.914
+Septic tank construction,18-02-2025,10.141
+Septic tank construction,19-02-2025,8.604
+Septic tank construction,20-02-2025,13.843
+Septic tank construction,21-02-2025,7.261
+Septic tank construction,22-02-2025,9.453
+Septic tank construction,23-02-2025,8.587
+Septic tank construction,24-02-2025,13.542
+Water tank Sump RCC 50KL,18-02-2025,5.165
+Water tank Sump RCC 50KL,19-02-2025,11.616
+Water tank Sump RCC 50KL,20-02-2025,7.976
+Water tank Sump RCC 50KL,21-02-2025,8.535
+Water tank Sump RCC 50KL,22-02-2025,5.847
+Water tank Sump RCC 50KL,23-02-2025,8.023
+Water tank Sump RCC 50KL,24-02-2025,6.23
+Water tank Sump RCC 50KL,25-02-2025,10.277
+Water tank Sump RCC 50KL,26-02-2025,8.052
+Water tank Sump RCC 50KL,27-02-2025,11.68
+Water tank Sump RCC 50KL,28-02-2025,10.283
+Water tank Sump RCC 50KL,01-03-2025,9.783
+Water tank Sump RCC 50KL,02-03-2025,8.29
+Water tank Sump RCC 50KL,03-03-2025,6.1
+Water tank Sump RCC 50KL,04-03-2025,11.276
+sand,15-02-2025,50.357
+sand,16-02-2025,73.671
+sand,17-02-2025,78.036
+sand,18-02-2025,54.762
+sand,19-02-2025,51.419
+sand,20-02-2025,35.917
+Soil compaction with 8T roller,12-02-2025,1905.396
+Soil compaction with 8T roller,13-02-2025,891.753
+Soil compaction with 8T roller,14-02-2025,1557.413
+Soil compaction with 8T roller,15-02-2025,1608.926
+Soil compaction with 8T roller,16-02-2025,1633.278
+Soil compaction with 8T roller,17-02-2025,1392.753
+Soil compaction with 8T roller,18-02-2025,1847.459
+Soil compaction with 8T roller,19-02-2025,1008.289
+Soil compaction with 8T roller,20-02-2025,1086.497
+Soil compaction with 8T roller,21-02-2025,1327.345
+Soil compaction with 8T roller,22-02-2025,1281.719
+Soil compaction with 8T roller,23-02-2025,1997.53
+Soil compaction with 8T roller,24-02-2025,1496.51
+Soil compaction with 8T roller,25-02-2025,1659.766
+Soil compaction with 8T roller,26-02-2025,981.925
+Leveling and dressing site,15-01-2025,3671.555
+Leveling and dressing site,16-01-2025,2991.244
+Leveling and dressing site,17-01-2025,1626.63
+Leveling and dressing site,18-01-2025,1954.665
+Leveling and dressing site,19-01-2025,2935.361
+Leveling and dressing site,20-01-2025,1750.586
+Leveling and dressing site,21-01-2025,1734.649
+Leveling and dressing site,22-01-2025,2745.908
+Leveling and dressing site,23-01-2025,1483.561
+Leveling and dressing site,24-01-2025,2382.399
+Leveling and dressing site,25-01-2025,1587.43
+Leveling and dressing site,26-01-2025,1800.637
+Leveling and dressing site,27-01-2025,2785.121
+Bitumen primer application,20-02-2025,4011.333
+Bitumen primer application,21-02-2025,2239.127
+Bitumen primer application,22-02-2025,1467.032
+Bitumen primer application,23-02-2025,1587.881
+Bitumen primer application,24-02-2025,1396.409
+Bitumen primer application,25-02-2025,1419.729
+Bitumen primer application,26-02-2025,2552.288
+Bitumen primer application,27-02-2025,1194.632
+BIT waterproofing two coats,15-01-2025,1854.316
+BIT waterproofing two coats,16-01-2025,860.878
+BIT waterproofing two coats,17-01-2025,1050.022
+BIT waterproofing two coats,18-01-2025,895.867
+BIT waterproofing two coats,19-01-2025,1047.251
+BIT waterproofing two coats,20-01-2025,563.319
+BIT waterproofing two coats,21-01-2025,648.861
+BIT waterproofing two coats,22-01-2025,753.834
+BIT waterproofing two coats,23-01-2025,693.571
+BIT waterproofing two coats,24-01-2025,1081.136
+BIT waterproofing two coats,25-01-2025,536.965
+BIT waterproofing two coats,26-01-2025,544.631
+Acrylic waterproof coating,29-01-2025,464.271
+Acrylic waterproof coating,30-01-2025,974.255
+Acrylic waterproof coating,31-01-2025,949.111
+Acrylic waterproof coating,01-02-2025,491.115
+Acrylic waterproof coating,02-02-2025,1049.51
+Acrylic waterproof coating,03-02-2025,776.162
+Acrylic waterproof coating,04-02-2025,531.779
+Acrylic waterproof coating,05-02-2025,781.98
+Acrylic waterproof coating,06-02-2025,945.886
+Polymer based bonding agent,05-03-2025,17.451
+Polymer based bonding agent,06-03-2025,8.221
+Polymer based bonding agent,07-03-2025,6.542
+Polymer based bonding agent,08-03-2025,10.894
+Polymer based bonding agent,09-03-2025,6.663
+Polymer based bonding agent,10-03-2025,6.605
+Polymer based bonding agent,11-03-2025,13.311
+Polymer based bonding agent,12-03-2025,9.947
+Polymer based bonding agent,13-03-2025,11.518
+Polymer based bonding agent,14-03-2025,9.236
+Polymer based bonding agent,15-03-2025,9.857
+Polymer based bonding agent,16-03-2025,6.503
+Polymer based bonding agent,17-03-2025,13.747
+Polymer based bonding agent,18-03-2025,9.689
+Polymer based bonding agent,19-03-2025,10.198
+Grouting with non-shrink grout,18-02-2025,33.015
+Grouting with non-shrink grout,19-02-2025,37.611
+Grouting with non-shrink grout,20-02-2025,61.669
+Grouting with non-shrink grout,21-02-2025,70.556
+Grouting with non-shrink grout,22-02-2025,63.908
+Grouting with non-shrink grout,23-02-2025,37.381
+Grouting with non-shrink grout,24-02-2025,59.666
+Grouting with non-shrink grout,25-02-2025,52.988
+Grouting with non-shrink grout,26-02-2025,56.371
+Grouting with non-shrink grout,27-02-2025,76.799
+Grouting with non-shrink grout,28-02-2025,47.33
+Grouting with non-shrink grout,01-03-2025,57.154
+Grouting with non-shrink grout,02-03-2025,60.884
+1.5sqmm FRLS copper cable,19-01-2025,411.519
+1.5sqmm FRLS copper cable,20-01-2025,123.552
+1.5sqmm FRLS copper cable,21-01-2025,252.959
+1.5sqmm FRLS copper cable,22-01-2025,136.481
+1.5sqmm FRLS copper cable,23-01-2025,169.996
+1.5sqmm FRLS copper cable,24-01-2025,213.967
+1.5sqmm FRLS copper cable,25-01-2025,177.929
+1.5sqmm FRLS copper cable,26-01-2025,127.779
+1.5sqmm FRLS copper cable,27-01-2025,176.3
+1.5sqmm FRLS copper cable,28-01-2025,181.971
+1.5sqmm FRLS copper cable,29-01-2025,164.649
+1.5sqmm FRLS copper cable,30-01-2025,147.95
+1.5sqmm FRLS copper cable,31-01-2025,181.677
+1.5sqmm FRLS copper cable,01-02-2025,145.913
+1.5sqmm FRLS copper cable,02-02-2025,222.394
+4sqmm copper cable,25-01-2025,537.846
+4sqmm copper cable,26-01-2025,537.543
+4sqmm copper cable,27-01-2025,305.66
+4sqmm copper cable,28-01-2025,304.456
+4sqmm copper cable,29-01-2025,571.113
+AC 3TR installation,19-01-2025,1.344
+AC 3TR installation,20-01-2025,2.322
+AC 3TR installation,21-01-2025,2.395
+AC 3TR installation,22-01-2025,2.341
+AC 3TR installation,23-01-2025,2.799

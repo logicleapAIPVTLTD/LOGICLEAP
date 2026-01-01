@@ -1,0 +1,321 @@
+spec_id,material_name,category,grade,thickness_mm,density_kg_m3,standard_size,unit_weight_kg,durability_rating,brand_popularity
+MS-0001,Plywood,Plywood,BWR,12.0,750,8x4 ft,9.0,7.16,Medium
+MS-0002,Plywood,Plywood,MR,12.0,750,8x4 ft,9.0,9.27,Low
+MS-0003,Plywood,Plywood,BWR,18.0,750,8x4 ft,13.5,9.02,Low
+MS-0004,Plywood,Plywood,BWP,18.0,750,8x4 ft,13.5,9.61,Medium
+MS-0005,Plywood,Plywood,BWP,18.0,750,8x4 ft,13.5,8.49,Medium
+MS-0006,Plywood,Plywood,BWP,18.0,750,8x4 ft,13.5,7.42,Medium
+MS-0007,Plywood,Plywood,MR,12.0,750,8x4 ft,9.0,7.33,Medium
+MS-0008,Plywood,Plywood,BWP,12.0,750,8x4 ft,9.0,9.61,High
+MS-0009,Plywood,Plywood,BWP,12.0,750,8x4 ft,9.0,6.67,High
+MS-0010,Plywood,Plywood,BWP,18.0,750,8x4 ft,13.5,6.59,High
+MS-0011,Plywood,Plywood,BWP,18.0,750,8x4 ft,13.5,8.74,High
+MS-0012,Plywood,Plywood,BWP,18.0,750,8x4 ft,13.5,8.56,High
+MS-0013,Plywood,Plywood,BWR,18.0,750,8x4 ft,13.5,7.17,Low
+MS-0014,Plywood,Plywood,BWR,18.0,750,8x4 ft,13.5,8.17,Low
+MS-0015,Plywood,Plywood,BWP,18.0,750,8x4 ft,13.5,8.3,High
+MS-0016,Plywood,Plywood,MR,18.0,750,8x4 ft,13.5,7.77,Medium
+MS-0017,Plywood,Plywood,BWR,18.0,750,8x4 ft,13.5,8.02,High
+MS-0018,Plywood,Plywood,BWP,12.0,750,8x4 ft,9.0,8.68,Medium
+MS-0019,Plywood,Plywood,BWR,12.0,750,8x4 ft,9.0,7.92,Medium
+MS-0020,Plywood,Plywood,BWR,18.0,750,8x4 ft,13.5,9.02,Low
+MS-0021,Laminate,Laminate,Premium,1.0,900,8x4 ft,0.9,8.07,High
+MS-0022,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,7.37,Low
+MS-0023,Laminate,Laminate,Premium,1.0,900,8x4 ft,0.9,9.03,Medium
+MS-0024,Laminate,Laminate,Standard,1.0,900,8x4 ft,0.9,6.59,High
+MS-0025,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,7.65,Low
+MS-0026,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,7.76,Medium
+MS-0027,Laminate,Laminate,Premium,1.0,900,8x4 ft,0.9,7.86,High
+MS-0028,Laminate,Laminate,Standard,0.8,900,8x4 ft,0.72,7.27,Medium
+MS-0029,Laminate,Laminate,Standard,0.8,900,8x4 ft,0.72,9.37,High
+MS-0030,Laminate,Laminate,Standard,1.0,900,8x4 ft,0.9,6.57,Medium
+MS-0031,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,8.67,Medium
+MS-0032,Laminate,Laminate,Premium,1.0,900,8x4 ft,0.9,6.57,Medium
+MS-0033,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,7.75,Medium
+MS-0034,Laminate,Laminate,Standard,1.0,900,8x4 ft,0.9,9.17,High
+MS-0035,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,8.14,Low
+MS-0036,Laminate,Laminate,Standard,1.0,900,8x4 ft,0.9,8.53,Medium
+MS-0037,Laminate,Laminate,Standard,1.0,900,8x4 ft,0.9,8.14,High
+MS-0038,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,7.38,Medium
+MS-0039,Laminate,Laminate,Standard,1.0,900,8x4 ft,0.9,8.56,High
+MS-0040,Laminate,Laminate,Premium,0.8,900,8x4 ft,0.72,7.4,Low
+MS-0041,Vitrified Tile,Vitrified Tile,Premium,10.0,2400,600x600 mm,24.0,7.19,High
+MS-0042,Vitrified Tile,Vitrified Tile,Premium,10.0,2400,600x600 mm,24.0,7.93,Low
+MS-0043,Vitrified Tile,Vitrified Tile,Standard,10.0,2400,600x600 mm,24.0,7.87,Medium
+MS-0044,Vitrified Tile,Vitrified Tile,Standard,10.0,2400,600x600 mm,24.0,9.41,Low
+MS-0045,Vitrified Tile,Vitrified Tile,Premium,8.0,2400,600x600 mm,19.2,7.2,Low
+MS-0046,Vitrified Tile,Vitrified Tile,Premium,10.0,2400,600x600 mm,24.0,9.59,Low
+MS-0047,Vitrified Tile,Vitrified Tile,Standard,10.0,2400,600x600 mm,24.0,8.22,Medium
+MS-0048,Vitrified Tile,Vitrified Tile,Standard,10.0,2400,600x600 mm,24.0,7.29,Low
+MS-0049,Vitrified Tile,Vitrified Tile,Premium,10.0,2400,600x600 mm,24.0,7.85,High
+MS-0050,Vitrified Tile,Vitrified Tile,Premium,8.0,2400,600x600 mm,19.2,7.38,Medium
+MS-0051,Vitrified Tile,Vitrified Tile,Premium,8.0,2400,600x600 mm,19.2,8.77,High
+MS-0052,Vitrified Tile,Vitrified Tile,Standard,10.0,2400,600x600 mm,24.0,6.87,High
+MS-0053,Vitrified Tile,Vitrified Tile,Standard,8.0,2400,600x600 mm,19.2,9.13,Medium
+MS-0054,Vitrified Tile,Vitrified Tile,Premium,10.0,2400,600x600 mm,24.0,8.35,Medium
+MS-0055,Vitrified Tile,Vitrified Tile,Standard,10.0,2400,600x600 mm,24.0,7.17,Medium
+MS-0056,Vitrified Tile,Vitrified Tile,Standard,8.0,2400,600x600 mm,19.2,7.35,Medium
+MS-0057,Vitrified Tile,Vitrified Tile,Standard,8.0,2400,600x600 mm,19.2,9.68,Medium
+MS-0058,Vitrified Tile,Vitrified Tile,Standard,8.0,2400,600x600 mm,19.2,9.34,High
+MS-0059,Vitrified Tile,Vitrified Tile,Premium,10.0,2400,600x600 mm,24.0,9.36,Medium
+MS-0060,Vitrified Tile,Vitrified Tile,Standard,10.0,2400,600x600 mm,24.0,7.81,Low
+MS-0061,Ceramic Tile,Ceramic Tile,Standard,6.0,2100,300x300 mm,12.6,6.87,Low
+MS-0062,Ceramic Tile,Ceramic Tile,Standard,6.0,2100,300x300 mm,12.6,8.14,High
+MS-0063,Ceramic Tile,Ceramic Tile,Standard,6.0,2100,300x300 mm,12.6,9.05,Medium
+MS-0064,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,9.16,Low
+MS-0065,Ceramic Tile,Ceramic Tile,Standard,6.0,2100,300x300 mm,12.6,7.22,High
+MS-0066,Ceramic Tile,Ceramic Tile,Standard,6.0,2100,300x300 mm,12.6,9.7,Medium
+MS-0067,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,9.35,High
+MS-0068,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,8.81,High
+MS-0069,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,8.07,High
+MS-0070,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,7.7,Low
+MS-0071,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,6.57,Low
+MS-0072,Ceramic Tile,Ceramic Tile,Standard,6.0,2100,300x300 mm,12.6,8.78,Low
+MS-0073,Ceramic Tile,Ceramic Tile,Standard,6.0,2100,300x300 mm,12.6,8.32,Medium
+MS-0074,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,8.27,High
+MS-0075,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,6.53,Medium
+MS-0076,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,6.8,High
+MS-0077,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,9.34,High
+MS-0078,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,9.4,Low
+MS-0079,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,7.4,High
+MS-0080,Ceramic Tile,Ceramic Tile,Standard,8.0,2100,300x300 mm,16.8,8.93,Medium
+MS-0081,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,9.22,Low
+MS-0082,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,7.66,Low
+MS-0083,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,8.79,High
+MS-0084,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,9.11,High
+MS-0085,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,7.16,Medium
+MS-0086,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,6.87,High
+MS-0087,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,9.12,Medium
+MS-0088,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,9.38,High
+MS-0089,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,8.77,Medium
+MS-0090,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,6.78,Medium
+MS-0091,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,9.39,Low
+MS-0092,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,9.63,Low
+MS-0093,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,9.71,High
+MS-0094,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,6.66,Low
+MS-0095,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,6.99,Medium
+MS-0096,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,6.55,Low
+MS-0097,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,9.23,Medium
+MS-0098,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,8.85,High
+MS-0099,Granite,Granite,Premium,18.0,2750,600x600 mm,49.5,8.96,Medium
+MS-0100,Granite,Granite,Premium,16.0,2750,600x600 mm,44.0,9.33,Low
+MS-0101,CPVC Pipe,CPVC Pipe,SDR-13.5,2.0,1400,1-inch,2.8,8.9,High
+MS-0102,CPVC Pipe,CPVC Pipe,SDR-11,3.0,1400,1-inch,4.2,7.85,High
+MS-0103,CPVC Pipe,CPVC Pipe,SDR-13.5,2.0,1400,1-inch,2.8,9.72,High
+MS-0104,CPVC Pipe,CPVC Pipe,SDR-11,3.0,1400,1-inch,4.2,7.72,Low
+MS-0105,CPVC Pipe,CPVC Pipe,SDR-11,3.0,1400,1-inch,4.2,6.53,High
+MS-0106,CPVC Pipe,CPVC Pipe,SDR-13.5,3.0,1400,1-inch,4.2,8.77,Low
+MS-0107,CPVC Pipe,CPVC Pipe,SDR-13.5,3.0,1400,1-inch,4.2,8.93,Medium
+MS-0108,CPVC Pipe,CPVC Pipe,SDR-11,2.0,1400,1-inch,2.8,8.34,High
+MS-0109,CPVC Pipe,CPVC Pipe,SDR-11,3.0,1400,1-inch,4.2,8.05,Medium
+MS-0110,CPVC Pipe,CPVC Pipe,SDR-11,2.0,1400,1-inch,2.8,7.34,Low
+MS-0111,CPVC Pipe,CPVC Pipe,SDR-13.5,3.0,1400,1-inch,4.2,9.73,Low
+MS-0112,CPVC Pipe,CPVC Pipe,SDR-11,3.0,1400,1-inch,4.2,9.69,Low
+MS-0113,CPVC Pipe,CPVC Pipe,SDR-11,2.0,1400,1-inch,2.8,7.36,Low
+MS-0114,CPVC Pipe,CPVC Pipe,SDR-13.5,3.0,1400,1-inch,4.2,9.4,High
+MS-0115,CPVC Pipe,CPVC Pipe,SDR-13.5,2.0,1400,1-inch,2.8,8.84,Medium
+MS-0116,CPVC Pipe,CPVC Pipe,SDR-13.5,2.0,1400,1-inch,2.8,6.89,High
+MS-0117,CPVC Pipe,CPVC Pipe,SDR-13.5,2.0,1400,1-inch,2.8,9.38,Medium
+MS-0118,CPVC Pipe,CPVC Pipe,SDR-13.5,3.0,1400,1-inch,4.2,7.43,Medium
+MS-0119,CPVC Pipe,CPVC Pipe,SDR-13.5,3.0,1400,1-inch,4.2,7.94,High
+MS-0120,CPVC Pipe,CPVC Pipe,SDR-13.5,3.0,1400,1-inch,4.2,9.02,High
+MS-0121,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,7.12,High
+MS-0122,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,6.62,Medium
+MS-0123,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,7.94,Medium
+MS-0124,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,7.68,Low
+MS-0125,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,8.13,Low
+MS-0126,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,7.65,High
+MS-0127,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,9.26,Low
+MS-0128,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,8.43,High
+MS-0129,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,9.54,High
+MS-0130,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,9.43,High
+MS-0131,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,7.8,Low
+MS-0132,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,7.01,High
+MS-0133,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,8.0,Medium
+MS-0134,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,9.7,Low
+MS-0135,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,9.63,Low
+MS-0136,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,9.35,Low
+MS-0137,UPVC Pipe,UPVC Pipe,SCH-40,3.0,1380,1-inch,4.14,9.13,Low
+MS-0138,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,6.81,Medium
+MS-0139,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,9.68,Medium
+MS-0140,UPVC Pipe,UPVC Pipe,SCH-40,2.0,1380,1-inch,2.76,9.31,High
+MS-0141,Wires,Wires,FRLS,4.0,8900,90m coil,35.6,7.44,Low
+MS-0142,Wires,Wires,FR,1.0,8900,90m coil,8.9,7.49,Medium
+MS-0143,Wires,Wires,FR,4.0,8900,90m coil,35.6,7.68,High
+MS-0144,Wires,Wires,FR,4.0,8900,90m coil,35.6,8.12,Medium
+MS-0145,Wires,Wires,FRLS,4.0,8900,90m coil,35.6,8.36,Medium
+MS-0146,Wires,Wires,FRLS,1.0,8900,90m coil,8.9,9.18,Low
+MS-0147,Wires,Wires,FRLS,1.0,8900,90m coil,8.9,8.58,High
+MS-0148,Wires,Wires,FRLS,1.0,8900,90m coil,8.9,9.71,Low
+MS-0149,Wires,Wires,FR,1.0,8900,90m coil,8.9,9.57,Low
+MS-0150,Wires,Wires,FRLS,1.0,8900,90m coil,8.9,8.05,High
+MS-0151,Wires,Wires,FRLS,4.0,8900,90m coil,35.6,6.99,High
+MS-0152,Wires,Wires,FR,4.0,8900,90m coil,35.6,8.23,Medium
+MS-0153,Wires,Wires,FR,1.0,8900,90m coil,8.9,9.53,Low
+MS-0154,Wires,Wires,FRLS,1.0,8900,90m coil,8.9,7.86,Medium
+MS-0155,Wires,Wires,FRLS,4.0,8900,90m coil,35.6,7.34,High
+MS-0156,Wires,Wires,FR,1.0,8900,90m coil,8.9,8.94,Medium
+MS-0157,Wires,Wires,FR,1.0,8900,90m coil,8.9,9.28,High
+MS-0158,Wires,Wires,FRLS,1.0,8900,90m coil,8.9,9.39,Medium
+MS-0159,Wires,Wires,FRLS,4.0,8900,90m coil,35.6,9.0,Medium
+MS-0160,Wires,Wires,FRLS,4.0,8900,90m coil,35.6,9.69,High
+MS-0161,Primer,Primer,Standard,0.0,1200,1L,0.0,6.76,Low
+MS-0162,Primer,Primer,Standard,0.0,1200,1L,0.0,7.93,High
+MS-0163,Primer,Primer,Standard,0.0,1200,1L,0.0,6.89,High
+MS-0164,Primer,Primer,Standard,0.0,1200,1L,0.0,8.78,Low
+MS-0165,Primer,Primer,Standard,0.0,1200,1L,0.0,8.54,Low
+MS-0166,Primer,Primer,Standard,0.0,1200,1L,0.0,9.16,High
+MS-0167,Primer,Primer,Standard,0.0,1200,1L,0.0,6.55,High
+MS-0168,Primer,Primer,Standard,0.0,1200,1L,0.0,9.33,High
+MS-0169,Primer,Primer,Standard,0.0,1200,1L,0.0,8.64,Medium
+MS-0170,Primer,Primer,Standard,0.0,1200,1L,0.0,7.49,Medium
+MS-0171,Primer,Primer,Standard,0.0,1200,1L,0.0,7.89,High
+MS-0172,Primer,Primer,Standard,0.0,1200,1L,0.0,8.94,Medium
+MS-0173,Primer,Primer,Standard,0.0,1200,1L,0.0,6.56,Medium
+MS-0174,Primer,Primer,Standard,0.0,1200,1L,0.0,7.47,Medium
+MS-0175,Primer,Primer,Standard,0.0,1200,1L,0.0,6.53,Low
+MS-0176,Primer,Primer,Standard,0.0,1200,1L,0.0,9.3,Low
+MS-0177,Primer,Primer,Standard,0.0,1200,1L,0.0,8.11,Medium
+MS-0178,Primer,Primer,Standard,0.0,1200,1L,0.0,8.86,Low
+MS-0179,Primer,Primer,Standard,0.0,1200,1L,0.0,8.4,Low
+MS-0180,Primer,Primer,Standard,0.0,1200,1L,0.0,9.45,Medium
+MS-0181,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,8.13,Low
+MS-0182,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,8.8,High
+MS-0183,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,8.9,Medium
+MS-0184,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,7.27,High
+MS-0185,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,6.93,Medium
+MS-0186,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.25,Low
+MS-0187,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.14,High
+MS-0188,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,8.78,High
+MS-0189,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,7.07,High
+MS-0190,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.12,Medium
+MS-0191,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,7.19,High
+MS-0192,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.41,Medium
+MS-0193,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.23,Low
+MS-0194,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,7.61,High
+MS-0195,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,8.35,Medium
+MS-0196,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.09,High
+MS-0197,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.32,Low
+MS-0198,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.56,Medium
+MS-0199,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,9.72,Low
+MS-0200,Putty,Putty,Standard,0.0,1500,20kg bag,0.0,8.17,High
+MS-0201,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,9.51,High
+MS-0202,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,9.01,Medium
+MS-0203,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,8.64,Medium
+MS-0204,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,9.3,Medium
+MS-0205,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,7.31,Medium
+MS-0206,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,8.17,High
+MS-0207,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,8.86,Medium
+MS-0208,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,7.0,Low
+MS-0209,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,6.96,Medium
+MS-0210,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,9.46,Low
+MS-0211,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,7.96,High
+MS-0212,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,7.62,Medium
+MS-0213,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,6.7,High
+MS-0214,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,9.73,Low
+MS-0215,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,7.83,Low
+MS-0216,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,9.5,High
+MS-0217,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,8.81,Medium
+MS-0218,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,8.8,Low
+MS-0219,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,9.41,High
+MS-0220,Emulsion Paint,Emulsion Paint,Premium,0.0,1100,4L,0.0,7.79,Low
+MS-0221,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,7.21,Low
+MS-0222,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,9.0,High
+MS-0223,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,9.44,Low
+MS-0224,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,9.25,Medium
+MS-0225,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.92,Medium
+MS-0226,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,6.91,Low
+MS-0227,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,7.48,Low
+MS-0228,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,7.62,High
+MS-0229,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,7.49,Low
+MS-0230,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.21,High
+MS-0231,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.2,High
+MS-0232,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,6.82,Low
+MS-0233,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,6.77,High
+MS-0234,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.07,Medium
+MS-0235,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.73,Medium
+MS-0236,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.43,Low
+MS-0237,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.77,Medium
+MS-0238,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,6.98,High
+MS-0239,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,6.93,Low
+MS-0240,Fevicol Adhesive,Fevicol Adhesive,Standard,0.0,950,1kg,0.0,8.0,High
+MS-0241,Steel Rebar,Steel Rebar,Fe-550,8.0,7850,12m rod,62.8,9.54,High
+MS-0242,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,6.9,Low
+MS-0243,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,8.23,High
+MS-0244,Steel Rebar,Steel Rebar,Fe-550,12.0,7850,12m rod,94.2,9.77,Medium
+MS-0245,Steel Rebar,Steel Rebar,Fe-550,12.0,7850,12m rod,94.2,6.59,High
+MS-0246,Steel Rebar,Steel Rebar,Fe-550,8.0,7850,12m rod,62.8,6.66,Medium
+MS-0247,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,7.1,Low
+MS-0248,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,6.9,Medium
+MS-0249,Steel Rebar,Steel Rebar,Fe-500,8.0,7850,12m rod,62.8,7.88,Low
+MS-0250,Steel Rebar,Steel Rebar,Fe-550,12.0,7850,12m rod,94.2,9.47,Medium
+MS-0251,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,9.01,Low
+MS-0252,Steel Rebar,Steel Rebar,Fe-550,12.0,7850,12m rod,94.2,8.7,High
+MS-0253,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,9.14,Low
+MS-0254,Steel Rebar,Steel Rebar,Fe-550,12.0,7850,12m rod,94.2,7.27,Medium
+MS-0255,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,9.66,Medium
+MS-0256,Steel Rebar,Steel Rebar,Fe-500,12.0,7850,12m rod,94.2,9.36,Low
+MS-0257,Steel Rebar,Steel Rebar,Fe-550,8.0,7850,12m rod,62.8,8.35,High
+MS-0258,Steel Rebar,Steel Rebar,Fe-500,8.0,7850,12m rod,62.8,9.65,Low
+MS-0259,Steel Rebar,Steel Rebar,Fe-500,8.0,7850,12m rod,62.8,8.98,Low
+MS-0260,Steel Rebar,Steel Rebar,Fe-500,8.0,7850,12m rod,62.8,8.67,Low
+MS-0261,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,7.41,High
+MS-0262,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,6.78,Low
+MS-0263,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,8.44,Medium
+MS-0264,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,7.94,Medium
+MS-0265,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,7.76,High
+MS-0266,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,8.29,Medium
+MS-0267,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,7.34,High
+MS-0268,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,9.64,Low
+MS-0269,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,8.53,Medium
+MS-0270,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,8.85,Medium
+MS-0271,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,7.56,Medium
+MS-0272,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,7.74,High
+MS-0273,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,7.29,Low
+MS-0274,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,8.18,Low
+MS-0275,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,7.39,Medium
+MS-0276,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,6.72,High
+MS-0277,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,9.52,High
+MS-0278,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,7.31,Low
+MS-0279,Cement,Cement,PPC,0.0,1440,50kg bag,0.0,8.38,Medium
+MS-0280,Cement,Cement,OPC,0.0,1440,50kg bag,0.0,9.08,High
+MS-0281,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,9.75,High
+MS-0282,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,7.99,High
+MS-0283,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,7.45,High
+MS-0284,Concrete Mix,Concrete Mix,M20,0.0,2400,per cu.ft,0.0,9.58,Medium
+MS-0285,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,7.33,Low
+MS-0286,Concrete Mix,Concrete Mix,M25,0.0,2400,per cu.ft,0.0,9.28,High
+MS-0287,Concrete Mix,Concrete Mix,M20,0.0,2400,per cu.ft,0.0,7.03,Low
+MS-0288,Concrete Mix,Concrete Mix,M25,0.0,2400,per cu.ft,0.0,6.8,Low
+MS-0289,Concrete Mix,Concrete Mix,M20,0.0,2400,per cu.ft,0.0,8.89,Medium
+MS-0290,Concrete Mix,Concrete Mix,M20,0.0,2400,per cu.ft,0.0,8.51,Medium
+MS-0291,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,7.36,Low
+MS-0292,Concrete Mix,Concrete Mix,M25,0.0,2400,per cu.ft,0.0,7.31,Medium
+MS-0293,Concrete Mix,Concrete Mix,M20,0.0,2400,per cu.ft,0.0,8.02,Low
+MS-0294,Concrete Mix,Concrete Mix,M20,0.0,2400,per cu.ft,0.0,9.52,High
+MS-0295,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,8.07,High
+MS-0296,Concrete Mix,Concrete Mix,M25,0.0,2400,per cu.ft,0.0,8.33,Low
+MS-0297,Concrete Mix,Concrete Mix,M25,0.0,2400,per cu.ft,0.0,8.28,Low
+MS-0298,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,6.6,Low
+MS-0299,Concrete Mix,Concrete Mix,M30,0.0,2400,per cu.ft,0.0,6.91,Medium
+MS-0300,Concrete Mix,Concrete Mix,M25,0.0,2400,per cu.ft,0.0,7.08,Low
+MS-0301,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,8.03,High
+MS-0302,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,7.23,High
+MS-0303,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,7.13,Low
+MS-0304,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,7.27,Medium
+MS-0305,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,7.43,Low
+MS-0306,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,7.15,Low
+MS-0307,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,9.37,Low
+MS-0308,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,8.32,Low
+MS-0309,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,8.44,Low
+MS-0310,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,7.36,Low
+MS-0311,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,7.13,Low
+MS-0312,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,8.75,Medium
+MS-0313,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,8.62,Low
+MS-0314,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,7.93,Medium
+MS-0315,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,8.74,Medium
+MS-0316,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,8.21,High
+MS-0317,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,7.42,Medium
+MS-0318,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,6.52,High
+MS-0319,Gypsum Board,Gypsum Board,Standard,12.0,800,6x4 ft,9.6,9.4,High
+MS-0320,Gypsum Board,Gypsum Board,Moisture Resistant,12.0,800,6x4 ft,9.6,9.66,High

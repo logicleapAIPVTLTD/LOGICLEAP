@@ -1,0 +1,301 @@
+rule_id,material_name,base_wastage_percent,season,season_factor,skill_level,skill_factor,site_complexity,site_complexity_factor,final_wastage_percent
+W-0001,Laminate,0.136,monsoon,1.11,unskilled,1.117,low,0.955,0.161
+W-0002,PVC Conduits,0.073,normal,0.982,unskilled,1.158,medium,1.094,0.091
+W-0003,Ceramic Tiles,0.098,summer,1.026,skilled,0.93,medium,1.029,0.096
+W-0004,PVC Conduits,0.05,normal,0.984,unskilled,1.143,medium,1.038,0.058
+W-0005,Adhesive,0.08,monsoon,1.118,skilled,0.932,high,1.102,0.092
+W-0006,Hardware,0.049,winter,1.0,semi-skilled,0.989,low,0.962,0.047
+W-0007,Cables,0.024,summer,1.045,unskilled,1.089,high,1.199,0.033
+W-0008,Ceramic Tiles,0.123,winter,1.001,semi-skilled,1.014,medium,1.045,0.13
+W-0009,CPVC Pipes,0.093,winter,1.003,unskilled,1.079,high,1.107,0.111
+W-0010,Edge Banding,0.109,summer,1.041,semi-skilled,0.994,high,1.142,0.129
+W-0011,Cables,0.028,summer,1.004,unskilled,1.198,low,0.989,0.033
+W-0012,Cables,0.029,monsoon,1.121,unskilled,1.159,high,1.216,0.046
+W-0013,Grout,0.067,winter,1.026,skilled,0.931,high,1.114,0.071
+W-0014,Laminate,0.102,normal,1.004,skilled,0.919,high,1.184,0.111
+W-0015,Granite,0.058,winter,1.022,unskilled,1.085,low,0.963,0.062
+W-0016,PVC Conduits,0.056,monsoon,1.094,semi-skilled,0.988,medium,1.09,0.066
+W-0017,Vitrified Tiles,0.102,normal,0.99,semi-skilled,0.996,low,0.988,0.099
+W-0018,Adhesive,0.097,monsoon,1.066,unskilled,1.189,high,1.221,0.15
+W-0019,Hardware,0.023,normal,1.002,semi-skilled,1.012,medium,1.09,0.025
+W-0020,Laminate,0.143,summer,1.021,skilled,0.957,high,1.229,0.172
+W-0021,Laminate,0.092,monsoon,1.072,skilled,0.908,medium,1.034,0.093
+W-0022,PVC Conduits,0.046,normal,0.983,skilled,0.918,low,0.962,0.04
+W-0023,Laminate,0.115,summer,1.05,skilled,0.919,low,0.999,0.111
+W-0024,Cables,0.022,summer,1.012,skilled,0.91,low,0.974,0.02
+W-0025,Plywood,0.124,normal,0.995,unskilled,1.086,high,1.22,0.163
+W-0026,Grout,0.055,winter,1.024,semi-skilled,1.012,high,1.123,0.064
+W-0027,PVC Conduits,0.039,summer,1.011,unskilled,1.157,high,1.221,0.056
+W-0028,Adhesive,0.082,normal,0.996,skilled,0.936,low,0.992,0.076
+W-0029,PVC Conduits,0.047,summer,1.027,semi-skilled,1.008,high,1.134,0.055
+W-0030,CPVC Pipes,0.099,normal,1.02,skilled,0.968,medium,1.056,0.103
+W-0031,PVC Conduits,0.039,summer,1.036,unskilled,1.185,high,1.233,0.059
+W-0032,Edge Banding,0.112,normal,0.986,unskilled,1.185,low,0.98,0.128
+W-0033,Granite,0.076,summer,1.0,unskilled,1.074,low,0.977,0.08
+W-0034,Plywood,0.145,summer,1.001,skilled,0.935,low,0.959,0.13
+W-0035,Edge Banding,0.095,monsoon,1.081,unskilled,1.131,low,0.975,0.113
+W-0036,Plywood,0.127,winter,1.029,semi-skilled,0.999,medium,1.091,0.142
+W-0037,PVC Conduits,0.07,winter,1.015,skilled,0.914,high,1.208,0.078
+W-0038,Granite,0.09,normal,1.02,skilled,0.933,low,0.964,0.083
+W-0039,Plywood,0.137,summer,1.021,skilled,0.968,low,0.998,0.135
+W-0040,Vitrified Tiles,0.085,summer,1.013,skilled,0.934,high,1.156,0.093
+W-0041,CPVC Pipes,0.096,winter,1.003,unskilled,1.142,medium,1.099,0.121
+W-0042,Ceramic Tiles,0.105,winter,1.022,semi-skilled,1.008,medium,1.07,0.116
+W-0043,Laminate,0.101,monsoon,1.076,semi-skilled,1.004,high,1.112,0.121
+W-0044,Laminate,0.115,summer,1.04,skilled,0.962,medium,1.034,0.119
+W-0045,Cables,0.037,normal,0.981,unskilled,1.12,high,1.181,0.048
+W-0046,Paint,0.109,winter,1.001,semi-skilled,1.013,low,0.968,0.107
+W-0047,Cables,0.03,normal,0.998,skilled,0.959,low,0.96,0.028
+W-0048,Primer,0.057,monsoon,1.102,skilled,0.923,medium,1.08,0.063
+W-0049,Granite,0.081,monsoon,1.068,semi-skilled,0.983,low,0.971,0.083
+W-0050,Cables,0.032,winter,1.013,semi-skilled,0.99,low,0.955,0.031
+W-0051,Hardware,0.04,summer,1.037,skilled,0.939,low,0.981,0.038
+W-0052,Laminate,0.083,winter,1.004,unskilled,1.101,low,0.955,0.088
+W-0053,Vitrified Tiles,0.102,winter,1.023,skilled,0.956,medium,1.035,0.103
+W-0054,Primer,0.052,monsoon,1.145,semi-skilled,1.015,medium,1.026,0.062
+W-0055,CPVC Pipes,0.074,winter,1.021,skilled,0.943,low,0.997,0.071
+W-0056,Ceramic Tiles,0.083,normal,1.003,unskilled,1.069,medium,1.081,0.096
+W-0057,PVC Conduits,0.077,monsoon,1.115,skilled,0.914,low,0.964,0.076
+W-0058,Cables,0.023,winter,1.019,skilled,0.924,high,1.198,0.026
+W-0059,Paint,0.109,winter,1.008,semi-skilled,1.0,medium,1.069,0.117
+W-0060,Ceramic Tiles,0.143,summer,1.048,skilled,0.938,low,0.971,0.136
+W-0061,Edge Banding,0.106,summer,1.013,unskilled,1.137,medium,1.087,0.133
+W-0062,Grout,0.04,monsoon,1.125,skilled,0.907,high,1.235,0.05
+W-0063,Primer,0.055,summer,1.045,semi-skilled,0.996,low,0.951,0.054
+W-0064,Hardware,0.045,summer,1.034,unskilled,1.122,medium,1.049,0.055
+W-0065,Grout,0.034,normal,0.989,skilled,0.966,high,1.217,0.04
+W-0066,Laminate,0.086,winter,1.03,semi-skilled,0.982,high,1.211,0.105
+W-0067,Paint,0.075,winter,1.023,unskilled,1.143,low,0.955,0.084
+W-0068,Laminate,0.11,normal,1.013,semi-skilled,1.008,low,0.954,0.107
+W-0069,Grout,0.039,normal,1.015,skilled,0.917,low,0.995,0.036
+W-0070,Paint,0.103,winter,1.023,unskilled,1.134,high,1.164,0.139
+W-0071,CPVC Pipes,0.053,winter,1.0,unskilled,1.12,low,0.953,0.057
+W-0072,Cables,0.043,monsoon,1.125,skilled,0.941,high,1.244,0.057
+W-0073,Cables,0.029,normal,0.997,skilled,0.956,medium,1.098,0.03
+W-0074,Paint,0.053,summer,1.05,semi-skilled,0.983,low,0.978,0.054
+W-0075,Adhesive,0.054,monsoon,1.12,skilled,0.932,low,0.981,0.055
+W-0076,Plywood,0.138,monsoon,1.078,skilled,0.967,high,1.234,0.178
+W-0077,Cables,0.023,summer,1.019,semi-skilled,0.989,medium,1.027,0.024
+W-0078,Grout,0.069,normal,0.981,unskilled,1.092,medium,1.041,0.077
+W-0079,Paint,0.098,summer,1.004,skilled,0.966,medium,1.042,0.099
+W-0080,Grout,0.055,winter,1.026,semi-skilled,0.982,medium,1.003,0.056
+W-0081,Vitrified Tiles,0.134,winter,1.011,unskilled,1.162,low,0.97,0.153
+W-0082,PVC Conduits,0.072,summer,1.002,skilled,0.909,medium,1.001,0.066
+W-0083,Laminate,0.141,summer,1.037,skilled,0.964,high,1.188,0.167
+W-0084,Grout,0.068,winter,1.007,unskilled,1.081,low,0.963,0.071
+W-0085,Paint,0.092,winter,1.023,skilled,0.903,low,0.963,0.082
+W-0086,Laminate,0.127,winter,1.025,semi-skilled,0.992,medium,1.082,0.14
+W-0087,Cables,0.037,winter,1.018,unskilled,1.122,low,0.971,0.041
+W-0088,Grout,0.055,winter,1.027,unskilled,1.143,high,1.247,0.081
+W-0089,Ceramic Tiles,0.139,winter,1.003,unskilled,1.159,high,1.182,0.191
+W-0090,Vitrified Tiles,0.135,normal,1.001,semi-skilled,1.008,high,1.219,0.166
+W-0091,CPVC Pipes,0.095,winter,1.029,skilled,0.934,low,0.966,0.088
+W-0092,PVC Conduits,0.059,monsoon,1.063,unskilled,1.069,high,1.123,0.075
+W-0093,Plywood,0.17,normal,1.015,skilled,0.936,high,1.246,0.201
+W-0094,Paint,0.063,monsoon,1.085,skilled,0.924,low,0.952,0.06
+W-0095,Plywood,0.112,summer,1.018,semi-skilled,1.0,medium,1.069,0.122
+W-0096,Hardware,0.023,monsoon,1.058,skilled,0.961,medium,1.092,0.026
+W-0097,Paint,0.05,normal,1.004,skilled,0.969,low,0.977,0.048
+W-0098,Edge Banding,0.084,winter,1.014,unskilled,1.162,medium,1.004,0.099
+W-0099,Edge Banding,0.059,monsoon,1.101,unskilled,1.13,high,1.116,0.082
+W-0100,CPVC Pipes,0.055,monsoon,1.124,unskilled,1.077,low,0.978,0.065
+W-0101,Vitrified Tiles,0.095,winter,1.027,semi-skilled,1.004,low,0.984,0.096
+W-0102,Granite,0.095,winter,1.022,unskilled,1.134,high,1.188,0.131
+W-0103,Cables,0.024,summer,1.045,skilled,0.943,medium,1.024,0.024
+W-0104,PVC Conduits,0.079,summer,1.0,skilled,0.916,low,0.968,0.07
+W-0105,Adhesive,0.093,winter,1.005,semi-skilled,1.016,medium,1.008,0.096
+W-0106,Granite,0.051,summer,1.02,unskilled,1.195,medium,1.087,0.068
+W-0107,Plywood,0.198,winter,1.025,semi-skilled,1.009,high,1.18,0.242
+W-0108,CPVC Pipes,0.05,normal,1.019,skilled,0.95,medium,1.02,0.049
+W-0109,Adhesive,0.062,monsoon,1.127,skilled,0.906,medium,1.051,0.067
+W-0110,Adhesive,0.066,monsoon,1.084,skilled,0.909,medium,1.006,0.065
+W-0111,Cables,0.026,normal,0.986,semi-skilled,0.98,low,0.956,0.024
+W-0112,Edge Banding,0.092,monsoon,1.143,semi-skilled,1.013,high,1.245,0.133
+W-0113,Primer,0.077,monsoon,1.068,skilled,0.905,medium,1.074,0.08
+W-0114,Plywood,0.105,summer,1.038,unskilled,1.17,low,0.991,0.126
+W-0115,Grout,0.063,monsoon,1.141,semi-skilled,0.993,medium,1.059,0.076
+W-0116,Ceramic Tiles,0.162,monsoon,1.112,semi-skilled,1.002,high,1.166,0.21
+W-0117,Vitrified Tiles,0.096,summer,1.027,unskilled,1.06,high,1.134,0.119
+W-0118,Laminate,0.088,winter,1.022,unskilled,1.154,high,1.125,0.117
+W-0119,Paint,0.085,winter,1.024,unskilled,1.073,high,1.147,0.107
+W-0120,Grout,0.061,summer,1.036,semi-skilled,1.0,medium,1.075,0.068
+W-0121,Plywood,0.182,monsoon,1.063,unskilled,1.11,low,0.99,0.213
+W-0122,Grout,0.049,normal,0.98,skilled,0.942,medium,1.057,0.048
+W-0123,CPVC Pipes,0.048,summer,1.045,unskilled,1.138,medium,1.04,0.059
+W-0124,CPVC Pipes,0.096,normal,0.986,semi-skilled,0.984,low,0.963,0.09
+W-0125,Edge Banding,0.111,normal,1.008,skilled,0.911,low,0.979,0.1
+W-0126,CPVC Pipes,0.035,monsoon,1.143,skilled,0.965,medium,1.045,0.04
+W-0127,Primer,0.042,winter,1.025,semi-skilled,0.993,medium,1.031,0.044
+W-0128,Granite,0.091,summer,1.037,unskilled,1.081,low,0.989,0.101
+W-0129,CPVC Pipes,0.053,monsoon,1.142,skilled,0.924,medium,1.035,0.058
+W-0130,Ceramic Tiles,0.172,normal,0.998,unskilled,1.071,high,1.126,0.207
+W-0131,Laminate,0.092,summer,1.039,skilled,0.919,low,0.961,0.084
+W-0132,Ceramic Tiles,0.146,monsoon,1.065,skilled,0.929,low,0.954,0.138
+W-0133,Paint,0.063,monsoon,1.09,skilled,0.93,low,0.99,0.063
+W-0134,Primer,0.04,summer,1.019,skilled,0.959,low,0.979,0.038
+W-0135,Vitrified Tiles,0.134,monsoon,1.103,semi-skilled,0.999,medium,1.05,0.155
+W-0136,Granite,0.061,summer,1.047,skilled,0.926,high,1.141,0.067
+W-0137,Primer,0.056,summer,1.008,unskilled,1.157,high,1.199,0.078
+W-0138,Vitrified Tiles,0.119,monsoon,1.101,unskilled,1.139,high,1.151,0.172
+W-0139,Grout,0.037,summer,1.04,unskilled,1.198,medium,1.06,0.049
+W-0140,Primer,0.072,normal,0.988,skilled,0.921,medium,1.09,0.071
+W-0141,Laminate,0.124,summer,1.001,unskilled,1.077,low,0.979,0.131
+W-0142,Cables,0.041,summer,1.017,unskilled,1.089,low,0.969,0.044
+W-0143,Laminate,0.082,normal,0.996,skilled,0.939,low,0.972,0.075
+W-0144,Cables,0.027,winter,1.026,semi-skilled,0.999,low,0.995,0.028
+W-0145,Vitrified Tiles,0.114,summer,1.027,semi-skilled,1.005,low,0.963,0.113
+W-0146,Plywood,0.165,winter,1.027,semi-skilled,1.008,medium,1.068,0.182
+W-0147,Plywood,0.191,summer,1.014,semi-skilled,1.002,low,0.983,0.191
+W-0148,CPVC Pipes,0.08,summer,1.007,semi-skilled,1.016,medium,1.087,0.089
+W-0149,Edge Banding,0.068,summer,1.009,skilled,0.964,low,0.971,0.064
+W-0150,Cables,0.043,winter,1.022,semi-skilled,0.983,medium,1.06,0.046
+W-0151,CPVC Pipes,0.035,monsoon,1.122,unskilled,1.142,low,0.997,0.045
+W-0152,Laminate,0.126,winter,1.015,semi-skilled,0.991,low,0.977,0.124
+W-0153,Granite,0.092,monsoon,1.146,skilled,0.911,medium,1.062,0.102
+W-0154,Ceramic Tiles,0.091,summer,1.025,skilled,0.948,low,0.972,0.086
+W-0155,Laminate,0.085,winter,1.008,skilled,0.941,high,1.154,0.093
+W-0156,Cables,0.044,summer,1.048,skilled,0.931,low,0.959,0.041
+W-0157,Primer,0.078,monsoon,1.126,unskilled,1.159,low,0.982,0.1
+W-0158,Edge Banding,0.067,summer,1.049,unskilled,1.192,high,1.106,0.093
+W-0159,CPVC Pipes,0.071,summer,1.028,unskilled,1.187,medium,1.003,0.087
+W-0160,Grout,0.059,monsoon,1.144,semi-skilled,0.999,high,1.229,0.083
+W-0161,Laminate,0.112,monsoon,1.054,semi-skilled,1.004,high,1.135,0.135
+W-0162,Cables,0.034,monsoon,1.084,skilled,0.951,high,1.11,0.039
+W-0163,Edge Banding,0.088,summer,1.037,semi-skilled,1.001,low,0.971,0.089
+W-0164,Cables,0.027,monsoon,1.149,unskilled,1.05,medium,1.019,0.033
+W-0165,Ceramic Tiles,0.174,monsoon,1.051,unskilled,1.058,high,1.113,0.215
+W-0166,Primer,0.054,summer,1.038,unskilled,1.113,low,0.971,0.061
+W-0167,Grout,0.059,summer,1.018,unskilled,1.093,low,0.965,0.063
+W-0168,Primer,0.059,normal,1.02,skilled,0.93,low,0.969,0.054
+W-0169,Edge Banding,0.059,monsoon,1.129,semi-skilled,0.984,low,0.971,0.064
+W-0170,Edge Banding,0.112,normal,1.005,unskilled,1.075,medium,1.099,0.133
+W-0171,PVC Conduits,0.05,summer,1.03,unskilled,1.127,medium,1.023,0.059
+W-0172,Ceramic Tiles,0.118,summer,1.039,skilled,0.925,medium,1.006,0.114
+W-0173,Laminate,0.142,monsoon,1.067,semi-skilled,0.996,low,0.988,0.149
+W-0174,Primer,0.08,monsoon,1.112,unskilled,1.162,medium,1.003,0.104
+W-0175,Adhesive,0.079,winter,1.012,unskilled,1.091,low,0.974,0.085
+W-0176,Granite,0.117,normal,0.993,semi-skilled,1.017,low,0.987,0.117
+W-0177,Ceramic Tiles,0.121,monsoon,1.122,semi-skilled,1.0,high,1.112,0.151
+W-0178,Cables,0.023,normal,1.014,skilled,0.935,low,0.974,0.021
+W-0179,Paint,0.113,monsoon,1.136,semi-skilled,1.009,high,1.178,0.153
+W-0180,Edge Banding,0.067,monsoon,1.083,unskilled,1.086,low,0.997,0.079
+W-0181,Adhesive,0.081,winter,1.026,unskilled,1.181,low,0.951,0.093
+W-0182,Laminate,0.08,normal,1.01,unskilled,1.074,low,0.991,0.086
+W-0183,Primer,0.068,normal,0.991,unskilled,1.143,medium,1.098,0.085
+W-0184,Vitrified Tiles,0.088,winter,1.004,skilled,0.92,high,1.103,0.09
+W-0185,Hardware,0.049,monsoon,1.125,unskilled,1.168,medium,1.017,0.065
+W-0186,Adhesive,0.053,monsoon,1.121,skilled,0.933,medium,1.006,0.056
+W-0187,Edge Banding,0.053,winter,1.029,semi-skilled,1.01,high,1.12,0.062
+W-0188,Paint,0.077,summer,1.016,unskilled,1.123,low,0.989,0.087
+W-0189,CPVC Pipes,0.03,winter,1.03,semi-skilled,0.997,medium,1.045,0.032
+W-0190,Laminate,0.117,summer,1.011,skilled,0.906,high,1.202,0.129
+W-0191,Plywood,0.113,monsoon,1.065,skilled,0.93,medium,1.094,0.122
+W-0192,Grout,0.056,winter,1.013,unskilled,1.097,low,0.966,0.06
+W-0193,Plywood,0.123,summer,1.033,unskilled,1.105,low,0.993,0.139
+W-0194,PVC Conduits,0.078,winter,1.003,skilled,0.911,low,0.973,0.069
+W-0195,Ceramic Tiles,0.156,monsoon,1.141,skilled,0.968,low,0.959,0.165
+W-0196,Hardware,0.02,monsoon,1.119,skilled,0.93,medium,1.02,0.021
+W-0197,Hardware,0.025,winter,1.008,semi-skilled,1.012,low,0.966,0.025
+W-0198,Paint,0.06,summer,1.02,semi-skilled,0.999,medium,1.06,0.065
+W-0199,PVC Conduits,0.065,summer,1.002,semi-skilled,0.999,low,0.955,0.062
+W-0200,Vitrified Tiles,0.087,winter,1.019,unskilled,1.155,medium,1.056,0.108
+W-0201,Ceramic Tiles,0.113,winter,1.026,skilled,0.906,low,0.991,0.104
+W-0202,CPVC Pipes,0.058,winter,1.006,semi-skilled,1.008,high,1.223,0.072
+W-0203,CPVC Pipes,0.042,summer,1.035,unskilled,1.055,low,0.997,0.046
+W-0204,Laminate,0.123,summer,1.031,semi-skilled,1.011,medium,1.061,0.136
+W-0205,Laminate,0.126,normal,1.011,semi-skilled,0.999,medium,1.004,0.128
+W-0206,Cables,0.042,monsoon,1.109,semi-skilled,1.006,medium,1.048,0.049
+W-0207,Granite,0.065,monsoon,1.068,semi-skilled,1.012,low,0.983,0.069
+W-0208,Granite,0.061,winter,1.007,semi-skilled,1.02,high,1.246,0.078
+W-0209,Granite,0.056,monsoon,1.057,unskilled,1.055,low,0.963,0.06
+W-0210,Cables,0.025,summer,1.037,unskilled,1.114,medium,1.035,0.03
+W-0211,Cables,0.043,normal,1.001,semi-skilled,1.004,low,0.951,0.041
+W-0212,Ceramic Tiles,0.129,winter,1.024,unskilled,1.148,medium,1.099,0.167
+W-0213,CPVC Pipes,0.094,normal,0.999,unskilled,1.175,low,0.962,0.106
+W-0214,CPVC Pipes,0.08,normal,1.005,semi-skilled,0.995,high,1.177,0.094
+W-0215,Grout,0.064,summer,1.005,skilled,0.928,medium,1.059,0.063
+W-0216,Laminate,0.105,winter,1.02,unskilled,1.097,medium,1.04,0.122
+W-0217,Granite,0.096,monsoon,1.074,skilled,0.916,low,0.994,0.094
+W-0218,Plywood,0.117,winter,1.02,skilled,0.91,medium,1.045,0.113
+W-0219,Edge Banding,0.093,summer,1.008,skilled,0.903,medium,1.074,0.091
+W-0220,Grout,0.051,summer,1.043,skilled,0.914,high,1.117,0.054
+W-0221,Ceramic Tiles,0.179,summer,1.047,unskilled,1.056,low,0.956,0.189
+W-0222,Plywood,0.118,monsoon,1.101,skilled,0.903,low,0.957,0.112
+W-0223,Grout,0.049,monsoon,1.145,unskilled,1.146,medium,1.087,0.07
+W-0224,Edge Banding,0.086,winter,1.004,unskilled,1.054,medium,1.031,0.094
+W-0225,Ceramic Tiles,0.1,monsoon,1.059,semi-skilled,1.007,low,0.972,0.104
+W-0226,Grout,0.069,monsoon,1.134,semi-skilled,1.018,low,0.984,0.078
+W-0227,Ceramic Tiles,0.104,winter,1.001,unskilled,1.19,low,0.984,0.122
+W-0228,Vitrified Tiles,0.122,monsoon,1.117,semi-skilled,1.003,low,0.967,0.132
+W-0229,Ceramic Tiles,0.18,winter,1.026,unskilled,1.199,low,0.988,0.219
+W-0230,Grout,0.053,summer,1.02,unskilled,1.099,medium,1.067,0.063
+W-0231,Plywood,0.19,summer,1.022,skilled,0.957,high,1.118,0.208
+W-0232,Plywood,0.165,summer,1.018,unskilled,1.109,low,0.985,0.183
+W-0233,Cables,0.036,summer,1.022,skilled,0.901,low,0.979,0.032
+W-0234,Edge Banding,0.097,winter,1.015,semi-skilled,1.002,medium,1.095,0.108
+W-0235,Ceramic Tiles,0.128,summer,1.005,skilled,0.91,medium,1.053,0.123
+W-0236,Cables,0.034,monsoon,1.125,unskilled,1.157,medium,1.052,0.047
+W-0237,Grout,0.038,monsoon,1.14,unskilled,1.087,low,0.996,0.047
+W-0238,Adhesive,0.097,winter,1.005,unskilled,1.143,medium,1.052,0.117
+W-0239,Primer,0.045,monsoon,1.111,unskilled,1.157,medium,1.027,0.059
+W-0240,Adhesive,0.091,winter,1.02,unskilled,1.077,high,1.179,0.118
+W-0241,Laminate,0.101,summer,1.013,semi-skilled,1.019,low,0.974,0.102
+W-0242,Laminate,0.137,normal,0.984,skilled,0.9,medium,1.064,0.129
+W-0243,Grout,0.065,summer,1.032,semi-skilled,0.987,low,0.968,0.064
+W-0244,CPVC Pipes,0.093,normal,0.99,skilled,0.921,medium,1.073,0.091
+W-0245,Adhesive,0.071,winter,1.023,skilled,0.91,medium,1.042,0.069
+W-0246,Grout,0.037,monsoon,1.072,semi-skilled,0.984,low,0.951,0.037
+W-0247,Granite,0.092,normal,0.99,unskilled,1.145,medium,1.006,0.105
+W-0248,Hardware,0.05,monsoon,1.118,unskilled,1.116,low,0.972,0.061
+W-0249,Hardware,0.041,monsoon,1.11,semi-skilled,0.993,high,1.236,0.056
+W-0250,Paint,0.056,normal,1.004,skilled,0.928,low,0.968,0.051
+W-0251,Plywood,0.135,normal,1.013,skilled,0.947,low,0.953,0.123
+W-0252,Grout,0.041,normal,1.001,semi-skilled,0.993,high,1.15,0.047
+W-0253,Plywood,0.105,normal,1.002,semi-skilled,1.009,medium,1.047,0.111
+W-0254,Edge Banding,0.091,winter,1.019,skilled,0.953,low,0.959,0.085
+W-0255,CPVC Pipes,0.037,summer,1.015,unskilled,1.197,low,0.974,0.044
+W-0256,Primer,0.042,normal,1.02,unskilled,1.189,medium,1.054,0.054
+W-0257,Hardware,0.04,normal,0.984,semi-skilled,1.01,medium,1.013,0.04
+W-0258,Cables,0.043,winter,1.004,skilled,0.916,medium,1.034,0.041
+W-0259,Hardware,0.023,monsoon,1.101,skilled,0.958,low,0.964,0.023
+W-0260,CPVC Pipes,0.072,monsoon,1.129,semi-skilled,1.003,high,1.185,0.097
+W-0261,Adhesive,0.06,monsoon,1.104,skilled,0.944,medium,1.067,0.067
+W-0262,CPVC Pipes,0.091,winter,1.009,unskilled,1.062,high,1.16,0.113
+W-0263,Ceramic Tiles,0.095,monsoon,1.148,semi-skilled,1.006,medium,1.082,0.119
+W-0264,Hardware,0.034,summer,1.007,unskilled,1.185,medium,1.083,0.044
+W-0265,Adhesive,0.075,summer,1.033,semi-skilled,0.985,low,0.974,0.074
+W-0266,Adhesive,0.057,normal,1.017,skilled,0.961,low,0.964,0.054
+W-0267,Plywood,0.1,monsoon,1.115,semi-skilled,0.986,medium,1.006,0.111
+W-0268,Granite,0.063,summer,1.05,semi-skilled,0.982,medium,1.07,0.07
+W-0269,Hardware,0.033,summer,1.006,unskilled,1.095,low,0.955,0.035
+W-0270,Cables,0.039,normal,0.989,unskilled,1.083,low,0.959,0.04
+W-0271,Adhesive,0.076,monsoon,1.129,semi-skilled,0.996,high,1.198,0.102
+W-0272,Granite,0.076,normal,0.987,semi-skilled,0.995,medium,1.096,0.082
+W-0273,Laminate,0.109,monsoon,1.129,skilled,0.941,medium,1.068,0.124
+W-0274,Edge Banding,0.087,summer,1.042,skilled,0.944,low,0.96,0.082
+W-0275,Grout,0.068,normal,0.991,skilled,0.945,high,1.175,0.075
+W-0276,Laminate,0.09,winter,1.014,semi-skilled,0.995,medium,1.039,0.094
+W-0277,Plywood,0.139,winter,1.029,skilled,0.955,low,0.966,0.132
+W-0278,Vitrified Tiles,0.137,normal,1.014,skilled,0.903,low,0.995,0.125
+W-0279,Grout,0.063,monsoon,1.095,semi-skilled,0.989,high,1.233,0.084
+W-0280,Laminate,0.116,monsoon,1.094,skilled,0.903,low,0.952,0.109
+W-0281,Laminate,0.13,summer,1.001,unskilled,1.193,high,1.211,0.188
+W-0282,CPVC Pipes,0.062,normal,1.018,unskilled,1.168,high,1.153,0.085
+W-0283,CPVC Pipes,0.037,winter,1.001,semi-skilled,0.983,medium,1.097,0.04
+W-0284,Edge Banding,0.104,summer,1.033,skilled,0.901,medium,1.026,0.099
+W-0285,Adhesive,0.089,summer,1.024,skilled,0.963,medium,1.032,0.091
+W-0286,Adhesive,0.065,normal,0.999,semi-skilled,1.017,medium,1.052,0.069
+W-0287,Cables,0.025,winter,1.028,unskilled,1.084,low,0.969,0.027
+W-0288,PVC Conduits,0.058,winter,1.028,skilled,0.917,medium,1.012,0.055
+W-0289,Granite,0.112,normal,1.007,skilled,0.922,high,1.232,0.128
+W-0290,Cables,0.048,winter,1.007,skilled,0.968,low,0.987,0.046
+W-0291,Primer,0.069,normal,1.01,unskilled,1.09,medium,1.054,0.08
+W-0292,Paint,0.062,summer,1.005,skilled,0.968,high,1.173,0.071
+W-0293,Laminate,0.139,summer,1.038,semi-skilled,1.01,high,1.192,0.174
+W-0294,Plywood,0.157,summer,1.029,semi-skilled,1.015,high,1.165,0.191
+W-0295,Edge Banding,0.082,normal,1.015,skilled,0.919,low,0.96,0.073
+W-0296,CPVC Pipes,0.076,summer,1.037,semi-skilled,1.005,low,0.959,0.076
+W-0297,Hardware,0.031,summer,1.038,semi-skilled,0.981,medium,1.075,0.034
+W-0298,Primer,0.067,summer,1.038,skilled,0.959,high,1.171,0.078
+W-0299,Granite,0.12,normal,1.006,unskilled,1.167,low,0.961,0.135
+W-0300,CPVC Pipes,0.057,summer,1.0,semi-skilled,1.005,high,1.153,0.066

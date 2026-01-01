@@ -1,0 +1,301 @@
+link_id,industry,task_name,material_name,avg_consumption_per_task_unit,uom
+TML-0001,Tiling,surface_preparation,Vitrified Tile,5.61,sqft
+TML-0002,Tiling,grouting,Tile Spacer,3.53,sqft
+TML-0003,Tiling,adhesive_application,Ceramic Tile,8.91,sqft
+TML-0004,Tiling,adhesive_application,Vitrified Tile,9.74,sqft
+TML-0005,Tiling,tile_laying,Tile Cleaner,8.86,sqft
+TML-0006,Tiling,tile_laying,Tile Adhesive,6.33,sqft
+TML-0007,Tiling,grouting,Tile Adhesive,7.75,sqft
+TML-0008,Tiling,surface_preparation,Grout,8.63,nos
+TML-0009,Tiling,surface_preparation,Tile Adhesive,5.48,sqft
+TML-0010,Tiling,finishing,Tile Cleaner,4.15,sqft
+TML-0011,Tiling,surface_preparation,Grout,11.42,nos
+TML-0012,Tiling,surface_preparation,Tile Cleaner,3.33,sqft
+TML-0013,Tiling,grouting,Grout,10.53,nos
+TML-0014,Tiling,tile_laying,Ceramic Tile,3.55,sqft
+TML-0015,Tiling,grouting,Ceramic Tile,9.86,sqft
+TML-0016,Tiling,grouting,Tile Cleaner,3.75,sqft
+TML-0017,Tiling,surface_preparation,Ceramic Tile,11.43,sqft
+TML-0018,Tiling,tile_laying,Tile Cleaner,0.54,sqft
+TML-0019,Tiling,grouting,Vitrified Tile,6.91,sqft
+TML-0020,Tiling,tile_laying,Ceramic Tile,0.95,sqft
+TML-0021,Tiling,adhesive_application,Tile Cleaner,7.55,sqft
+TML-0022,Tiling,finishing,Tile Cleaner,3.2,sqft
+TML-0023,Tiling,grouting,Tile Adhesive,6.6,sqft
+TML-0024,Tiling,adhesive_application,Ceramic Tile,10.17,sqft
+TML-0025,Tiling,grouting,Tile Adhesive,6.14,sqft
+TML-0026,Tiling,grouting,Tile Cleaner,7.38,sqft
+TML-0027,Tiling,grouting,Grout,3.9,nos
+TML-0028,Tiling,surface_preparation,Ceramic Tile,11.57,sqft
+TML-0029,Tiling,grouting,Tile Adhesive,11.65,sqft
+TML-0030,Tiling,tile_laying,Tile Adhesive,8.12,sqft
+TML-0031,Tiling,tile_laying,Vitrified Tile,5.84,sqft
+TML-0032,Tiling,surface_preparation,Tile Adhesive,4.5,sqft
+TML-0033,Tiling,tile_laying,Tile Spacer,9.4,sqft
+TML-0034,Tiling,grouting,Tile Spacer,7.41,sqft
+TML-0035,Tiling,tile_laying,Tile Cleaner,0.83,sqft
+TML-0036,Tiling,finishing,Tile Adhesive,2.97,sqft
+TML-0037,Tiling,surface_preparation,Tile Spacer,6.97,sqft
+TML-0038,Tiling,adhesive_application,Tile Adhesive,8.26,sqft
+TML-0039,Tiling,grouting,Tile Spacer,9.8,sqft
+TML-0040,Tiling,grouting,Tile Spacer,3.5,sqft
+TML-0041,Tiling,adhesive_application,Vitrified Tile,6.08,sqft
+TML-0042,Tiling,adhesive_application,Ceramic Tile,7.82,sqft
+TML-0043,Tiling,adhesive_application,Vitrified Tile,5.65,sqft
+TML-0044,Tiling,finishing,Ceramic Tile,10.57,sqft
+TML-0045,Tiling,tile_laying,Grout,9.46,nos
+TML-0046,Tiling,finishing,Vitrified Tile,7.52,sqft
+TML-0047,Tiling,finishing,Ceramic Tile,6.71,sqft
+TML-0048,Tiling,surface_preparation,Tile Cleaner,9.73,sqft
+TML-0049,Tiling,adhesive_application,Vitrified Tile,10.99,sqft
+TML-0050,Tiling,surface_preparation,Grout,8.03,nos
+TML-0051,Tiling,tile_laying,Grout,4.66,nos
+TML-0052,Tiling,tile_laying,Ceramic Tile,10.14,sqft
+TML-0053,Tiling,tile_laying,Tile Spacer,3.84,sqft
+TML-0054,Tiling,adhesive_application,Ceramic Tile,4.31,sqft
+TML-0055,Tiling,finishing,Ceramic Tile,8.93,sqft
+TML-0056,Tiling,surface_preparation,Vitrified Tile,10.22,sqft
+TML-0057,Tiling,surface_preparation,Grout,6.27,nos
+TML-0058,Tiling,surface_preparation,Tile Spacer,2.3,sqft
+TML-0059,Tiling,surface_preparation,Tile Adhesive,3.15,sqft
+TML-0060,Tiling,tile_laying,Tile Cleaner,0.89,sqft
+TML-0061,Interior,cutting,Acrylic Sheet,9.85,nos
+TML-0062,Interior,edge_banding,Screws,2.01,nos
+TML-0063,Interior,installation,Acrylic Sheet,10.41,nos
+TML-0064,Interior,cutting,Plywood,6.3,nos
+TML-0065,Interior,edge_banding,Acrylic Sheet,0.73,nos
+TML-0066,Interior,finishing,Acrylic Sheet,7.46,nos
+TML-0067,Interior,cutting,Laminates,8.96,sqft
+TML-0068,Interior,frame_fabrication,Screws,10.06,nos
+TML-0069,Interior,installation,Edge Band,5.39,nos
+TML-0070,Interior,cutting,Acrylic Sheet,3.97,nos
+TML-0071,Interior,frame_fabrication,Screws,1.65,nos
+TML-0072,Interior,finishing,Acrylic Sheet,5.92,nos
+TML-0073,Interior,edge_banding,Edge Band,1.57,nos
+TML-0074,Interior,finishing,Screws,3.7,nos
+TML-0075,Interior,finishing,Edge Band,6.33,nos
+TML-0076,Interior,cutting,Screws,11.92,nos
+TML-0077,Interior,edge_banding,Acrylic Sheet,11.44,nos
+TML-0078,Interior,cutting,Fevicol,5.7,nos
+TML-0079,Interior,cutting,Fevicol,5.07,nos
+TML-0080,Interior,edge_banding,Laminates,4.75,sqft
+TML-0081,Interior,cutting,Fevicol,7.89,nos
+TML-0082,Interior,frame_fabrication,Edge Band,9.81,nos
+TML-0083,Interior,cutting,Plywood,6.95,nos
+TML-0084,Interior,edge_banding,Laminates,7.32,sqft
+TML-0085,Interior,frame_fabrication,Plywood,5.14,nos
+TML-0086,Interior,finishing,Screws,8.81,nos
+TML-0087,Interior,frame_fabrication,Fevicol,1.18,nos
+TML-0088,Interior,installation,Screws,5.24,nos
+TML-0089,Interior,installation,Acrylic Sheet,10.09,nos
+TML-0090,Interior,installation,Plywood,8.42,nos
+TML-0091,Interior,edge_banding,Fevicol,10.52,nos
+TML-0092,Interior,frame_fabrication,Edge Band,9.18,nos
+TML-0093,Interior,finishing,Screws,6.25,nos
+TML-0094,Interior,frame_fabrication,Acrylic Sheet,4.2,nos
+TML-0095,Interior,edge_banding,Acrylic Sheet,6.42,nos
+TML-0096,Interior,cutting,Acrylic Sheet,11.09,nos
+TML-0097,Interior,cutting,Screws,4.82,nos
+TML-0098,Interior,frame_fabrication,Plywood,6.48,nos
+TML-0099,Interior,frame_fabrication,Plywood,2.77,nos
+TML-0100,Interior,cutting,Plywood,10.68,nos
+TML-0101,Interior,frame_fabrication,Screws,7.7,nos
+TML-0102,Interior,edge_banding,Fevicol,2.11,nos
+TML-0103,Interior,edge_banding,Fevicol,5.09,nos
+TML-0104,Interior,cutting,Edge Band,5.51,nos
+TML-0105,Interior,installation,Edge Band,6.51,nos
+TML-0106,Interior,installation,Fevicol,6.98,nos
+TML-0107,Interior,frame_fabrication,Laminates,3.84,sqft
+TML-0108,Interior,frame_fabrication,Acrylic Sheet,9.73,nos
+TML-0109,Interior,installation,Acrylic Sheet,6.47,nos
+TML-0110,Interior,edge_banding,Edge Band,5.82,nos
+TML-0111,Interior,frame_fabrication,Edge Band,2.39,nos
+TML-0112,Interior,edge_banding,Acrylic Sheet,0.61,nos
+TML-0113,Interior,frame_fabrication,Screws,2.23,nos
+TML-0114,Interior,cutting,Plywood,4.09,nos
+TML-0115,Interior,frame_fabrication,Laminates,8.48,sqft
+TML-0116,Interior,edge_banding,Fevicol,4.31,nos
+TML-0117,Interior,finishing,Plywood,5.89,nos
+TML-0118,Interior,cutting,Laminates,4.53,sqft
+TML-0119,Interior,frame_fabrication,Fevicol,4.47,nos
+TML-0120,Interior,frame_fabrication,Plywood,3.66,nos
+TML-0121,Plumbing,valve_fitting,Ball Valve,4.72,nos
+TML-0122,Plumbing,valve_fitting,Ball Valve,6.95,nos
+TML-0123,Plumbing,pipe_installation,Sealant,1.39,nos
+TML-0124,Plumbing,pipe_cutting,UPVC Pipe,8.9,nos
+TML-0125,Plumbing,pipe_installation,Pipe Fittings,3.52,nos
+TML-0126,Plumbing,pipe_installation,CPVC Pipe,9.66,nos
+TML-0127,Plumbing,pressure_testing,Teflon Tape,4.3,nos
+TML-0128,Plumbing,valve_fitting,Teflon Tape,11.62,nos
+TML-0129,Plumbing,pressure_testing,Sealant,2.91,nos
+TML-0130,Plumbing,pipe_installation,CPVC Pipe,11.87,nos
+TML-0131,Plumbing,pipe_installation,CPVC Pipe,2.15,nos
+TML-0132,Plumbing,pipe_cutting,Ball Valve,4.22,nos
+TML-0133,Plumbing,pipe_installation,CPVC Pipe,6.38,nos
+TML-0134,Plumbing,pressure_testing,Ball Valve,8.15,nos
+TML-0135,Plumbing,valve_fitting,Pipe Fittings,6.25,nos
+TML-0136,Plumbing,pipe_installation,CPVC Pipe,6.94,nos
+TML-0137,Plumbing,pressure_testing,Ball Valve,8.62,nos
+TML-0138,Plumbing,valve_fitting,Pipe Fittings,10.14,nos
+TML-0139,Plumbing,pipe_cutting,Pipe Fittings,10.66,nos
+TML-0140,Plumbing,pipe_installation,UPVC Pipe,11.37,nos
+TML-0141,Plumbing,pipe_installation,Pipe Fittings,10.16,nos
+TML-0142,Plumbing,pressure_testing,Teflon Tape,6.14,nos
+TML-0143,Plumbing,pipe_cutting,Pipe Fittings,6.92,nos
+TML-0144,Plumbing,valve_fitting,Ball Valve,2.55,nos
+TML-0145,Plumbing,pressure_testing,Pipe Fittings,9.36,nos
+TML-0146,Plumbing,pressure_testing,Pipe Fittings,2.96,nos
+TML-0147,Plumbing,pipe_installation,Teflon Tape,4.9,nos
+TML-0148,Plumbing,pipe_cutting,UPVC Pipe,2.75,nos
+TML-0149,Plumbing,pipe_installation,Pipe Fittings,0.56,nos
+TML-0150,Plumbing,valve_fitting,Pipe Fittings,1.58,nos
+TML-0151,Plumbing,valve_fitting,Pipe Fittings,6.28,nos
+TML-0152,Plumbing,valve_fitting,CPVC Pipe,0.89,nos
+TML-0153,Plumbing,pressure_testing,Pipe Fittings,5.08,nos
+TML-0154,Plumbing,valve_fitting,Sealant,3.65,nos
+TML-0155,Plumbing,pipe_cutting,CPVC Pipe,10.43,nos
+TML-0156,Plumbing,pressure_testing,Ball Valve,6.14,nos
+TML-0157,Plumbing,pipe_cutting,Ball Valve,0.94,nos
+TML-0158,Plumbing,pipe_installation,CPVC Pipe,8.61,nos
+TML-0159,Plumbing,pipe_installation,UPVC Pipe,1.45,nos
+TML-0160,Plumbing,pipe_cutting,CPVC Pipe,5.6,nos
+TML-0161,Plumbing,pipe_cutting,Sealant,4.11,nos
+TML-0162,Plumbing,valve_fitting,Teflon Tape,11.81,nos
+TML-0163,Plumbing,pipe_cutting,UPVC Pipe,4.33,nos
+TML-0164,Plumbing,valve_fitting,Sealant,10.82,nos
+TML-0165,Plumbing,valve_fitting,UPVC Pipe,6.44,nos
+TML-0166,Plumbing,pressure_testing,Sealant,5.29,nos
+TML-0167,Plumbing,pipe_cutting,Sealant,1.25,nos
+TML-0168,Plumbing,pipe_installation,Teflon Tape,8.88,nos
+TML-0169,Plumbing,pipe_installation,CPVC Pipe,5.6,nos
+TML-0170,Plumbing,pipe_installation,Pipe Fittings,8.42,nos
+TML-0171,Plumbing,pipe_installation,Ball Valve,7.81,nos
+TML-0172,Plumbing,valve_fitting,CPVC Pipe,3.65,nos
+TML-0173,Plumbing,pipe_cutting,Pipe Fittings,4.43,nos
+TML-0174,Plumbing,pipe_cutting,Teflon Tape,7.01,nos
+TML-0175,Plumbing,pipe_cutting,Ball Valve,1.84,nos
+TML-0176,Plumbing,pipe_installation,CPVC Pipe,8.89,nos
+TML-0177,Plumbing,valve_fitting,UPVC Pipe,7.3,nos
+TML-0178,Plumbing,pipe_installation,CPVC Pipe,9.57,nos
+TML-0179,Plumbing,valve_fitting,UPVC Pipe,5.79,nos
+TML-0180,Plumbing,pipe_installation,Sealant,4.04,nos
+TML-0181,Electrical,cable_pulling,MCB,9.1,nos
+TML-0182,Electrical,cable_pulling,MCB,4.07,nos
+TML-0183,Electrical,junction_box_fixing,Switches,2.55,nos
+TML-0184,Electrical,wiring,PVC Conduit,4.13,nos
+TML-0185,Electrical,cable_pulling,PVC Conduit,3.64,nos
+TML-0186,Electrical,cable_pulling,PVC Conduit,11.76,nos
+TML-0187,Electrical,db_fabrication,DB Box,3.54,nos
+TML-0188,Electrical,junction_box_fixing,Switches,7.16,nos
+TML-0189,Electrical,wiring,DB Box,5.67,nos
+TML-0190,Electrical,cable_pulling,MCB,0.92,nos
+TML-0191,Electrical,db_fabrication,Sockets,2.29,nos
+TML-0192,Electrical,cable_pulling,Sockets,11.93,nos
+TML-0193,Electrical,junction_box_fixing,Switches,7.93,nos
+TML-0194,Electrical,junction_box_fixing,MCB,2.89,nos
+TML-0195,Electrical,wiring,MCB,6.84,nos
+TML-0196,Electrical,junction_box_fixing,MCB,1.54,nos
+TML-0197,Electrical,junction_box_fixing,PVC Conduit,3.01,nos
+TML-0198,Electrical,conduit_installation,DB Box,11.1,nos
+TML-0199,Electrical,cable_pulling,Sockets,5.96,nos
+TML-0200,Electrical,wiring,Switches,4.21,nos
+TML-0201,Electrical,db_fabrication,Sockets,8.07,nos
+TML-0202,Electrical,junction_box_fixing,Copper Wire,8.56,nos
+TML-0203,Electrical,junction_box_fixing,MCB,10.5,nos
+TML-0204,Electrical,cable_pulling,Copper Wire,5.35,nos
+TML-0205,Electrical,junction_box_fixing,DB Box,7.95,nos
+TML-0206,Electrical,cable_pulling,Copper Wire,11.0,nos
+TML-0207,Electrical,cable_pulling,DB Box,5.87,nos
+TML-0208,Electrical,conduit_installation,PVC Conduit,5.55,nos
+TML-0209,Electrical,db_fabrication,Sockets,7.33,nos
+TML-0210,Electrical,db_fabrication,MCB,8.91,nos
+TML-0211,Electrical,cable_pulling,Switches,3.4,nos
+TML-0212,Electrical,wiring,DB Box,4.39,nos
+TML-0213,Electrical,db_fabrication,MCB,3.95,nos
+TML-0214,Electrical,wiring,PVC Conduit,1.74,nos
+TML-0215,Electrical,junction_box_fixing,Switches,11.47,nos
+TML-0216,Electrical,wiring,Switches,0.83,nos
+TML-0217,Electrical,cable_pulling,Sockets,11.11,nos
+TML-0218,Electrical,wiring,Sockets,2.78,nos
+TML-0219,Electrical,cable_pulling,Sockets,1.99,nos
+TML-0220,Electrical,conduit_installation,DB Box,11.66,nos
+TML-0221,Electrical,cable_pulling,DB Box,9.72,nos
+TML-0222,Electrical,db_fabrication,Switches,2.4,nos
+TML-0223,Electrical,cable_pulling,Copper Wire,2.8,nos
+TML-0224,Electrical,junction_box_fixing,PVC Conduit,4.04,nos
+TML-0225,Electrical,cable_pulling,PVC Conduit,10.36,nos
+TML-0226,Electrical,conduit_installation,Switches,8.83,nos
+TML-0227,Electrical,wiring,PVC Conduit,10.23,nos
+TML-0228,Electrical,conduit_installation,DB Box,5.99,nos
+TML-0229,Electrical,conduit_installation,DB Box,5.91,nos
+TML-0230,Electrical,db_fabrication,MCB,8.54,nos
+TML-0231,Electrical,db_fabrication,Switches,10.06,nos
+TML-0232,Electrical,cable_pulling,MCB,9.28,nos
+TML-0233,Electrical,db_fabrication,Copper Wire,1.98,nos
+TML-0234,Electrical,db_fabrication,PVC Conduit,9.39,nos
+TML-0235,Electrical,db_fabrication,DB Box,7.36,nos
+TML-0236,Electrical,conduit_installation,Sockets,4.49,nos
+TML-0237,Electrical,wiring,MCB,0.81,nos
+TML-0238,Electrical,cable_pulling,Sockets,9.33,nos
+TML-0239,Electrical,junction_box_fixing,DB Box,4.41,nos
+TML-0240,Electrical,wiring,Copper Wire,7.39,nos
+TML-0241,Infra,formwork_setup,TMT Bar,7.92,nos
+TML-0242,Infra,vibrating,Sand,2.66,nos
+TML-0243,Infra,concrete_pouring,Sand,5.51,nos
+TML-0244,Infra,vibrating,Aggregate,8.02,kg
+TML-0245,Infra,rebar_placement,TMT Bar,3.78,nos
+TML-0246,Infra,vibrating,TMT Bar,0.9,nos
+TML-0247,Infra,rebar_placement,TMT Bar,2.38,nos
+TML-0248,Infra,curing,Binding Wire,10.09,nos
+TML-0249,Infra,formwork_setup,TMT Bar,4.48,nos
+TML-0250,Infra,formwork_setup,Binding Wire,8.04,nos
+TML-0251,Infra,formwork_setup,TMT Bar,2.35,nos
+TML-0252,Infra,curing,Sand,6.33,nos
+TML-0253,Infra,vibrating,Binding Wire,0.63,nos
+TML-0254,Infra,vibrating,Binding Wire,5.36,nos
+TML-0255,Infra,concrete_pouring,Cement,5.39,kg
+TML-0256,Infra,formwork_setup,Binding Wire,7.44,nos
+TML-0257,Infra,curing,TMT Bar,4.79,nos
+TML-0258,Infra,concrete_pouring,TMT Bar,10.21,nos
+TML-0259,Infra,formwork_setup,Aggregate,9.53,kg
+TML-0260,Infra,curing,TMT Bar,9.24,nos
+TML-0261,Infra,formwork_setup,Binding Wire,2.23,nos
+TML-0262,Infra,curing,Aggregate,3.47,kg
+TML-0263,Infra,curing,Shuttering Oil,8.87,nos
+TML-0264,Infra,vibrating,TMT Bar,1.06,nos
+TML-0265,Infra,formwork_setup,Aggregate,1.9,kg
+TML-0266,Infra,vibrating,TMT Bar,4.72,nos
+TML-0267,Infra,concrete_pouring,Shuttering Oil,3.4,nos
+TML-0268,Infra,concrete_pouring,Aggregate,9.32,kg
+TML-0269,Infra,curing,Cement,3.57,kg
+TML-0270,Infra,concrete_pouring,Aggregate,5.3,kg
+TML-0271,Infra,concrete_pouring,TMT Bar,3.92,nos
+TML-0272,Infra,curing,Cement,1.78,kg
+TML-0273,Infra,formwork_setup,Binding Wire,6.61,nos
+TML-0274,Infra,rebar_placement,TMT Bar,2.52,nos
+TML-0275,Infra,formwork_setup,Shuttering Oil,1.95,nos
+TML-0276,Infra,vibrating,Sand,5.46,nos
+TML-0277,Infra,concrete_pouring,Aggregate,11.68,kg
+TML-0278,Infra,curing,Binding Wire,3.31,nos
+TML-0279,Infra,curing,Binding Wire,7.04,nos
+TML-0280,Infra,formwork_setup,Cement,4.26,kg
+TML-0281,Infra,rebar_placement,Cement,7.51,kg
+TML-0282,Infra,formwork_setup,Binding Wire,4.89,nos
+TML-0283,Infra,formwork_setup,Binding Wire,4.38,nos
+TML-0284,Infra,concrete_pouring,Binding Wire,5.36,nos
+TML-0285,Infra,rebar_placement,Cement,11.43,kg
+TML-0286,Infra,formwork_setup,Aggregate,10.12,kg
+TML-0287,Infra,formwork_setup,TMT Bar,9.63,nos
+TML-0288,Infra,concrete_pouring,Shuttering Oil,11.94,nos
+TML-0289,Infra,curing,Shuttering Oil,6.7,nos
+TML-0290,Infra,formwork_setup,Sand,4.8,nos
+TML-0291,Infra,rebar_placement,TMT Bar,9.25,nos
+TML-0292,Infra,concrete_pouring,TMT Bar,9.09,nos
+TML-0293,Infra,concrete_pouring,Sand,6.27,nos
+TML-0294,Infra,curing,Cement,5.08,kg
+TML-0295,Infra,concrete_pouring,Sand,3.64,nos
+TML-0296,Infra,rebar_placement,TMT Bar,0.72,nos
+TML-0297,Infra,rebar_placement,TMT Bar,3.66,nos
+TML-0298,Infra,curing,TMT Bar,9.59,nos
+TML-0299,Infra,concrete_pouring,Binding Wire,1.62,nos
+TML-0300,Infra,formwork_setup,Sand,8.65,nos

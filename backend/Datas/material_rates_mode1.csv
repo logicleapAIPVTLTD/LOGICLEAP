@@ -1,0 +1,601 @@
+material_name,region,grade,unit,base_price_inr,final_price_inr,source
+Plywood BWP 6mm,north,Economy,sqft,38.81,39.08,synthetic_mode1
+Plywood BWP 6mm,north,Standard,sqft,44.1,43.88,synthetic_mode1
+Plywood BWP 6mm,north,Premium,sqft,52.04,52.09,synthetic_mode1
+Plywood BWP 6mm,south,Economy,sqft,40.39,40.83,synthetic_mode1
+Plywood BWP 6mm,south,Standard,sqft,45.9,46.5,synthetic_mode1
+Plywood BWP 6mm,south,Premium,sqft,54.16,53.19,synthetic_mode1
+Plywood BWP 6mm,central,Economy,sqft,39.6,39.6,synthetic_mode1
+Plywood BWP 6mm,central,Standard,sqft,45.0,45.0,synthetic_mode1
+Plywood BWP 6mm,central,Premium,sqft,53.1,52.46,synthetic_mode1
+Plywood BWP 6mm,east,Economy,sqft,40.0,40.32,synthetic_mode1
+Plywood BWP 6mm,east,Standard,sqft,45.45,45.0,synthetic_mode1
+Plywood BWP 6mm,east,Premium,sqft,53.63,53.31,synthetic_mode1
+Plywood BWP 6mm,west,Economy,sqft,40.79,41.36,synthetic_mode1
+Plywood BWP 6mm,west,Standard,sqft,46.35,46.67,synthetic_mode1
+Plywood BWP 6mm,west,Premium,sqft,54.69,54.64,synthetic_mode1
+Plywood BWP 8mm,north,Economy,sqft,51.74,51.95,synthetic_mode1
+Plywood BWP 8mm,north,Standard,sqft,58.8,57.33,synthetic_mode1
+Plywood BWP 8mm,north,Premium,sqft,69.38,68.62,synthetic_mode1
+Plywood BWP 8mm,south,Economy,sqft,53.86,54.45,synthetic_mode1
+Plywood BWP 8mm,south,Standard,sqft,61.2,62.0,synthetic_mode1
+Plywood BWP 8mm,south,Premium,sqft,72.22,72.15,synthetic_mode1
+Plywood BWP 8mm,central,Economy,sqft,52.8,52.11,synthetic_mode1
+Plywood BWP 8mm,central,Standard,sqft,60.0,59.4,synthetic_mode1
+Plywood BWP 8mm,central,Premium,sqft,70.8,70.45,synthetic_mode1
+Plywood BWP 8mm,east,Economy,sqft,53.33,53.44,synthetic_mode1
+Plywood BWP 8mm,east,Standard,sqft,60.6,62.05,synthetic_mode1
+Plywood BWP 8mm,east,Premium,sqft,71.51,72.87,synthetic_mode1
+Plywood BWP 8mm,west,Economy,sqft,54.38,54.43,synthetic_mode1
+Plywood BWP 8mm,west,Standard,sqft,61.8,61.37,synthetic_mode1
+Plywood BWP 8mm,west,Premium,sqft,72.92,73.5,synthetic_mode1
+Plywood BWP 12mm,north,Economy,sqft,81.93,82.26,synthetic_mode1
+Plywood BWP 12mm,north,Standard,sqft,93.1,91.61,synthetic_mode1
+Plywood BWP 12mm,north,Premium,sqft,109.86,109.75,synthetic_mode1
+Plywood BWP 12mm,south,Economy,sqft,85.27,85.1,synthetic_mode1
+Plywood BWP 12mm,south,Standard,sqft,96.9,97.58,synthetic_mode1
+Plywood BWP 12mm,south,Premium,sqft,114.34,113.2,synthetic_mode1
+Plywood BWP 12mm,central,Economy,sqft,83.6,82.68,synthetic_mode1
+Plywood BWP 12mm,central,Standard,sqft,95.0,93.67,synthetic_mode1
+Plywood BWP 12mm,central,Premium,sqft,112.1,112.44,synthetic_mode1
+Plywood BWP 12mm,east,Economy,sqft,84.44,84.52,synthetic_mode1
+Plywood BWP 12mm,east,Standard,sqft,95.95,96.72,synthetic_mode1
+Plywood BWP 12mm,east,Premium,sqft,113.22,112.99,synthetic_mode1
+Plywood BWP 12mm,west,Economy,sqft,86.11,87.06,synthetic_mode1
+Plywood BWP 12mm,west,Standard,sqft,97.85,96.77,synthetic_mode1
+Plywood BWP 12mm,west,Premium,sqft,115.46,115.0,synthetic_mode1
+Laminate 1mm,north,Economy,sqft,25.87,25.95,synthetic_mode1
+Laminate 1mm,north,Standard,sqft,29.4,29.02,synthetic_mode1
+Laminate 1mm,north,Premium,sqft,34.69,35.18,synthetic_mode1
+Laminate 1mm,south,Economy,sqft,26.93,26.88,synthetic_mode1
+Laminate 1mm,south,Standard,sqft,30.6,30.6,synthetic_mode1
+Laminate 1mm,south,Premium,sqft,36.11,36.25,synthetic_mode1
+Laminate 1mm,central,Economy,sqft,26.4,26.35,synthetic_mode1
+Laminate 1mm,central,Standard,sqft,30.0,29.76,synthetic_mode1
+Laminate 1mm,central,Premium,sqft,35.4,35.01,synthetic_mode1
+Laminate 1mm,east,Economy,sqft,26.66,26.29,synthetic_mode1
+Laminate 1mm,east,Standard,sqft,30.3,29.97,synthetic_mode1
+Laminate 1mm,east,Premium,sqft,35.75,36.43,synthetic_mode1
+Laminate 1mm,west,Economy,sqft,27.19,26.75,synthetic_mode1
+Laminate 1mm,west,Standard,sqft,30.9,31.15,synthetic_mode1
+Laminate 1mm,west,Premium,sqft,36.46,36.57,synthetic_mode1
+Laminate 1.5mm,north,Economy,sqft,36.22,36.15,synthetic_mode1
+Laminate 1.5mm,north,Standard,sqft,41.16,40.42,synthetic_mode1
+Laminate 1.5mm,north,Premium,sqft,48.57,48.72,synthetic_mode1
+Laminate 1.5mm,south,Economy,sqft,37.7,37.36,synthetic_mode1
+Laminate 1.5mm,south,Standard,sqft,42.84,43.01,synthetic_mode1
+Laminate 1.5mm,south,Premium,sqft,50.55,50.6,synthetic_mode1
+Laminate 1.5mm,central,Economy,sqft,36.96,36.78,synthetic_mode1
+Laminate 1.5mm,central,Standard,sqft,42.0,42.76,synthetic_mode1
+Laminate 1.5mm,central,Premium,sqft,49.56,50.15,synthetic_mode1
+Laminate 1.5mm,east,Economy,sqft,37.33,37.26,synthetic_mode1
+Laminate 1.5mm,east,Standard,sqft,42.42,42.29,synthetic_mode1
+Laminate 1.5mm,east,Premium,sqft,50.06,50.16,synthetic_mode1
+Laminate 1.5mm,west,Economy,sqft,38.07,38.11,synthetic_mode1
+Laminate 1.5mm,west,Standard,sqft,43.26,42.96,synthetic_mode1
+Laminate 1.5mm,west,Premium,sqft,51.05,51.25,synthetic_mode1
+Edge Band PVC 19mm,north,Economy,mtr,6.9,6.78,synthetic_mode1
+Edge Band PVC 19mm,north,Standard,mtr,7.84,7.84,synthetic_mode1
+Edge Band PVC 19mm,north,Premium,mtr,9.25,9.19,synthetic_mode1
+Edge Band PVC 19mm,south,Economy,mtr,7.18,7.08,synthetic_mode1
+Edge Band PVC 19mm,south,Standard,mtr,8.16,8.02,synthetic_mode1
+Edge Band PVC 19mm,south,Premium,mtr,9.63,9.89,synthetic_mode1
+Edge Band PVC 19mm,central,Economy,mtr,7.04,7.06,synthetic_mode1
+Edge Band PVC 19mm,central,Standard,mtr,8.0,8.01,synthetic_mode1
+Edge Band PVC 19mm,central,Premium,mtr,9.44,9.37,synthetic_mode1
+Edge Band PVC 19mm,east,Economy,mtr,7.11,7.2,synthetic_mode1
+Edge Band PVC 19mm,east,Standard,mtr,8.08,7.99,synthetic_mode1
+Edge Band PVC 19mm,east,Premium,mtr,9.53,9.71,synthetic_mode1
+Edge Band PVC 19mm,west,Economy,mtr,7.25,7.13,synthetic_mode1
+Edge Band PVC 19mm,west,Standard,mtr,8.24,8.25,synthetic_mode1
+Edge Band PVC 19mm,west,Premium,mtr,9.72,9.62,synthetic_mode1
+Handle Stainless Steel,north,Economy,nos,81.93,81.77,synthetic_mode1
+Handle Stainless Steel,north,Standard,nos,93.1,94.03,synthetic_mode1
+Handle Stainless Steel,north,Premium,nos,109.86,108.76,synthetic_mode1
+Handle Stainless Steel,south,Economy,nos,85.27,83.99,synthetic_mode1
+Handle Stainless Steel,south,Standard,nos,96.9,97.09,synthetic_mode1
+Handle Stainless Steel,south,Premium,nos,114.34,114.8,synthetic_mode1
+Handle Stainless Steel,central,Economy,nos,83.6,83.27,synthetic_mode1
+Handle Stainless Steel,central,Standard,nos,95.0,94.81,synthetic_mode1
+Handle Stainless Steel,central,Premium,nos,112.1,111.76,synthetic_mode1
+Handle Stainless Steel,east,Economy,nos,84.44,83.0,synthetic_mode1
+Handle Stainless Steel,east,Standard,nos,95.95,96.24,synthetic_mode1
+Handle Stainless Steel,east,Premium,nos,113.22,110.84,synthetic_mode1
+Handle Stainless Steel,west,Economy,nos,86.11,86.28,synthetic_mode1
+Handle Stainless Steel,west,Standard,nos,97.85,99.71,synthetic_mode1
+Handle Stainless Steel,west,Premium,nos,115.46,117.19,synthetic_mode1
+Hinge Soft Close,north,Economy,nos,189.73,188.59,synthetic_mode1
+Hinge Soft Close,north,Standard,nos,215.6,215.38,synthetic_mode1
+Hinge Soft Close,north,Premium,nos,254.41,257.21,synthetic_mode1
+Hinge Soft Close,south,Economy,nos,197.47,197.47,synthetic_mode1
+Hinge Soft Close,south,Standard,nos,224.4,223.28,synthetic_mode1
+Hinge Soft Close,south,Premium,nos,264.79,263.47,synthetic_mode1
+Hinge Soft Close,central,Economy,nos,193.6,194.96,synthetic_mode1
+Hinge Soft Close,central,Standard,nos,220.0,222.86,synthetic_mode1
+Hinge Soft Close,central,Premium,nos,259.6,260.38,synthetic_mode1
+Hinge Soft Close,east,Economy,nos,195.54,198.08,synthetic_mode1
+Hinge Soft Close,east,Standard,nos,222.2,223.53,synthetic_mode1
+Hinge Soft Close,east,Premium,nos,262.2,264.56,synthetic_mode1
+Hinge Soft Close,west,Economy,nos,199.41,197.42,synthetic_mode1
+Hinge Soft Close,west,Standard,nos,226.6,229.55,synthetic_mode1
+Hinge Soft Close,west,Premium,nos,267.39,269.26,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),north,Economy,kg,137.98,139.64,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),north,Standard,kg,156.8,158.37,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),north,Premium,kg,185.02,182.61,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),south,Economy,kg,143.62,144.19,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),south,Standard,kg,163.2,165.32,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),south,Premium,kg,192.58,189.69,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),central,Economy,kg,140.8,140.24,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),central,Standard,kg,160.0,158.72,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),central,Premium,kg,188.8,188.42,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),east,Economy,kg,142.21,140.79,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),east,Standard,kg,161.6,159.82,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),east,Premium,kg,190.69,189.36,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),west,Economy,kg,145.02,147.2,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),west,Standard,kg,164.8,166.78,synthetic_mode1
+Adhesive (Carpentry) - Fevicol SH (kg),west,Premium,kg,194.46,194.27,synthetic_mode1
+Adhesive (Tile) - Powder (kg),north,Economy,kg,51.74,52.0,synthetic_mode1
+Adhesive (Tile) - Powder (kg),north,Standard,kg,58.8,58.39,synthetic_mode1
+Adhesive (Tile) - Powder (kg),north,Premium,kg,69.38,68.69,synthetic_mode1
+Adhesive (Tile) - Powder (kg),south,Economy,kg,53.86,54.08,synthetic_mode1
+Adhesive (Tile) - Powder (kg),south,Standard,kg,61.2,61.87,synthetic_mode1
+Adhesive (Tile) - Powder (kg),south,Premium,kg,72.22,71.93,synthetic_mode1
+Adhesive (Tile) - Powder (kg),central,Economy,kg,52.8,53.06,synthetic_mode1
+Adhesive (Tile) - Powder (kg),central,Standard,kg,60.0,59.76,synthetic_mode1
+Adhesive (Tile) - Powder (kg),central,Premium,kg,70.8,71.58,synthetic_mode1
+Adhesive (Tile) - Powder (kg),east,Economy,kg,53.33,53.01,synthetic_mode1
+Adhesive (Tile) - Powder (kg),east,Standard,kg,60.6,61.87,synthetic_mode1
+Adhesive (Tile) - Powder (kg),east,Premium,kg,71.51,71.01,synthetic_mode1
+Adhesive (Tile) - Powder (kg),west,Economy,kg,54.38,54.43,synthetic_mode1
+Adhesive (Tile) - Powder (kg),west,Standard,kg,61.8,60.93,synthetic_mode1
+Adhesive (Tile) - Powder (kg),west,Premium,kg,72.92,73.14,synthetic_mode1
+Emulsion Paint 1L,north,Economy,liters,146.61,148.22,synthetic_mode1
+Emulsion Paint 1L,north,Standard,liters,166.6,165.27,synthetic_mode1
+Emulsion Paint 1L,north,Premium,liters,196.59,194.62,synthetic_mode1
+Emulsion Paint 1L,south,Economy,liters,152.59,153.66,synthetic_mode1
+Emulsion Paint 1L,south,Standard,liters,173.4,176.35,synthetic_mode1
+Emulsion Paint 1L,south,Premium,liters,204.61,204.81,synthetic_mode1
+Emulsion Paint 1L,central,Economy,liters,149.6,149.75,synthetic_mode1
+Emulsion Paint 1L,central,Standard,liters,170.0,170.51,synthetic_mode1
+Emulsion Paint 1L,central,Premium,liters,200.6,202.2,synthetic_mode1
+Emulsion Paint 1L,east,Economy,liters,151.1,152.91,synthetic_mode1
+Emulsion Paint 1L,east,Standard,liters,171.7,169.98,synthetic_mode1
+Emulsion Paint 1L,east,Premium,liters,202.61,197.34,synthetic_mode1
+Emulsion Paint 1L,west,Economy,liters,154.09,155.78,synthetic_mode1
+Emulsion Paint 1L,west,Standard,liters,175.1,173.87,synthetic_mode1
+Emulsion Paint 1L,west,Premium,liters,206.62,204.35,synthetic_mode1
+Primer 1L,north,Economy,liters,120.74,121.34,synthetic_mode1
+Primer 1L,north,Standard,liters,137.2,138.16,synthetic_mode1
+Primer 1L,north,Premium,liters,161.9,161.09,synthetic_mode1
+Primer 1L,south,Economy,liters,125.66,126.29,synthetic_mode1
+Primer 1L,south,Standard,liters,142.8,142.09,synthetic_mode1
+Primer 1L,south,Premium,liters,168.5,167.15,synthetic_mode1
+Primer 1L,central,Economy,liters,123.2,122.71,synthetic_mode1
+Primer 1L,central,Standard,liters,140.0,139.58,synthetic_mode1
+Primer 1L,central,Premium,liters,165.2,164.37,synthetic_mode1
+Primer 1L,east,Economy,liters,124.43,123.93,synthetic_mode1
+Primer 1L,east,Standard,liters,141.4,141.26,synthetic_mode1
+Primer 1L,east,Premium,liters,166.85,167.85,synthetic_mode1
+Primer 1L,west,Economy,liters,126.9,124.87,synthetic_mode1
+Primer 1L,west,Standard,liters,144.2,142.76,synthetic_mode1
+Primer 1L,west,Premium,liters,170.16,167.95,synthetic_mode1
+Putty (kg),north,Economy,kg,77.62,77.78,synthetic_mode1
+Putty (kg),north,Standard,kg,88.2,87.14,synthetic_mode1
+Putty (kg),north,Premium,kg,104.08,104.08,synthetic_mode1
+Putty (kg),south,Economy,kg,80.78,81.35,synthetic_mode1
+Putty (kg),south,Standard,kg,91.8,90.33,synthetic_mode1
+Putty (kg),south,Premium,kg,108.32,108.64,synthetic_mode1
+Putty (kg),central,Economy,kg,79.2,78.41,synthetic_mode1
+Putty (kg),central,Standard,kg,90.0,90.0,synthetic_mode1
+Putty (kg),central,Premium,kg,106.2,107.37,synthetic_mode1
+Putty (kg),east,Economy,kg,79.99,81.27,synthetic_mode1
+Putty (kg),east,Standard,kg,90.9,90.35,synthetic_mode1
+Putty (kg),east,Premium,kg,107.26,107.37,synthetic_mode1
+Putty (kg),west,Economy,kg,81.58,81.82,synthetic_mode1
+Putty (kg),west,Standard,kg,92.7,93.44,synthetic_mode1
+Putty (kg),west,Premium,kg,109.39,108.95,synthetic_mode1
+Roller (nos),north,Economy,nos,103.49,103.18,synthetic_mode1
+Roller (nos),north,Standard,nos,117.6,115.25,synthetic_mode1
+Roller (nos),north,Premium,nos,138.77,139.88,synthetic_mode1
+Roller (nos),south,Economy,nos,107.71,108.46,synthetic_mode1
+Roller (nos),south,Standard,nos,122.4,125.46,synthetic_mode1
+Roller (nos),south,Premium,nos,144.43,142.26,synthetic_mode1
+Roller (nos),central,Economy,nos,105.6,103.8,synthetic_mode1
+Roller (nos),central,Standard,nos,120.0,119.88,synthetic_mode1
+Roller (nos),central,Premium,nos,141.6,144.01,synthetic_mode1
+Roller (nos),east,Economy,nos,106.66,106.23,synthetic_mode1
+Roller (nos),east,Standard,nos,121.2,121.08,synthetic_mode1
+Roller (nos),east,Premium,nos,143.02,143.31,synthetic_mode1
+Roller (nos),west,Economy,nos,108.77,109.75,synthetic_mode1
+Roller (nos),west,Standard,nos,123.6,122.61,synthetic_mode1
+Roller (nos),west,Premium,nos,145.85,143.66,synthetic_mode1
+Brush (nos),north,Economy,nos,60.37,60.61,synthetic_mode1
+Brush (nos),north,Standard,nos,68.6,68.81,synthetic_mode1
+Brush (nos),north,Premium,nos,80.95,80.55,synthetic_mode1
+Brush (nos),south,Economy,nos,62.83,61.76,synthetic_mode1
+Brush (nos),south,Standard,nos,71.4,71.61,synthetic_mode1
+Brush (nos),south,Premium,nos,84.25,84.67,synthetic_mode1
+Brush (nos),central,Economy,nos,61.6,61.78,synthetic_mode1
+Brush (nos),central,Standard,nos,70.0,70.77,synthetic_mode1
+Brush (nos),central,Premium,nos,82.6,82.85,synthetic_mode1
+Brush (nos),east,Economy,nos,62.22,62.1,synthetic_mode1
+Brush (nos),east,Standard,nos,70.7,71.34,synthetic_mode1
+Brush (nos),east,Premium,nos,83.43,81.93,synthetic_mode1
+Brush (nos),west,Economy,nos,63.45,63.58,synthetic_mode1
+Brush (nos),west,Standard,nos,72.1,71.23,synthetic_mode1
+Brush (nos),west,Premium,nos,85.08,84.31,synthetic_mode1
+Vitrified Tile 600x600 (nos),north,Economy,nos,155.23,153.99,synthetic_mode1
+Vitrified Tile 600x600 (nos),north,Standard,nos,176.4,177.11,synthetic_mode1
+Vitrified Tile 600x600 (nos),north,Premium,nos,208.15,210.23,synthetic_mode1
+Vitrified Tile 600x600 (nos),south,Economy,nos,161.57,163.51,synthetic_mode1
+Vitrified Tile 600x600 (nos),south,Standard,nos,183.6,184.33,synthetic_mode1
+Vitrified Tile 600x600 (nos),south,Premium,nos,216.65,214.48,synthetic_mode1
+Vitrified Tile 600x600 (nos),central,Economy,nos,158.4,159.03,synthetic_mode1
+Vitrified Tile 600x600 (nos),central,Standard,nos,180.0,179.46,synthetic_mode1
+Vitrified Tile 600x600 (nos),central,Premium,nos,212.4,210.49,synthetic_mode1
+Vitrified Tile 600x600 (nos),east,Economy,nos,159.98,160.3,synthetic_mode1
+Vitrified Tile 600x600 (nos),east,Standard,nos,181.8,180.53,synthetic_mode1
+Vitrified Tile 600x600 (nos),east,Premium,nos,214.52,216.24,synthetic_mode1
+Vitrified Tile 600x600 (nos),west,Economy,nos,163.15,162.66,synthetic_mode1
+Vitrified Tile 600x600 (nos),west,Standard,nos,185.4,183.92,synthetic_mode1
+Vitrified Tile 600x600 (nos),west,Premium,nos,218.77,217.89,synthetic_mode1
+Ceramic Tile (nos),north,Economy,nos,81.93,83.32,synthetic_mode1
+Ceramic Tile (nos),north,Standard,nos,93.1,92.54,synthetic_mode1
+Ceramic Tile (nos),north,Premium,nos,109.86,109.86,synthetic_mode1
+Ceramic Tile (nos),south,Economy,nos,85.27,85.36,synthetic_mode1
+Ceramic Tile (nos),south,Standard,nos,96.9,96.61,synthetic_mode1
+Ceramic Tile (nos),south,Premium,nos,114.34,115.71,synthetic_mode1
+Ceramic Tile (nos),central,Economy,nos,83.6,84.6,synthetic_mode1
+Ceramic Tile (nos),central,Standard,nos,95.0,95.09,synthetic_mode1
+Ceramic Tile (nos),central,Premium,nos,112.1,112.77,synthetic_mode1
+Ceramic Tile (nos),east,Economy,nos,84.44,86.64,synthetic_mode1
+Ceramic Tile (nos),east,Standard,nos,95.95,95.76,synthetic_mode1
+Ceramic Tile (nos),east,Premium,nos,113.22,113.45,synthetic_mode1
+Ceramic Tile (nos),west,Economy,nos,86.11,85.34,synthetic_mode1
+Ceramic Tile (nos),west,Standard,nos,97.85,98.53,synthetic_mode1
+Ceramic Tile (nos),west,Premium,nos,115.46,116.04,synthetic_mode1
+Tile Adhesive (kg),north,Economy,kg,47.43,48.19,synthetic_mode1
+Tile Adhesive (kg),north,Standard,kg,53.9,54.49,synthetic_mode1
+Tile Adhesive (kg),north,Premium,kg,63.6,62.2,synthetic_mode1
+Tile Adhesive (kg),south,Economy,kg,49.37,49.67,synthetic_mode1
+Tile Adhesive (kg),south,Standard,kg,56.1,56.16,synthetic_mode1
+Tile Adhesive (kg),south,Premium,kg,66.2,65.8,synthetic_mode1
+Tile Adhesive (kg),central,Economy,kg,48.4,47.82,synthetic_mode1
+Tile Adhesive (kg),central,Standard,kg,55.0,55.27,synthetic_mode1
+Tile Adhesive (kg),central,Premium,kg,64.9,66.0,synthetic_mode1
+Tile Adhesive (kg),east,Economy,kg,48.88,48.39,synthetic_mode1
+Tile Adhesive (kg),east,Standard,kg,55.55,54.38,synthetic_mode1
+Tile Adhesive (kg),east,Premium,kg,65.55,64.83,synthetic_mode1
+Tile Adhesive (kg),west,Economy,kg,49.85,49.7,synthetic_mode1
+Tile Adhesive (kg),west,Standard,kg,56.65,56.82,synthetic_mode1
+Tile Adhesive (kg),west,Premium,kg,66.85,65.58,synthetic_mode1
+Tile Grout (kg),north,Economy,kg,68.99,68.44,synthetic_mode1
+Tile Grout (kg),north,Standard,kg,78.4,78.71,synthetic_mode1
+Tile Grout (kg),north,Premium,kg,92.51,93.07,synthetic_mode1
+Tile Grout (kg),south,Economy,kg,71.81,72.1,synthetic_mode1
+Tile Grout (kg),south,Standard,kg,81.6,82.17,synthetic_mode1
+Tile Grout (kg),south,Premium,kg,96.29,96.1,synthetic_mode1
+Tile Grout (kg),central,Economy,kg,70.4,70.33,synthetic_mode1
+Tile Grout (kg),central,Standard,kg,80.0,79.44,synthetic_mode1
+Tile Grout (kg),central,Premium,kg,94.4,95.44,synthetic_mode1
+Tile Grout (kg),east,Economy,kg,71.1,69.75,synthetic_mode1
+Tile Grout (kg),east,Standard,kg,80.8,80.88,synthetic_mode1
+Tile Grout (kg),east,Premium,kg,95.34,94.96,synthetic_mode1
+Tile Grout (kg),west,Economy,kg,72.51,73.09,synthetic_mode1
+Tile Grout (kg),west,Standard,kg,82.4,81.91,synthetic_mode1
+Tile Grout (kg),west,Premium,kg,97.23,99.08,synthetic_mode1
+Tile Spacer (nos),north,Economy,nos,0.43,0.43,synthetic_mode1
+Tile Spacer (nos),north,Standard,nos,0.49,0.49,synthetic_mode1
+Tile Spacer (nos),north,Premium,nos,0.58,0.58,synthetic_mode1
+Tile Spacer (nos),south,Economy,nos,0.45,0.45,synthetic_mode1
+Tile Spacer (nos),south,Standard,nos,0.51,0.51,synthetic_mode1
+Tile Spacer (nos),south,Premium,nos,0.6,0.6,synthetic_mode1
+Tile Spacer (nos),central,Economy,nos,0.44,0.44,synthetic_mode1
+Tile Spacer (nos),central,Standard,nos,0.5,0.5,synthetic_mode1
+Tile Spacer (nos),central,Premium,nos,0.59,0.59,synthetic_mode1
+Tile Spacer (nos),east,Economy,nos,0.44,0.45,synthetic_mode1
+Tile Spacer (nos),east,Standard,nos,0.51,0.51,synthetic_mode1
+Tile Spacer (nos),east,Premium,nos,0.6,0.6,synthetic_mode1
+Tile Spacer (nos),west,Economy,nos,0.45,0.45,synthetic_mode1
+Tile Spacer (nos),west,Standard,nos,0.52,0.52,synthetic_mode1
+Tile Spacer (nos),west,Premium,nos,0.61,0.61,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),north,Economy,mtr,72.44,71.57,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),north,Standard,mtr,82.32,82.4,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),north,Premium,mtr,97.14,95.97,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),south,Economy,mtr,75.4,75.85,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),south,Standard,mtr,85.68,84.74,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),south,Premium,mtr,101.1,101.71,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),central,Economy,mtr,73.92,74.95,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),central,Standard,mtr,84.0,85.09,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),central,Premium,mtr,99.12,98.92,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),east,Economy,mtr,74.66,74.73,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),east,Standard,mtr,84.84,83.91,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),east,Premium,mtr,100.11,99.81,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),west,Economy,mtr,76.14,76.14,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),west,Standard,mtr,86.52,86.0,synthetic_mode1
+CPVC Pipe 3/4 inch (mtr),west,Premium,mtr,102.09,101.89,synthetic_mode1
+CPVC Elbow (nos),north,Economy,nos,18.97,18.61,synthetic_mode1
+CPVC Elbow (nos),north,Standard,nos,21.56,21.34,synthetic_mode1
+CPVC Elbow (nos),north,Premium,nos,25.44,25.11,synthetic_mode1
+CPVC Elbow (nos),south,Economy,nos,19.75,19.87,synthetic_mode1
+CPVC Elbow (nos),south,Standard,nos,22.44,22.53,synthetic_mode1
+CPVC Elbow (nos),south,Premium,nos,26.48,26.93,synthetic_mode1
+CPVC Elbow (nos),central,Economy,nos,19.36,19.26,synthetic_mode1
+CPVC Elbow (nos),central,Standard,nos,22.0,21.87,synthetic_mode1
+CPVC Elbow (nos),central,Premium,nos,25.96,25.99,synthetic_mode1
+CPVC Elbow (nos),east,Economy,nos,19.55,19.55,synthetic_mode1
+CPVC Elbow (nos),east,Standard,nos,22.22,22.6,synthetic_mode1
+CPVC Elbow (nos),east,Premium,nos,26.22,26.51,synthetic_mode1
+CPVC Elbow (nos),west,Economy,nos,19.94,20.1,synthetic_mode1
+CPVC Elbow (nos),west,Standard,nos,22.66,22.37,synthetic_mode1
+CPVC Elbow (nos),west,Premium,nos,26.74,26.82,synthetic_mode1
+CPVC Tee (nos),north,Economy,nos,30.18,30.39,synthetic_mode1
+CPVC Tee (nos),north,Standard,nos,34.3,34.47,synthetic_mode1
+CPVC Tee (nos),north,Premium,nos,40.47,39.5,synthetic_mode1
+CPVC Tee (nos),south,Economy,nos,31.42,31.8,synthetic_mode1
+CPVC Tee (nos),south,Standard,nos,35.7,35.77,synthetic_mode1
+CPVC Tee (nos),south,Premium,nos,42.13,42.42,synthetic_mode1
+CPVC Tee (nos),central,Economy,nos,30.8,31.48,synthetic_mode1
+CPVC Tee (nos),central,Standard,nos,35.0,34.65,synthetic_mode1
+CPVC Tee (nos),central,Premium,nos,41.3,40.89,synthetic_mode1
+CPVC Tee (nos),east,Economy,nos,31.11,31.42,synthetic_mode1
+CPVC Tee (nos),east,Standard,nos,35.35,35.21,synthetic_mode1
+CPVC Tee (nos),east,Premium,nos,41.71,42.21,synthetic_mode1
+CPVC Tee (nos),west,Economy,nos,31.72,32.42,synthetic_mode1
+CPVC Tee (nos),west,Standard,nos,36.05,36.63,synthetic_mode1
+CPVC Tee (nos),west,Premium,nos,42.54,42.11,synthetic_mode1
+Solvent Cement (liters),north,Economy,liters,275.97,280.39,synthetic_mode1
+Solvent Cement (liters),north,Standard,liters,313.6,314.23,synthetic_mode1
+Solvent Cement (liters),north,Premium,liters,370.05,367.09,synthetic_mode1
+Solvent Cement (liters),south,Economy,liters,287.23,285.22,synthetic_mode1
+Solvent Cement (liters),south,Standard,liters,326.4,320.85,synthetic_mode1
+Solvent Cement (liters),south,Premium,liters,385.15,379.76,synthetic_mode1
+Solvent Cement (liters),central,Economy,liters,281.6,284.98,synthetic_mode1
+Solvent Cement (liters),central,Standard,liters,320.0,323.84,synthetic_mode1
+Solvent Cement (liters),central,Premium,liters,377.6,376.84,synthetic_mode1
+Solvent Cement (liters),east,Economy,liters,284.42,283.57,synthetic_mode1
+Solvent Cement (liters),east,Standard,liters,323.2,323.2,synthetic_mode1
+Solvent Cement (liters),east,Premium,liters,381.38,381.38,synthetic_mode1
+Solvent Cement (liters),west,Economy,liters,290.05,287.44,synthetic_mode1
+Solvent Cement (liters),west,Standard,liters,329.6,328.61,synthetic_mode1
+Solvent Cement (liters),west,Premium,liters,388.93,384.65,synthetic_mode1
+Ball Valve (nos),north,Economy,nos,310.46,313.88,synthetic_mode1
+Ball Valve (nos),north,Standard,nos,352.8,354.21,synthetic_mode1
+Ball Valve (nos),north,Premium,nos,416.3,418.38,synthetic_mode1
+Ball Valve (nos),south,Economy,nos,323.14,319.91,synthetic_mode1
+Ball Valve (nos),south,Standard,nos,367.2,363.16,synthetic_mode1
+Ball Valve (nos),south,Premium,nos,433.3,429.83,synthetic_mode1
+Ball Valve (nos),central,Economy,nos,316.8,313.63,synthetic_mode1
+Ball Valve (nos),central,Standard,nos,360.0,365.4,synthetic_mode1
+Ball Valve (nos),central,Premium,nos,424.8,429.47,synthetic_mode1
+Ball Valve (nos),east,Economy,nos,319.97,320.61,synthetic_mode1
+Ball Valve (nos),east,Standard,nos,363.6,365.78,synthetic_mode1
+Ball Valve (nos),east,Premium,nos,429.05,428.62,synthetic_mode1
+Ball Valve (nos),west,Economy,nos,326.3,325.32,synthetic_mode1
+Ball Valve (nos),west,Standard,nos,370.8,370.43,synthetic_mode1
+Ball Valve (nos),west,Premium,nos,437.54,437.1,synthetic_mode1
+PVC Conduit (mtr),north,Economy,mtr,13.8,13.84,synthetic_mode1
+PVC Conduit (mtr),north,Standard,mtr,15.68,15.71,synthetic_mode1
+PVC Conduit (mtr),north,Premium,mtr,18.5,18.11,synthetic_mode1
+PVC Conduit (mtr),south,Economy,mtr,14.36,14.2,synthetic_mode1
+PVC Conduit (mtr),south,Standard,mtr,16.32,16.35,synthetic_mode1
+PVC Conduit (mtr),south,Premium,mtr,19.26,19.47,synthetic_mode1
+PVC Conduit (mtr),central,Economy,mtr,14.08,14.11,synthetic_mode1
+PVC Conduit (mtr),central,Standard,mtr,16.0,15.79,synthetic_mode1
+PVC Conduit (mtr),central,Premium,mtr,18.88,19.03,synthetic_mode1
+PVC Conduit (mtr),east,Economy,mtr,14.22,14.11,synthetic_mode1
+PVC Conduit (mtr),east,Standard,mtr,16.16,16.27,synthetic_mode1
+PVC Conduit (mtr),east,Premium,mtr,19.07,18.94,synthetic_mode1
+PVC Conduit (mtr),west,Economy,mtr,14.5,14.47,synthetic_mode1
+PVC Conduit (mtr),west,Standard,mtr,16.48,16.66,synthetic_mode1
+PVC Conduit (mtr),west,Premium,mtr,19.45,19.33,synthetic_mode1
+Junction Box (nos),north,Economy,nos,81.93,80.95,synthetic_mode1
+Junction Box (nos),north,Standard,nos,93.1,93.57,synthetic_mode1
+Junction Box (nos),north,Premium,nos,109.86,110.3,synthetic_mode1
+Junction Box (nos),south,Economy,nos,85.27,84.84,synthetic_mode1
+Junction Box (nos),south,Standard,nos,96.9,97.77,synthetic_mode1
+Junction Box (nos),south,Premium,nos,114.34,114.45,synthetic_mode1
+Junction Box (nos),central,Economy,nos,83.6,83.85,synthetic_mode1
+Junction Box (nos),central,Standard,nos,95.0,96.04,synthetic_mode1
+Junction Box (nos),central,Premium,nos,112.1,110.19,synthetic_mode1
+Junction Box (nos),east,Economy,nos,84.44,84.78,synthetic_mode1
+Junction Box (nos),east,Standard,nos,95.95,96.33,synthetic_mode1
+Junction Box (nos),east,Premium,nos,113.22,111.97,synthetic_mode1
+Junction Box (nos),west,Economy,nos,86.11,85.42,synthetic_mode1
+Junction Box (nos),west,Standard,nos,97.85,97.17,synthetic_mode1
+Junction Box (nos),west,Premium,nos,115.46,116.04,synthetic_mode1
+Switch Modular (nos),north,Economy,nos,50.02,50.17,synthetic_mode1
+Switch Modular (nos),north,Standard,nos,56.84,56.61,synthetic_mode1
+Switch Modular (nos),north,Premium,nos,67.07,66.67,synthetic_mode1
+Switch Modular (nos),south,Economy,nos,52.06,52.06,synthetic_mode1
+Switch Modular (nos),south,Standard,nos,59.16,60.22,synthetic_mode1
+Switch Modular (nos),south,Premium,nos,69.81,70.51,synthetic_mode1
+Switch Modular (nos),central,Economy,nos,51.04,51.09,synthetic_mode1
+Switch Modular (nos),central,Standard,nos,58.0,57.77,synthetic_mode1
+Switch Modular (nos),central,Premium,nos,68.44,69.33,synthetic_mode1
+Switch Modular (nos),east,Economy,nos,51.55,51.76,synthetic_mode1
+Switch Modular (nos),east,Standard,nos,58.58,58.52,synthetic_mode1
+Switch Modular (nos),east,Premium,nos,69.12,70.92,synthetic_mode1
+Switch Modular (nos),west,Economy,nos,52.57,52.57,synthetic_mode1
+Switch Modular (nos),west,Standard,nos,59.74,60.7,synthetic_mode1
+Switch Modular (nos),west,Premium,nos,70.49,70.84,synthetic_mode1
+Socket Modular (nos),north,Economy,nos,142.3,142.44,synthetic_mode1
+Socket Modular (nos),north,Standard,nos,161.7,162.19,synthetic_mode1
+Socket Modular (nos),north,Premium,nos,190.81,193.1,synthetic_mode1
+Socket Modular (nos),south,Economy,nos,148.1,146.32,synthetic_mode1
+Socket Modular (nos),south,Standard,nos,168.3,168.13,synthetic_mode1
+Socket Modular (nos),south,Premium,nos,198.59,198.79,synthetic_mode1
+Socket Modular (nos),central,Economy,nos,145.2,144.47,synthetic_mode1
+Socket Modular (nos),central,Standard,nos,165.0,163.19,synthetic_mode1
+Socket Modular (nos),central,Premium,nos,194.7,196.26,synthetic_mode1
+Socket Modular (nos),east,Economy,nos,146.65,146.36,synthetic_mode1
+Socket Modular (nos),east,Standard,nos,166.65,169.48,synthetic_mode1
+Socket Modular (nos),east,Premium,nos,196.65,197.83,synthetic_mode1
+Socket Modular (nos),west,Economy,nos,149.56,151.06,synthetic_mode1
+Socket Modular (nos),west,Standard,nos,169.95,171.48,synthetic_mode1
+Socket Modular (nos),west,Premium,nos,200.54,200.74,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),north,Economy,mtr,24.15,23.88,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),north,Standard,mtr,27.44,27.0,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),north,Premium,mtr,32.38,32.48,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),south,Economy,mtr,25.13,25.18,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),south,Standard,mtr,28.56,28.87,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),south,Premium,mtr,33.7,33.16,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),central,Economy,mtr,24.64,24.81,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),central,Standard,mtr,28.0,28.45,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),central,Premium,mtr,33.04,33.34,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),east,Economy,mtr,24.89,25.31,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),east,Standard,mtr,28.28,27.88,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),east,Premium,mtr,33.37,33.3,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),west,Economy,mtr,25.38,25.63,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),west,Standard,mtr,28.84,28.72,synthetic_mode1
+FRLS Copper Wire 1.5 sqmm (mtr),west,Premium,mtr,34.03,33.72,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),north,Economy,mtr,38.81,39.12,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),north,Standard,mtr,44.1,44.63,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),north,Premium,mtr,52.04,52.46,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),south,Economy,mtr,40.39,40.11,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),south,Standard,mtr,45.9,45.62,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),south,Premium,mtr,54.16,54.16,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),central,Economy,mtr,39.6,39.44,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),central,Standard,mtr,45.0,45.63,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),central,Premium,mtr,53.1,52.46,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),east,Economy,mtr,40.0,40.2,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),east,Standard,mtr,45.45,45.0,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),east,Premium,mtr,53.63,53.42,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),west,Economy,mtr,40.79,41.16,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),west,Standard,mtr,46.35,46.63,synthetic_mode1
+FRLS Copper Wire 2.5 sqmm (mtr),west,Premium,mtr,54.69,54.69,synthetic_mode1
+Cable Tray (mtr),north,Economy,mtr,362.21,363.66,synthetic_mode1
+Cable Tray (mtr),north,Standard,mtr,411.6,411.6,synthetic_mode1
+Cable Tray (mtr),north,Premium,mtr,485.69,484.72,synthetic_mode1
+Cable Tray (mtr),south,Economy,mtr,376.99,380.01,synthetic_mode1
+Cable Tray (mtr),south,Standard,mtr,428.4,424.12,synthetic_mode1
+Cable Tray (mtr),south,Premium,mtr,505.51,510.06,synthetic_mode1
+Cable Tray (mtr),central,Economy,mtr,369.6,371.08,synthetic_mode1
+Cable Tray (mtr),central,Standard,mtr,420.0,423.78,synthetic_mode1
+Cable Tray (mtr),central,Premium,mtr,495.6,499.07,synthetic_mode1
+Cable Tray (mtr),east,Economy,mtr,373.3,375.17,synthetic_mode1
+Cable Tray (mtr),east,Standard,mtr,424.2,423.78,synthetic_mode1
+Cable Tray (mtr),east,Premium,mtr,500.56,503.56,synthetic_mode1
+Cable Tray (mtr),west,Economy,mtr,380.69,385.64,synthetic_mode1
+Cable Tray (mtr),west,Standard,mtr,432.6,433.47,synthetic_mode1
+Cable Tray (mtr),west,Premium,mtr,510.47,509.96,synthetic_mode1
+Cement OPC 53 (kg),north,Economy,kg,7.33,7.29,synthetic_mode1
+Cement OPC 53 (kg),north,Standard,kg,8.33,8.32,synthetic_mode1
+Cement OPC 53 (kg),north,Premium,kg,9.83,9.84,synthetic_mode1
+Cement OPC 53 (kg),south,Economy,kg,7.63,7.71,synthetic_mode1
+Cement OPC 53 (kg),south,Standard,kg,8.67,8.69,synthetic_mode1
+Cement OPC 53 (kg),south,Premium,kg,10.23,10.26,synthetic_mode1
+Cement OPC 53 (kg),central,Economy,kg,7.48,7.35,synthetic_mode1
+Cement OPC 53 (kg),central,Standard,kg,8.5,8.46,synthetic_mode1
+Cement OPC 53 (kg),central,Premium,kg,10.03,10.03,synthetic_mode1
+Cement OPC 53 (kg),east,Economy,kg,7.55,7.6,synthetic_mode1
+Cement OPC 53 (kg),east,Standard,kg,8.59,8.46,synthetic_mode1
+Cement OPC 53 (kg),east,Premium,kg,10.13,10.0,synthetic_mode1
+Cement OPC 53 (kg),west,Economy,kg,7.7,7.75,synthetic_mode1
+Cement OPC 53 (kg),west,Standard,kg,8.76,8.86,synthetic_mode1
+Cement OPC 53 (kg),west,Premium,kg,10.33,10.32,synthetic_mode1
+Sand (per cuft),north,Economy,cuft,10.35,10.39,synthetic_mode1
+Sand (per cuft),north,Standard,cuft,11.76,11.85,synthetic_mode1
+Sand (per cuft),north,Premium,cuft,13.88,13.7,synthetic_mode1
+Sand (per cuft),south,Economy,cuft,10.77,10.86,synthetic_mode1
+Sand (per cuft),south,Standard,cuft,12.24,12.19,synthetic_mode1
+Sand (per cuft),south,Premium,cuft,14.44,14.57,synthetic_mode1
+Sand (per cuft),central,Economy,cuft,10.56,10.59,synthetic_mode1
+Sand (per cuft),central,Standard,cuft,12.0,12.01,synthetic_mode1
+Sand (per cuft),central,Premium,cuft,14.16,14.24,synthetic_mode1
+Sand (per cuft),east,Economy,cuft,10.67,10.77,synthetic_mode1
+Sand (per cuft),east,Standard,cuft,12.12,12.29,synthetic_mode1
+Sand (per cuft),east,Premium,cuft,14.3,14.09,synthetic_mode1
+Sand (per cuft),west,Economy,cuft,10.88,10.97,synthetic_mode1
+Sand (per cuft),west,Standard,cuft,12.36,12.42,synthetic_mode1
+Sand (per cuft),west,Premium,cuft,14.58,14.54,synthetic_mode1
+Rebar Fe 8mm (kg),north,Economy,kg,68.99,68.85,synthetic_mode1
+Rebar Fe 8mm (kg),north,Standard,kg,78.4,78.64,synthetic_mode1
+Rebar Fe 8mm (kg),north,Premium,kg,92.51,92.05,synthetic_mode1
+Rebar Fe 8mm (kg),south,Economy,kg,71.81,70.59,synthetic_mode1
+Rebar Fe 8mm (kg),south,Standard,kg,81.6,81.27,synthetic_mode1
+Rebar Fe 8mm (kg),south,Premium,kg,96.29,96.48,synthetic_mode1
+Rebar Fe 8mm (kg),central,Economy,kg,70.4,69.91,synthetic_mode1
+Rebar Fe 8mm (kg),central,Standard,kg,80.0,80.0,synthetic_mode1
+Rebar Fe 8mm (kg),central,Premium,kg,94.4,94.21,synthetic_mode1
+Rebar Fe 8mm (kg),east,Economy,kg,71.1,71.31,synthetic_mode1
+Rebar Fe 8mm (kg),east,Standard,kg,80.8,81.69,synthetic_mode1
+Rebar Fe 8mm (kg),east,Premium,kg,95.34,95.82,synthetic_mode1
+Rebar Fe 8mm (kg),west,Economy,kg,72.51,72.73,synthetic_mode1
+Rebar Fe 8mm (kg),west,Standard,kg,82.4,82.24,synthetic_mode1
+Rebar Fe 8mm (kg),west,Premium,kg,97.23,96.74,synthetic_mode1
+Cement Mortar (kg),north,Economy,kg,5.17,5.23,synthetic_mode1
+Cement Mortar (kg),north,Standard,kg,5.88,5.93,synthetic_mode1
+Cement Mortar (kg),north,Premium,kg,6.94,6.87,synthetic_mode1
+Cement Mortar (kg),south,Economy,kg,5.39,5.33,synthetic_mode1
+Cement Mortar (kg),south,Standard,kg,6.12,6.17,synthetic_mode1
+Cement Mortar (kg),south,Premium,kg,7.22,7.17,synthetic_mode1
+Cement Mortar (kg),central,Economy,kg,5.28,5.26,synthetic_mode1
+Cement Mortar (kg),central,Standard,kg,6.0,6.01,synthetic_mode1
+Cement Mortar (kg),central,Premium,kg,7.08,7.08,synthetic_mode1
+Cement Mortar (kg),east,Economy,kg,5.33,5.2,synthetic_mode1
+Cement Mortar (kg),east,Standard,kg,6.06,6.04,synthetic_mode1
+Cement Mortar (kg),east,Premium,kg,7.15,7.24,synthetic_mode1
+Cement Mortar (kg),west,Economy,kg,5.44,5.52,synthetic_mode1
+Cement Mortar (kg),west,Standard,kg,6.18,6.16,synthetic_mode1
+Cement Mortar (kg),west,Premium,kg,7.29,7.28,synthetic_mode1
+Granite (sqft),north,Economy,sqft,137.98,138.26,synthetic_mode1
+Granite (sqft),north,Standard,sqft,156.8,155.86,synthetic_mode1
+Granite (sqft),north,Premium,sqft,185.02,185.21,synthetic_mode1
+Granite (sqft),south,Economy,sqft,143.62,141.61,synthetic_mode1
+Granite (sqft),south,Standard,sqft,163.2,164.83,synthetic_mode1
+Granite (sqft),south,Premium,sqft,192.58,193.16,synthetic_mode1
+Granite (sqft),central,Economy,sqft,140.8,143.33,synthetic_mode1
+Granite (sqft),central,Standard,sqft,160.0,158.24,synthetic_mode1
+Granite (sqft),central,Premium,sqft,188.8,189.74,synthetic_mode1
+Granite (sqft),east,Economy,sqft,142.21,142.78,synthetic_mode1
+Granite (sqft),east,Standard,sqft,161.6,161.6,synthetic_mode1
+Granite (sqft),east,Premium,sqft,190.69,190.12,synthetic_mode1
+Granite (sqft),west,Economy,sqft,145.02,142.55,synthetic_mode1
+Granite (sqft),west,Standard,sqft,164.8,164.47,synthetic_mode1
+Granite (sqft),west,Premium,sqft,194.46,194.65,synthetic_mode1
+Sealant Silicone (nos),north,Economy,nos,189.73,187.26,synthetic_mode1
+Sealant Silicone (nos),north,Standard,nos,215.6,217.54,synthetic_mode1
+Sealant Silicone (nos),north,Premium,nos,254.41,256.95,synthetic_mode1
+Sealant Silicone (nos),south,Economy,nos,197.47,200.83,synthetic_mode1
+Sealant Silicone (nos),south,Standard,nos,224.4,224.85,synthetic_mode1
+Sealant Silicone (nos),south,Premium,nos,264.79,265.32,synthetic_mode1
+Sealant Silicone (nos),central,Economy,nos,193.6,193.02,synthetic_mode1
+Sealant Silicone (nos),central,Standard,nos,220.0,219.56,synthetic_mode1
+Sealant Silicone (nos),central,Premium,nos,259.6,260.12,synthetic_mode1
+Sealant Silicone (nos),east,Economy,nos,195.54,199.26,synthetic_mode1
+Sealant Silicone (nos),east,Standard,nos,222.2,220.64,synthetic_mode1
+Sealant Silicone (nos),east,Premium,nos,262.2,264.04,synthetic_mode1
+Sealant Silicone (nos),west,Economy,nos,199.41,199.61,synthetic_mode1
+Sealant Silicone (nos),west,Standard,nos,226.6,225.92,synthetic_mode1
+Sealant Silicone (nos),west,Premium,nos,267.39,267.39,synthetic_mode1
+Epoxy Grout (kg),north,Economy,kg,362.21,361.85,synthetic_mode1
+Epoxy Grout (kg),north,Standard,kg,411.6,414.89,synthetic_mode1
+Epoxy Grout (kg),north,Premium,kg,485.69,494.92,synthetic_mode1
+Epoxy Grout (kg),south,Economy,kg,376.99,374.35,synthetic_mode1
+Epoxy Grout (kg),south,Standard,kg,428.4,433.11,synthetic_mode1
+Epoxy Grout (kg),south,Premium,kg,505.51,502.48,synthetic_mode1
+Epoxy Grout (kg),central,Economy,kg,369.6,369.23,synthetic_mode1
+Epoxy Grout (kg),central,Standard,kg,420.0,424.62,synthetic_mode1
+Epoxy Grout (kg),central,Premium,kg,495.6,497.58,synthetic_mode1
+Epoxy Grout (kg),east,Economy,kg,373.3,378.53,synthetic_mode1
+Epoxy Grout (kg),east,Standard,kg,424.2,425.05,synthetic_mode1
+Epoxy Grout (kg),east,Premium,kg,500.56,499.56,synthetic_mode1
+Epoxy Grout (kg),west,Economy,kg,380.69,384.88,synthetic_mode1
+Epoxy Grout (kg),west,Standard,kg,432.6,430.87,synthetic_mode1
+Epoxy Grout (kg),west,Premium,kg,510.47,503.32,synthetic_mode1
+HDHMR Board (sqft),north,Economy,sqft,103.49,104.42,synthetic_mode1
+HDHMR Board (sqft),north,Standard,sqft,117.6,116.31,synthetic_mode1
+HDHMR Board (sqft),north,Premium,sqft,138.77,138.63,synthetic_mode1
+HDHMR Board (sqft),south,Economy,sqft,107.71,108.68,synthetic_mode1
+HDHMR Board (sqft),south,Standard,sqft,122.4,121.91,synthetic_mode1
+HDHMR Board (sqft),south,Premium,sqft,144.43,147.46,synthetic_mode1
+HDHMR Board (sqft),central,Economy,sqft,105.6,107.18,synthetic_mode1
+HDHMR Board (sqft),central,Standard,sqft,120.0,121.56,synthetic_mode1
+HDHMR Board (sqft),central,Premium,sqft,141.6,139.9,synthetic_mode1
+HDHMR Board (sqft),east,Economy,sqft,106.66,108.15,synthetic_mode1
+HDHMR Board (sqft),east,Standard,sqft,121.2,120.23,synthetic_mode1
+HDHMR Board (sqft),east,Premium,sqft,143.02,143.45,synthetic_mode1
+HDHMR Board (sqft),west,Economy,sqft,108.77,108.33,synthetic_mode1
+HDHMR Board (sqft),west,Standard,sqft,123.6,122.49,synthetic_mode1
+HDHMR Board (sqft),west,Premium,sqft,145.85,144.83,synthetic_mode1

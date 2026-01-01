@@ -1,0 +1,301 @@
+boq_id,category,material,quantity,unit,length_ft,width_ft,area_sqft,region,season,grade,consumption_rules
+BOQ-0001,Civil,RCC Concrete,61.25,cft,17.38,15.04,,north,normal,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0002,Plumbing,CPVC Pipe,63.41,rft,14.84,27.74,,north,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0003,Civil,Reinforced Steel,295.22,cft,14.92,31.52,,north,monsoon,Economy,{'steel_kg_per_cft': 5}
+BOQ-0004,Plumbing,UPVC Pipe,175.04,rft,14.69,39.36,,north,normal,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0005,Tiling,Ceramic Tiles,431.37,sqft,32.17,41.32,1329.26,west,normal,Premium,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0006,Tiling,Granite Tiles,181.93,sqft,33.29,44.85,1493.06,east,monsoon,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0007,Tiling,Vitrified Tiles,347.57,sqft,39.79,49.33,1962.84,south,normal,Premium,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0008,Carpentry,Laminate,336.06,sqft,21.42,21.66,463.96,south,summer,Economy,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0009,Civil,Reinforced Steel,82.13,cft,33.57,29.04,,south,monsoon,Premium,{'steel_kg_per_cft': 5}
+BOQ-0010,Plumbing,UPVC Pipe,495.29,rft,33.8,30.06,,east,normal,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0011,Tiling,Ceramic Tiles,230.52,sqft,7.98,46.09,367.8,central,summer,Standard,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0012,Civil,Cement Plaster,228.03,cft,46.15,25.65,,east,monsoon,Standard,{'cement_kg_per_sqft': 0.9}
+BOQ-0013,Civil,Reinforced Steel,292.54,cft,38.62,24.28,,central,winter,Premium,{'steel_kg_per_cft': 5}
+BOQ-0014,Painting,Acrylic Paint,279.29,sqft,9.09,7.12,64.72,north,monsoon,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0015,Painting,Putty,239.97,sqft,7.86,22.17,174.26,west,summer,Economy,{'putty_kg_per_sqft': 0.12}
+BOQ-0016,Tiling,Granite Tiles,374.32,sqft,35.68,29.16,1040.43,east,summer,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0017,Carpentry,Laminate,121.17,sqft,5.15,37.49,193.07,east,monsoon,Economy,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0018,Tiling,Granite Tiles,184.3,sqft,33.75,32.4,1093.5,south,summer,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0019,Electrical,MCB Unit,463.32,rft,31.95,26.99,,north,summer,Premium,{'units_per_project': 1}
+BOQ-0020,Painting,Acrylic Paint,158.39,sqft,30.53,8.54,260.73,west,normal,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0021,Painting,Acrylic Paint,346.89,sqft,47.61,12.43,591.79,central,winter,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0022,Electrical,MCB Unit,360.44,rft,37.08,22.95,,east,winter,Economy,{'units_per_project': 1}
+BOQ-0023,Plumbing,CPVC Pipe,161.56,rft,7.88,5.95,,central,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0024,Painting,Acrylic Paint,81.95,sqft,33.4,15.3,511.02,north,summer,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0025,Electrical,PVC Conduit,175.31,rft,26.84,29.27,,central,winter,Standard,{'conduit_rft_per_rft': 1}
+BOQ-0026,Plumbing,UPVC Pipe,135.68,rft,9.36,24.4,,west,winter,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0027,Civil,RCC Concrete,353.01,cft,49.29,9.43,,west,summer,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0028,Painting,Acrylic Paint,135.59,sqft,25.19,23.98,604.06,east,winter,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0029,Tiling,Ceramic Tiles,413.61,sqft,43.52,9.41,409.52,central,normal,Standard,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0030,Painting,Acrylic Paint,232.89,sqft,26.66,43.91,1170.64,north,monsoon,Premium,{'paint_litre_per_sqft': 0.018}
+BOQ-0031,Tiling,Ceramic Tiles,169.34,sqft,40.28,25.48,1026.33,west,winter,Standard,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0032,Painting,Emulsion Paint,147.97,sqft,7.63,38.11,290.78,north,summer,Standard,{'paint_litre_per_sqft': 0.02}
+BOQ-0033,Tiling,Granite Tiles,264.55,sqft,46.37,28.9,1340.09,north,normal,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0034,Tiling,Granite Tiles,80.58,sqft,43.78,23.17,1014.38,central,monsoon,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0035,Electrical,PVC Conduit,328.72,rft,23.87,31.27,,central,summer,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0036,Painting,Putty,372.29,sqft,15.74,22.81,359.03,east,winter,Premium,{'putty_kg_per_sqft': 0.12}
+BOQ-0037,Tiling,Vitrified Tiles,256.23,sqft,49.93,49.82,2487.51,north,monsoon,Economy,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0038,Carpentry,Plywood,469.97,sqft,44.64,44.57,1989.6,east,summer,Standard,{'plywood_sheets_per_sqft': 0.03125}
+BOQ-0039,Plumbing,GI Pipe,366.59,rft,32.53,49.43,,central,normal,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0040,Electrical,Copper Wire,469.29,rft,9.66,44.52,,east,normal,Standard,{'wire_rft_per_rft': 1}
+BOQ-0041,Civil,Reinforced Steel,119.95,cft,17.68,14.48,,east,monsoon,Economy,{'steel_kg_per_cft': 5}
+BOQ-0042,Civil,Cement Plaster,277.43,cft,16.3,45.87,,north,normal,Economy,{'cement_kg_per_sqft': 0.9}
+BOQ-0043,Plumbing,UPVC Pipe,69.84,rft,20.01,10.89,,east,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0044,Plumbing,GI Pipe,367.55,rft,30.24,10.03,,south,normal,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0045,Electrical,MCB Unit,116.64,rft,10.74,18.87,,north,summer,Standard,{'units_per_project': 1}
+BOQ-0046,Civil,RCC Concrete,350.12,cft,20.92,30.19,,west,monsoon,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0047,Painting,Acrylic Paint,446.64,sqft,6.12,38.15,233.48,east,winter,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0048,Civil,RCC Concrete,170.06,cft,40.43,9.86,,north,winter,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0049,Painting,Emulsion Paint,207.35,sqft,41.92,44.21,1853.28,south,normal,Economy,{'paint_litre_per_sqft': 0.02}
+BOQ-0050,Painting,Emulsion Paint,197.72,sqft,43.9,48.51,2129.59,east,summer,Economy,{'paint_litre_per_sqft': 0.02}
+BOQ-0051,Electrical,Copper Wire,355.78,rft,42.96,19.9,,north,normal,Premium,{'wire_rft_per_rft': 1}
+BOQ-0052,Painting,Putty,483.14,sqft,16.95,9.88,167.47,west,summer,Economy,{'putty_kg_per_sqft': 0.12}
+BOQ-0053,Carpentry,Laminate,322.79,sqft,28.01,22.33,625.46,central,monsoon,Premium,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0054,Tiling,Granite Tiles,246.23,sqft,28.4,41.29,1172.64,south,summer,Premium,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0055,Tiling,Granite Tiles,464.35,sqft,33.04,34.85,1151.44,north,summer,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0056,Carpentry,Edge Banding,233.78,sqft,23.11,18.3,422.91,south,monsoon,Premium,{'edgeband_m_per_sqft': 0.9}
+BOQ-0057,Civil,Cement Plaster,354.79,cft,45.63,32.7,,east,winter,Economy,{'cement_kg_per_sqft': 0.9}
+BOQ-0058,Tiling,Ceramic Tiles,179.11,sqft,24.34,31.1,756.97,east,winter,Premium,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0059,Plumbing,GI Pipe,146.17,rft,26.29,45.55,,south,normal,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0060,Electrical,MCB Unit,334.82,rft,20.08,41.83,,south,summer,Standard,{'units_per_project': 1}
+BOQ-0061,Painting,Acrylic Paint,60.99,sqft,16.02,26.38,422.61,north,winter,Premium,{'paint_litre_per_sqft': 0.018}
+BOQ-0062,Civil,Reinforced Steel,137.5,cft,36.34,27.25,,south,monsoon,Economy,{'steel_kg_per_cft': 5}
+BOQ-0063,Civil,RCC Concrete,451.7,cft,43.72,44.85,,west,monsoon,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0064,Civil,Reinforced Steel,259.05,cft,30.08,46.29,,north,winter,Standard,{'steel_kg_per_cft': 5}
+BOQ-0065,Plumbing,GI Pipe,289.01,rft,30.15,19.28,,west,winter,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0066,Plumbing,CPVC Pipe,384.64,rft,26.36,16.66,,south,summer,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0067,Plumbing,GI Pipe,157.66,rft,24.79,37.11,,south,summer,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0068,Carpentry,Edge Banding,86.26,sqft,11.79,22.24,262.21,south,monsoon,Standard,{'edgeband_m_per_sqft': 0.9}
+BOQ-0069,Plumbing,UPVC Pipe,198.9,rft,25.97,7.8,,west,winter,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0070,Civil,RCC Concrete,435.53,cft,39.45,22.12,,north,summer,Premium,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0071,Plumbing,UPVC Pipe,292.2,rft,38.06,40.99,,south,winter,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0072,Carpentry,Laminate,268.54,sqft,22.5,35.1,789.75,west,monsoon,Premium,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0073,Painting,Putty,290.36,sqft,45.81,31.64,1449.43,north,normal,Economy,{'putty_kg_per_sqft': 0.12}
+BOQ-0074,Plumbing,CPVC Pipe,440.08,rft,13.18,16.71,,east,monsoon,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0075,Carpentry,Laminate,392.55,sqft,22.06,38.84,856.81,west,summer,Standard,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0076,Plumbing,CPVC Pipe,387.06,rft,7.34,47.84,,south,normal,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0077,Tiling,Vitrified Tiles,477.33,sqft,13.97,5.92,82.7,south,monsoon,Standard,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0078,Plumbing,GI Pipe,101.48,rft,47.65,25.93,,east,summer,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0079,Electrical,MCB Unit,483.68,rft,37.33,40.0,,south,summer,Standard,{'units_per_project': 1}
+BOQ-0080,Electrical,PVC Conduit,468.0,rft,30.91,45.86,,west,winter,Economy,{'conduit_rft_per_rft': 1}
+BOQ-0081,Painting,Acrylic Paint,316.44,sqft,42.38,15.93,675.11,east,normal,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0082,Tiling,Ceramic Tiles,289.74,sqft,34.77,8.1,281.64,east,normal,Premium,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0083,Plumbing,CPVC Pipe,245.09,rft,21.3,45.12,,west,monsoon,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0084,Painting,Putty,284.79,sqft,34.27,32.72,1121.31,central,winter,Premium,{'putty_kg_per_sqft': 0.12}
+BOQ-0085,Plumbing,GI Pipe,316.61,rft,19.5,16.05,,north,summer,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0086,Painting,Emulsion Paint,306.43,sqft,35.07,20.14,706.31,west,summer,Standard,{'paint_litre_per_sqft': 0.02}
+BOQ-0087,Plumbing,CPVC Pipe,209.67,rft,16.63,17.58,,central,summer,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0088,Tiling,Granite Tiles,476.63,sqft,8.85,37.4,330.99,west,monsoon,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0089,Plumbing,GI Pipe,370.33,rft,25.17,5.78,,east,monsoon,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0090,Civil,RCC Concrete,187.79,cft,31.17,26.3,,central,summer,Premium,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0091,Civil,Reinforced Steel,198.86,cft,36.63,17.19,,east,monsoon,Standard,{'steel_kg_per_cft': 5}
+BOQ-0092,Civil,RCC Concrete,192.0,cft,38.43,47.79,,south,monsoon,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0093,Civil,Cement Plaster,174.42,cft,31.53,39.21,,central,summer,Standard,{'cement_kg_per_sqft': 0.9}
+BOQ-0094,Painting,Emulsion Paint,152.37,sqft,13.07,5.64,73.71,central,monsoon,Premium,{'paint_litre_per_sqft': 0.02}
+BOQ-0095,Tiling,Vitrified Tiles,299.01,sqft,36.38,10.68,388.54,west,normal,Standard,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0096,Electrical,Copper Wire,261.23,rft,24.82,13.3,,north,summer,Premium,{'wire_rft_per_rft': 1}
+BOQ-0097,Tiling,Vitrified Tiles,230.32,sqft,8.33,33.33,277.64,north,monsoon,Standard,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0098,Electrical,Copper Wire,88.33,rft,16.17,30.11,,west,monsoon,Economy,{'wire_rft_per_rft': 1}
+BOQ-0099,Plumbing,UPVC Pipe,458.83,rft,18.38,31.48,,west,summer,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0100,Electrical,PVC Conduit,324.33,rft,38.3,47.64,,south,monsoon,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0101,Civil,RCC Concrete,120.68,cft,12.82,8.38,,north,winter,Premium,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0102,Civil,Reinforced Steel,261.46,cft,6.47,17.96,,east,winter,Standard,{'steel_kg_per_cft': 5}
+BOQ-0103,Civil,RCC Concrete,465.76,cft,40.45,33.13,,south,winter,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0104,Electrical,PVC Conduit,341.44,rft,45.88,42.2,,north,normal,Standard,{'conduit_rft_per_rft': 1}
+BOQ-0105,Carpentry,Edge Banding,387.03,sqft,30.61,17.99,550.67,north,winter,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0106,Carpentry,Edge Banding,231.13,sqft,17.25,29.3,505.43,west,normal,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0107,Tiling,Ceramic Tiles,380.54,sqft,32.17,6.16,198.17,south,normal,Economy,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0108,Carpentry,Edge Banding,68.1,sqft,39.03,26.17,1021.42,west,summer,Standard,{'edgeband_m_per_sqft': 0.9}
+BOQ-0109,Electrical,Copper Wire,335.65,rft,27.13,9.11,,east,winter,Premium,{'wire_rft_per_rft': 1}
+BOQ-0110,Carpentry,Edge Banding,97.07,sqft,12.24,23.52,287.88,west,summer,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0111,Plumbing,GI Pipe,66.51,rft,8.96,16.36,,north,winter,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0112,Tiling,Granite Tiles,441.22,sqft,25.79,7.44,191.88,central,summer,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0113,Plumbing,GI Pipe,248.92,rft,7.32,17.02,,south,summer,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0114,Civil,Cement Plaster,104.64,cft,48.79,32.4,,south,monsoon,Premium,{'cement_kg_per_sqft': 0.9}
+BOQ-0115,Electrical,PVC Conduit,298.51,rft,9.19,49.65,,north,winter,Standard,{'conduit_rft_per_rft': 1}
+BOQ-0116,Civil,RCC Concrete,274.27,cft,37.25,27.9,,east,winter,Premium,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0117,Plumbing,CPVC Pipe,255.55,rft,11.51,13.58,,central,monsoon,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0118,Carpentry,Laminate,202.94,sqft,40.45,17.02,688.46,north,summer,Economy,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0119,Carpentry,Edge Banding,310.97,sqft,34.7,43.94,1524.72,west,winter,Premium,{'edgeband_m_per_sqft': 0.9}
+BOQ-0120,Carpentry,Edge Banding,393.29,sqft,21.97,46.98,1032.15,south,monsoon,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0121,Plumbing,CPVC Pipe,435.21,rft,23.48,19.32,,west,winter,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0122,Civil,Reinforced Steel,491.37,cft,27.29,6.67,,central,summer,Standard,{'steel_kg_per_cft': 5}
+BOQ-0123,Plumbing,CPVC Pipe,286.68,rft,25.56,37.51,,west,monsoon,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0124,Plumbing,UPVC Pipe,202.35,rft,36.17,34.24,,east,winter,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0125,Civil,Reinforced Steel,449.35,cft,26.96,29.35,,central,normal,Standard,{'steel_kg_per_cft': 5}
+BOQ-0126,Civil,Reinforced Steel,464.42,cft,49.88,38.6,,west,normal,Economy,{'steel_kg_per_cft': 5}
+BOQ-0127,Civil,RCC Concrete,249.66,cft,36.23,45.65,,north,summer,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0128,Carpentry,Laminate,218.68,sqft,11.55,28.9,333.8,central,monsoon,Standard,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0129,Painting,Acrylic Paint,324.27,sqft,22.21,35.74,793.79,west,monsoon,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0130,Plumbing,GI Pipe,164.29,rft,16.49,5.42,,west,summer,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0131,Electrical,PVC Conduit,83.24,rft,47.54,49.44,,east,winter,Economy,{'conduit_rft_per_rft': 1}
+BOQ-0132,Carpentry,Laminate,430.39,sqft,13.96,22.31,311.45,west,normal,Standard,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0133,Plumbing,GI Pipe,211.53,rft,18.31,36.47,,north,winter,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0134,Tiling,Granite Tiles,439.28,sqft,40.02,48.81,1953.38,central,winter,Premium,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0135,Painting,Putty,410.87,sqft,14.86,13.56,201.5,east,monsoon,Economy,{'putty_kg_per_sqft': 0.12}
+BOQ-0136,Tiling,Granite Tiles,340.85,sqft,18.9,24.84,469.48,central,summer,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0137,Painting,Acrylic Paint,459.33,sqft,19.7,23.7,466.89,south,monsoon,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0138,Carpentry,Edge Banding,275.81,sqft,17.26,12.4,214.02,west,summer,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0139,Carpentry,Plywood,260.75,sqft,8.39,38.94,326.71,south,winter,Economy,{'plywood_sheets_per_sqft': 0.03125}
+BOQ-0140,Carpentry,Plywood,405.81,sqft,5.63,29.15,164.11,west,summer,Economy,{'plywood_sheets_per_sqft': 0.03125}
+BOQ-0141,Civil,Reinforced Steel,167.97,cft,22.15,33.73,,east,normal,Economy,{'steel_kg_per_cft': 5}
+BOQ-0142,Painting,Emulsion Paint,61.26,sqft,44.79,30.26,1355.35,central,monsoon,Economy,{'paint_litre_per_sqft': 0.02}
+BOQ-0143,Tiling,Granite Tiles,420.73,sqft,45.92,18.6,854.11,west,normal,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0144,Tiling,Vitrified Tiles,186.96,sqft,27.17,9.37,254.58,central,monsoon,Premium,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0145,Plumbing,UPVC Pipe,351.72,rft,38.44,47.57,,west,monsoon,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0146,Civil,RCC Concrete,425.16,cft,32.7,47.26,,east,normal,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0147,Carpentry,Plywood,249.52,sqft,47.77,43.5,2078.0,north,summer,Economy,{'plywood_sheets_per_sqft': 0.03125}
+BOQ-0148,Civil,Cement Plaster,77.25,cft,17.41,48.57,,west,normal,Economy,{'cement_kg_per_sqft': 0.9}
+BOQ-0149,Painting,Putty,337.77,sqft,48.7,7.28,354.54,east,monsoon,Standard,{'putty_kg_per_sqft': 0.12}
+BOQ-0150,Electrical,PVC Conduit,80.87,rft,39.43,14.32,,south,monsoon,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0151,Painting,Putty,51.28,sqft,43.63,11.51,502.18,south,summer,Standard,{'putty_kg_per_sqft': 0.12}
+BOQ-0152,Tiling,Granite Tiles,439.9,sqft,10.93,21.12,230.84,south,summer,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0153,Painting,Emulsion Paint,73.58,sqft,38.38,28.67,1100.35,north,winter,Premium,{'paint_litre_per_sqft': 0.02}
+BOQ-0154,Carpentry,Edge Banding,317.15,sqft,25.34,14.97,379.34,central,normal,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0155,Civil,Reinforced Steel,185.73,cft,33.95,6.4,,west,winter,Premium,{'steel_kg_per_cft': 5}
+BOQ-0156,Civil,RCC Concrete,270.62,cft,45.94,8.31,,north,summer,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0157,Painting,Acrylic Paint,106.79,sqft,33.09,31.34,1037.04,east,winter,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0158,Electrical,Copper Wire,254.17,rft,32.24,9.46,,north,monsoon,Premium,{'wire_rft_per_rft': 1}
+BOQ-0159,Plumbing,CPVC Pipe,236.22,rft,42.23,22.94,,north,summer,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0160,Carpentry,Edge Banding,164.7,sqft,47.91,35.91,1720.45,west,normal,Standard,{'edgeband_m_per_sqft': 0.9}
+BOQ-0161,Tiling,Vitrified Tiles,244.34,sqft,38.51,21.77,838.36,south,normal,Economy,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0162,Electrical,MCB Unit,198.34,rft,10.5,20.91,,west,normal,Premium,{'units_per_project': 1}
+BOQ-0163,Electrical,Copper Wire,208.24,rft,31.01,14.57,,west,monsoon,Standard,{'wire_rft_per_rft': 1}
+BOQ-0164,Carpentry,Edge Banding,215.4,sqft,39.32,30.83,1212.24,west,normal,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0165,Civil,Reinforced Steel,170.35,cft,13.12,36.62,,east,summer,Premium,{'steel_kg_per_cft': 5}
+BOQ-0166,Tiling,Vitrified Tiles,441.44,sqft,30.48,23.04,702.26,south,normal,Standard,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0167,Civil,Reinforced Steel,146.81,cft,23.89,20.34,,east,summer,Economy,{'steel_kg_per_cft': 5}
+BOQ-0168,Carpentry,Edge Banding,318.3,sqft,44.75,12.0,537.0,central,normal,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0169,Tiling,Ceramic Tiles,249.4,sqft,24.08,32.32,778.27,west,summer,Standard,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0170,Electrical,PVC Conduit,205.33,rft,9.99,35.52,,central,winter,Economy,{'conduit_rft_per_rft': 1}
+BOQ-0171,Civil,Cement Plaster,70.44,cft,22.79,31.97,,north,monsoon,Premium,{'cement_kg_per_sqft': 0.9}
+BOQ-0172,Painting,Acrylic Paint,393.87,sqft,18.03,10.4,187.51,west,winter,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0173,Painting,Emulsion Paint,289.66,sqft,15.35,30.14,462.65,east,normal,Premium,{'paint_litre_per_sqft': 0.02}
+BOQ-0174,Civil,RCC Concrete,246.3,cft,25.69,8.5,,east,winter,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0175,Plumbing,GI Pipe,338.06,rft,18.03,23.23,,east,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0176,Plumbing,GI Pipe,463.9,rft,8.97,43.0,,south,winter,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0177,Plumbing,GI Pipe,85.39,rft,44.17,38.56,,south,summer,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0178,Tiling,Granite Tiles,334.95,sqft,28.88,13.73,396.52,east,summer,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0179,Civil,RCC Concrete,156.32,cft,11.59,13.88,,central,monsoon,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0180,Tiling,Vitrified Tiles,478.08,sqft,33.26,25.88,860.77,central,winter,Economy,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0181,Electrical,MCB Unit,335.88,rft,33.1,43.89,,east,monsoon,Premium,{'units_per_project': 1}
+BOQ-0182,Tiling,Ceramic Tiles,248.99,sqft,18.63,17.36,323.42,north,summer,Economy,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0183,Tiling,Ceramic Tiles,257.78,sqft,6.69,21.59,144.44,east,normal,Economy,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0184,Tiling,Granite Tiles,317.34,sqft,22.3,31.11,693.75,north,winter,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0185,Civil,RCC Concrete,194.69,cft,26.4,11.79,,north,winter,Standard,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0186,Carpentry,Edge Banding,87.95,sqft,34.08,6.76,230.38,west,winter,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0187,Electrical,MCB Unit,121.44,rft,21.78,17.73,,west,summer,Economy,{'units_per_project': 1}
+BOQ-0188,Electrical,PVC Conduit,405.15,rft,34.13,7.97,,north,winter,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0189,Carpentry,Edge Banding,433.2,sqft,48.4,32.12,1554.61,south,summer,Standard,{'edgeband_m_per_sqft': 0.9}
+BOQ-0190,Electrical,MCB Unit,113.64,rft,20.74,48.55,,west,monsoon,Economy,{'units_per_project': 1}
+BOQ-0191,Civil,RCC Concrete,189.31,cft,21.95,40.62,,south,normal,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0192,Civil,Cement Plaster,278.82,cft,5.82,18.9,,south,summer,Premium,{'cement_kg_per_sqft': 0.9}
+BOQ-0193,Painting,Acrylic Paint,499.99,sqft,11.97,18.31,219.17,north,normal,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0194,Carpentry,Edge Banding,108.97,sqft,21.95,12.3,269.99,central,monsoon,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0195,Plumbing,CPVC Pipe,234.89,rft,35.44,15.69,,west,summer,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0196,Plumbing,CPVC Pipe,290.31,rft,18.93,41.39,,west,monsoon,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0197,Civil,Reinforced Steel,493.0,cft,25.78,17.68,,west,winter,Standard,{'steel_kg_per_cft': 5}
+BOQ-0198,Painting,Putty,112.28,sqft,16.25,33.85,550.06,east,normal,Economy,{'putty_kg_per_sqft': 0.12}
+BOQ-0199,Electrical,PVC Conduit,178.28,rft,39.34,17.28,,central,monsoon,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0200,Tiling,Vitrified Tiles,417.52,sqft,44.81,46.87,2100.24,west,normal,Premium,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0201,Electrical,Copper Wire,156.1,rft,49.75,21.87,,north,summer,Standard,{'wire_rft_per_rft': 1}
+BOQ-0202,Civil,Reinforced Steel,200.88,cft,11.57,6.72,,west,monsoon,Economy,{'steel_kg_per_cft': 5}
+BOQ-0203,Plumbing,UPVC Pipe,326.91,rft,45.76,5.86,,south,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0204,Civil,Reinforced Steel,287.5,cft,10.0,17.96,,east,normal,Standard,{'steel_kg_per_cft': 5}
+BOQ-0205,Painting,Emulsion Paint,337.53,sqft,33.03,7.83,258.62,west,normal,Economy,{'paint_litre_per_sqft': 0.02}
+BOQ-0206,Electrical,MCB Unit,158.87,rft,11.46,24.32,,central,summer,Standard,{'units_per_project': 1}
+BOQ-0207,Electrical,Copper Wire,134.29,rft,35.07,28.56,,east,normal,Economy,{'wire_rft_per_rft': 1}
+BOQ-0208,Electrical,MCB Unit,403.89,rft,27.84,5.92,,west,normal,Economy,{'units_per_project': 1}
+BOQ-0209,Plumbing,UPVC Pipe,164.14,rft,5.73,40.48,,east,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0210,Civil,Reinforced Steel,96.65,cft,31.19,39.05,,south,normal,Premium,{'steel_kg_per_cft': 5}
+BOQ-0211,Electrical,Copper Wire,416.08,rft,12.88,40.06,,west,winter,Economy,{'wire_rft_per_rft': 1}
+BOQ-0212,Painting,Acrylic Paint,78.4,sqft,39.93,25.6,1022.21,east,monsoon,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0213,Painting,Acrylic Paint,192.02,sqft,18.95,22.92,434.33,central,winter,Premium,{'paint_litre_per_sqft': 0.018}
+BOQ-0214,Tiling,Granite Tiles,136.0,sqft,21.06,40.14,845.35,east,summer,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0215,Carpentry,Laminate,450.27,sqft,38.45,45.26,1740.25,west,summer,Standard,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0216,Plumbing,GI Pipe,273.89,rft,46.59,28.37,,north,winter,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0217,Plumbing,GI Pipe,497.79,rft,13.12,18.22,,north,normal,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0218,Civil,Cement Plaster,187.92,cft,32.12,24.18,,west,summer,Premium,{'cement_kg_per_sqft': 0.9}
+BOQ-0219,Tiling,Granite Tiles,441.52,sqft,20.87,49.92,1041.83,east,normal,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0220,Civil,Reinforced Steel,232.79,cft,28.09,38.75,,south,normal,Standard,{'steel_kg_per_cft': 5}
+BOQ-0221,Electrical,MCB Unit,401.59,rft,6.57,8.03,,east,summer,Premium,{'units_per_project': 1}
+BOQ-0222,Electrical,PVC Conduit,322.29,rft,35.56,47.7,,east,winter,Standard,{'conduit_rft_per_rft': 1}
+BOQ-0223,Electrical,PVC Conduit,288.26,rft,22.91,34.23,,south,normal,Standard,{'conduit_rft_per_rft': 1}
+BOQ-0224,Civil,RCC Concrete,274.57,cft,22.41,30.28,,east,summer,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0225,Plumbing,CPVC Pipe,498.36,rft,17.85,46.24,,west,monsoon,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0226,Painting,Acrylic Paint,253.42,sqft,45.44,25.03,1137.36,north,summer,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0227,Carpentry,Edge Banding,79.22,sqft,29.4,45.11,1326.23,south,monsoon,Premium,{'edgeband_m_per_sqft': 0.9}
+BOQ-0228,Electrical,PVC Conduit,104.61,rft,14.04,11.25,,west,normal,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0229,Electrical,MCB Unit,216.01,rft,41.16,29.82,,central,normal,Standard,{'units_per_project': 1}
+BOQ-0230,Carpentry,Laminate,499.82,sqft,37.35,28.66,1070.45,west,normal,Standard,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0231,Carpentry,Edge Banding,83.37,sqft,25.96,28.28,734.15,south,monsoon,Standard,{'edgeband_m_per_sqft': 0.9}
+BOQ-0232,Plumbing,GI Pipe,459.82,rft,7.49,10.59,,south,summer,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0233,Painting,Emulsion Paint,470.63,sqft,15.15,47.64,721.75,central,summer,Standard,{'paint_litre_per_sqft': 0.02}
+BOQ-0234,Carpentry,Plywood,335.78,sqft,29.79,10.63,316.67,east,normal,Economy,{'plywood_sheets_per_sqft': 0.03125}
+BOQ-0235,Civil,RCC Concrete,316.31,cft,31.13,12.7,,central,summer,Economy,"{'cement_bags_per_cft': 0.12, 'steel_kg_per_cft': 4}"
+BOQ-0236,Tiling,Vitrified Tiles,86.55,sqft,47.68,39.7,1892.9,east,monsoon,Economy,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0237,Plumbing,GI Pipe,337.55,rft,27.41,33.22,,east,summer,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0238,Painting,Putty,232.74,sqft,25.41,35.99,914.51,south,winter,Premium,{'putty_kg_per_sqft': 0.12}
+BOQ-0239,Plumbing,UPVC Pipe,141.81,rft,32.3,19.07,,east,summer,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0240,Painting,Emulsion Paint,281.74,sqft,9.78,15.88,155.31,north,summer,Premium,{'paint_litre_per_sqft': 0.02}
+BOQ-0241,Painting,Acrylic Paint,93.57,sqft,18.06,22.29,402.56,central,winter,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0242,Painting,Emulsion Paint,470.19,sqft,37.45,13.54,507.07,south,winter,Economy,{'paint_litre_per_sqft': 0.02}
+BOQ-0243,Plumbing,UPVC Pipe,445.58,rft,27.38,9.05,,west,winter,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0244,Painting,Putty,208.8,sqft,7.27,27.27,198.25,west,summer,Economy,{'putty_kg_per_sqft': 0.12}
+BOQ-0245,Tiling,Vitrified Tiles,243.92,sqft,44.71,37.74,1687.36,west,summer,Standard,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0246,Plumbing,CPVC Pipe,306.63,rft,13.76,29.9,,north,winter,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0247,Plumbing,GI Pipe,175.87,rft,49.51,35.62,,north,monsoon,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0248,Plumbing,UPVC Pipe,407.7,rft,20.26,47.25,,south,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0249,Electrical,Copper Wire,275.04,rft,7.04,11.17,,east,winter,Economy,{'wire_rft_per_rft': 1}
+BOQ-0250,Plumbing,CPVC Pipe,322.82,rft,28.2,19.76,,central,summer,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0251,Plumbing,GI Pipe,382.69,rft,18.47,20.14,,central,winter,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0252,Electrical,Copper Wire,263.7,rft,5.75,19.91,,north,winter,Economy,{'wire_rft_per_rft': 1}
+BOQ-0253,Carpentry,Edge Banding,442.44,sqft,33.32,31.86,1061.58,east,monsoon,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0254,Tiling,Granite Tiles,266.2,sqft,28.59,37.45,1070.7,west,monsoon,Economy,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0255,Painting,Acrylic Paint,307.66,sqft,36.52,13.59,496.31,west,summer,Premium,{'paint_litre_per_sqft': 0.018}
+BOQ-0256,Painting,Emulsion Paint,360.73,sqft,23.47,39.87,935.75,west,normal,Economy,{'paint_litre_per_sqft': 0.02}
+BOQ-0257,Painting,Putty,143.3,sqft,19.63,34.8,683.12,central,winter,Premium,{'putty_kg_per_sqft': 0.12}
+BOQ-0258,Painting,Emulsion Paint,460.46,sqft,20.4,20.94,427.18,east,winter,Standard,{'paint_litre_per_sqft': 0.02}
+BOQ-0259,Painting,Emulsion Paint,301.14,sqft,15.12,48.78,737.55,east,summer,Economy,{'paint_litre_per_sqft': 0.02}
+BOQ-0260,Painting,Putty,367.24,sqft,19.27,20.7,398.89,east,summer,Standard,{'putty_kg_per_sqft': 0.12}
+BOQ-0261,Electrical,MCB Unit,294.44,rft,45.31,22.75,,east,monsoon,Premium,{'units_per_project': 1}
+BOQ-0262,Tiling,Ceramic Tiles,479.89,sqft,8.56,46.58,398.72,east,winter,Standard,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0263,Painting,Putty,172.01,sqft,30.29,17.22,521.59,north,monsoon,Standard,{'putty_kg_per_sqft': 0.12}
+BOQ-0264,Tiling,Granite Tiles,457.33,sqft,15.16,15.48,234.68,north,winter,Premium,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0265,Civil,Cement Plaster,95.25,cft,39.68,5.23,,central,monsoon,Premium,{'cement_kg_per_sqft': 0.9}
+BOQ-0266,Civil,Cement Plaster,264.85,cft,13.98,48.38,,east,summer,Economy,{'cement_kg_per_sqft': 0.9}
+BOQ-0267,Tiling,Vitrified Tiles,343.53,sqft,15.45,38.24,590.81,north,monsoon,Premium,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0268,Painting,Acrylic Paint,498.73,sqft,22.86,27.29,623.85,east,normal,Standard,{'paint_litre_per_sqft': 0.018}
+BOQ-0269,Carpentry,Edge Banding,321.25,sqft,46.78,20.08,939.34,west,winter,Standard,{'edgeband_m_per_sqft': 0.9}
+BOQ-0270,Electrical,Copper Wire,172.78,rft,41.4,19.88,,west,summer,Economy,{'wire_rft_per_rft': 1}
+BOQ-0271,Painting,Acrylic Paint,381.48,sqft,40.58,30.55,1239.72,south,monsoon,Economy,{'paint_litre_per_sqft': 0.018}
+BOQ-0272,Civil,Cement Plaster,422.15,cft,28.19,8.9,,north,monsoon,Standard,{'cement_kg_per_sqft': 0.9}
+BOQ-0273,Plumbing,UPVC Pipe,471.12,rft,5.31,22.26,,west,summer,Premium,{'pipe_rft_per_rft': 1}
+BOQ-0274,Carpentry,Edge Banding,375.3,sqft,5.51,34.42,189.65,south,normal,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0275,Tiling,Ceramic Tiles,188.06,sqft,23.24,27.61,641.66,east,normal,Economy,"{'adhesive_kg_per_sqft': 0.45, 'grout_kg_per_sqft': 0.07}"
+BOQ-0276,Carpentry,Laminate,326.58,sqft,14.86,11.01,163.61,south,winter,Economy,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0277,Electrical,Copper Wire,237.13,rft,29.72,26.19,,central,monsoon,Standard,{'wire_rft_per_rft': 1}
+BOQ-0278,Civil,Reinforced Steel,442.91,cft,8.68,25.1,,east,normal,Economy,{'steel_kg_per_cft': 5}
+BOQ-0279,Tiling,Vitrified Tiles,422.95,sqft,45.63,14.1,643.38,central,monsoon,Standard,"{'adhesive_kg_per_sqft': 0.5, 'grout_kg_per_sqft': 0.08}"
+BOQ-0280,Carpentry,Edge Banding,248.83,sqft,35.61,37.26,1326.83,west,normal,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0281,Plumbing,CPVC Pipe,254.04,rft,28.1,25.56,,north,winter,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0282,Carpentry,Edge Banding,59.8,sqft,16.45,5.14,84.55,south,normal,Standard,{'edgeband_m_per_sqft': 0.9}
+BOQ-0283,Plumbing,UPVC Pipe,365.17,rft,29.35,7.71,,north,winter,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0284,Carpentry,Laminate,130.99,sqft,11.09,33.87,375.62,west,summer,Premium,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0285,Plumbing,UPVC Pipe,219.04,rft,35.72,34.78,,central,monsoon,Economy,{'pipe_rft_per_rft': 1}
+BOQ-0286,Carpentry,Plywood,130.31,sqft,29.18,28.8,840.38,south,normal,Standard,{'plywood_sheets_per_sqft': 0.03125}
+BOQ-0287,Carpentry,Laminate,353.07,sqft,29.5,28.94,853.73,south,monsoon,Premium,{'laminate_sheets_per_sqft': 0.028}
+BOQ-0288,Carpentry,Plywood,174.04,sqft,47.18,37.63,1775.38,north,normal,Economy,{'plywood_sheets_per_sqft': 0.03125}
+BOQ-0289,Plumbing,GI Pipe,394.72,rft,44.77,5.7,,south,normal,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0290,Electrical,PVC Conduit,250.9,rft,35.24,44.25,,south,normal,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0291,Plumbing,CPVC Pipe,292.89,rft,38.95,39.92,,south,summer,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0292,Civil,Reinforced Steel,193.51,cft,31.91,35.26,,east,monsoon,Premium,{'steel_kg_per_cft': 5}
+BOQ-0293,Painting,Putty,284.56,sqft,23.61,17.38,410.34,central,monsoon,Economy,{'putty_kg_per_sqft': 0.12}
+BOQ-0294,Civil,Cement Plaster,300.13,cft,7.11,20.5,,west,summer,Economy,{'cement_kg_per_sqft': 0.9}
+BOQ-0295,Plumbing,UPVC Pipe,117.15,rft,21.94,38.95,,west,monsoon,Standard,{'pipe_rft_per_rft': 1}
+BOQ-0296,Carpentry,Edge Banding,114.96,sqft,25.84,7.59,196.13,west,winter,Economy,{'edgeband_m_per_sqft': 0.9}
+BOQ-0297,Electrical,PVC Conduit,224.79,rft,16.47,19.86,,north,winter,Premium,{'conduit_rft_per_rft': 1}
+BOQ-0298,Tiling,Granite Tiles,376.06,sqft,13.57,17.08,231.78,central,normal,Standard,"{'adhesive_kg_per_sqft': 0.65, 'grout_kg_per_sqft': 0.1}"
+BOQ-0299,Painting,Putty,375.94,sqft,30.15,26.57,801.09,east,summer,Standard,{'putty_kg_per_sqft': 0.12}
+BOQ-0300,Painting,Acrylic Paint,482.93,sqft,10.28,49.98,513.79,west,monsoon,Economy,{'paint_litre_per_sqft': 0.018}
