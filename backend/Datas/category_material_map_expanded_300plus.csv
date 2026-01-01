@@ -1,0 +1,361 @@
+map_id,category,material_name,material_type,unit,usage_frequency
+1,Plumbing,CPVC Elbow,material,nos,0.05
+2,Plumbing,Ball Valve,material,nos,0.72
+3,Plumbing,Ball Valve,material,nos,0.31
+4,Plumbing,UPVC Pipe,material,mtr,0.51
+5,Plumbing,CPVC Tee,material,nos,1.0
+6,Plumbing,Pipe Clamp,material,nos,0.04
+7,Plumbing,CPVC Tee,material,nos,0.7
+8,Plumbing,Ball Valve,material,nos,0.04
+9,Plumbing,CPVC Pipe,material,mtr,0.04
+10,Plumbing,Pipe Clamp,material,nos,0.74
+11,Plumbing,CPVC Elbow,material,nos,0.4
+12,Plumbing,Pipe Clamp,material,nos,0.14
+13,Plumbing,CPVC Pipe,material,mtr,0.4
+14,Plumbing,UPVC Pipe,material,mtr,0.59
+15,Plumbing,CPVC Elbow,material,nos,0.24
+16,Plumbing,Ball Valve,material,nos,0.1
+17,Plumbing,CPVC Tee,material,nos,0.55
+18,Plumbing,CPVC Pipe,material,mtr,0.32
+19,Plumbing,Solvent Cement,consumable,ml,0.49
+20,Plumbing,CPVC Tee,material,nos,0.69
+21,Plumbing,UPVC Pipe,material,mtr,0.26
+22,Plumbing,CPVC Pipe,material,mtr,0.7
+23,Plumbing,Solvent Cement,consumable,ml,0.78
+24,Plumbing,CPVC Elbow,material,nos,0.29
+25,Plumbing,CPVC Pipe,material,mtr,0.22
+26,Plumbing,UPVC Pipe,material,mtr,0.42
+27,Plumbing,CPVC Elbow,material,nos,0.13
+28,Plumbing,Ball Valve,material,nos,0.74
+29,Plumbing,CPVC Tee,material,nos,0.58
+30,Plumbing,UPVC Pipe,material,mtr,0.53
+31,Plumbing,Pipe Clamp,material,nos,0.02
+32,Plumbing,Solvent Cement,consumable,ml,0.29
+33,Plumbing,CPVC Tee,material,nos,0.88
+34,Plumbing,Ball Valve,material,nos,0.59
+35,Plumbing,CPVC Pipe,material,mtr,0.6
+36,Plumbing,Solvent Cement,consumable,ml,0.46
+37,Plumbing,CPVC Elbow,material,nos,0.58
+38,Plumbing,CPVC Pipe,material,mtr,0.02
+39,Plumbing,CPVC Tee,material,nos,0.49
+40,Plumbing,CPVC Pipe,material,mtr,0.59
+41,Plumbing,Ball Valve,material,nos,0.69
+42,Plumbing,Pipe Clamp,material,nos,0.43
+43,Plumbing,UPVC Pipe,material,mtr,0.53
+44,Plumbing,CPVC Tee,material,nos,0.82
+45,Plumbing,CPVC Tee,material,nos,0.77
+46,Plumbing,CPVC Pipe,material,mtr,0.45
+47,Plumbing,Pipe Clamp,material,nos,0.19
+48,Plumbing,UPVC Pipe,material,mtr,0.31
+49,Plumbing,Solvent Cement,consumable,ml,0.32
+50,Plumbing,CPVC Pipe,material,mtr,0.95
+51,Plumbing,Pipe Clamp,material,nos,0.73
+52,Plumbing,Pipe Clamp,material,nos,0.11
+53,Plumbing,Solvent Cement,consumable,ml,0.5
+54,Plumbing,Ball Valve,material,nos,0.42
+55,Plumbing,CPVC Tee,material,nos,0.92
+56,Plumbing,Ball Valve,material,nos,0.84
+57,Plumbing,Solvent Cement,consumable,ml,0.67
+58,Plumbing,Pipe Clamp,material,nos,0.81
+59,Plumbing,UPVC Pipe,material,mtr,0.15
+60,Plumbing,CPVC Tee,material,nos,0.69
+61,Carpentry,Edge Band,material,mtr,0.57
+62,Carpentry,Laminate,material,sqft,0.17
+63,Carpentry,Screws,material,nos,0.85
+64,Carpentry,Edge Band,material,mtr,0.03
+65,Carpentry,Adhesive,consumable,kg,0.77
+66,Carpentry,Handles,material,nos,0.56
+67,Carpentry,Hinges,material,nos,0.09
+68,Carpentry,Laminate,material,sqft,0.98
+69,Carpentry,Laminate,material,sqft,0.25
+70,Carpentry,Edge Band,material,mtr,1.0
+71,Carpentry,Edge Band,material,mtr,0.65
+72,Carpentry,Hinges,material,nos,0.64
+73,Carpentry,Hinges,material,nos,0.19
+74,Carpentry,Adhesive,consumable,kg,0.28
+75,Carpentry,Laminate,material,sqft,0.09
+76,Carpentry,Adhesive,consumable,kg,0.38
+77,Carpentry,Edge Band,material,mtr,0.23
+78,Carpentry,Hinges,material,nos,0.03
+79,Carpentry,Laminate,material,sqft,0.26
+80,Carpentry,Adhesive,consumable,kg,0.81
+81,Carpentry,Laminate,material,sqft,0.02
+82,Carpentry,Laminate,material,sqft,0.87
+83,Carpentry,Laminate,material,sqft,0.62
+84,Carpentry,Hinges,material,nos,0.57
+85,Carpentry,Laminate,material,sqft,0.06
+86,Carpentry,Screws,material,nos,0.09
+87,Carpentry,Handles,material,nos,0.8
+88,Carpentry,Laminate,material,sqft,0.27
+89,Carpentry,Screws,material,nos,0.81
+90,Carpentry,Screws,material,nos,0.41
+91,Carpentry,Edge Band,material,mtr,0.52
+92,Carpentry,Plywood,material,sqft,0.6
+93,Carpentry,Plywood,material,sqft,0.18
+94,Carpentry,Hinges,material,nos,0.08
+95,Carpentry,Adhesive,consumable,kg,0.44
+96,Carpentry,Edge Band,material,mtr,0.2
+97,Carpentry,Hinges,material,nos,0.78
+98,Carpentry,Screws,material,nos,0.48
+99,Carpentry,Edge Band,material,mtr,0.07
+100,Carpentry,Handles,material,nos,0.49
+101,Carpentry,Screws,material,nos,0.49
+102,Carpentry,Edge Band,material,mtr,0.24
+103,Carpentry,Screws,material,nos,0.67
+104,Carpentry,Screws,material,nos,0.83
+105,Carpentry,Handles,material,nos,0.25
+106,Carpentry,Hinges,material,nos,0.29
+107,Carpentry,Adhesive,consumable,kg,0.1
+108,Carpentry,Edge Band,material,mtr,0.73
+109,Carpentry,Laminate,material,sqft,0.37
+110,Carpentry,Handles,material,nos,0.36
+111,Carpentry,Screws,material,nos,0.54
+112,Carpentry,Laminate,material,sqft,0.65
+113,Carpentry,Screws,material,nos,0.03
+114,Carpentry,Plywood,material,sqft,0.9
+115,Carpentry,Adhesive,consumable,kg,0.47
+116,Carpentry,Edge Band,material,mtr,0.49
+117,Carpentry,Hinges,material,nos,0.7
+118,Carpentry,Hinges,material,nos,0.84
+119,Carpentry,Screws,material,nos,0.41
+120,Carpentry,Screws,material,nos,0.32
+121,Electrical,Junction Box,material,nos,0.75
+122,Electrical,Junction Box,material,nos,0.79
+123,Electrical,Switch,material,nos,0.27
+124,Electrical,Junction Box,material,nos,0.86
+125,Electrical,MCB,material,nos,0.36
+126,Electrical,Copper Wire,material,mtr,0.44
+127,Electrical,Copper Wire,material,mtr,0.09
+128,Electrical,Junction Box,material,nos,0.01
+129,Electrical,Copper Wire,material,mtr,0.26
+130,Electrical,Switch,material,nos,0.91
+131,Electrical,PVC Conduit,material,mtr,0.52
+132,Electrical,Switch,material,nos,0.35
+133,Electrical,Junction Box,material,nos,0.57
+134,Electrical,Copper Wire,material,mtr,0.08
+135,Electrical,Junction Box,material,nos,0.39
+136,Electrical,Socket,material,nos,0.45
+137,Electrical,MCB,material,nos,0.27
+138,Electrical,Junction Box,material,nos,0.64
+139,Electrical,Switch,material,nos,0.16
+140,Electrical,Copper Wire,material,mtr,0.72
+141,Electrical,PVC Conduit,material,mtr,0.46
+142,Electrical,MCB,material,nos,0.13
+143,Electrical,Copper Wire,material,mtr,0.23
+144,Electrical,PVC Conduit,material,mtr,0.49
+145,Electrical,Switch,material,nos,0.91
+146,Electrical,Switch,material,nos,0.19
+147,Electrical,MCB,material,nos,0.49
+148,Electrical,PVC Conduit,material,mtr,0.09
+149,Electrical,Socket,material,nos,0.45
+150,Electrical,PVC Conduit,material,mtr,0.44
+151,Electrical,Copper Wire,material,mtr,0.86
+152,Electrical,PVC Conduit,material,mtr,0.69
+153,Electrical,MCB,material,nos,0.18
+154,Electrical,Switch,material,nos,0.46
+155,Electrical,MCB,material,nos,0.7
+156,Electrical,Copper Wire,material,mtr,0.63
+157,Electrical,Switch,material,nos,0.56
+158,Electrical,MCB,material,nos,0.69
+159,Electrical,Copper Wire,material,mtr,0.13
+160,Electrical,MCB,material,nos,0.29
+161,Electrical,Copper Wire,material,mtr,0.42
+162,Electrical,Copper Wire,material,mtr,0.88
+163,Electrical,Socket,material,nos,0.99
+164,Electrical,MCB,material,nos,0.84
+165,Electrical,Junction Box,material,nos,0.87
+166,Electrical,MCB,material,nos,0.28
+167,Electrical,Junction Box,material,nos,0.89
+168,Electrical,Socket,material,nos,0.33
+169,Electrical,Junction Box,material,nos,0.69
+170,Electrical,Junction Box,material,nos,0.23
+171,Electrical,Copper Wire,material,mtr,0.2
+172,Electrical,PVC Conduit,material,mtr,0.7
+173,Electrical,Socket,material,nos,0.5
+174,Electrical,Junction Box,material,nos,0.85
+175,Electrical,Switch,material,nos,0.55
+176,Electrical,Junction Box,material,nos,0.28
+177,Electrical,Switch,material,nos,0.29
+178,Electrical,Socket,material,nos,0.04
+179,Electrical,Junction Box,material,nos,0.63
+180,Electrical,PVC Conduit,material,mtr,0.64
+181,Painting,Roller,material,nos,0.18
+182,Painting,Brush,material,nos,0.28
+183,Painting,Putty,consumable,kg,0.11
+184,Painting,Primer,consumable,liters,0.67
+185,Painting,Primer,consumable,liters,0.96
+186,Painting,Emulsion Paint,consumable,liters,0.7
+187,Painting,Primer,consumable,liters,0.5
+188,Painting,Brush,material,nos,0.55
+189,Painting,Putty,consumable,kg,0.5
+190,Painting,Roller,material,nos,0.51
+191,Painting,Roller,material,nos,0.97
+192,Painting,Emulsion Paint,consumable,liters,0.81
+193,Painting,Emulsion Paint,consumable,liters,0.22
+194,Painting,Roller,material,nos,0.55
+195,Painting,Brush,material,nos,0.97
+196,Painting,Brush,material,nos,0.89
+197,Painting,Putty,consumable,kg,0.75
+198,Painting,Primer,consumable,liters,0.83
+199,Painting,Roller,material,nos,0.71
+200,Painting,Primer,consumable,liters,0.95
+201,Painting,Primer,consumable,liters,0.27
+202,Painting,Putty,consumable,kg,0.17
+203,Painting,Emulsion Paint,consumable,liters,0.03
+204,Painting,Roller,material,nos,0.58
+205,Painting,Putty,consumable,kg,0.76
+206,Painting,Brush,material,nos,0.88
+207,Painting,Primer,consumable,liters,0.46
+208,Painting,Emulsion Paint,consumable,liters,0.48
+209,Painting,Roller,material,nos,0.49
+210,Painting,Roller,material,nos,0.96
+211,Painting,Brush,material,nos,0.75
+212,Painting,Roller,material,nos,0.53
+213,Painting,Primer,consumable,liters,0.51
+214,Painting,Putty,consumable,kg,0.59
+215,Painting,Primer,consumable,liters,0.73
+216,Painting,Brush,material,nos,0.02
+217,Painting,Brush,material,nos,0.17
+218,Painting,Putty,consumable,kg,0.28
+219,Painting,Brush,material,nos,0.71
+220,Painting,Emulsion Paint,consumable,liters,0.63
+221,Painting,Brush,material,nos,0.91
+222,Painting,Emulsion Paint,consumable,liters,0.87
+223,Painting,Roller,material,nos,0.84
+224,Painting,Brush,material,nos,0.16
+225,Painting,Roller,material,nos,0.36
+226,Painting,Putty,consumable,kg,0.1
+227,Painting,Roller,material,nos,0.12
+228,Painting,Emulsion Paint,consumable,liters,0.63
+229,Painting,Emulsion Paint,consumable,liters,0.04
+230,Painting,Brush,material,nos,0.78
+231,Painting,Putty,consumable,kg,0.77
+232,Painting,Primer,consumable,liters,0.39
+233,Painting,Putty,consumable,kg,0.02
+234,Painting,Putty,consumable,kg,0.71
+235,Painting,Emulsion Paint,consumable,liters,0.1
+236,Painting,Roller,material,nos,0.1
+237,Painting,Putty,consumable,kg,0.24
+238,Painting,Roller,material,nos,0.36
+239,Painting,Brush,material,nos,0.08
+240,Painting,Putty,consumable,kg,0.91
+241,Tiling,Tile Grout,consumable,kg,0.12
+242,Tiling,Tile Adhesive,consumable,kg,0.35
+243,Tiling,Tile Adhesive,consumable,kg,0.24
+244,Tiling,Ceramic Tile,material,nos,0.47
+245,Tiling,Tile Adhesive,consumable,kg,0.65
+246,Tiling,Vitrified Tile,material,nos,0.39
+247,Tiling,Vitrified Tile,material,nos,0.79
+248,Tiling,Tile Adhesive,consumable,kg,0.94
+249,Tiling,Ceramic Tile,material,nos,0.03
+250,Tiling,Spacer,material,nos,0.02
+251,Tiling,Ceramic Tile,material,nos,0.56
+252,Tiling,Spacer,material,nos,0.57
+253,Tiling,Vitrified Tile,material,nos,0.23
+254,Tiling,Ceramic Tile,material,nos,0.29
+255,Tiling,Ceramic Tile,material,nos,0.41
+256,Tiling,Spacer,material,nos,0.11
+257,Tiling,Vitrified Tile,material,nos,0.44
+258,Tiling,Ceramic Tile,material,nos,0.47
+259,Tiling,Vitrified Tile,material,nos,0.55
+260,Tiling,Vitrified Tile,material,nos,0.44
+261,Tiling,Ceramic Tile,material,nos,0.83
+262,Tiling,Spacer,material,nos,0.33
+263,Tiling,Tile Grout,consumable,kg,0.37
+264,Tiling,Tile Adhesive,consumable,kg,0.83
+265,Tiling,Ceramic Tile,material,nos,0.96
+266,Tiling,Vitrified Tile,material,nos,0.05
+267,Tiling,Tile Adhesive,consumable,kg,0.99
+268,Tiling,Tile Grout,consumable,kg,0.17
+269,Tiling,Ceramic Tile,material,nos,0.44
+270,Tiling,Spacer,material,nos,0.33
+271,Tiling,Spacer,material,nos,0.47
+272,Tiling,Spacer,material,nos,0.15
+273,Tiling,Spacer,material,nos,0.45
+274,Tiling,Ceramic Tile,material,nos,0.66
+275,Tiling,Ceramic Tile,material,nos,0.24
+276,Tiling,Vitrified Tile,material,nos,0.56
+277,Tiling,Tile Grout,consumable,kg,0.34
+278,Tiling,Ceramic Tile,material,nos,0.28
+279,Tiling,Tile Grout,consumable,kg,0.37
+280,Tiling,Tile Adhesive,consumable,kg,0.58
+281,Tiling,Tile Adhesive,consumable,kg,0.64
+282,Tiling,Tile Grout,consumable,kg,0.94
+283,Tiling,Vitrified Tile,material,nos,0.19
+284,Tiling,Ceramic Tile,material,nos,0.88
+285,Tiling,Tile Adhesive,consumable,kg,0.06
+286,Tiling,Vitrified Tile,material,nos,0.84
+287,Tiling,Tile Grout,consumable,kg,0.32
+288,Tiling,Tile Adhesive,consumable,kg,0.3
+289,Tiling,Tile Adhesive,consumable,kg,0.89
+290,Tiling,Tile Grout,consumable,kg,0.66
+291,Tiling,Spacer,material,nos,0.26
+292,Tiling,Tile Grout,consumable,kg,0.25
+293,Tiling,Tile Adhesive,consumable,kg,0.62
+294,Tiling,Spacer,material,nos,0.84
+295,Tiling,Vitrified Tile,material,nos,0.61
+296,Tiling,Tile Adhesive,consumable,kg,0.05
+297,Tiling,Vitrified Tile,material,nos,0.22
+298,Tiling,Spacer,material,nos,0.38
+299,Tiling,Spacer,material,nos,0.69
+300,Tiling,Tile Adhesive,consumable,kg,0.53
+301,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.17
+302,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.68
+303,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.85
+304,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.03
+305,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.57
+306,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.97
+307,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.74
+308,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.76
+309,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.91
+310,Tank Cleaning,Disinfectant,consumable,liters,0.22
+311,Tank Cleaning,Disinfectant,consumable,liters,0.36
+312,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.08
+313,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.76
+314,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.06
+315,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.99
+316,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.15
+317,Tank Cleaning,Disinfectant,consumable,liters,0.73
+318,Tank Cleaning,Disinfectant,consumable,liters,0.3
+319,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.07
+320,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.04
+321,Tank Cleaning,Disinfectant,consumable,liters,0.85
+322,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.85
+323,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.41
+324,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.85
+325,Tank Cleaning,Disinfectant,consumable,liters,0.51
+326,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.96
+327,Tank Cleaning,Disinfectant,consumable,liters,0.15
+328,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.88
+329,Tank Cleaning,Disinfectant,consumable,liters,0.11
+330,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.29
+331,Tank Cleaning,Disinfectant,consumable,liters,0.51
+332,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.43
+333,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.48
+334,Tank Cleaning,Disinfectant,consumable,liters,0.07
+335,Tank Cleaning,Disinfectant,consumable,liters,0.76
+336,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.96
+337,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.66
+338,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.3
+339,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.73
+340,Tank Cleaning,Disinfectant,consumable,liters,0.97
+341,Tank Cleaning,Disinfectant,consumable,liters,0.15
+342,Tank Cleaning,Disinfectant,consumable,liters,0.6
+343,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.97
+344,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.93
+345,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.1
+346,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.37
+347,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.28
+348,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.73
+349,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.96
+350,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.32
+351,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.76
+352,Tank Cleaning,Disinfectant,consumable,liters,0.52
+353,Tank Cleaning,Disinfectant,consumable,liters,0.32
+354,Tank Cleaning,Disinfectant,consumable,liters,0.96
+355,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.72
+356,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.39
+357,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.69
+358,Tank Cleaning,Cleaning Chemical - Type 1,consumable,liters,0.99
+359,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.61
+360,Tank Cleaning,Cleaning Chemical - Type 2,consumable,liters,0.52

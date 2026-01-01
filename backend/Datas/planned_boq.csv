@@ -1,0 +1,164 @@
+input_material,normalized_material,qty,region,grade,rate_min_adj,rate_most_likely_adj,rate_max_adj,total_cost_min,total_cost_most_likely,total_cost_max
+,,,,,,,,,,
+Excavation in hard soil,excavation in hard soil,240,central,B,478.7,633.1,884.75,114888,151944,212340
+PCC 1:4:8 using 40mm aggregate,pcc 1:4:8 using 40mm aggregate,180,central,B,562.63,770.27,1165.45,101273.4,138648.6,209781
+RCC M20 using ready mix concrete,rcc m20 using ready mix concrete,350,central,B,893.62,1210.98,1791.42,312767,423843,626997
+cement,cement,48000,central,B,557.6,633.64,709.68,26764800,30414720,34064640
+Shuttering for beams,shuttering for beams,5600,central,B,18772.14,24944.96,35261.19,105123984,139691776,197462664
+Masonry work in CM 1:6,masonry work in cm 1:6,6400,central,B,659.04,893.1,1321.17,4217856,5715840,8455488
+cement,cement,9800,central,B,557.6,633.64,709.68,5464480,6209672,6954864
+granite,granite,1600,central,B,415.21,554.4,792.68,664336,887040,1268288
+Concrete curing compound,concrete curing compound,190,central,B,512.2,687.23,993.84,97318,130573.7,188829.6
+Anti-termite treatment,anti-termite treatment,4300,central,B,444.29,593.22,848.19,1910447,2550846,3647217
+Excavation in soft rock,excavation in soft rock,320,central,B,545.68,721.69,1008.55,174617.6,230940.8,322736
+Backfilling with excavated soil,backfilling with excavated soil,600,central,B,430.67,586.58,877.59,258402,351948,526554
+Earth filling with red soil,earth filling with red soil,450,central,B,516.24,692.67,1001.71,232308,311701.5,450769.5
+PCC 1:3:6 bed concrete,pcc 1:3:6 bed concrete,210,central,B,491.6,673.03,1018.32,103236,141336.3,213847.2
+RCC M25 footing concrete,rcc m25 footing concrete,280,central,B,995.18,1328.79,1899.89,278650.4,372061.2,531969.2
+RCC M30 column concrete,rcc m30 column concrete,150,central,B,1031.13,1411.66,2135.9,154669.5,211749,320385
+Centering and shuttering for columns,centering and shuttering for columns,7200,central,B,376.2,517.72,792.18,2708640,3727584,5703696
+cement,cement,52000,central,B,557.6,633.64,709.68,28995200,32949280,36903360
+Masonry work in CM 1:5,masonry work in cm 1:5,5400,central,B,492.02,666.76,986.35,2656908,3600504,5326290
+Wire cut brick masonry,wire cut brick masonry,4800,central,B,387.18,522.06,763.6,1858464,2505888,3665280
+Block work using AAC blocks,block work using aac blocks,9000,central,B,373.86,517.23,800.35,3364740,4655070,7203150
+cement,cement,8200,central,B,557.6,633.64,709.68,4572320,5195848,5819376
+Waterproof plaster,waterproof plaster,3500,central,B,445.58,594.95,850.66,1559530,2082325,2977310
+granite,granite,1800,central,B,415.21,554.4,792.68,747378,997920,1426824
+vitrified tile,vitrified tile,4200,central,B,546.72,621.27,695.82,2296224,2609334,2922444
+Anti-skid tile flooring,anti-skid tile flooring,2600,central,B,420.93,559.35,790.68,1094418,1454310,2055768
+Wall tiling 300x600,wall tiling 300x600,2800,central,B,566.03,774.92,1172.48,1584884,2169776,3282944
+granite,granite,650,central,B,415.21,554.4,792.68,269886.5,360360,515242
+Marble flooring 20mm,marble flooring 20mm,1300,central,B,497.49,670.81,981.16,646737,872053,1275508
+Stone cladding external,stone cladding external,3700,central,B,429.2,570.33,806.19,1588040,2110221,2982903
+External wall plastering 20mm,external wall plastering 20mm,7600,central,B,811.85,1100.16,1627.48,6170060,8361216,12368848
+gypsum board,gypsum board,5900,central,B,497.79,565.67,633.55,2936961,3337453,3737945
+Aluminium window fabrication,aluminium window fabrication,4400,central,B,438.47,588.31,850.79,1929268,2588564,3743476
+Door frame installation hardwood,door frame installation hardwood,2600,central,B,554.02,762.44,1166.63,1440452,1982344,3033238
+Flush door shutter installation,flush door shutter installation,1800,central,B,727.23,980.58,1434.25,1309014,1765044,2581650
+MS railing fabrication and installation,ms railing fabrication and installation,1700,central,B,433.17,593.03,897.28,736389,1008151,1525376
+Structural steel welding,structural steel welding,8500,central,B,22422.06,30084.64,43507.02,190587510,255719440,369809670
+RCC lintel 150mm thickness,rcc lintel 150mm thickness,45,central,B,722.6,974.33,1425.11,32517,43844.85,64129.95
+RCC sunshade 75mm,rcc sunshade 75mm,30,central,B,661.94,910.96,1393.89,19858.2,27328.8,41816.7
+Concrete paver block 60mm,concrete paver block 60mm,5200,central,B,385.22,519.43,759.76,2003144,2701036,3950752
+Kerb stone supplying and fixing,kerb stone supplying and fixing,900,central,B,412.22,555.84,813,370998,500256,731700
+Drain construction in CM 1:4,drain construction in cm 1:4,95,central,B,564.7,746.83,1043.68,53646.5,70948.85,99149.6
+Manhole construction complete,manhole construction complete,22,central,B,567.98,747.68,1032.94,12495.56,16448.96,22724.68
+Septic tank construction,septic tank construction,85,central,B,805.79,1070.75,1513.57,68492.15,91013.75,128653.45
+Water tank Sump RCC 50KL,water tank sump rcc 50kl,120,central,B,11175.84,15144.83,22403.9,1341100.8,1817379.6,2688468
+sand,sand,380,central,B,985.38,1335.32,1975.34,374444.4,507421.6,750629.2
+Soil compaction with 8T roller,soil compaction with 8t roller,21000,central,B,21630.08,29311.8,43361.25,454231680,615547800,910586250
+Leveling and dressing site,leveling and dressing site,30000,central,B,563.81,749.21,1059.05,16914300,22476300,31771500
+Bitumen primer application,bitumen primer application,15000,central,B,422.29,563.86,806.2,6334350,8457900,12093000
+BIT waterproofing two coats,bit waterproofing two coats,9600,central,B,575.64,784.03,1172.99,5526144,7526688,11260704
+Acrylic waterproof coating,acrylic waterproof coating,7300,central,B,501.44,676.13,988.94,3660512,4935749,7219262
+Polymer based bonding agent,polymer based bonding agent,160,central,B,441.2,591.97,856.08,70592,94715.2,136972.8
+Grouting with non-shrink grout,grouting with non-shrink grout,780,central,B,438.68,597.5,893.92,342170.4,466050,697257.6
+1.5sqmm FRLS copper cable,1.5sqmm frls copper cable,3200,central,B,275.14,372.85,551.57,880448,1193120,1765024
+4sqmm copper cable,4sqmm copper cable,2100,central,B,304.36,410.4,600.27,639156,861840,1260567
+AC 3TR installation,ac 3tr installation,12,central,B,684.52,937.14,1417.94,8214.24,11245.68,17015.28
+Cable tray GI perforated 150mm,cable tray gi perforated 150mm,980,central,B,441.94,595.91,871.62,433101.2,583991.8,854187.6
+Earth pit plate earthing,earth pit plate earthing,22,central,B,720.18,948.02,1309.7,15843.96,20856.44,28813.4
+2.5sqmm FRLS copper cable,2.5sqmm frls copper cable,4100,central,B,403.06,546.21,808.02,1652546,2239461,3312882
+6sqmm FRLS copper cable,6sqmm frls copper cable,1800,central,B,246.57,332.46,486.28,443826,598428,875304
+10sqmm aluminium armoured cable,10sqmm aluminium armoured cable,950,central,B,283.15,387.64,586.52,268992.5,368258,557194
+16sqmm aluminium armoured cable,16sqmm aluminium armoured cable,780,central,B,292.29,400.16,605.46,227986.2,312124.8,472258.8
+25sqmm aluminium armoured cable,25sqmm aluminium armoured cable,620,central,B,303.39,415.36,628.46,188101.8,257523.2,389645.2
+63A TPN MCCB,63a tpn mccb,14,central,B,1254.29,1708.38,2555.92,17560.06,23917.32,35782.88
+100A TPN MCCB,100a tpn mccb,9,central,B,2037.05,2788.81,4219.59,18333.45,25099.29,37976.31
+125A TPN MCCB,125a tpn mccb,6,central,B,2226.02,3047.52,4611.02,13356.12,18285.12,27666.12
+Distribution board 12-way TPN,distribution board 12-way tpn,18,central,B,1586.51,2118.35,3028.78,28557.18,38130.3,54518.04
+Distribution board 8-way SPN,distribution board 8-way spn,25,central,B,1104.14,1474.27,2107.88,27603.5,36856.75,52697
+MCB SP 6A–32A,mcb sp 6a–32a,210,central,B,37.58,52.28,81.81,7891.8,10978.8,17180.1
+MCB DP 32A,mcb dp 32a,65,central,B,311.26,419.7,613.87,20231.9,27280.5,39901.55
+MCB TP 32A,mcb tp 32a,28,central,B,303.54,415.56,628.77,8499.12,11635.68,17605.56
+RJ45 CAT6 data point with faceplate,rj45 cat6 data point with faceplate,480,central,B,532.28,721.32,1067.05,255494.4,346233.6,512184
+RJ11 telephone point,rj11 telephone point,65,central,B,526.17,702.56,1004.51,34201.05,45666.4,65293.15
+Lighting fixture LED panel 2x2,lighting fixture led panel 2x2,380,central,B,633.24,853.85,1248.9,240631.2,324463,474582
+LED tube light 20W,led tube light 20w,260,central,B,312.05,418.68,605.48,81133,108856.8,157424.8
+LED downlight 12W,led downlight 12w,145,central,B,386.93,527,788.45,56104.85,76415,114325.25
+Emergency light 12W battery backup,emergency light 12w battery backup,42,central,B,879.85,1204.56,1822.55,36953.7,50591.52,76547.1
+Motion sensor ceiling mount,motion sensor ceiling mount,34,central,B,569.24,760.06,1086.71,19354.16,25842.04,36948.14
+6A switch socket combined set,6a switch socket combined set,520,central,B,252.78,346.07,523.61,131445.6,179956.4,272277.2
+16A power socket,16a power socket,180,central,B,265.31,355.97,514.79,47755.8,64074.6,92662.2
+32A industrial socket,32a industrial socket,34,central,B,484.01,649.42,939.15,16456.34,22080.28,31931.1
+PVC conduit 25mm ISI marked,pvc conduit 25mm isi marked,5400,central,B,210.52,285.29,422.02,1136808,1540566,2278908
+PVC conduit 32mm ISI marked,pvc conduit 32mm isi marked,2800,central,B,207.89,281.72,416.76,582092,788816,1166928
+GI flexible conduit 25mm,gi flexible conduit 25mm,1600,central,B,216.31,293.14,433.64,346096,469024,693824
+Switchboard wiring complete,switchboard wiring complete,210,central,B,528.85,706.14,1009.62,111058.5,148289.4,212020.2
+Main LT panel fabrication,main lt panel fabrication,3,central,B,22882.34,30553.12,43684.46,68647.02,91659.36,131053.38
+AC outdoor MS stand,ac outdoor ms stand,12,central,B,453.51,611.51,894.44,5442.12,7338.12,10733.28
+VRV copper piping installation,vrv copper piping installation,740,central,B,980.19,1302.51,1841.18,725340.6,963857.4,1362473.2
+Earthing GI strip 25x3mm,earthing gi strip 25x3mm,1300,central,B,393.73,528.28,763.97,511849,686764,993161
+Earth busbar 300x50mm,earth busbar 300x50mm,8,central,B,519.4,703.87,1041.25,4155.2,5630.96,8330
+Cable gland brass 25mm,cable gland brass 25mm,60,central,B,403.07,551.83,834.93,24184.2,33109.8,50095.8
+Cable gland brass 32mm,cable gland brass 32mm,45,central,B,410.09,561.43,849.47,18454.05,25264.35,38226.15
+Lug copper 25sqmm,lug copper 25sqmm,150,central,B,440.88,594.48,869.52,66132,89172,130428
+Lug copper 16sqmm,lug copper 16sqmm,180,central,B,440.88,594.48,869.52,79358.4,107006.4,156513.6
+Fire alarm detector point,fire alarm detector point,220,central,B,982.54,1311.91,1875.75,216158.8,288620.2,412665
+Fire alarm MCP with backbox,fire alarm mcp with backbox,45,central,B,524.13,717.55,1085.69,23585.85,32289.75,48856.05
+Hooter with flasher,hooter with flasher,40,central,B,570.53,769.3,1125.23,22821.2,30772,45009.2
+UPS 10KVA online,ups 10kva online,2,central,B,13525.21,18328.56,27113.62,27050.42,36657.12,54227.24
+UPS battery 26AH,ups battery 26ah,36,central,B,2419.22,3199.52,4471.22,87091.92,115182.72,160963.92
+Server rack 42U,server rack 42u,2,central,B,11974.74,16146.49,23616.84,23949.48,32292.98,47233.68
+WiFi access point with mounting kit,wifi access point with mounting kit,28,central,B,2587.8,3438.75,4860.87,72458.4,96285,136104.36
+Speaker ceiling type 6W,speaker ceiling type 6w,85,central,B,2200.84,2910.71,4067.62,187071.4,247410.35,345747.7
+PA system amplifier 120W,pa system amplifier 120w,3,central,B,3861.42,5181.03,7492.57,11584.26,15543.09,22477.71
+vitrified tile,vitrified tile,1250,central,B,546.72,621.27,695.82,683400,776587.5,869775
+granite,granite,180,central,B,415.21,554.4,792.68,74737.8,99792,142682.4
+carpet tile,carpet tile,420,central,B,930.44,1057.32,1184.2,390784.8,444074.4,497364
+Self-leveling compound,self-leveling compound,95,central,B,400.69,542.98,803.24,38065.55,51583.1,76307.8
+Floor protection sheet,floor protection sheet,1500,central,B,436.98,583.47,834.23,655470,875205,1251345
+GI pipe 40mm medium grade,gi pipe 40mm medium grade,1600,central,B,1386.89,1888.98,2826.11,2219024,3022368,4521776
+Fire hydrant landing valve,fire hydrant landing valve,42,central,B,1166.27,1564.82,2262.97,48983.34,65722.44,95044.74
+Sprinkler pendent type,sprinkler pendent type,620,central,B,459.31,607.45,848.89,284772.2,376619,526311.8
+Fire hose box double door,fire hose box double door,38,central,B,849.61,1151.34,1703.19,32285.18,43750.92,64721.22
+Fire pump 15HP,fire pump 15hp,3,central,B,6714.47,8965.34,12818.53,20143.41,26896.02,38455.59
+GI pipe 25mm medium grade,gi pipe 25mm medium grade,950,central,B,438.6,597.38,893.74,416670,567511,849053
+GI pipe 50mm medium grade,gi pipe 50mm medium grade,780,central,B,438.64,597.45,893.85,342139.2,466011,697203
+Butterfly valve 100mm,butterfly valve 100mm,24,central,B,1097.98,1503.19,2274.39,26351.52,36076.56,54585.36
+Gate valve 80mm,gate valve 80mm,36,central,B,780.47,1042.11,1490,28096.92,37515.96,53640
+Y-Strainer 65mm,y-strainer 65mm,32,central,B,497.29,670.54,980.77,15913.28,21457.28,31384.64
+MS pipe 80mm heavy duty,ms pipe 80mm heavy duty,420,central,B,450.01,600.86,859.1,189004.2,252361.2,360822
+Fire brigade inlet connection,fire brigade inlet connection,12,central,B,1413.74,1896.87,2743.16,16964.88,22762.44,32917.92
+Pressure gauge 0-14kg,pressure gauge 0-14kg,28,central,B,1027.02,1406.04,2127.39,28756.56,39369.12,59566.92
+Flow switch paddle type,flow switch paddle type,16,central,B,1985.13,2650.6,3789.8,31762.08,42409.6,60636.8
+Check valve 80mm NRV,check valve 80mm nrv,22,central,B,717.06,976.66,1461.19,15775.32,21486.52,32146.18
+Fire alarm panel 2-loop,fire alarm panel 2-loop,6,central,B,8031.15,10883.34,16099.84,48186.9,65300.04,96599.04
+Smoke detector optical type,smoke detector optical type,350,central,B,860.4,1154.44,1669.51,301140,404054,584328.5
+Heat detector fixed temperature,heat detector fixed temperature,140,central,B,1148.59,1548.74,2265.29,160802.6,216823.6,317140.6
+Manual call point (MCP),manual call point (mcp),48,central,B,518.73,686.05,958.74,24899.04,32930.4,46019.52
+Hooter with strobe,hooter with strobe,52,central,B,638.37,856.53,1238.68,33195.24,44539.56,64411.36
+Fire extinguisher CO2 4.5kg,fire extinguisher co2 4.5kg,110,central,B,980.79,1329.1,1966.15,107886.9,146201,216276.5
+Fire extinguisher DCP 5kg,fire extinguisher dcp 5kg,95,central,B,980.79,1329.1,1966.15,93175.05,126264.5,186878.5
+Fire extinguisher ABC 6kg,fire extinguisher abc 6kg,130,central,B,980.79,1329.1,1966.15,127502.7,172783,255593.5
+MS support fabrication for riser,ms support fabrication for riser,580,central,B,524.48,700.3,1001.28,304159.84,406174,580742.4
+Hose reel drum with 30m hose,hose reel drum with 30m hose,28,central,B,2821.08,3842.39,5748.62,78990.24,107587,160962.96
+Hydrant head single outlet,hydrant head single outlet,18,central,B,1097.98,1503.19,2274.39,19763.64,27057.42,40939.02
+Sprinkler sidewall type,sprinkler sidewall type,220,central,B,459.31,607.45,848.89,101048.2,133639,186755.8
+Deluge valve 150mm,deluge valve 150mm,4,central,B,2821.08,3842.39,5748.62,11284.32,15369.56,22994.48
+SS flexible hose 300mm,ss flexible hose 300mm,160,central,B,546.72,752.39,1151.26,87475.2,120382.4,184201.6
+FM200 clean agent cylinder 40L,fm200 clean agent cylinder 40l,8,central,B,2821.08,3842.39,5748.62,22568.64,30739.12,45988.96
+Diesel engine fire pump 75HP,diesel engine fire pump 75hp,1,central,B,28858.19,39106.89,57851.23,28858.19,39106.89,57851.23
+Jockey pump 5HP,jockey pump 5hp,3,central,B,3359.57,4507.68,6518.8,10078.71,13523.04,19556.4
+Control panel for pump room,control panel for pump room,2,central,B,7030.51,9575.76,14326.34,14061.02,19151.52,28652.68
+MS fabricated pump base frame,ms fabricated pump base frame,2,central,B,524.48,700.3,1001.28,1048.96,1400.6,2002.56
+Pressure relief valve 50mm,pressure relief valve 50mm,10,central,B,1074.57,1456.19,2154.15,10745.7,14561.9,21541.5
+Fire hose coupling SS,fire hose coupling ss,75,central,B,843.14,1142.58,1690.24,63235.5,85693.5,126768
+Rubber gasket for hydrant line,rubber gasket for hydrant line,210,central,B,979.5,1327.36,1963.57,205695,278745.6,412349.7
+Nozzle branch pipe SS,nozzle branch pipe ss,56,central,B,650.25,876.78,1282.43,36414,49099.68,71816.08
+Fire bucket with stand,fire bucket with stand,28,central,B,658.07,887.32,1297.85,18425.96,24844.96,36339.8
+PVC conduit 25mm for alarm wiring,pvc conduit 25mm for alarm wiring,1900,central,B,226.19,306.52,453.44,429761,582388,861536
+Underground sump cleaning upto 50KL,underground sump cleaning upto 50kl,1,central,B,510.18,691.36,1022.74,510.18,691.36,1022.74
+Desludging of septic tank,desludging of septic tank,3,central,B,529.25,703.28,994.13,1587.75,2109.84,2982.39
+Overhead tank cleaning 30KL,overhead tank cleaning 30kl,2,central,B,510.18,691.36,1022.74,1020.36,1382.72,2045.48
+Chlorination of water tanks,chlorination of water tanks,80,central,B,524.48,700.3,1001.28,41958.4,56024,80102.4
+Jet pressure cleaning,jet pressure cleaning,5000,central,B,519.71,697.32,1008.43,2598550,3486600,5042150
+Underground sump cleaning upto 100KL,underground sump cleaning upto 100kl,1,central,B,505.41,688.38,1029.89,505.41,688.38,1029.89
+Overhead tank cleaning 50KL,overhead tank cleaning 50kl,3,central,B,510.18,691.36,1022.74,1530.54,2074.08,3068.22
+Desludging of bio-digester tank,desludging of bio-digester tank,2,central,B,505.41,688.38,1029.89,1010.82,1376.76,2059.78
+Drain line jetting and flushing,drain line jetting and flushing,250,central,B,519.71,697.32,1008.43,129927.5,174330,252107.5
+Sewage pipeline mechanical rodding,sewage pipeline mechanical rodding,180,central,B,505.41,688.38,1029.89,90973.8,123908.4,185380.2
+Floor deep cleaning using scrubber,floor deep cleaning using scrubber,6000,central,B,500.64,685.4,1037.04,3003840,4112400,6222240
+Washroom deep cleaning complete,washroom deep cleaning complete,25,central,B,510.18,691.36,1022.74,12754.5,17284,25568.5
+Waterproof tank anti-bacterial coating,waterproof tank anti-bacterial coating,1200,central,B,505.41,688.38,1029.89,606492,826056,1235868
+Tank desludging with high vacuum tanker,tank desludging with high vacuum tanker,4,central,B,500.64,685.4,1037.04,2002.56,2741.6,4148.16

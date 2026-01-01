@@ -1,0 +1,155 @@
+sub_id,material_name,substitute_material,quality_level,cost_factor,performance_factor,reason
+1,Copper Wire,Aluminium Wire,standard,0.78,0.8,cost saving
+2,Copper Wire,FRLS Copper Wire Premium,premium,1.12,1.2,fire safety
+3,Copper Wire,Copper Cable Heavy Duty,premium,1.15,1.25,high load areas
+4,PVC Conduit,HDPE Conduit,premium,1.1,1.14,durability
+5,PVC Conduit,FRLS Conduit,premium,1.08,1.12,fire safety
+6,Switch,Modular Switch,premium,1.1,1.15,client preference
+7,Switch,Economy Switch,economy,0.85,0.8,cost saving
+8,Socket,Modular Socket,premium,1.1,1.15,standardization
+9,Socket,Universal Socket,premium,1.12,1.18,compatibility
+10,Junction Box,Metal Junction Box,premium,1.15,1.18,safety
+11,Junction Box,PVC Junction Box,standard,0.95,0.92,availability
+12,CPVC Pipe,UPVC Pipe,premium,1.06,1.13,faster installation
+13,CPVC Pipe,PPR Pipe,premium,1.1,1.08,supply shortage
+14,CPVC Pipe,GI Pipe,economy,0.88,0.85,cost saving
+15,UPVC Pipe,CPVC Pipe,standard,0.95,0.92,cost reduction
+16,UPVC Pipe,PPR Pipe,premium,1.05,1.1,hot water usage
+17,CPVC Elbow,UPVC Elbow,standard,0.95,0.9,availability
+18,CPVC Elbow,PPR Elbow,premium,1.05,1.1,durability
+19,CPVC Tee,UPVC Tee,standard,0.96,0.9,cost saving
+20,CPVC Tee,PPR Tee,premium,1.06,1.1,high pressure
+21,Ball Valve,Gate Valve,standard,0.9,0.85,cost saving
+22,Ball Valve,Angle Valve,premium,1.05,1.1,better control
+23,Ball Valve,Brass Ball Valve,premium,1.12,1.18,durability
+24,Solvent Cement,CPVC Solvent Premium,premium,1.08,1.15,bond strength
+25,Solvent Cement,UPVC Solvent Cement,standard,0.97,0.92,availability
+26,Plywood,Block Board,premium,1.05,1.12,better strength
+27,Plywood,MDF Board,standard,0.92,0.88,cost reduction
+28,Plywood,HDHMR Board,premium,1.1,1.2,water resistance
+29,Laminate,Veneer,premium,1.07,1.14,better finish
+30,Laminate,Acrylic Sheet,premium,1.12,1.15,modern look
+31,Laminate,PVC Laminate,standard,0.95,0.9,moisture resistance
+32,Adhesive,Tile Adhesive Premium,premium,1.08,1.18,bond strength
+33,Adhesive,Fevicol SH,standard,1.0,1.0,availability
+34,Edge Band,PVC Edge Band Premium,premium,1.06,1.12,finish quality
+35,Edge Band,ABS Edge Band,premium,1.1,1.18,durability
+36,Hinges,Soft Close Hinges,premium,1.15,1.2,user comfort
+37,Hinges,Standard Hinges,economy,0.85,0.8,cost saving
+38,Handles,Stainless Steel Handle,premium,1.1,1.15,durability
+39,Handles,Aluminium Handle,standard,0.95,0.9,cost reduction
+40,Vitrified Tile,Granite,premium,1.05,1.2,client preference
+41,Vitrified Tile,Ceramic Tile,standard,0.9,0.85,cost saving
+42,Vitrified Tile,Porcelain Tile,premium,1.1,1.18,water resistance
+43,Ceramic Tile,Porcelain Tile,premium,1.08,1.18,durability
+44,Ceramic Tile,Vitrified Tile,premium,1.12,1.2,premium finish
+45,Tile Adhesive,Tile Adhesive Premium,premium,1.1,1.18,better bonding
+46,Tile Adhesive,Cement Mortar,economy,0.7,0.75,cost saving
+47,Tile Grout,Epoxy Grout,premium,1.12,1.15,chemical resistance
+48,Tile Grout,Cement Grout,standard,0.9,0.85,availability
+49,Spacer,Reusable Spacer,premium,1.05,1.12,reusability
+50,Spacer,Plastic Spacer,standard,0.9,0.9,cost saving
+51,Cleaning Chemical - Type 1,Industrial Cleaning Chemical,premium,1.1,1.15,heavy contamination
+52,Cleaning Chemical - Type 1,Bio Cleaning Chemical,premium,1.08,1.12,eco friendly
+53,Cleaning Chemical - Type 2,Bio Cleaning Chemical,premium,1.1,1.14,eco friendly
+54,Cleaning Chemical - Type 2,Industrial Degreaser,standard,0.95,0.9,availability
+55,Disinfectant,Chlorine Based Disinfectant,standard,0.95,0.9,cost saving
+56,Disinfectant,Hydrogen Peroxide,premium,1.12,1.18,safety
+57,Hose,High Pressure Hose,premium,1.1,1.15,durability
+58,Hose,Reinforced Rubber Hose,standard,0.95,0.92,availability
+59,Brush,Mechanical Brush,premium,1.12,1.2,faster cleaning
+60,Brush,Nylon Brush,standard,0.9,0.88,cost saving
+61,CPVC Elbow,UPVC Elbow Variant,standard,0.9595,0.909,availability
+62,Edge Band,PVC Edge Band Premium Variant,premium,1.0706,1.1312000000000002,finish quality
+63,Ceramic Tile,Porcelain Tile Variant,premium,1.0908,1.1918,durability
+64,Laminate,Veneer Variant,premium,1.0807,1.1514,better finish
+65,Ball Valve,Gate Valve Variant,standard,0.909,0.8584999999999999,cost saving
+66,Junction Box,PVC Junction Box Variant,standard,0.9595,0.9292,availability
+67,Plywood,MDF Board Variant,standard,0.9292,0.8888,cost reduction
+68,CPVC Pipe,PPR Pipe Variant,premium,1.1110000000000002,1.0908,supply shortage
+69,Tile Grout,Epoxy Grout Variant,premium,1.1312000000000002,1.1615,chemical resistance
+70,UPVC Pipe,CPVC Pipe Variant,standard,0.9595,0.9292,cost reduction
+71,CPVC Pipe,PPR Pipe Variant,premium,1.1110000000000002,1.0908,supply shortage
+72,Laminate,Veneer Variant Variant,premium,1.091507,1.162914,better finish
+73,CPVC Pipe,PPR Pipe Variant Variant,premium,1.1221100000000002,1.101708,supply shortage
+74,Plywood,Block Board Variant,premium,1.0605,1.1312000000000002,better strength
+75,Switch,Modular Switch Variant,premium,1.1110000000000002,1.1615,client preference
+76,UPVC Pipe,CPVC Pipe Variant,standard,0.9595,0.9292,cost reduction
+77,Cleaning Chemical - Type 2,Bio Cleaning Chemical Variant,premium,1.1110000000000002,1.1514,eco friendly
+78,Plywood,Block Board Variant,premium,1.0605,1.1312000000000002,better strength
+79,Ball Valve,Gate Valve Variant,standard,0.909,0.8584999999999999,cost saving
+80,PVC Conduit,HDPE Conduit Variant,premium,1.1110000000000002,1.1514,durability
+81,Plywood,MDF Board Variant Variant,standard,0.938492,0.897688,cost reduction
+82,Edge Band,PVC Edge Band Premium Variant Variant,premium,1.081306,1.1425120000000002,finish quality
+83,Adhesive,Tile Adhesive Premium Variant,premium,1.0908,1.1918,bond strength
+84,Hose,Reinforced Rubber Hose Variant,standard,0.9595,0.9292,availability
+85,CPVC Elbow,UPVC Elbow Variant,standard,0.9595,0.909,availability
+86,Tile Adhesive,Cement Mortar Variant,economy,0.707,0.7575000000000001,cost saving
+87,Ceramic Tile,Porcelain Tile Variant Variant,premium,1.101708,1.203718,durability
+88,Spacer,Plastic Spacer Variant,standard,0.909,0.909,cost saving
+89,UPVC Pipe,CPVC Pipe Variant Variant,standard,0.969095,0.938492,cost reduction
+90,UPVC Pipe,CPVC Pipe Variant Variant,standard,0.969095,0.938492,cost reduction
+91,Socket,Universal Socket Variant,premium,1.1312000000000002,1.1918,compatibility
+92,CPVC Elbow,UPVC Elbow Variant Variant,standard,0.969095,0.91809,availability
+93,Plywood,MDF Board Variant Variant Variant,standard,0.94787692,0.90666488,cost reduction
+94,Adhesive,Fevicol SH Variant,standard,1.01,1.01,availability
+95,Copper Wire,Copper Cable Heavy Duty Variant,premium,1.1615,1.2625,high load areas
+96,Adhesive,Tile Adhesive Premium Variant,premium,1.0908,1.1918,bond strength
+97,CPVC Pipe,GI Pipe Variant,economy,0.8888,0.8584999999999999,cost saving
+98,Spacer,Plastic Spacer Variant Variant,standard,0.91809,0.91809,cost saving
+99,UPVC Pipe,PPR Pipe Variant,premium,1.0605,1.1110000000000002,hot water usage
+100,Hose,Reinforced Rubber Hose Variant,standard,0.9595,0.9292,availability
+101,Vitrified Tile,Porcelain Tile Variant,premium,1.1110000000000002,1.1918,water resistance
+102,Handles,Aluminium Handle Variant,standard,0.9595,0.909,cost reduction
+103,Spacer,Plastic Spacer Variant Variant,standard,0.91809,0.91809,cost saving
+104,Brush,Mechanical Brush Variant,premium,1.1312000000000002,1.212,faster cleaning
+105,Ball Valve,Angle Valve Variant,premium,1.0605,1.1110000000000002,better control
+106,Vitrified Tile,Porcelain Tile Variant Variant,premium,1.1221100000000002,1.203718,water resistance
+107,Plywood,MDF Board Variant,standard,0.9292,0.8888,cost reduction
+108,Copper Wire,FRLS Copper Wire Premium Variant,premium,1.1312000000000002,1.212,fire safety
+109,Edge Band,PVC Edge Band Premium Variant,premium,1.0706,1.1312000000000002,finish quality
+110,Adhesive,Tile Adhesive Premium Variant,premium,1.0908,1.1918,bond strength
+111,Junction Box,PVC Junction Box Variant Variant,standard,0.969095,0.938492,availability
+112,Copper Wire,Copper Cable Heavy Duty Variant,premium,1.1615,1.2625,high load areas
+113,Plywood,Block Board Variant,premium,1.0605,1.1312000000000002,better strength
+114,Plywood,Block Board Variant Variant,premium,1.071105,1.1425120000000002,better strength
+115,CPVC Pipe,GI Pipe Variant Variant,economy,0.897688,0.8670849999999999,cost saving
+116,Ball Valve,Brass Ball Valve Variant,premium,1.1312000000000002,1.1918,durability
+117,UPVC Pipe,CPVC Pipe Variant Variant Variant,standard,0.97878595,0.94787692,cost reduction
+118,Cleaning Chemical - Type 2,Bio Cleaning Chemical Variant,premium,1.1110000000000002,1.1514,eco friendly
+119,Edge Band,PVC Edge Band Premium Variant,premium,1.0706,1.1312000000000002,finish quality
+120,UPVC Pipe,CPVC Pipe Variant Variant,standard,0.969095,0.938492,cost reduction
+121,Spacer,Plastic Spacer Variant,standard,0.909,0.909,cost saving
+122,UPVC Pipe,PPR Pipe Variant Variant,premium,1.071105,1.1221100000000002,hot water usage
+123,Tile Grout,Epoxy Grout Variant,premium,1.1312000000000002,1.1615,chemical resistance
+124,Hose,Reinforced Rubber Hose Variant Variant,standard,0.969095,0.938492,availability
+125,Copper Wire,Aluminium Wire Variant,standard,0.7878000000000001,0.808,cost saving
+126,Solvent Cement,UPVC Solvent Cement Variant,standard,0.9797,0.9292,availability
+127,UPVC Pipe,CPVC Pipe Variant Variant Variant,standard,0.97878595,0.94787692,cost reduction
+128,Junction Box,PVC Junction Box Variant Variant,standard,0.969095,0.938492,availability
+129,Handles,Stainless Steel Handle Variant,premium,1.1110000000000002,1.1615,durability
+130,Laminate,Veneer Variant Variant,premium,1.091507,1.162914,better finish
+131,Tile Adhesive,Tile Adhesive Premium Variant,premium,1.1110000000000002,1.1918,better bonding
+132,Handles,Stainless Steel Handle Variant,premium,1.1110000000000002,1.1615,durability
+133,Handles,Stainless Steel Handle Variant Variant,premium,1.1221100000000002,1.173115,durability
+134,Ball Valve,Angle Valve Variant,premium,1.0605,1.1110000000000002,better control
+135,Tile Grout,Epoxy Grout Variant Variant,premium,1.1425120000000002,1.173115,chemical resistance
+136,Hinges,Soft Close Hinges Variant,premium,1.1615,1.212,user comfort
+137,UPVC Pipe,CPVC Pipe Variant Variant Variant,standard,0.97878595,0.94787692,cost reduction
+138,CPVC Elbow,PPR Elbow Variant,premium,1.0605,1.1110000000000002,durability
+139,Vitrified Tile,Porcelain Tile Variant,premium,1.1110000000000002,1.1918,water resistance
+140,Vitrified Tile,Porcelain Tile Variant Variant Variant,premium,1.1333311,1.2157551800000002,water resistance
+141,CPVC Pipe,PPR Pipe Variant Variant Variant,premium,1.1333311,1.11272508,supply shortage
+142,UPVC Pipe,CPVC Pipe Variant Variant Variant Variant,standard,0.9885738095,0.9573556892,cost reduction
+143,Cleaning Chemical - Type 2,Bio Cleaning Chemical Variant Variant,premium,1.1221100000000002,1.162914,eco friendly
+144,Handles,Aluminium Handle Variant,standard,0.9595,0.909,cost reduction
+145,Plywood,MDF Board Variant Variant,standard,0.938492,0.897688,cost reduction
+146,Vitrified Tile,Porcelain Tile Variant Variant Variant Variant,premium,1.1446644110000002,1.2279127318000005,water resistance
+147,CPVC Pipe,GI Pipe Variant Variant,economy,0.897688,0.8670849999999999,cost saving
+148,CPVC Pipe,PPR Pipe Variant Variant,premium,1.1221100000000002,1.101708,supply shortage
+149,Disinfectant,Chlorine Based Disinfectant Variant,standard,0.9595,0.909,cost saving
+150,Laminate,PVC Laminate Variant,standard,0.9595,0.909,moisture resistance
+NEW-Emu1,Emulsion Paint,Emulsion Paint Alt,standard,1.0,1.0,generic alternative
+NEW-Pri1,Primer,Primer Alt,standard,1.0,1.0,generic alternative
+NEW-Put1,Putty,Putty Alt,standard,1.0,1.0,generic alternative
+NEW-Rol1,Roller,Roller Alt,standard,1.0,1.0,generic alternative
