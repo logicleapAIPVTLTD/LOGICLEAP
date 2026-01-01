@@ -12,7 +12,7 @@ const app = express();
 
 // Middleware
 app.use(helmet());
-const cors = require("cors");
+// const cors = require("cors");
 
 app.use(cors({
   origin: "https://logicleap-2.onrender.com",
