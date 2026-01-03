@@ -2,81 +2,49 @@
 import { Edit2, Trash2, ChevronDown } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
-// ALIAS_MAP from backend/dynamo_wbs 2.py
-const ALIAS_MAP = {
-  "cpvc": ["plumbing", "pipeline", "pipe"],
-  "pvc": ["plumbing", "pipeline", "pipe"],
-  "hdpe": ["pipeline", "pipe"],
-  "gi": ["pipeline", "pipe"],
-  "piping": ["pipeline", "pipe"],
-  "pipes": ["pipeline", "pipe"],
-  "waterline": ["pipeline"],
-  "pipeline": ["pipeline"],
-  "sewer": ["sewer"],
-  "manhole": ["sewer"],
-  "drain": ["drainage"],
-  "drainage": ["drainage"],
-  "road": ["road"],
-  "highway": ["road"],
-  "street": ["road"],
-  "bitumen": ["road"],
-  "asphalt": ["road"],
-  "concrete road": ["road"],
-  "footpath": ["footpath"],
-  "culvert": ["culvert"],
-  "bridge": ["bridge"],
-  "canal": ["canal"],
-  "retaining": ["retaining"],
-  "wiring": ["electrical"],
-  "cable": ["electrical"],
-  "switch": ["electrical"],
-  "lighting": ["lighting"],
-  "false ceiling": ["ceiling"],
-  "gypsum": ["ceiling"],
-  "painting": ["painting"],
-  "paint": ["painting"],
-  "tiles": ["flooring"],
-  "tiling": ["flooring"],
-  "floor": ["flooring"],
-  "plumbing": ["plumbing"],
-  "kitchen": ["kitchen"],
-  "carpentry": ["carpentry"],
-  "furniture": ["furniture"],
-  "partition": ["partition"],
-  "sump": ["sump"],
-  "oht": ["oht"],
-  "overhead tank": ["oht"],
-  "septic": ["septic"],
-  "stp": ["stp"],
-  "etp": ["etp"],
-  "tank cleaning": ["tank"],
-  "sludge": ["sludge"],
-  "disinfection": ["disinfection"],
-  "pipeline flushing": ["pipeline"],
-  "repair": ["service"],
-  "maintenance": ["service"],
-  "ac": ["ac"],
-  "air conditioner": ["ac"],
-  "housekeeping": ["housekeeping"],
-  "facility": ["facility"],
-  "pest": ["pest"],
-  "solar": ["solar"],
-  "lift": ["lift"],
-  "fire": ["fire"],
-  "cctv": ["cctv"],
-  "security": ["security"],
-  "cleaning": ["cleaning"]
-};
-
-// Group items by category for nested dropdown
-const MATERIAL_CATEGORIES = {
-  "Pipeline & Plumbing": ["cpvc", "pvc", "hdpe", "gi", "piping", "pipes", "waterline", "pipeline", "plumbing"],
-  "Sewer & Drainage": ["sewer", "manhole", "drain", "drainage"],
-  "Roads & Infrastructure": ["road", "highway", "street", "bitumen", "asphalt", "concrete road", "footpath", "culvert", "bridge", "canal", "retaining"],
-  "Interior & Electrical": ["wiring", "cable", "switch", "lighting", "false ceiling", "gypsum", "painting", "paint", "tiles", "tiling", "floor", "kitchen", "carpentry", "furniture", "partition"],
-  "Tanks & Water Systems": ["sump", "oht", "overhead tank", "septic", "stp", "etp", "tank cleaning", "sludge", "disinfection", "pipeline flushing"],
-  "Services & Maintenance": ["repair", "maintenance", "ac", "air conditioner", "housekeeping", "facility", "pest", "solar", "lift", "fire", "cctv", "security", "cleaning"]
-};
+// Work Types for Material Dropdown
+const WORK_TYPES = [
+  "Flooring Work",
+  "Tiling Work",
+  "False Ceiling Work",
+  "Painting / Wall Painting",
+  "Wallpaper Fixing",
+  "Carpentry Work",
+  "Modular Kitchen Installation",
+  "Furniture Installation",
+  "Glass Partition Work",
+  "Office Interior Setup",
+  "Retail Showroom Interior",
+  "Electrical Wiring",
+  "Electrical Repair & Maintenance",
+  "Plumbing Work (Interior)",
+  "Plumbing Service Work",
+  "Road Construction",
+  "Highway Widening",
+  "Drainage Construction",
+  "Storm Water Drain Work",
+  "Bridge Construction",
+  "Culvert Construction",
+  "Retaining Wall Construction",
+  "Footpath Construction",
+  "Canal Lining",
+  "Water Pipeline Laying",
+  "Sewer Line Construction",
+  "Borewell Drilling",
+  "Pump House Construction",
+  "Substation Civil Work",
+  "Underground Sump Cleaning",
+  "Overhead Water Tank Cleaning",
+  "Septic Tank Cleaning",
+  "Facility Management Services",
+  "Housekeeping Services",
+  "Painting Contract Work",
+  "Pest Control Services",
+  "AC Installation & Servicing",
+  "Lift Maintenance",
+  "Fire Safety System Installation",
+  "CCTV Installation"
+];
 
 const STATE_TIER_MAP = {
   // States
@@ -124,7 +92,6 @@ const TIERS = ["T1", "T2", "T3"];
 
 const emptyItem = {
   projectMaterial: "",
-  category: "",
   state: "",
   tier: "",
   length: "",
@@ -135,8 +102,6 @@ const BOQGenerator = ({ boqData, setBoqData, setActiveView, setSelectedBOQItems 
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState(emptyItem);
   const [editIndex, setEditIndex] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [showMaterialDropdown, setShowMaterialDropdown] = useState(false);
 
   const [localBoqData, setLocalBoqData] = useState([]);
   useEffect(() => {
@@ -145,21 +110,6 @@ const BOQGenerator = ({ boqData, setBoqData, setActiveView, setSelectedBOQItems 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-    setFormData({ ...formData, category: category, projectMaterial: "" });
-  };
-
-  const handleMaterialSelect = (material) => {
-    setFormData({ ...formData, projectMaterial: material });
-    setShowMaterialDropdown(false);
-  };
-
-  const getMaterialsForCategory = () => {
-    if (!selectedCategory || !MATERIAL_CATEGORIES[selectedCategory]) return [];
-    return MATERIAL_CATEGORIES[selectedCategory];
   };
 
   const handleSave = () => {
@@ -199,7 +149,6 @@ const BOQGenerator = ({ boqData, setBoqData, setActiveView, setSelectedBOQItems 
     localStorage.removeItem("bomResult");
     localStorage.removeItem("costPredictions");
     setFormData(emptyItem);
-    setSelectedCategory("");
     setEditIndex(null);
     setShowForm(false);
   };
@@ -209,15 +158,6 @@ const BOQGenerator = ({ boqData, setBoqData, setActiveView, setSelectedBOQItems 
   const handleEdit = (index) => {
     const item = localBoqData[index];
     setFormData(item);
-    // Find category for the material
-    let foundCategory = "";
-    for (const [cat, materials] of Object.entries(MATERIAL_CATEGORIES)) {
-      if (materials.includes(item.projectMaterial)) {
-        foundCategory = cat;
-        break;
-      }
-    }
-    setSelectedCategory(foundCategory);
     setEditIndex(index);
     setShowForm(true);
   };
@@ -251,7 +191,6 @@ const BOQGenerator = ({ boqData, setBoqData, setActiveView, setSelectedBOQItems 
             onClick={() => {
               setShowForm(true);
               setFormData(emptyItem);
-              setSelectedCategory("");
             }}
             className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-sm transition-all duration-200 font-medium"
           >
@@ -278,76 +217,44 @@ const BOQGenerator = ({ boqData, setBoqData, setActiveView, setSelectedBOQItems 
       {/* Add / Edit Form */}
       {showForm && (
         <div className="border border-green-200 rounded-lg p-6 bg-gradient-to-br from-green-50 to-white space-y-4 shadow-sm">
-          {/* Nested Material Dropdown */}
-          <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Project </label>
-            
-            {/* Category Dropdown */}
+          {/* Material Dropdown */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Project / Material</label>
             <div className="relative">
               <select
-                value={selectedCategory}
-                onChange={(e) => handleCategoryChange(e.target.value)}
+                name="projectMaterial"
+                value={formData.projectMaterial}
+                onChange={handleChange}
                 className="w-full border border-green-300 p-3 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
               >
-                <option value="">Select Category</option>
-                {Object.keys(MATERIAL_CATEGORIES).map((category) => (
-                  <option key={category} value={category}>
-                    {category}
+                <option value="">Select Material</option>
+                {WORK_TYPES.map((workType) => (
+                  <option key={workType} value={workType}>
+                    {workType}
                   </option>
                 ))}
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" size={20} />
             </div>
-
-            {/* Material Dropdown (nested) */}
-            {selectedCategory && (
-              <div className="relative">
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={formData.projectMaterial}
-                    placeholder="Select Material"
-                    readOnly
-                    onClick={() => setShowMaterialDropdown(!showMaterialDropdown)}
-                    className="w-full border border-green-300 p-3 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 cursor-pointer"
-                  />
-                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" size={20} />
-                </div>
-                
-                {showMaterialDropdown && (
-                  <>
-                    <div 
-                      className="fixed inset-0 z-10" 
-                      onClick={() => setShowMaterialDropdown(false)}
-                    />
-                    <div className="absolute z-20 w-full mt-1 bg-white border border-green-200 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-                      {getMaterialsForCategory().map((material) => (
-                        <div
-                          key={material}
-                          onClick={() => handleMaterialSelect(material)}
-                          className="p-3 hover:bg-green-50 cursor-pointer transition-colors duration-150 border-b border-green-100 last:border-b-0"
-                        >
-                          <span className="text-gray-700 capitalize">{material}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-            )}
           </div>
 
           {/* State, Tier, Length, Width */}
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
-              <input
+              <select
                 name="state"
-                placeholder="State"
                 value={formData.state}
                 onChange={handleChange}
-                className="w-full border border-green-300 p-3 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-              />
+                className="w-full border border-green-300 p-3 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
+              >
+                <option value="">Select State</option>
+                {Object.keys(STATE_TIER_MAP).map((stateName) => (
+                  <option key={stateName} value={stateName}>
+                    {stateName}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Tier</label>
@@ -401,7 +308,6 @@ const BOQGenerator = ({ boqData, setBoqData, setActiveView, setSelectedBOQItems 
               onClick={() => {
                 setShowForm(false);
                 setFormData(emptyItem);
-                setSelectedCategory("");
                 setEditIndex(null);
               }}
               className="px-6 py-2 bg-gray-400 hover:bg-gray-500 text-white rounded-lg shadow-sm transition-all duration-200 font-medium flex-1"

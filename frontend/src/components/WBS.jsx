@@ -401,9 +401,54 @@
 
 
 
-import { AirVent } from "lucide-react"
+import { AirVent, ChevronDown } from "lucide-react"
 import React, { useState, useEffect, useMemo } from "react";
 import { generateWBS, generateWBSBatch } from "../services/api";
+
+// Work Types for Material Dropdown
+const WORK_TYPES = [
+  "Flooring Work",
+  "Tiling Work",
+  "False Ceiling Work",
+  "Painting / Wall Painting",
+  "Wallpaper Fixing",
+  "Carpentry Work",
+  "Modular Kitchen Installation",
+  "Furniture Installation",
+  "Glass Partition Work",
+  "Office Interior Setup",
+  "Retail Showroom Interior",
+  "Electrical Wiring",
+  "Electrical Repair & Maintenance",
+  "Plumbing Work (Interior)",
+  "Plumbing Service Work",
+  "Road Construction",
+  "Highway Widening",
+  "Drainage Construction",
+  "Storm Water Drain Work",
+  "Bridge Construction",
+  "Culvert Construction",
+  "Retaining Wall Construction",
+  "Footpath Construction",
+  "Canal Lining",
+  "Water Pipeline Laying",
+  "Sewer Line Construction",
+  "Borewell Drilling",
+  "Pump House Construction",
+  "Substation Civil Work",
+  "Underground Sump Cleaning",
+  "Overhead Water Tank Cleaning",
+  "Septic Tank Cleaning",
+  "Facility Management Services",
+  "Housekeeping Services",
+  "Painting Contract Work",
+  "Pest Control Services",
+  "AC Installation & Servicing",
+  "Lift Maintenance",
+  "Fire Safety System Installation",
+  "CCTV Installation"
+];
+
 const STATE_TIER_MAP = {
     // States
     "Andhra Pradesh": { code: "AP", defaultTier: "T1" },
@@ -482,7 +527,7 @@ export default function WBS({ setActiveView, initialItems = [] }) {
         return () => window.removeEventListener("storage", checkBOQChanges);
     }, [initialItems.length]);
 
-    // Initialize form with first BOQ item or empty form for manual generation
+            // Initialize form with first BOQ item or empty form for manual generation
     useEffect(() => {
         if (!selectedItemForForm) {
             if (initialItems.length > 0) {
@@ -520,6 +565,16 @@ export default function WBS({ setActiveView, initialItems = [] }) {
     /* ---------------- HANDLERS ---------------- */
     const handleFormInputChange = (field, value) => {
         setSelectedItemForForm(prev => ({ ...prev, [field]: value }));
+    };
+
+    const handleStateChange = (fullStateName) => {
+        const mapping = STATE_TIER_MAP[fullStateName];
+        setSelectedItemForForm(prev => ({
+            ...prev,
+            stateFull: fullStateName,
+            state: mapping?.code || "",
+            tier: mapping?.defaultTier || prev.tier || ""
+        }));
     };
 
     const handleGenerate = async (batch = false) => {
@@ -756,37 +811,41 @@ export default function WBS({ setActiveView, initialItems = [] }) {
 
                 {selectedItemForForm && (
                     <div className="space-y-4">
+                        {/* Project / Material Dropdown */}
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Project / Material</label>
-                        <input
-                            className="w-full border p-2 rounded"
-                            placeholder="BOQ Item"
-                            value={selectedItemForForm.projectMaterial || ""}
-                            onChange={e =>
-                                handleFormInputChange("projectMaterial", e.target.value)
-                            }
-                        />
+                            <div className="relative">
+                                <select
+                                    value={selectedItemForForm.projectMaterial || ""}
+                                    onChange={(e) => handleFormInputChange("projectMaterial", e.target.value)}
+                                    className="w-full border border-gray-300 p-2 rounded bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
+                                >
+                                    <option value="">Select Material</option>
+                                    {WORK_TYPES.map((workType) => (
+                                        <option key={workType} value={workType}>
+                                            {workType}
+                                        </option>
+                                    ))}
+                                </select>
+                                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" size={18} />
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
-                            <input
-                                    className="w-full border p-2 rounded"
-                                placeholder="Enter full state name"
-                                value={selectedItemForForm.stateFull || ""}
-                                onChange={e => {
-                                    const fullState = e.target.value;
-                                    const mapping = STATE_TIER_MAP[fullState];
-
-                                    setSelectedItemForForm(prev => ({
-                                        ...prev,
-                                        stateFull: fullState, // keep the full name for display
-                                        state: mapping?.code || "", // store the state code
-                                            tier: mapping?.defaultTier || prev.tier || ""  // store the tier
-                                    }));
-                                }}
-                            />
+                                <select
+                                    className="w-full border border-gray-300 p-2 rounded bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
+                                    value={selectedItemForForm.stateFull || ""}
+                                    onChange={(e) => handleStateChange(e.target.value)}
+                                >
+                                    <option value="">Select State</option>
+                                    {Object.keys(STATE_TIER_MAP).map((stateName) => (
+                                        <option key={stateName} value={stateName}>
+                                            {stateName}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Tier</label>
