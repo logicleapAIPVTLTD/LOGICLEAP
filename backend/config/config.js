@@ -5,7 +5,7 @@ module.exports = {
   nodeEnv: process.env.NODE_ENV || 'development',
   
   // Python configuration
-  pythonExecutable: "python3",
+  pythonExecutable: "python",
   pythonScriptPath: path.join(__dirname, '../python/bom.py'),
   dataFilePath: path.join(__dirname, '../python/data/mat_quan.xlsx'),
   

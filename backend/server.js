@@ -14,12 +14,35 @@ const app = express();
 app.use(helmet());
 // const cors = require("cors");
 
-app.use(cors({
-  origin: "https://logicleap-2.onrender.com",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ["https://logicleap-2.onrender.com","http://localhost:3000", "http://localhost:5173", "http://localhost:5174","https://logicleap-1.onrender.com/api"],
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+//   credentials: true
+// }));
+
+
+
+
+app.use(
+  cors({
+    origin: [
+      "https://logicleap-2.onrender.com",
+      "https://logicleap-1.onrender.com",
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "http://localhost:5174"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+  })
+);
+;
+
+
+
+
 
 app.use(morgan('dev'));
 app.use(express.json());
