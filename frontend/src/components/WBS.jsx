@@ -461,29 +461,60 @@ export default function WBS({ setActiveView, initialItems = [] }) {
     }, [results]);
 
     /* ---------------- INIT ---------------- */
+    // Sync with BOQ changes - clear WBS and related results when BOQ changes
     useEffect(() => {
-        if (initialItems.length > 0 && !selectedItemForForm) {
-            setSelectedItemForForm({ ...initialItems[0] });
+        const checkBOQChanges = () => {
+            const stored = JSON.parse(localStorage.getItem("boqItems") || "[]");
+            // If stored BOQ doesn't match initialItems, clear WBS, BOM, and Cost Prediction results
+            if (stored.length !== initialItems.length) {
+                localStorage.removeItem("wbsResults");
+                localStorage.removeItem("bomResult");
+                localStorage.removeItem("costPredictions");
+                setResults(null);
+            }
+        };
+        
+        // Check on mount and when initialItems change
+        checkBOQChanges();
+        
+        // Also listen for storage events
+        window.addEventListener("storage", checkBOQChanges);
+        return () => window.removeEventListener("storage", checkBOQChanges);
+    }, [initialItems.length]);
+
+    // Initialize form with first BOQ item or empty form for manual generation
+    useEffect(() => {
+        if (!selectedItemForForm) {
+            if (initialItems.length > 0) {
+                const firstItem = { ...initialItems[0] };
+                // Get full state name for display
+                const stateFull = Object.keys(STATE_TIER_MAP).find(
+                    k => STATE_TIER_MAP[k].code === firstItem.state
+                ) || "";
+                setSelectedItemForForm({
+                    ...firstItem,
+                    stateFull: stateFull
+                });
+            } else {
+                // Initialize with empty form for manual generation
+                setSelectedItemForForm({
+                    projectMaterial: "",
+                    state: "",
+                    tier: "",
+                    length: "",
+                    width: "",
+                    stateFull: ""
+                });
+            }
         }
     }, [initialItems, selectedItemForForm]);
 
     useEffect(() => {
-        const savedResults = sessionStorage.getItem("wbsResults");
+        const savedResults = localStorage.getItem("wbsResults");
         if (savedResults) {
             setResults(JSON.parse(savedResults));
         }
     }, []);
-    useEffect(() => {
-    const handleBeforeUnload = () => {
-        sessionStorage.removeItem("wbsResults");
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-        window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-}, []);
 
 
     /* ---------------- HANDLERS ---------------- */
@@ -523,7 +554,7 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                         data: Array.from(mergedMap.values())
                     };
 
-                    sessionStorage.setItem("wbsResults", JSON.stringify(mergedResults));
+                    localStorage.setItem("wbsResults", JSON.stringify(mergedResults));
                     return mergedResults;
                 });
 
@@ -555,7 +586,7 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                         data: Array.from(mergedMap.values())
                     };
 
-                    sessionStorage.setItem("wbsResults", JSON.stringify(mergedResults));
+                    localStorage.setItem("wbsResults", JSON.stringify(mergedResults));
                     return mergedResults;
                 });
             }
@@ -574,14 +605,91 @@ export default function WBS({ setActiveView, initialItems = [] }) {
 
         return boqArray.map(boqItem => {
             const tasksByStage = {};
-            if (boqItem?.wbs) {
-                Object.entries(boqItem.wbs).forEach(([stageName, tasks]) => {
-                    tasksByStage[stageName] = tasks.map(task => ({
-                        ...task,
-                        boq_text: boqItem.boq_text
-                    }));
+            
+            // Handle different possible data structures
+            let wbsData = boqItem?.wbs;
+            
+            // Stage normalization helper to handle numeric or text stage names
+            const normalizeStageName = (name) => {
+                if (name === null || name === undefined) return "Unknown";
+                const raw = name.toString().trim().toLowerCase();
+                // Handle numeric strings like "1.0", "2.0"
+                const numericStage = Number(raw);
+                const normalizedNumeric = Number.isFinite(numericStage) ? numericStage.toString().replace(/\.0+$/, "") : raw;
+                const key = normalizedNumeric || raw;
+                const stageMap = {
+                    "1": "Planning",
+                    "planning": "Planning",
+                    "plan": "Planning",
+                    "2": "Procurement",
+                    "procurement": "Procurement",
+                    "ordering materials": "Procurement",
+                    "3": "Execution",
+                    "execution": "Execution",
+                    "exec": "Execution",
+                    "4": "QC",
+                    "qc": "QC",
+                    "qc check": "QC",
+                    "5": "Billing",
+                    "billing": "Billing"
+                };
+                if (stageMap[key]) return stageMap[key];
+                if (stageMap[raw]) return stageMap[raw];
+                return raw ? raw.charAt(0).toUpperCase() + raw.slice(1) : "Unknown";
+            };
+
+            // If wbs is an array (from dynamo_wbs format), convert it to stage-based object
+            if (Array.isArray(wbsData)) {
+                wbsData = wbsData.reduce((acc, task) => {
+                    const stageName = normalizeStageName(task.stage || "Unknown");
+                    if (!acc[stageName]) {
+                        acc[stageName] = [];
+                    }
+                    acc[stageName].push(task);
+                    return acc;
+                }, {});
+            }
+            
+            // Process the wbs data
+            if (wbsData && typeof wbsData === 'object') {
+                Object.entries(wbsData).forEach(([stageName, tasks]) => {
+                    // Ensure tasks is an array
+                    const tasksArray = Array.isArray(tasks) ? tasks : [];
+                    const normalizedStageName = normalizeStageName(stageName);
+
+                    const mappedTasks = tasksArray.map(task => {
+                        // Handle different task structures
+                        const taskObj = typeof task === 'string' ? { task_name: task } : task;
+                        
+                        // Preserve duration object if it exists, otherwise compute from final_days
+                        let durationObj = taskObj.duration;
+                        if (!durationObj && taskObj.final_days) {
+                            const hours = taskObj.final_days * 8;
+                            durationObj = {
+                                expected_hours: hours,
+                                optimistic_hours: hours * 0.8,
+                                most_likely_hours: hours,
+                                pessimistic_hours: hours * 1.2
+                            };
+                        }
+                        
+                        return {
+                            task_id: taskObj.task_id || taskObj.wbs_task_id || `task-${Math.random().toString(36).substr(2, 9)}`,
+                            task_name: taskObj.task_name || taskObj.task || task,
+                            duration: durationObj,
+                            boq_text: boqItem.boq_text
+                        };
+                    });
+
+                    // Combine tasks if the stage already exists
+                    if (!tasksByStage[normalizedStageName]) {
+                        tasksByStage[normalizedStageName] = mappedTasks;
+                    } else {
+                        tasksByStage[normalizedStageName] = [...tasksByStage[normalizedStageName], ...mappedTasks];
+                    }
                 });
             }
+            
             return {
                 ...boqItem,
                 tasksByStage
@@ -625,10 +733,31 @@ export default function WBS({ setActiveView, initialItems = [] }) {
 
             {/* SINGLE BOQ FORM */}
             <div className="bg-white p-6 shadow rounded mb-8">
-                <h3 className="font-semibold mb-4">Generate WBS (Single BOQ)</h3>
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="font-semibold">Generate WBS (Single BOQ)</h3>
+                    <button
+                        onClick={() => {
+                            setSelectedItemForForm({
+                                projectMaterial: "",
+                                state: "",
+                                tier: "",
+                                length: "",
+                                width: "",
+                                stateFull: ""
+                            });
+                            setResults(null);
+                            localStorage.removeItem("wbsResults");
+                        }}
+                        className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded transition-colors"
+                    >
+                        Start Fresh / Manual
+                    </button>
+                </div>
 
                 {selectedItemForForm && (
                     <div className="space-y-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Project / Material</label>
                         <input
                             className="w-full border p-2 rounded"
                             placeholder="BOQ Item"
@@ -637,27 +766,13 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                 handleFormInputChange("projectMaterial", e.target.value)
                             }
                         />
+                        </div>
 
-                        <div className="flex gap-4">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
                             <input
-                                type="number"
-                                className="flex-1 border p-2 rounded"
-                                placeholder="Quantity"
-                                value={selectedItemForForm.quantity || ""}
-                                onChange={e =>
-                                    handleFormInputChange("quantity", e.target.value)
-                                }
-                            />
-                            <input
-                                className="flex-1 border p-2 rounded"
-                                placeholder="Unit"
-                                value={selectedItemForForm.unit || ""}
-                                onChange={e =>
-                                    handleFormInputChange("unit", e.target.value)
-                                }
-                            />
-                            <input
-                                className="flex-1 border p-2 rounded"
+                                    className="w-full border p-2 rounded"
                                 placeholder="Enter full state name"
                                 value={selectedItemForForm.stateFull || ""}
                                 onChange={e => {
@@ -668,16 +783,59 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                         ...prev,
                                         stateFull: fullState, // keep the full name for display
                                         state: mapping?.code || "", // store the state code
-                                        tier: mapping?.defaultTier || ""  // store the tier
+                                            tier: mapping?.defaultTier || prev.tier || ""  // store the tier
                                     }));
                                 }}
                             />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Tier</label>
+                                <select
+                                    className="w-full border p-2 rounded"
+                                    value={selectedItemForForm.tier || ""}
+                                    onChange={e =>
+                                        handleFormInputChange("tier", e.target.value)
+                                    }
+                                >
+                                    <option value="">Select Tier</option>
+                                    <option value="T1">T1</option>
+                                    <option value="T2">T2</option>
+                                    <option value="T3">T3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Length</label>
+                                <input
+                                    type="number"
+                                    className="w-full border p-2 rounded"
+                                    placeholder="Length"
+                                    value={selectedItemForForm.length || ""}
+                                    onChange={e =>
+                                        handleFormInputChange("length", e.target.value)
+                                    }
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Width</label>
+                                <input
+                                    type="number"
+                                    className="w-full border p-2 rounded"
+                                    placeholder="Width"
+                                    value={selectedItemForForm.width || ""}
+                                    onChange={e =>
+                                        handleFormInputChange("width", e.target.value)
+                                    }
+                                />
+                            </div>
                         </div>
 
                         <button
                             onClick={() => handleGenerate(false)}
-                            disabled={loading}
-                            className="bg-blue-600 text-white px-4 py-2 rounded"
+                            disabled={loading || !selectedItemForForm.projectMaterial}
+                            className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded transition-colors"
                         >
                             Generate Selected WBS
                         </button>
@@ -694,18 +852,26 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                     {initialItems.map((item, idx) => (
                         <div
                             key={idx}
-                            onClick={() => setSelectedItemForForm({
-                                ...item,
-                                stateFull: Object.keys(STATE_TIER_MAP).find(
+                            onClick={() => {
+                                const stateFull = Object.keys(STATE_TIER_MAP).find(
                                     k => STATE_TIER_MAP[k].code === item.state
-                                ) || ""
-                            })}
-                            className="border p-3 rounded cursor-pointer hover:bg-gray-50"
+                                ) || "";
+                                setSelectedItemForForm({
+                                    ...item,
+                                    stateFull: stateFull
+                                });
+                            }}
+                            className="border p-3 rounded cursor-pointer hover:bg-green-50 hover:border-green-300 transition-all"
                         >
-                            <p className="font-medium">{item.projectMaterial}</p>
-                            <p className="text-sm">
-                                {item.quantity} {item.unit} × {item.rate}
+                            <p className="font-medium capitalize">{item.projectMaterial}</p>
+                            <p className="text-sm text-gray-600">
+                                State: {item.state} | Tier: {item.tier || "-"}
                             </p>
+                            {(item.length || item.width) && (
+                                <p className="text-xs text-gray-500">
+                                    {item.length && `L: ${item.length}`} {item.width && `W: ${item.width}`}
+                                </p>
+                            )}
                         </div>
                     ))}
                 </div>
@@ -713,7 +879,7 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                 <button
                     onClick={() => handleGenerate(true)}
                     disabled={loading || initialItems.length === 0}
-                    className="mt-4 bg-green-600 text-white px-4 py-2 rounded"
+                    className="mt-4 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white px-4 py-2 rounded transition-colors"
                 >
                     Generate WBS for All BOQ Items
                 </button>
@@ -729,26 +895,53 @@ export default function WBS({ setActiveView, initialItems = [] }) {
 
 
             {allTasksByBOQ.length > 0 && (
-                <div className="space-y-4 mb-6">
+                <div className="space-y-6 mb-6">
+                    <h2 className="text-xl font-bold text-gray-800 mb-4">Generated WBS Results</h2>
                     {allTasksByBOQ.map((boqItem, idx) => (
-                        <div key={idx} className="border rounded p-4 bg-white shadow">
+                        <div key={idx} className="border border-green-200 rounded-lg p-6 bg-gradient-to-br from-green-50/30 to-white shadow-sm hover:shadow-md transition-shadow duration-200">
                             {/* BOQ Heading */}
-                            <h3
-                                className="font-bold text-lg mb-2 cursor-pointer"
+                            <div
+                                className="flex items-center justify-between cursor-pointer mb-4 pb-3 border-b border-green-200"
                                 onClick={() =>
                                     setExpandedBOQ(expandedBOQ === idx ? null : idx)
                                 }
                             >
-                                {boqItem.boq_text}
-                            </h3>
+                                <div>
+                                    <h3 className="font-bold text-lg text-gray-800 capitalize">
+                                        {boqItem.boq_text}
+                                    </h3>
+                                    <p className="text-sm text-gray-500">
+                                        {boqItem.subcategory && `Category: ${boqItem.subcategory}`}
+                                        {boqItem.wbs_id && ` | ID: ${boqItem.wbs_id.slice(0, 8)}...`}
+                                    </p>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <span className="text-sm text-gray-600 bg-green-100 px-2 py-1 rounded">
+                                        {Object.keys(boqItem.tasksByStage || {}).length} stages
+                                    </span>
+                                    <span className="text-sm text-gray-500">
+                                        {expandedBOQ === idx ? "▼" : "▶"}
+                                    </span>
+                                </div>
+                            </div>
 
                             {/* Stages */}
                             {expandedBOQ === idx && (
-                                <div className="space-y-2 ml-2">
-                                    {Object.entries(boqItem.tasksByStage).map(([stageName, tasks]) => (
-                                        <div key={stageName}>
-                                            <h4
-                                                className="font-semibold cursor-pointer"
+                                <div className="space-y-3 mt-4">
+                                    {Object.entries(boqItem.tasksByStage)
+                                        .sort(([a], [b]) => {
+                                            // Sort stages in logical order
+                                            const order = { "Planning": 1, "Procurement": 2, "Execution": 3, "QC": 4, "Billing": 5 };
+                                            return (order[a] || 99) - (order[b] || 99);
+                                        })
+                                        .map(([stageName, tasks]) => {
+                                            // Only show stages that have tasks or show empty state
+                                            const hasTasks = tasks && tasks.length > 0;
+                                            return (
+                                                <div key={stageName} className="bg-white rounded-lg border border-green-100 overflow-hidden">
+                                                    {/* Stage Header - Clickable */}
+                                                    <div
+                                                        className="px-4 py-3 bg-gradient-to-r from-green-50 to-green-50/50 cursor-pointer hover:from-green-100 hover:to-green-100/50 transition-all duration-200 flex items-center justify-between"
                                                 onClick={() =>
                                                     setExpandedStage(prev => ({
                                                         ...prev,
@@ -756,35 +949,85 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                                     }))
                                                 }
                                             >
+                                                        <h4 className="font-semibold text-gray-800 capitalize flex items-center gap-2">
+                                                            <span className={`w-2 h-2 rounded-full ${hasTasks ? 'bg-green-500' : 'bg-gray-300'}`}></span>
                                                 {stageName}
                                             </h4>
+                                                        <div className="flex items-center gap-3">
+                                                            <span className={`text-xs px-2 py-1 rounded ${hasTasks ? 'text-gray-600 bg-white' : 'text-gray-400 bg-gray-100'}`}>
+                                                                {tasks.length} {tasks.length === 1 ? 'task' : 'tasks'}
+                                                            </span>
+                                                            <span className="text-sm text-gray-500">
+                                                                {expandedStage[stageName + idx] ? "▼" : "▶"}
+                                                            </span>
+                                                        </div>
+                                                    </div>
 
                                             {/* Tasks */}
                                             {expandedStage[stageName + idx] && (
-                                                <div className="ml-4 mt-1 space-y-1">
-                                                    {tasks.map(task => (
+                                                        <div className="p-4 space-y-3 bg-white">
+                                                            {hasTasks ? (
+                                                                tasks.map((task, taskIdx) => (
                                                         <div
                                                             key={task.task_id}
-                                                            className="p-2 border rounded flex justify-between"
+                                                            className="p-4 border border-green-100 rounded-lg bg-green-50/20 hover:bg-green-50/40 hover:border-green-200 transition-all duration-200"
                                                         >
-                                                            <div>
-                                                                <p className="font-medium">Task name: {task.task_name}</p>
-                                                                <p className="text-xs text-gray-500">
-                                                                    Optimistic: {task.duration?.optimistic_hours?.toFixed(2)}h •{" "}
-                                                                    Most Likely: {task.duration?.most_likely_hours?.toFixed(2)}h •{" "}
-                                                                    Pessimistic: {task.duration?.pessimistic_hours?.toFixed(2)}h •{" "}
-                                                                    Expected: {task.duration?.expected_hours?.toFixed(2)}h
-                                                                </p>
+                                                            <div className="flex justify-between items-start gap-4">
+                                                                <div className="flex-1">
+                                                                    <p className="font-medium text-gray-800 mb-2">
+                                                                        {task.task_name || task.task}
+                                                                    </p>
+                                                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+                                                                        <div className="bg-white px-2 py-1 rounded border border-green-100">
+                                                                            <span className="text-gray-600">Optimistic:</span>
+                                                                            <span className="font-semibold text-gray-800 ml-1">
+                                                                                {task.duration?.optimistic_hours != null 
+                                                                                    ? Number(task.duration.optimistic_hours).toFixed(2) 
+                                                                                    : "N/A"}h
+                                                                            </span>
                                                             </div>
-                                                            <span className="text-xs font-semibold px-2 py-1 bg-gray-100 rounded">
+                                                                        <div className="bg-white px-2 py-1 rounded border border-green-100">
+                                                                            <span className="text-gray-600">Most Likely:</span>
+                                                                            <span className="font-semibold text-gray-800 ml-1">
+                                                                                {task.duration?.most_likely_hours != null 
+                                                                                    ? Number(task.duration.most_likely_hours).toFixed(2) 
+                                                                                    : "N/A"}h
+                                                                            </span>
+                                                                        </div>
+                                                                        <div className="bg-white px-2 py-1 rounded border border-green-100">
+                                                                            <span className="text-gray-600">Pessimistic:</span>
+                                                                            <span className="font-semibold text-gray-800 ml-1">
+                                                                                {task.duration?.pessimistic_hours != null 
+                                                                                    ? Number(task.duration.pessimistic_hours).toFixed(2) 
+                                                                                    : "N/A"}h
+                                                                            </span>
+                                                                        </div>
+                                                                        <div className="bg-green-100 px-2 py-1 rounded border border-green-200">
+                                                                            <span className="text-gray-700 font-medium">Expected:</span>
+                                                                            <span className="font-bold text-green-700 ml-1">
+                                                                                {task.duration?.expected_hours != null 
+                                                                                    ? Number(task.duration.expected_hours).toFixed(2) 
+                                                                                    : "N/A"}h
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <span className="text-xs font-semibold px-3 py-1.5 bg-green-200 text-green-800 rounded-full whitespace-nowrap">
                                                                 {stageName}
                                                             </span>
                                                         </div>
-                                                    ))}
+                                                        </div>
+                                                                ))
+                                                            ) : (
+                                                                <div className="p-4 text-center text-gray-500 bg-gray-50 rounded-lg border border-gray-200">
+                                                                    <p className="text-sm">No tasks available for this stage</p>
                                                 </div>
                                             )}
                                         </div>
-                                    ))}
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
                                 </div>
                             )}
                         </div>

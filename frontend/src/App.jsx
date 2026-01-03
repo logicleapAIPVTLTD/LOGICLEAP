@@ -6,18 +6,11 @@ import LogicLeapWireframe from './LogicLeapWireframe'
 
 function App() {
   console.log(import.meta.env.VITE_API_URL);
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      localStorage.removeItem("boqItems");
-      sessionStorage.clear(); // clears WBS + BOM safely
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
+  // Results are now persisted in localStorage - no clearing on page load
+  // WBS Results: localStorage.getItem("wbsResults")
+  // BOM Results: localStorage.getItem("bomResult")
+  // Cost Predictions: localStorage.getItem("costPredictions")
+  // BOQ Items: localStorage.getItem("boqItems")
 
   return (
     <>

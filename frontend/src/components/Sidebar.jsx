@@ -8,9 +8,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activeView, setActiveView }) => 
     icon: FileText,
     label: 'Project Planning',
     subItems: [
-      { id: 'boq-generator', label: 'BOQ Generator' },   // renamed
+      { id: 'boq-generator', label: 'Project List' },   // renamed
       { id: 'wbs-creator', label: 'WBS Creator' },
-      { id: 'bom-generator', label: 'BOM Generator' },
+      { id: 'bom-generator', label: 'BOQ-BOM Generator' },
       { id: 'post-predictor', label: 'COST Predictor' }, // renamed
     ],
   },
