@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import TopBar from './components/TopBar';
 import Dashboard from './components/Dashboard';
@@ -12,18 +12,8 @@ const LogicLeapWireframe = () => {
   const [activeView, setActiveView] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedProject, setSelectedProject] = useState('Office Interior - TechCorp');
-  const [boqData, setBoqData] = useState(() => {
-    // Load BOQ items from localStorage on mount
-    const stored = localStorage.getItem("boqItems");
-    return stored ? JSON.parse(stored) : [];
-  });
   const [postResult, setPostResult] = useState(null);
   const [selectedBOQItems, setSelectedBOQItems] = useState([]);
-
-  // Sync selectedBOQItems with boqData
-  useEffect(() => {
-    setSelectedBOQItems(boqData);
-  }, [boqData]);
 
 
   // Mock data
@@ -41,9 +31,7 @@ const LogicLeapWireframe = () => {
         return <Dashboard onNavigate={setActiveView} />;
 
       case 'boq-generator':
-        return <BOQGenerator boqData={boqData}
-          setBoqData={setBoqData}
-          setPostResult={setPostResult}
+        return <BOQGenerator 
           setActiveView={setActiveView} 
           setSelectedBOQItems={setSelectedBOQItems}/>;
       case 'wbs-creator':

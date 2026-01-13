@@ -1,12 +1,12 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const morgan = require('morgan');
-const path = require('path');
-require('dotenv').config();
+const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const path = require("path");
+require("dotenv").config();
 
-const bomRoutes = require('./routes/bomRoutes');
-const config = require('./config/config');
+const bomRoutes = require("./routes/bomRoutes");
+const config = require("./config/config");
 
 const app = express();
 
@@ -21,9 +21,6 @@ app.use(helmet());
 //   credentials: true
 // }));
 
-
-
-
 app.use(
   cors({
     origin: [
@@ -31,55 +28,56 @@ app.use(
       "https://logicleap-1.onrender.com",
       "http://localhost:3000",
       "http://localhost:5173",
-      "http://localhost:5174"
+      "http://localhost:5174",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true
+    credentials: true,
   })
 );
-;
-
-
-
-
-
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static files (for serving generated Excel files)
-app.use('/downloads', express.static(path.join(__dirname, 'downloads')));
+app.use("/downloads", express.static(path.join(__dirname, "downloads")));
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get("/health", (req, res) => {
   res.status(200).json({
-    status: 'success',
-    message: 'BOM Prediction API is running',
-    timestamp: new Date().toISOString()
+    status: "success",
+    message: "BOM Prediction API is running",
+    timestamp: new Date().toISOString(),
   });
 });
 
 // API Routes
-app.use('/api/bom', bomRoutes);
-app.use("/api/estimation", require("./routes/estimationRoutes"));
+app.use("/api/boq", require("./routes/boqRoutes"));
+app.use("/api/bom", bomRoutes);
+app.use("/api/estimation", require("./routes/costEngineRoutes"));
 app.use("/api/wbs", require("./routes/wbsRoutes"));
+app.use("/api/floorplan", require("./routes/floorPlanRoutes"));
+app.use(
+  "/api/continuous-learning",
+  require("./routes/continuousLearningRoutes")
+);
+app.use("/api/cost-engine", require("./routes/costEngineRoutes"));
 
 // 404 handler
 app.use((req, res) => {
   res.status(404).json({
-    status: 'error',
-    message: 'Route not found'
+    status: "error",
+    message: "Route not found",
   });
 });
 
 // Global error handler
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
+  console.error("Error:", err);
   res.status(err.status || 500).json({
-    status: 'error',
-    message: err.message || 'Internal server error',
-    ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
+    status: "error",
+    message: err.message || "Internal server error",
+    ...(process.env.NODE_ENV === "development" && { stack: err.stack }),
   });
 });
 

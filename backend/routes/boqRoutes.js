@@ -1,33 +1,41 @@
 const express = require('express');
 const router = express.Router();
-const boqController = require('../controllers/boqController');
+const {
+  upload,
+  processTextToBOQ,
+  processFileToBOQ,
+  getBOQStats,
+  healthCheck
+} = require('../controllers/boqController');
 
 /**
- * @route   POST /api/boq/train
- * @desc    Train rate prediction model
- * @access  Public
+ * @route   POST /api/boq/text
+ * @desc    Generate BOQ from text input
+ * @access  Public (add authentication middleware as needed)
+ * @body    { text: string, minConfidence?: number }
  */
-router.post('/train', boqController.trainModel);
+router.post('/text', processTextToBOQ);
 
 /**
- * @route   POST /api/boq/predict
- * @desc    Predict rates for BOQ items
- * @access  Public
+ * @route   POST /api/boq/file
+ * @desc    Generate BOQ from file upload (PDF, DOCX, Image)
+ * @access  Public (add authentication middleware as needed)
+ * @body    FormData with 'file' field and optional 'minConfidence'
  */
-router.post('/predict', boqController.predictRates);
+router.post('/file', upload.single('file'), processFileToBOQ);
 
 /**
- * @route   POST /api/boq/extract
- * @desc    Extract BOQ from text and predict rates
- * @access  Public
+ * @route   GET /api/boq/stats
+ * @desc    Get BOQ generation statistics
+ * @access  Public (add authentication middleware as needed)
  */
-router.post('/extract', boqController.extractAndPredict);
+router.get('/stats', getBOQStats);
 
 /**
  * @route   GET /api/boq/health
- * @desc    Health check for BOQ service
+ * @desc    Health check endpoint
  * @access  Public
  */
-router.get('/health', boqController.boqHealthCheck);
+router.get('/health', healthCheck);
 
 module.exports = router;

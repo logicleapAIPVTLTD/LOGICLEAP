@@ -11,36 +11,49 @@ const POSTPredictor = ({ postResult }) => {
 
     if (saved) {
       const parsed = JSON.parse(saved);
-      const validPredictions = Array.isArray(parsed) 
-        ? parsed.filter(p => p && p.estimation && p.estimation.grand_total)
-        : (parsed && parsed.estimation ? [parsed] : []);
+      const validPredictions = Array.isArray(parsed)
+        ? parsed.filter(
+            (p) =>
+              p &&
+              p.estimation &&
+              p.estimation.project_cost &&
+              p.estimation.project_cost.overall
+          )
+        : parsed &&
+          parsed.estimation &&
+          parsed.estimation.project_cost &&
+          parsed.estimation.project_cost.overall
+        ? [parsed]
+        : [];
 
       if (validPredictions.length > 0) {
         // Aggregate all cost predictions into one result
         const aggregatedSummary = {};
-        let totalMin = 0, totalLikely = 0, totalMax = 0;
+        let totalMin = 0,
+          totalLikely = 0,
+          totalMax = 0;
 
-        validPredictions.forEach(costPred => {
-          const est = costPred.estimation;
-          
-          // Aggregate grand totals
-          if (est.grand_total) {
-            totalMin += est.grand_total.min || 0;
-            totalLikely += est.grand_total.likely || 0;
-            totalMax += est.grand_total.max || 0;
+        validPredictions.forEach((costPred) => {
+          const pc = costPred.estimation.project_cost;
+
+          // Aggregate overall totals
+          if (pc.overall) {
+            totalMin += pc.overall.min || 0;
+            totalLikely += pc.overall.likely || 0;
+            totalMax += pc.overall.max || 0;
           }
 
-          // Aggregate summary components
-          if (est.summary && typeof est.summary === 'object') {
-            Object.entries(est.summary).forEach(([key, val]) => {
+          // Aggregate summary components (material, labour, machinery)
+          ["material", "labour", "machinery"].forEach((key) => {
+            if (pc[key]) {
               if (!aggregatedSummary[key]) {
                 aggregatedSummary[key] = { min: 0, likely: 0, max: 0 };
               }
-              aggregatedSummary[key].min += val.min || 0;
-              aggregatedSummary[key].likely += val.likely || 0;
-              aggregatedSummary[key].max += val.max || 0;
-            });
-          }
+              aggregatedSummary[key].min += pc[key].min || 0;
+              aggregatedSummary[key].likely += pc[key].likely || 0;
+              aggregatedSummary[key].max += pc[key].max || 0;
+            }
+          });
         });
 
         finalEstimation = {
@@ -48,8 +61,8 @@ const POSTPredictor = ({ postResult }) => {
           grand_total: {
             min: totalMin,
             likely: totalLikely,
-            max: totalMax
-          }
+            max: totalMax,
+          },
         };
       }
     }
@@ -71,18 +84,23 @@ const POSTPredictor = ({ postResult }) => {
     );
   }
 
-  const hasSummary = aggregatedResult.summary && typeof aggregatedResult.summary === 'object';
+  const hasSummary =
+    aggregatedResult.summary && typeof aggregatedResult.summary === "object";
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-gray-800 mb-2">Cost Prediction</h2>
-        <p className="text-gray-600">Aggregated cost estimation for all materials</p>
+        <h2 className="text-xl font-semibold text-gray-800 mb-2">
+          Cost Prediction
+        </h2>
+        <p className="text-gray-600">
+          Aggregated cost estimation for all materials
+        </p>
       </div>
 
       <div className="bg-white border border-green-200 rounded-lg overflow-hidden shadow-sm">
         {/* Header - Clickable */}
-        <div 
+        <div
           className="px-4 py-3 bg-gradient-to-r from-green-50 to-green-100 cursor-pointer flex items-center justify-between"
           onClick={() => setIsExpanded(!isExpanded)}
         >
@@ -92,7 +110,8 @@ const POSTPredictor = ({ postResult }) => {
           <div className="flex items-center gap-3">
             {aggregatedResult.grand_total && (
               <span className="text-sm font-semibold text-green-700 bg-white px-3 py-1 rounded">
-                ₹{aggregatedResult.grand_total.min?.toLocaleString()} – ₹{aggregatedResult.grand_total.max?.toLocaleString()}
+                ₹{aggregatedResult.grand_total.min?.toLocaleString()} – ₹
+                {aggregatedResult.grand_total.max?.toLocaleString()}
               </span>
             )}
             <span className="text-gray-500">{isExpanded ? "▼" : "▶"}</span>
@@ -104,7 +123,9 @@ const POSTPredictor = ({ postResult }) => {
           <div className="p-6 space-y-4">
             {hasSummary && (
               <div>
-                <h4 className="font-semibold text-gray-700 mb-3">Cost Breakdown</h4>
+                <h4 className="font-semibold text-gray-700 mb-3">
+                  Cost Breakdown
+                </h4>
                 <table className="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
                   <thead className="bg-gray-100">
                     <tr>
@@ -115,14 +136,24 @@ const POSTPredictor = ({ postResult }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {Object.entries(aggregatedResult.summary).map(([key, val]) => (
-                      <tr key={key} className="border-b hover:bg-green-50">
-                        <td className="p-3 capitalize font-medium">{key.replace(/_/g, ' ')}</td>
-                        <td className="p-3 text-right">₹{val.min?.toLocaleString() || '0'}</td>
-                        <td className="p-3 text-right">₹{val.likely?.toLocaleString() || '0'}</td>
-                        <td className="p-3 text-right">₹{val.max?.toLocaleString() || '0'}</td>
-                      </tr>
-                    ))}
+                    {Object.entries(aggregatedResult.summary).map(
+                      ([key, val]) => (
+                        <tr key={key} className="border-b hover:bg-green-50">
+                          <td className="p-3 capitalize font-medium">
+                            {key.replace(/_/g, " ")}
+                          </td>
+                          <td className="p-3 text-right">
+                            ₹{val.min?.toLocaleString() || "0"}
+                          </td>
+                          <td className="p-3 text-right">
+                            ₹{val.likely?.toLocaleString() || "0"}
+                          </td>
+                          <td className="p-3 text-right">
+                            ₹{val.max?.toLocaleString() || "0"}
+                          </td>
+                        </tr>
+                      )
+                    )}
                   </tbody>
                 </table>
               </div>
