@@ -1,392 +1,397 @@
 import pandas as pd
+import boto3
 import re
+import math
 import json
-import sys
-import argparse
-from pathlib import Path
+import ast
+from decimal import Decimal
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from fuzzywuzzy import fuzz
-import math
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding="utf-8")
+
 
 # =====================================================================
-# 🔹 LOAD DATA (OS-INDEPENDENT PATH)
+# ⚙️ CONFIGURATION
 # =====================================================================
-BASE_DIR = Path(__file__).resolve().parent
-DEFAULT_DATA_PATH = BASE_DIR / "data" / "mat_quan.xlsx"
+AWS_REGION = "ap-south-2"
+AWS_ACCESS_KEY_ID = "AKIAYH3VJY2ZUOPIZ27O"
+AWS_SECRET_ACCESS_KEY = "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"
+BOM_TABLE_NAME = "po_bom_input_master"
 
-def load_data(file_path=None):
-    """Load Excel data file"""
-    if file_path is None:
-        file_path = DEFAULT_DATA_PATH
+# =====================================================================
+# 🔹 1. DYNAMODB LOADER & MASTER DATA SETUP
+# =====================================================================
+def load_bom_master_data():
+    """Loads and prepares the BOM Master Data from DynamoDB."""
+    print("Connecting to DynamoDB for BOM Master Data...")
+    try:
+        dynamodb = boto3.resource(
+            "dynamodb",
+            region_name=AWS_REGION,
+            aws_access_key_id=AWS_ACCESS_KEY_ID,
+            aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+        )
+        table = dynamodb.Table(BOM_TABLE_NAME)
+        items = []
+        scan_kwargs = {}
+
+        while True:
+            response = table.scan(**scan_kwargs)
+            items.extend(response.get("Items", []))
+            if "LastEvaluatedKey" in response:
+                scan_kwargs["ExclusiveStartKey"] = response["LastEvaluatedKey"]
+            else:
+                break
+
+        if not items:
+            raise RuntimeError("❌ BOM Master Table is empty.")
+
+        # Convert Decimal -> float
+        def convert(val):
+            if isinstance(val, Decimal):
+                return int(val) if val % 1 == 0 else float(val)
+            return val
+
+        for item in items:
+            for k, v in item.items():
+                item[k] = convert(v)
+
+        df = pd.DataFrame(items)
+        
+        # Cleanup & Preprocessing
+        drop_cols = ["Category", "Mandatory_Flag", "Input_Parameter"]
+        df = df.drop(columns=[c for c in drop_cols if c in df.columns], errors='ignore')
+        df = df.fillna("")
+        
+        print(f"✅ Loaded {len(df)} BOM Master items.")
+        return df
+
+    except Exception as e:
+        print(f"❌ Error loading DynamoDB: {e}")
+        return pd.DataFrame()
+
+# Load Data Once (Global Scope)
+BOM_DF = load_bom_master_data()
+
+# =====================================================================
+# 🔹 2. AI MATCHING ENGINE (Semantic Work Type Mapping)
+# =====================================================================
+if not BOM_DF.empty:
+    WORK_TYPES = BOM_DF["Work_Type"].unique().tolist()
     
-    df = pd.read_excel(file_path)
+    # Create "Enriched Text" for better matching
+    work_text_map = (
+        BOM_DF.groupby("Work_Type")["Item_Name"]
+        .apply(lambda x: " ".join(x.astype(str)))
+        .to_dict()
+    )
+    WORK_TEXTS = [f"{wt} {work_text_map.get(wt, '')}" for wt in WORK_TYPES]
+
+    # Train TF-IDF Vectorizer
+    tfidf_vectorizer = TfidfVectorizer(stop_words="english", ngram_range=(1, 2))
+    tfidf_matrix = tfidf_vectorizer.fit_transform(WORK_TEXTS)
+else:
+    print("⚠️ Warning: BOM DataFrame is empty. AI Matching will fail.")
+
+def match_work_type(user_text):
+    """Matches the BOQ work name to a Master Work Type using AI."""
+    if BOM_DF.empty or not user_text: return None
+
+    user_text = str(user_text).lower()
+    user_vec = tfidf_vectorizer.transform([user_text])
     
-    # Remove unnecessary columns if present
-    drop_cols = ["Category", "Mandatory_Flag", "Input_Parameter"]
-    df = df.drop(columns=[c for c in drop_cols if c in df.columns])
-    
-    return df
-
-# ---------------------------------------------------------------------
-# 🔹 DOMAIN KEYWORDS
-# ---------------------------------------------------------------------
-DOMAIN_KEYWORDS = {
-    "road": ["road", "highway", "pavement", "bitumen", "gsb", "wmm", "km", "resurfacing"],
-    "building": ["building", "construction", "civil", "foundation"],
-    "interior": ["interior", "renovation", "false ceiling", "painting", "tiling", "flooring", "showroom"],
-    "flooring": ["tile", "tiling", "floor", "granite", "marble"],
-    "painting": ["paint", "painting", "primer", "putty"],
-    "electrical": ["electrical", "wiring", "mcbs", "panel", "lighting", "socket"],
-    "plumbing": ["plumbing", "pipe", "bathroom", "kitchen sink", "water line"],
-    "tank": ["tank", "sump", "reservoir", "overhead", "underground cleaning"],
-    "drainage": ["drainage", "culvert", "storm water", "pipeline"],
-    "cleaning": ["cleaning", "office cleaning", "scrubbing"],
-    "carpentry": ["carpenter", "wood", "plywood", "wardrobe"],
-    "modular": ["modular kitchen", "kitchen cabinets"],
-}
-
-def detect_domain(user_text):
-    text = user_text.lower()
-    domain_scores = {}
-
-    for domain, keywords in DOMAIN_KEYWORDS.items():
-        score = 0
-        for kw in keywords:
-            if kw in text:
-                score += 15
-            score += fuzz.partial_ratio(text, kw) / 10
-        domain_scores[domain] = score
-
-    best_domain = max(domain_scores, key=lambda x: domain_scores[x])
-    if domain_scores[best_domain] < 20:
-        return None
-    return best_domain
-
-def match_work_type(user_text, domain, work_types, work_texts, tfidf, tfidf_matrix):
-    user_text = user_text.lower()
-    user_vec = tfidf.transform([user_text])
     scores = []
-
-    for i, wt in enumerate(work_types):
-        wt_text = work_texts[i].lower()
-
-        if domain and domain not in wt_text:
-            continue
-
+    for i, wt in enumerate(WORK_TYPES):
+        # 1. TF-IDF Score (Semantic)
         tfidf_score = cosine_similarity(user_vec, tfidf_matrix[i])[0][0] * 100
-        fuzzy_score = fuzz.token_set_ratio(user_text, wt_text)
-
+        # 2. Fuzzy Score (String Similarity)
+        fuzzy_score = fuzz.token_set_ratio(user_text, wt.lower())
+        
+        # Weighted Final Score
         final_score = (0.6 * tfidf_score) + (0.4 * fuzzy_score)
         scores.append((wt, final_score))
 
-    if not scores:
-        return None
-
     scores.sort(key=lambda x: x[1], reverse=True)
     best_wt, best_score = scores[0]
+    
+    # Threshold to avoid bad matches
+    return best_wt if best_score > 35 else None
 
-    return best_wt if best_score >= 30 else None
+# =====================================================================
+# 🔹 3. DYNAMIC BOQ PARSER (The Integration Bridge)
+# =====================================================================
+def parse_boq_output_item(boq_item):
+    """
+    Parses a single item from the BOQ Engine's output list.
+    Standardizes units (sqft->sqm, ft->m) for calculation.
+    """
+    # 1. Extract Name
+    work_name = boq_item.get("work_name") or boq_item.get("work_code") or "Unknown Work"
+    
+    # 2. Extract Dimensions Dictionary
+    dims = boq_item.get("dimensions", {})
+    
+    # Initialize Metrics
+    metrics = {
+        "area_sqm": 0.0,
+        "length_m": 0.0,
+        "volume_m3": 0.0,
+        "quantity_nos": 1.0, # Default for 'job' based items
+        "tank_capacity": None
+    }
 
+    # --- PARSE AREA ---
+    if "area" in dims and dims["area"]:
+        for d in dims["area"]:
+            val = float(d.get("value", 0))
+            unit = str(d.get("unit", "")).lower()
+            
+            if "sqft" in unit or "sft" in unit:
+                metrics["area_sqm"] += val / 10.7639
+            elif "sqm" in unit or "m2" in unit:
+                metrics["area_sqm"] += val
+            else:
+                metrics["area_sqm"] += val # Fallback
+
+    # --- PARSE LENGTH ---
+    if "length" in dims and dims["length"]:
+        for d in dims["length"]:
+            val = float(d.get("value", 0))
+            unit = str(d.get("unit", "")).lower()
+            
+            if "ft" in unit or "feet" in unit:
+                metrics["length_m"] += val * 0.3048
+            elif "m" in unit:
+                metrics["length_m"] += val
+
+    # --- PARSE VOLUME / CAPACITY ---
+    if "volume" in dims and dims["volume"]:
+        metrics["volume_m3"] = float(dims["volume"][0].get("value", 0))
+    
+    if "capacity" in dims and dims["capacity"]:
+        metrics["tank_capacity"] = float(dims["capacity"][0].get("value", 0))
+
+    # --- PARSE QUANTITY (Count) ---
+    if "quantity" in dims and dims["quantity"]:
+        metrics["quantity_nos"] = float(dims["quantity"][0].get("value", 1))
+
+    # --- LOGIC: ESTIMATION FALLBACKS ---
+    # If we have Area but need Length (e.g., for Skirting/Cornice)
+    if metrics["length_m"] == 0 and metrics["area_sqm"] > 0:
+        metrics["length_m"] = math.sqrt(metrics["area_sqm"]) * 4 # Approximation (Perimeter)
+        
+    return work_name, metrics
+
+# =====================================================================
+# 🔹 4. QUANTITY CALCULATION RULES
+# =====================================================================
 def ceil_min(val, min_val=1):
     return max(min_val, int(math.ceil(val)))
 
-def calculate_quantity(row, area_sqm, length, project_days, tank_capacity=None):
-    """Calculate quantity for each BOM item - EXACT LOGIC FROM ORIGINAL"""
-    item = row["Item_Name"].lower()
-    unit = row["Unit"].lower()
-    norm = float(row["Norm_Value"]) if pd.notna(row["Norm_Value"]) else 0
-    work = row["Work_Type"].lower()
+def calculate_material_qty(row, metrics, project_days=15):
+    """
+    Applies logic norms to the standardized metrics.
+    """
+    item = str(row["Item_Name"]).lower()
+    unit = str(row["Unit"]).lower()
+    norm = float(row["Norm_Value"]) if pd.notna(row["Norm_Value"]) and row["Norm_Value"] != "" else 0
+    work_type = str(row["Work_Type"]).lower()
+    
+    area = metrics["area_sqm"]
+    length = metrics["length_m"]
+    vol = metrics["volume_m3"]
+    nos = metrics["quantity_nos"]
+    cap = metrics["tank_capacity"]
 
-    # TANK CLEANING
-    if "tank" in work:
-        if not tank_capacity:
-            tank_capacity = area_sqm * 100
+    # ---------------- SPECIFIC RULES ----------------
+    
+    # 1. TANK CLEANING
+    if "tank" in work_type:
+        eff_cap = cap if cap else (area * 100) # Estimate if cap missing
+        if "chemical" in item: return ceil_min(eff_cap / 5000)
+        if "staff" in item: return ceil_min(eff_cap / (20000 * project_days))
+        return 1
+
+    # 2. FLOORING & TILING
+    if "floor" in work_type or "tile" in work_type:
+        if "tile" in item: return ceil_min(area * 1.05) # 5% Waste
+        if "adhesive" in item: return ceil_min(area * 0.25)
+        if "grout" in item: return ceil_min(area / 50)
+        if "mason" in item: return ceil_min(area / (25 * project_days))
+        return ceil_min(area * norm)
+
+    # 3. PAINTING
+    if "paint" in work_type:
+        if "primer" in item: return ceil_min(area * 0.1) # Liters
+        if "putty" in item: return ceil_min(area * 0.5)  # Kg
+        if "paint" in item: return ceil_min(area * 0.15) # Liters
+        if "painter" in item: return ceil_min(area / (35 * project_days))
+        return ceil_min(area * norm)
+
+    # 4. INTERIOR / CARPENTRY
+    if "interior" in work_type or "wood" in work_type:
+        if "plywood" in item: return ceil_min(area)
+        if "laminate" in item: return ceil_min(area)
+        if "glue" in item: return ceil_min(area / 20)
+        if "carpenter" in item: return ceil_min(area / (15 * project_days))
+        return ceil_min(area * norm)
+
+    # 5. ELECTRICAL
+    if "electrical" in work_type:
+        points = nos if nos > 1 else ceil_min(area / 15) 
+        if "wire" in item: return ceil_min(area * 1.5)
+        if "switch" in item or "socket" in item: return points
+        if "electrician" in item: return ceil_min(points / (10 * project_days))
+        return 1
+
+    # 6. ROAD / CIVIL
+    if "road" in work_type:
+        if "bitumen" in item: return ceil_min(area * 1.2)
+        if "paver" in item: return ceil_min(area / (800 * project_days))
+        return ceil_min(area * norm)
+
+    # ---------------- GENERIC FALLBACK ----------------
+    if unit in ["m3", "cum", "truck"]:
+        if vol > 0: return ceil_min(vol * norm)
+        return ceil_min(area * 0.1 * norm) 
         
-        if "cleaning chemical" in item:
-            return ceil_min(tank_capacity / 5000)
-        if "disinfectant" in item:
-            return ceil_min(tank_capacity / 10000)
-        if "bleaching" in item:
-            return ceil_min(tank_capacity / 20000)
-        if "blower" in item:
-            return 1
-        if "staff" in item:
-            return ceil_min(tank_capacity / (20000 * project_days))
-        if unit in ["numbers", "sets"]:
-            return ceil_min(tank_capacity / 1500)
-        return 1
+    if unit in ["m", "rft", "meter"]:
+        if length > 0: return ceil_min(length * norm)
+        return ceil_min(math.sqrt(area) * 4 * norm)
 
-    # FLOORING / TILING
-    if "tiling" in work or "floor" in work:
-        if "tile" in item and unit in ["sqft", "sqm"]:
-            return ceil_min(area_sqm)
-        if "adhesive" in item:
-            return ceil_min(area_sqm * 0.25)
-        if "grout" in item or "levelling" in item:
-            return ceil_min(area_sqm / 50)
-        if "cutter" in item:
-            return ceil_min(area_sqm / (200 * project_days))
-        if "mason" in item:
-            return ceil_min(area_sqm / (30 * project_days))
-        return ceil_min(area_sqm * norm)
+    return ceil_min(area * norm)
 
-    # INTERIOR DESIGN
-    if "interior" in work:
-        if unit in ["sqft", "sqm"] and ("plywood" in item or "laminate" in item):
-            return ceil_min(area_sqm)
-        if "edge band" in item:
-            return ceil_min(area_sqm * 1)
-        if "adhesive" in item:
-            return ceil_min(area_sqm / 20)
-        if "carpenter" in item:
-            return ceil_min(area_sqm / (20 * project_days))
-        if unit in ["numbers", "sets"]:
-            return ceil_min(area_sqm / 10)
-        return ceil_min(area_sqm * norm)
+# =====================================================================
+# 🔹 5. MAIN EXECUTION FUNCTION (API Entry Point)
+# =====================================================================
+def generate_bom_from_boq_output(boq_data_list, project_days=15):
+    """
+    Main entry point. Call this function with the list output from the BOQ Engine.
+    """
+    print("\n======== 🏗️ BOM GENERATION ENGINE ========")
+    
+    if BOM_DF.empty:
+        print("❌ Error: Master Data not loaded.")
+        return None
 
-    # CARPENTRY
-    if "carpentry" in work:
-        if "carpenter" in item:
-            return ceil_min(area_sqm / (20 * project_days))
-        return ceil_min(area_sqm * norm)
+    if not boq_data_list:
+        print("⚠️ Warning: Received empty BOQ list.")
+        return pd.DataFrame()
 
-    # INDUSTRIAL CLEANING
-    if "industrial cleaning" in work:
-        staff = ceil_min(area_sqm / (10 * project_days))
-        staff = min(staff, 40)
-        if "staff" in item or "crew" in item:
-            return staff
-        if unit in ["sets", "numbers"]:
-            return ceil_min(staff * 2)
-        if "jet" in item or "pressure" in item:
-            return ceil_min(area_sqm / 100)
-        return ceil_min(area_sqm * norm)
+    all_bom_data = []
 
-    # CLEANING
-    if "cleaning" in work:
-        if "hospital" in work:
-            staff = ceil_min(area_sqm / (25 * project_days))
-        else:
-            staff = ceil_min(area_sqm / (200 * project_days))
+    for i, boq_item in enumerate(boq_data_list):
+        work_name, metrics = parse_boq_output_item(boq_item)
+        print(f"\n🔹 Item {i+1}: {work_name}")
+        print(f"   Input Metrics: {metrics}")
+
+        matched_type = match_work_type(work_name)
+        if not matched_type:
+            print(f"   ❌ Could not match '{work_name}' to any Master Work Type.")
+            continue
         
-        if "staff" in item:
-            return staff
-        if unit in ["sets", "numbers"]:
-            return ceil_min(staff * 2)
-        if "vacuum" in item:
-            return ceil_min(area_sqm / 1000)
-        return ceil_min(area_sqm * norm)
+        print(f"   ✅ Matched Master Type: '{matched_type}'")
 
-    # ROAD
-    if "road" in work:
-        if unit not in ["machine-days", "man-days"]:
-            return round(area_sqm * norm, 2)
-        if "paver" in item:
-            return ceil_min(area_sqm / (800 * project_days))
-        if "roller" in item:
-            return ceil_min(area_sqm / (600 * project_days))
-        if "tipper" in item:
-            volume = area_sqm * 0.15
-            return ceil_min(volume / (50 * project_days))
-        if "labor" in item:
-            return ceil_min(area_sqm / (25 * project_days))
-        return 1
+        subset = BOM_DF[BOM_DF["Work_Type"] == matched_type].copy()
+        if subset.empty:
+            print("   ⚠️ No materials defined for this Work Type.")
+            continue
 
-    # BUILDING
-    if "building" in work:
-        thickness = 0.15
-        volume = area_sqm * thickness
+        subset["Predicted_Quantity"] = subset.apply(
+            lambda row: calculate_material_qty(row, metrics, project_days),
+            axis=1
+        )
+
+        subset["Ref_BOQ_Scope"] = work_name
+        subset["Ref_Area_SQM"] = round(metrics["area_sqm"], 2)
         
-        if unit in ["bags", "m3", "kg"]:
-            return ceil_min(volume * norm)
-        if unit == "numbers":
-            return ceil_min(norm * 10)
-        if "excavator" in item:
-            return ceil_min(area_sqm / 2000)
-        if "labor" in item:
-            return ceil_min(area_sqm / (40 * project_days))
-        return 1
+        result_cols = ["Ref_BOQ_Scope", "Ref_Area_SQM", "Item_Name", "Unit", "Predicted_Quantity"]
+        all_bom_data.append(subset[result_cols])
 
-    # PLUMBING
-    if "plumbing" in work:
-        fixtures = ceil_min(area_sqm / 30)
-        if "pipe" in item:
-            return ceil_min(length * norm)
-        if unit in ["numbers", "sets"]:
-            return fixtures
-        if "plumber" in item:
-            return ceil_min(fixtures / 6)
-        return 1
-
-    # PAINTING
-    if "paint" in work:
-        if "painter" in item:
-            return ceil_min(area_sqm / (30 * project_days))
-        return ceil_min(area_sqm * norm)
-
-    # ELECTRICAL
-    if "electrical" in work:
-        wire_per_sqm = 1.25
-        conduit_per_sqm = 1.1
-        points = ceil_min(area_sqm / 12)
+    if all_bom_data:
+        final_df = pd.concat(all_bom_data, ignore_index=True)
         
-        if "wire" in item:
-            return ceil_min(area_sqm * wire_per_sqm)
-        if "conduit" in item:
-            return ceil_min(area_sqm * conduit_per_sqm)
-        if "junction" in item or "switch" in item:
-            return points
-        if "electrician" in item:
-            return max(8, ceil_min(points / (12 * project_days)))
-        if "tape" in item:
-            return ceil_min(points / 40)
-        return 1
+        # Save to Excel
+        output_file = "Final_Project_BOM.xlsx"
+        final_df.to_excel(output_file, index=False)
+        print(f"\n✅ BOM Generation Complete. Saved to: {output_file}")
+        print(final_df)
+        return final_df
+    else:
+        print("\n❌ No valid BOM items generated.")
+        return pd.DataFrame()
 
-    # FALLBACK
-    return ceil_min(area_sqm * norm)
-
-def generate_bom(user_work, length, breadth, project_days=10, tank_capacity=None, data_file=None):
-    """Generate BOM prediction - EXACT LOGIC FROM ORIGINAL"""
+# =====================================================================
+# 🔹 6. MANUAL TESTING BLOCK (UPDATED)
+# =====================================================================
+if __name__ == "__main__":
+    print("\n🔹 Manual Testing Mode")
+    print("Paste your BOQ Output Dictionary below.")
+    print("Supported formats:")
+    print("1. Full Dict: {'work_name': 'Ceiling', 'dimensions': {...}}")
+    print("2. Partial: dimensions : {'area': [...]}")
+    print("-" * 50)
     
-    # Load data
-    df = load_data(data_file)
-    
-    # Extract work types
-    work_types = df["Work_Type"].unique().tolist()
-    
-    # Build enriched text per work type
-    work_text_map = (
-        df.groupby("Work_Type")["Item_Name"]
-          .apply(lambda x: " ".join(x.astype(str)))
-          .to_dict()
-    )
-    
-    work_texts = [
-        f"{wt} {work_text_map.get(wt, '')}"
-        for wt in work_types
-    ]
-    
-    # Build TF-IDF model
-    tfidf = TfidfVectorizer(stop_words="english", ngram_range=(1, 2))
-    tfidf_matrix = tfidf.fit_transform(work_texts)
-    
-    # Detect domain and work type
-    domain = detect_domain(user_work)
-    work_type = match_work_type(user_work, domain, work_types, work_texts, tfidf, tfidf_matrix)
-    
-    if work_type is None:
-        work_type = match_work_type(user_work, None, work_types, work_texts, tfidf, tfidf_matrix)
-    
-    if work_type is None:
-        return {
-            "error": "No suitable Work Type found",
-            "domain": domain
-        }
-    
-    area = length * breadth
-    
-    # Filter BOM items
-    subset = df[df["Work_Type"] == work_type].copy()
-    
-    if subset.empty:
-        return {
-            "error": "No BOM items found for work type",
-            "work_type": work_type,
-            "domain": domain
-        }
-    
-    # Calculate quantities
-    subset["Predicted_Quantity"] = subset.apply(
-        lambda row: calculate_quantity(
-            row=row,
-            area_sqm=area,
-            length=length,
-            project_days=project_days,
-            tank_capacity=tank_capacity
-        ),
-        axis=1
-    )
-    
-    # Unit conversion
-    subset.loc[subset["Unit"].str.lower() == "machine-days", "Unit"] = "machines"
-    subset.loc[subset["Unit"].str.lower() == "man-days", "Unit"] = "persons"
-    
-    result = subset[["Item_Name", "Unit", "Predicted_Quantity"]]
-    
-    # Convert to JSON-serializable format
-    bom_items = result.to_dict('records')
-    
-    return {
-        "domain": domain,
-        "work_type": work_type,
-        "area_sqm": area,
-        "length": length,
-        "breadth": breadth,
-        "project_days": project_days,
-        "tank_capacity": tank_capacity,
-        "bom_items": bom_items,
-        "total_items": len(bom_items)
-    }
-
-def main():
-    parser = argparse.ArgumentParser(description='BOM Prediction System')
-    parser.add_argument('--user-work', type=str, help='Work description')
-    parser.add_argument('--length', type=float, help='Length in meters')
-    parser.add_argument('--breadth', type=float, help='Breadth in meters')
-    parser.add_argument('--project-days', type=int, default=10, help='Project duration in days')
-    parser.add_argument('--tank-capacity', type=float, help='Tank capacity in liters')
-    parser.add_argument('--data-file', type=str, help='Custom data file path')
-    parser.add_argument('--get-work-types', action='store_true', help='Get all work types')
-    parser.add_argument('--get-domains', action='store_true', help='Get all domains')
-    parser.add_argument('--health-check', action='store_true', help='Health check')
-    
-    args = parser.parse_args()
+    raw_input = input("INPUT > ").strip()
     
     try:
-        if args.health_check:
-            df = load_data()
-            result = {
-                "status": "healthy",
-                "python_version": sys.version,
-                "data_loaded": True,
-                "total_records": len(df)
-            }
-            print(json.dumps(result))
-            sys.exit(0)
+        data_to_process = []
         
-        if args.get_work_types:
-            df = load_data()
-            work_types = df["Work_Type"].unique().tolist()
-            result = {"work_types": work_types}
-            print(json.dumps(result))
-            sys.exit(0)
-        
-        if args.get_domains:
-            result = {"domains": list(DOMAIN_KEYWORDS.keys())}
-            print(json.dumps(result))
-            sys.exit(0)
-        
-        # Generate BOM
-        result = generate_bom(
-            user_work=args.user_work,
-            length=args.length,
-            breadth=args.breadth,
-            project_days=args.project_days,
-            tank_capacity=args.tank_capacity,
-            data_file=args.data_file
-        )
-        
-        print(json.dumps(result))
-        sys.exit(0)
+        # CASE A: User pasted "dimensions : {...}"
+        if raw_input.startswith("dimensions") and ":" in raw_input:
+            print("ℹ️ Detected Partial Dimensions Input.")
+            
+            # Extract the dictionary part after the colon
+            _, dict_part = raw_input.split(":", 1)
+            dimensions_dict = ast.literal_eval(dict_part.strip())
+            
+            # We need a work name to proceed
+            work_name_input = input("⚠️ Work Name Missing. Enter Work Name > ").strip()
+            
+            # Construct the proper object
+            data_to_process = [{
+                "work_name": work_name_input,
+                "dimensions": dimensions_dict
+            }]
+            
+        # CASE B: User pasted a Full List or Dictionary
+        else:
+            parsed_input = ast.literal_eval(raw_input)
+            if isinstance(parsed_input, dict):
+                data_to_process = [parsed_input]
+            elif isinstance(parsed_input, list):
+                data_to_process = parsed_input
+                
+        # Run Engine
+        generate_bom_from_boq_output(data_to_process)
         
     except Exception as e:
-        error_result = {
-            "error": str(e),
-            "type": type(e).__name__
-        }
-        print(json.dumps(error_result), file=sys.stderr)
-        sys.exit(1)
+        print(f"❌ Input Error: {e}")
+        print("Tip: Ensure you are pasting valid Python Dictionary syntax (keys/values in quotes).")
 
-if __name__ == "__main__":
-    main()
+# READ FOR THE TESTING INPUTS BELOW
+
+"""
+Some sample inputs can copy/paste into the INPUT > prompt to test it.
+
+1: Full Input (Recommended)
+when there will be a complete ouput from the boq
+
+{'work_name': 'False Ceiling Gypsum', 'dimensions': {'area': [{'value': 180.0, 'unit': 'sqft'}], 'length': [{'value': 15.0, 'unit': 'ft'}]}, 'confidence': 0.95}
+
+
+2: Road Work Sample
+this tests metric conversion (sqm) and heavy machinery logic
+
+{'work_name': 'Asphalt Road Laying', 'dimensions': {'area': [{'value': 500.0, 'unit': 'sqm'}]}, 'source': 'TEXT_INPUT'}
+
+
+3: Partial Input (Simulates debugging)
+if you paste this the script will pause and ask you for the "Work Name" manually so that it can work even if anything goes wrong
+
+dimensions : {'area': [{'value': 250.0, 'unit': 'sqft'}], 'quantity': [{'value': 1, 'unit': 'job'}]}
+
+"""
