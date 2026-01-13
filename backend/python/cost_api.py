@@ -179,7 +179,7 @@ if __name__ == "__main__":
     uvicorn.run(
         "cost_api:app",
         host="0.0.0.0",
-        port=8001,  # Different port from continuous learning (8000)
+        port=10000,  # Different port from continuous learning (8000)
         reload=True,  # Set to False in production
         log_level="info"
     )
