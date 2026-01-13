@@ -644,7 +644,7 @@ const executePythonScript = (mode, input) => {
       }`
     );
 
-    const python = spawn("python", [scriptPath]);
+    const python = spawn("python3", [scriptPath]);
 
     let stdout = "";
     let stderr = "";
@@ -912,7 +912,7 @@ const healthCheck = async (req, res) => {
     await fs.access(scriptPath);
 
     const testResult = await new Promise((resolve) => {
-      const python = spawn("python", ["--version"]);
+      const python = spawn("python3", ["--version"]);
       let version = "";
 
       python.stdout.on("data", (data) => {

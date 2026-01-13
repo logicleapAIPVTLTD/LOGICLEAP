@@ -183,7 +183,7 @@ const fs = require("fs").promises;
 const executeBOMScript = (boqData, projectDays = 15) => {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(__dirname, "../python/bom_api.py");
-    const python = spawn("python", [scriptPath]);
+    const python = spawn("python3", [scriptPath]);
 
     let stdout = "";
     let stderr = "";
@@ -312,7 +312,7 @@ const generateBOMFromSource = async (req, res) => {
 
     // Step 1: Generate BOQ first
     const boqScript = path.join(__dirname, "../python/boq_api.py");
-    const boqPython = spawn("python", [boqScript]);
+    const boqPython = spawn("python3", [boqScript]);
 
     const boqInput = JSON.stringify({
       mode: mode || "1",
@@ -455,7 +455,7 @@ const downloadBOM = async (req, res) => {
 const getMasterStats = async (req, res) => {
   try {
     const scriptPath = path.join(__dirname, "../python/bom_api.py");
-    const python = spawn("python", [scriptPath, "stats"]);
+    const python = spawn("python3", [scriptPath, "stats"]);
 
     let stdout = "";
     let stderr = "";
@@ -510,7 +510,7 @@ const testWorkTypeMatch = async (req, res) => {
     }
 
     const scriptPath = path.join(__dirname, "../python/bom_api.py");
-    const python = spawn("python", [scriptPath, "test-match"]);
+    const python = spawn("python3", [scriptPath, "test-match"]);
 
     python.stdin.write(JSON.stringify({ work_name: workName }));
     python.stdin.end();
@@ -569,7 +569,7 @@ const healthCheck = async (req, res) => {
     await fs.access(scriptPath);
 
     // Test DynamoDB connection
-    const python = spawn("python", [scriptPath, "health"]);
+    const python = spawn("python3", [scriptPath, "health"]);
     let stdout = "";
 
     python.stdout.on("data", (data) => {

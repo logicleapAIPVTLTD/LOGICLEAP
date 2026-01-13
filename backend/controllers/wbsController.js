@@ -378,7 +378,7 @@ const path = require('path');
  */
 const executePythonScript = (scriptArgs) => {
   return new Promise((resolve, reject) => {
-    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const pythonPath = process.env.PYTHON_PATH || 'python3';
     const scriptPath = path.join(__dirname, '../python/wbs_api.py');
     
     const pythonProcess = spawn(pythonPath, [scriptPath, JSON.stringify(scriptArgs)]);
@@ -553,7 +553,7 @@ exports.generateBatchWBS = async (req, res) => {
  */
 exports.healthCheck = async (req, res) => {
   try {
-    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const pythonPath = process.env.PYTHON_PATH || 'python3';
     const testProcess = spawn(pythonPath, ['--version']);
     
     testProcess.on('close', (code) => {
