@@ -8,12 +8,17 @@ import re
 from collections import defaultdict
 import traceback
 
+import shutil
+
+if not shutil.which("tesseract"):
+    raise RuntimeError("Tesseract is not installed in this environment")
+
 
 # ======================================================
 # CONFIG
 # ======================================================
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 # pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 SCOPE_MASTER = os.path.join(BASE_PATH, "data", "scope_master.xlsx")
 
