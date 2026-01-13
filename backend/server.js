@@ -56,7 +56,7 @@ app.use("/api/boq", require("./routes/boqRoutes"));
 app.use("/api/bom", bomRoutes);
 app.use("/api/estimation", require("./routes/costEngineRoutes"));
 app.use("/api/wbs", require("./routes/wbsRoutes"));
-app.use("/api/floorplan", require("./routes/floorPlanRoutes"));
+app.use("/api/floorplan", require("./routes/floorplanRoutes"));
 app.use(
   "/api/continuous-learning",
   require("./routes/continuousLearningRoutes")
