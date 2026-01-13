@@ -1,9 +1,22 @@
+# services:
+#   - type: web
+#     name: msme-backend
+#     env: docker
+#     dockerfilePath: backend/Dockerfile
+#     dockerContext: backend
+#     envVars:
+#       - key: NODE_ENV
+#         value: production
+#       - key: PORT
+#         value: 10000
+
+
 services:
   - type: web
     name: msme-backend
-    env: node
-    buildCommand: npm install && pip install pandas openpyxl xlrd
-    startCommand: node server.js
+    env: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: NODE_ENV
         value: production
