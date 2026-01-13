@@ -25,6 +25,7 @@ app.use(
   cors({
     origin: [
       "https://logicleap-2.onrender.com",
+      "https://msme-backend-wu84.onrender.com",
       "https://logicleap-1.onrender.com",
       "http://localhost:3000",
       "http://localhost:5173",
