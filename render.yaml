@@ -1,12 +1,8 @@
 services:
   - type: web
     name: msme-backend
-    env: node
-    buildCommand: npm install && pip install pandas openpyxl xlrd
-     apt-get update
-      apt-get install -y tesseract-ocr
-      pip install -r requirements.txt
-    startCommand: node server.js
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
     envVars:
       - key: NODE_ENV
         value: production
