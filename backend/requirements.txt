@@ -1,29 +1,64 @@
-# pandas==2.1.4
-scikit-learn==1.7.2
-fuzzywuzzy==0.18.0
-# python-Levenshtein==0.23.0
+# # pandas==2.1.4
+# scikit-learn==1.7.2
+# fuzzywuzzy==0.18.0
+# # python-Levenshtein==0.23.0
+# openpyxl==3.1.2
+# xlrd==2.0.1
+# numpy==1.26.4
+# Flask==2.3.3
+# boto3==1.34.0
+# # Core dependencies
+# pandas>=2.0.0
+# python-docx>=0.8.11
+# pdfplumber>=0.9.0
+# pdf2image>=1.16.3
+# pytesseract>=0.3.10
+# opencv-python>=4.8.0
+
+# numpy>=1.24.0
+# Pillow>=10.0.0
+
+# # AWS
+# boto3>=1.28.0
+
+# # Optional but recommended
+# python-dotenv>=1.0.0
+
+# # Added by Sachin
+# fastapi==0.128.0
+# uvicorn==0.40.0
+
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
 openpyxl==3.1.2
 xlrd==2.0.1
-numpy==1.26.4
-Flask==2.3.3
-boto3==1.34.0
-# Core dependencies
-pandas>=2.0.0
+
+# Machine Learning
+scikit-learn==1.7.2
+
+# String matching
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.25.1
+
+# Document processing
 python-docx>=0.8.11
 pdfplumber>=0.9.0
 pdf2image>=1.16.3
 pytesseract>=0.3.10
-opencv-python>=4.8.0
 
-numpy>=1.24.0
+# Image processing
+opencv-python-headless>=4.8.0
 Pillow>=10.0.0
+
+# Web frameworks
+Flask==2.3.3
+fastapi==0.128.0
+uvicorn==0.40.0
 
 # AWS
 boto3>=1.28.0
 
-# Optional but recommended
+# Environment
 python-dotenv>=1.0.0
-
-# Added by Sachin
-fastapi==0.128.0
-uvicorn==0.40.0
