@@ -8,6 +8,10 @@ from docx import Document
 from decimal import Decimal
 import google.generativeai as genai
 from difflib import get_close_matches
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # =========================================================
 # 1. CONFIGURATION
@@ -19,7 +23,7 @@ AWS_ACCESS_KEY_ID = "AKIAYH3VJY2ZUOPIZ27O"
 AWS_SECRET_ACCESS_KEY = "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"
 
 # Gemini Config
-GEMINI_API_KEY = "AIzaSyDuOnFahA9RvScwL0gTtga9K8tA0acdTio"
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 GEMINI_MODEL_NAME = "gemini-2.5-flash"
 
 # DynamoDB Tables
