@@ -182,49 +182,45 @@ const fs = require("fs").promises;
  */
 const executeBOMScript = (boqData, projectDays = 15) => {
   return new Promise((resolve, reject) => {
-    const scriptPath = path.join(__dirname, "../python/bom_api.py");
-    const python = spawn("python3", [scriptPath]);
-
-    let stdout = "";
-    let stderr = "";
-
-    // Send BOQ data via stdin
-    const inputData = JSON.stringify({
-      boq_data: boqData,
-      project_days: projectDays,
+    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const scriptPath = path.join(__dirname, '../python/bom_engine.py');
+    
+    const pythonProcess = spawn(pythonPath, [scriptPath, JSON.stringify(boqData)]);
+    
+    let dataBuffer = '';
+    let errorBuffer = '';
+    
+    pythonProcess.stdout.on('data', (data) => {
+      dataBuffer += data.toString();
     });
-
-    python.stdin.write(inputData);
-    python.stdin.end();
-
-    python.stdout.on("data", (data) => {
-      stdout += data.toString();
+    
+    pythonProcess.stderr.on('data', (data) => {
+      errorBuffer += data.toString();
+      console.error(`Python Error: ${data}`);
     });
-
-    python.stderr.on("data", (data) => {
-      stderr += data.toString();
-    });
-
-    python.on("close", (code) => {
+    
+    pythonProcess.on('close', (code) => {
       if (code !== 0) {
-        reject(new Error(`BOM script exited with code ${code}: ${stderr}`));
-      } else {
-        try {
-          const result = JSON.parse(stdout);
-          resolve(result);
-        } catch (error) {
-          reject(
-            new Error(
-              `Failed to parse BOM output: ${stdout}\nError: ${error.message}`
-            )
-          );
-        }
+        reject(new Error(`BOM script exited with code ${code}: ${errorBuffer}`));
+        return;
+      }
+      
+      try {
+        const result = JSON.parse(dataBuffer);
+        resolve(result);
+      } catch (parseError) {
+        reject(new Error(`Failed to parse BOM output: ${parseError.message}`));
       }
     });
-
-    python.on("error", (error) => {
+    
+    pythonProcess.on('error', (error) => {
       reject(new Error(`Failed to start Python process: ${error.message}`));
     });
+    
+    setTimeout(() => {
+      pythonProcess.kill();
+      reject(new Error('BOM script execution timeout'));
+    }, 300000); // 5 minutes timeout
   });
 };
 
@@ -245,14 +241,14 @@ const generateBOM = async (req, res) => {
     }
 
     // Validate BOQ items structure
-    const isValid = boqData.every((item) => item.work_name || item.work_code);
+    // const isValid = boqData.every((item) => item.work_name || item.work_code);
 
-    if (!isValid) {
-      return res.status(400).json({
-        success: false,
-        error: "Each BOQ item must have at least work_name or work_code",
-      });
-    }
+    // if (!isValid) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     error: "Each BOQ item must have at least work_name or work_code",
+    //   });
+    // }
 
     const days =
       projectDays && !isNaN(projectDays) ? parseInt(projectDays) : 15;
@@ -263,29 +259,22 @@ const generateBOM = async (req, res) => {
 
     const result = await executeBOMScript(boqData, days);
 
-    if (result.success) {
-      return res.status(200).json({
-        success: true,
-        message: "BOM generated successfully",
-        data: result.data,
-        summary: {
-          totalItems: result.total_items || 0,
-          totalMaterials: result.total_materials || 0,
-          workTypes: result.work_types || [],
-          excelFile: result.excel_file || null,
-        },
-        metadata: {
-          projectDays: days,
-          boqItemsProcessed: boqData.length,
-          timestamp: new Date().toISOString(),
-        },
-      });
-    } else {
-      return res.status(500).json({
-        success: false,
-        error: result.error || "Failed to generate BOM",
-      });
-    }
+    return res.status(200).json({
+      success: true,
+      message: "BOM generated successfully",
+      data: result,
+      summary: {
+        totalItems: boqData.length,
+        totalMaterials: result.length,
+        workTypes: [...new Set(result.map(item => item.work_item))],
+        excelFile: null,
+      },
+      metadata: {
+        projectDays: days,
+        boqItemsProcessed: boqData.length,
+        timestamp: new Date().toISOString(),
+      },
+    });
   } catch (error) {
     console.error("Error generating BOM:", error);
     return res.status(500).json({
@@ -312,7 +301,7 @@ const generateBOMFromSource = async (req, res) => {
 
     // Step 1: Generate BOQ first
     const boqScript = path.join(__dirname, "../python/boq_api.py");
-    const boqPython = spawn("python3", [boqScript]);
+    const boqPython = spawn("python", [boqScript]);
 
     const boqInput = JSON.stringify({
       mode: mode || "1",
@@ -563,13 +552,13 @@ const testWorkTypeMatch = async (req, res) => {
  */
 const healthCheck = async (req, res) => {
   try {
-    const scriptPath = path.join(__dirname, "../python/bom_api.py");
+    const scriptPath = path.join(__dirname, "../python/bom_engine.py");
 
     // Check if Python script exists
     await fs.access(scriptPath);
 
-    // Test DynamoDB connection
-    const python = spawn("python3", [scriptPath, "health"]);
+    // Test Python availability
+    const python = spawn("python", ["--version"]);
     let stdout = "";
 
     python.stdout.on("data", (data) => {
@@ -580,17 +569,13 @@ const healthCheck = async (req, res) => {
       python.on("close", () => resolve());
     });
 
-    const health = JSON.parse(stdout || "{}");
-
     return res.status(200).json({
       success: true,
       message: "BOM service is healthy",
       data: {
         scriptPath: scriptPath,
-        dynamoDBConnected: health.db_connected || false,
-        masterDataLoaded: health.master_loaded || false,
-        totalWorkTypes: health.work_types_count || 0,
-        totalMaterials: health.materials_count || 0,
+        pythonAvailable: true,
+        dynamoDBConfigured: !!process.env.AWS_ACCESS_KEY_ID,
       },
     });
   } catch (error) {

@@ -1,501 +1,267 @@
-# from decimal import Decimal
-# import re
-# import boto3
-
-# # ============================================================
-# # 🔐 AWS CONFIG (REGION: ap-south-2)
-# # ============================================================
-# AWS_REGION = "ap-south-2"
-# AWS_ACCESS_KEY_ID = "AKIAYH3VJY2ZUOPIZ27O"
-# AWS_SECRET_ACCESS_KEY = "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"
-
-# dynamodb = boto3.resource(
-#     "dynamodb",
-#     region_name=AWS_REGION,
-#     aws_access_key_id=AWS_ACCESS_KEY_ID,
-#     aws_secret_access_key=AWS_SECRET_ACCESS_KEY
-# )
-
-# client = dynamodb.meta.client
-
-# # ============================================================
-# # 🛡️ REQUIRED TABLE CHECK (NO AUTO CREATION)
-# # ============================================================
-# REQUIRED_TABLES = [
-#     "ItemRateMaster",
-#     "LabourRateMaster",
-#     "MachineryRateMaster",
-#     "ItemMappingMaster",
-#     "StateCityIndexMaster"
-# ]
-
-# for table in REQUIRED_TABLES:
-#     client.describe_table(TableName=table)
-
-# # ============================================================
-# # 📦 TABLE HANDLES
-# # ============================================================
-# ITEM_RATE = dynamodb.Table("ItemRateMaster")
-# LABOUR_RATE = dynamodb.Table("LabourRateMaster")
-# MACHINE_RATE = dynamodb.Table("MachineryRateMaster")
-# ITEM_MAP = dynamodb.Table("ItemMappingMaster")
-# CITY_INDEX = dynamodb.Table("StateCityIndexMaster")
-
-# # ============================================================
-# # 🔧 HELPERS
-# # ============================================================
-# def norm(text: str) -> str:
-#     return re.sub(r"[^a-z0-9]", "", text.lower())
-
-# def decimal_to_float(obj):
-#     if isinstance(obj, Decimal):
-#         return float(obj)
-#     if isinstance(obj, dict):
-#         return {k: decimal_to_float(v) for k, v in obj.items()}
-#     if isinstance(obj, list):
-#         return [decimal_to_float(i) for i in obj]
-#     return obj
-
-# def get_rate(rate_key: str, component: str) -> dict:
-#     table = {
-#         "Material": ITEM_RATE,
-#         "Labour": LABOUR_RATE,
-#         "Machinery": MACHINE_RATE
-#     }[component]
-
-#     res = table.get_item(Key={"Rate_Key": norm(rate_key)})
-#     if "Item" not in res:
-#         raise ValueError(f"Rate missing for '{rate_key}'")
-#     return res["Item"]
-
-# # ============================================================
-# # ❌ LEARNING AUTOMATION — HARD DISABLED (SCOPE SAFE)
-# # ============================================================
-# def get_learning_factor(*args, **kwargs) -> Decimal:
-#     return Decimal("1.0")
-
-# # ============================================================
-# # 🧮 COST ENGINE
-# # ============================================================
-# def estimate_cost(payload: dict) -> dict:
-#     state_tier = payload["state_tier"].replace("-", "#")
-#     city_res = CITY_INDEX.get_item(Key={"StateTier": state_tier})
-
-#     if "Item" not in city_res:
-#         raise ValueError(f"City index not found for '{payload['state_tier']}'")
-
-#     city = city_res["Item"]
-
-#     project_totals = {
-#         "material": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-#         "labour": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-#         "machinery": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)}
-#     }
-
-#     boq_results = []
-#     explainability = {
-#         "material_share_pct": 0,
-#         "labour_share_pct": 0,
-#         "city_tier": payload["state_tier"],
-#         "dominant_cost_driver": None
-#     }
-
-#     for boq in payload["boq_items"]:
-#         boq_totals = {
-#             "Material": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-#             "Labour": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-#             "Machinery": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)}
-#         }
-
-#         buckets = {"Material": [], "Labour": [], "Machinery": []}
-
-#         for bom in boq["bom_items"]:
-#             item_key = norm(bom["item_name"])
-#             map_res = ITEM_MAP.get_item(Key={"Item_Key": item_key})
-
-#             if "Item" not in map_res:
-#                 raise ValueError(f"Item mapping missing for '{bom['item_name']}'")
-
-#             mapping = map_res["Item"]
-#             rate = get_rate(mapping["Rate_Key"], mapping["Cost_Component"])
-
-#             qty = Decimal(str(bom["quantity"]))
-#             index = city[f"{mapping['Cost_Component']}_Index"]
-#             lf = Decimal("1.0")
-
-#             min_cost = qty * rate["Base_Min"] * index * lf
-#             likely_cost = qty * rate["Base_Likely"] * index * lf
-#             max_cost = qty * rate["Base_Max"] * index * lf
-
-#             buckets[mapping["Cost_Component"]].append({
-#                 "item_name": bom["item_name"],
-#                 "quantity": float(qty),
-#                 "unit": rate["Unit"],
-#                 "learning_factor": 1.0,
-#                 "cost": {
-#                     "min": round(min_cost, 2),
-#                     "likely": round(likely_cost, 2),
-#                     "max": round(max_cost, 2)
-#                 }
-#             })
-
-#             for k, v in zip(["min", "likely", "max"], [min_cost, likely_cost, max_cost]):
-#                 boq_totals[mapping["Cost_Component"]][k] += v
-#                 project_totals[mapping["Cost_Component"].lower()][k] += v
-
-#         boq_results.append({
-#             "boq_id": boq["boq_id"],
-#             "boq_name": boq["boq_name"],
-#             "material": {
-#                 "items": buckets["Material"],
-#                 "total": {k: round(v, 2) for k, v in boq_totals["Material"].items()}
-#             },
-#             "labour": {
-#                 "items": buckets["Labour"],
-#                 "total": {k: round(v, 2) for k, v in boq_totals["Labour"].items()}
-#             },
-#             "machinery": {
-#                 "items": buckets["Machinery"],
-#                 "total": {k: round(v, 2) for k, v in boq_totals["Machinery"].items()}
-#             },
-#             "boq_total_cost": {
-#                 k: round(
-#                     boq_totals["Material"][k]
-#                     + boq_totals["Labour"][k]
-#                     + boq_totals["Machinery"][k],
-#                     2
-#                 )
-#                 for k in ["min", "likely", "max"]
-#             }
-#         })
-
-#     overall_likely = (
-#         project_totals["material"]["likely"]
-#         + project_totals["labour"]["likely"]
-#         + project_totals["machinery"]["likely"]
-#     )
-
-#     if overall_likely > 0:
-#         explainability["material_share_pct"] = round(
-#             (project_totals["material"]["likely"] / overall_likely) * 100, 2
-#         )
-#         explainability["labour_share_pct"] = round(
-#             (project_totals["labour"]["likely"] / overall_likely) * 100, 2
-#         )
-#         explainability["dominant_cost_driver"] = (
-#             "Material" if project_totals["material"]["likely"] >
-#             project_totals["labour"]["likely"] else "Labour"
-#         )
-
-#     result = {
-#         "project_cost": {
-#             "material": project_totals["material"],
-#             "labour": project_totals["labour"],
-#             "machinery": project_totals["machinery"],
-#             "overall": {
-#                 k: round(
-#                     project_totals["material"][k]
-#                     + project_totals["labour"][k]
-#                     + project_totals["machinery"][k],
-#                     2
-#                 )
-#                 for k in ["min", "likely", "max"]
-#             }
-#         },
-#         "boq_items": boq_results,
-#         "explainability": explainability
-#     }
-
-#     return decimal_to_float(result)
-
-
-from decimal import Decimal
-import re
+import os
+import json
+import time
+import logging
+import math
 import boto3
+import pandas as pd
+import google.genai as genai
+from typing import List, Dict, Any
+from dotenv import load_dotenv
+from botocore.exceptions import ClientError
+import sys
 
-# ============================================================
-# 🔐 AWS CONFIG (REGION: ap-south-2)
-# ============================================================
-AWS_REGION = "ap-south-2"
-AWS_ACCESS_KEY_ID = "AKIAYH3VJY2ZUOPIZ27O"
-AWS_SECRET_ACCESS_KEY = "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"
+# =========================================================
+# 1. CONFIGURATION
+# =========================================================
 
-dynamodb = boto3.resource(
-    "dynamodb",
-    region_name=AWS_REGION,
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+# Configure logging to stderr only (keep stdout clean for JSON output)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    stream=sys.stderr  # Send all logs to stderr
 )
+logger = logging.getLogger(__name__)
 
-client = dynamodb.meta.client
+# Ensure no other output goes to stdout
+import os
+# Redirect any accidental stdout prints to stderr for logging
+# But keep final JSON output to stdout
 
-# ============================================================
-# 🛡️ REQUIRED TABLE CHECK (NO AUTO CREATION)
-# ============================================================
-REQUIRED_TABLES = [
-    "ItemRateMaster",
-    "LabourRateMaster",
-    "MachineryRateMaster",
-    "ItemMappingMaster",
-    "StateCityIndexMaster"
-]
+load_dotenv()
 
-for table in REQUIRED_TABLES:
-    client.describe_table(TableName=table)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemini-1.5-flash")
 
-# ============================================================
-# 📦 TABLE HANDLES
-# ============================================================
-ITEM_RATE = dynamodb.Table("ItemRateMaster")
-LABOUR_RATE = dynamodb.Table("LabourRateMaster")
-MACHINE_RATE = dynamodb.Table("MachineryRateMaster")
-ITEM_MAP = dynamodb.Table("ItemMappingMaster")
-CITY_INDEX = dynamodb.Table("StateCityIndexMaster")
+# Process items in small batches to ensure high-quality, detailed JSON from Gemini
+BATCH_SIZE = 10 
 
-# ============================================================
-# 🔧 HELPERS
-# ============================================================
-def norm(text: str) -> str:
-    """Normalize text by removing non-alphanumeric characters and converting to lowercase"""
-    return re.sub(r"[^a-z0-9]", "", text.lower())
+if GEMINI_API_KEY:
+    pass  # Will configure in class
+else:
+    logger.error("GEMINI_API_KEY not found.")
+    exit(1)
 
-def decimal_to_float(obj):
-    """Recursively convert Decimal objects to float for JSON serialization"""
-    if isinstance(obj, Decimal):
-        return float(obj)
-    if isinstance(obj, dict):
-        return {k: decimal_to_float(v) for k, v in obj.items()}
-    if isinstance(obj, list):
-        return [decimal_to_float(i) for i in obj]
-    return obj
+# =========================================================
+# 2. GEMINI ESTIMATOR ENGINE
+# =========================================================
 
-def get_rate(rate_key: str, component: str) -> dict:
-    """
-    Retrieve rate data from DynamoDB with fallback mechanism.
-    
-    Strategy:
-    1. Try normalized key (e.g., "cement" -> "cement")
-    2. If not found, try raw key (for legacy data like "Screws")
-    3. If still not found, raise error with clear message
-    
-    Args:
-        rate_key: The rate key to look up
-        component: Cost component type ("Material", "Labour", or "Machinery")
+class GeminiCostEstimator:
+    def __init__(self):
+        self.client = genai.Client(api_key=GEMINI_API_KEY)
         
-    Returns:
-        dict: Rate item from DynamoDB
+    def estimate_batch(self, batch_items: List[Dict]) -> List[Dict]:
+        """
+        Sends a batch of BOM items to Gemini to estimate detailed costs.
+        """
         
-    Raises:
-        ValueError: If rate not found in database
-    """
-    table = {
-        "Material": ITEM_RATE,
-        "Labour": LABOUR_RATE,
-        "Machinery": MACHINE_RATE
-    }[component]
+        # Prepare the prompt
+        prompt = f"""
+        Role: Senior Cost Estimation Engineer (Indian Construction Market).
+        Task: Provide a detailed COST BREAKDOWN for the following list of construction materials/works.
 
-    normalized_key = norm(rate_key)
+        CONTEXT:
+        - Location: Tier-1 City, India (e.g., Delhi/Mumbai/Bangalore).
+        - Market Rates: Use current market rates (Material + Labor).
+        - Project Scale: Residential/Commercial fit-out.
+        - Currency: INR.
 
-    # 1️⃣ Try normalized lookup (primary method)
-    res = table.get_item(Key={"Rate_Key": normalized_key})
-    if "Item" in res:
-        return res["Item"]
+        INPUT DATA (List of Items):
+        {json.dumps(batch_items, indent=2)}
 
-    # 2️⃣ Try raw key (fallback for legacy data)
-    res = table.get_item(Key={"Rate_Key": rate_key})
-    if "Item" in res:
-        return res["Item"]
+        REQUIREMENTS:
+        1. For EACH item, analyze the 'material_name', 'quantity', and 'unit'.
+        2. Infer the following costs per unit and total:
+           - **Material Cost**: Cost of the item itself.
+           - **Labor Cost**: Cost of installation/application (if applicable).
+           - **Equipment Cost**: Associated tools/machinery (if applicable).
+           - **Overheads**: ~10% (Transport, Handling, Profit).
+           - **Contingency**: ~5% (Wastage, Price fluctuation).
+        3. If 'material_id' is 'LOCAL_PURCHASE', assume standard local hardware store rates.
+        4. Be REALISTIC. Do not underestimate labor for complex items like tiling/painting.
 
-    # 3️⃣ Fail cleanly with detailed error message
-    raise ValueError(
-        f"Rate missing for '{rate_key}' (normalized='{normalized_key}') "
-        f"in {component} rate table. Please ensure the rate exists in DynamoDB."
-    )
-
-# ============================================================
-# ❌ LEARNING AUTOMATION — HARD DISABLED (SCOPE SAFE)
-# ============================================================
-def get_learning_factor(*args, **kwargs) -> Decimal:
-    """
-    Learning factor is disabled for deterministic cost calculation.
-    Always returns 1.0 (no learning curve adjustment).
-    """
-    return Decimal("1.0")
-
-# ============================================================
-# 🧮 COST ENGINE
-# ============================================================
-def estimate_cost(payload: dict) -> dict:
-    """
-    Main cost estimation engine with semantic data mapping.
-    
-    Process:
-    1. Validate and retrieve city/state index data
-    2. For each BOQ item:
-       - Process BOM items through semantic mapper
-       - Apply regional cost indices
-       - Calculate min/likely/max cost ranges
-    3. Aggregate costs by component type (Material/Labour/Machinery)
-    4. Generate explainability metrics
-    
-    Args:
-        payload: Dictionary containing:
-            - state_tier: State and tier (e.g., "Maharashtra-Tier1")
-            - boq_items: List of BOQ items with BOM details
+        OUTPUT FORMAT:
+        Return a Valid JSON List of Objects. No Markdown. No commentary.
+        Structure:
+        [
+          {{
+            "wbs_id": "...",
+            "work_item": "...",
+            "material_name": "...",
+            "quantity": 0.0,
+            "unit": "...",
             
-    Returns:
-        dict: Comprehensive cost breakdown with explainability
-        
-    Raises:
-        ValueError: If validation fails or required data is missing
-    """
-    # Convert state_tier format for DynamoDB lookup (e.g., "Maharashtra-Tier1" -> "Maharashtra#Tier1")
-    state_tier = payload["state_tier"].replace("-", "#")
-    city_res = CITY_INDEX.get_item(Key={"StateTier": state_tier})
-
-    if "Item" not in city_res:
-        raise ValueError(
-            f"City index not found for '{payload['state_tier']}'. "
-            f"Please verify the state_tier format (e.g., 'Maharashtra-Tier1')"
-        )
-
-    city = city_res["Item"]
-
-    # Initialize project-level totals
-    project_totals = {
-        "material": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-        "labour": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-        "machinery": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)}
-    }
-
-    boq_results = []
-    explainability = {
-        "material_share_pct": 0,
-        "labour_share_pct": 0,
-        "city_tier": payload["state_tier"],
-        "dominant_cost_driver": None
-    }
-
-    # Process each BOQ item
-    for boq in payload["boq_items"]:
-        # Initialize BOQ-level totals
-        boq_totals = {
-            "Material": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-            "Labour": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)},
-            "Machinery": {"min": Decimal(0), "likely": Decimal(0), "max": Decimal(0)}
-        }
-
-        # Buckets for organizing items by component type
-        buckets = {"Material": [], "Labour": [], "Machinery": []}
-
-        # Process each BOM item within the BOQ
-        for bom in boq["bom_items"]:
-            # Step 1: Semantic mapping - normalize item name and look up mapping
-            item_key = norm(bom["item_name"])
-            map_res = ITEM_MAP.get_item(Key={"Item_Key": item_key})
-
-            if "Item" not in map_res:
-                raise ValueError(
-                    f"Item mapping missing for '{bom['item_name']}' (normalized: '{item_key}'). "
-                    f"Please add this item to ItemMappingMaster table."
-                )
-
-            mapping = map_res["Item"]
+            "rate_per_unit_material": 0.0, 
+            "rate_per_unit_labor": 0.0,
             
-            # Step 2: Retrieve rate data for the mapped rate key
-            rate = get_rate(mapping["Rate_Key"], mapping["Cost_Component"])
+            "total_material_cost": 0.0,
+            "total_labor_cost": 0.0,
+            "total_equipment_cost": 0.0,
+            
+            "overheads_and_profit": 0.0,
+            "contingency_cost": 0.0,
+            
+            "grand_total": 0.0,
+            
+            "confidence_level": "High/Medium/Low",
+            "cost_basis": "Unified Market Rate 2025"
+          }}
+        ]
+        """
 
-            # Step 3: Calculate costs with regional index
-            qty = Decimal(str(bom["quantity"]))
-            index = city[f"{mapping['Cost_Component']}_Index"]
-            lf = Decimal("1.0")  # Learning factor (currently disabled)
+        retries = 3
+        for attempt in range(retries):
+            try:
+                response = self.client.models.generate_content(model=MODEL_NAME, contents=prompt)
+                raw_text = response.text.replace("```json", "").replace("```", "").strip()
+                
+                # Sanity check: is it JSON?
+                if not raw_text.startswith("[") and not raw_text.endswith("]"):
+                     # Sometimes Gemini adds intro text
+                    start_idx = raw_text.find("[")
+                    end_idx = raw_text.rfind("]")
+                    if start_idx != -1 and end_idx != -1:
+                        raw_text = raw_text[start_idx : end_idx + 1]
+                
+                estimates = json.loads(raw_text)
+                return estimates
 
-            min_cost = qty * rate["Base_Min"] * index * lf
-            likely_cost = qty * rate["Base_Likely"] * index * lf
-            max_cost = qty * rate["Base_Max"] * index * lf
-
-            # Step 4: Add to appropriate bucket
-            buckets[mapping["Cost_Component"]].append({
-                "item_name": bom["item_name"],
-                "quantity": float(qty),
-                "unit": rate["Unit"],
-                "learning_factor": 1.0,
-                "cost": {
-                    "min": round(min_cost, 2),
-                    "likely": round(likely_cost, 2),
-                    "max": round(max_cost, 2)
-                }
+            except Exception as e:
+                logger.warning(f"⚠️ Batch failed (Attempt {attempt+1}/{retries}): {e}")
+                time.sleep(2 * (attempt + 1)) # Exponential backoff
+        
+        logger.error("Batch failed after all retries.")
+        # Return input items with zero costs so pipeline doesn't break
+        fallback = []
+        for item in batch_items:
+            fallback_item = item.copy()
+            fallback_item.update({
+                "grand_total": 0.0, 
+                "confidence_level": "Failed",
+                "reason": "AI Error"
             })
+            fallback.append(fallback_item)
+        return fallback
 
-            # Step 5: Accumulate totals
-            for k, v in zip(["min", "likely", "max"], [min_cost, likely_cost, max_cost]):
-                boq_totals[mapping["Cost_Component"]][k] += v
-                project_totals[mapping["Cost_Component"].lower()][k] += v
+# =========================================================
+# 3. AGGREGATION & PIPELINE
+# =========================================================
 
-        # Compile BOQ-level results
-        boq_results.append({
-            "boq_id": boq["boq_id"],
-            "boq_name": boq["boq_name"],
-            "material": {
-                "items": buckets["Material"],
-                "total": {k: round(v, 2) for k, v in boq_totals["Material"].items()}
-            },
-            "labour": {
-                "items": buckets["Labour"],
-                "total": {k: round(v, 2) for k, v in boq_totals["Labour"].items()}
-            },
-            "machinery": {
-                "items": buckets["Machinery"],
-                "total": {k: round(v, 2) for k, v in boq_totals["Machinery"].items()}
-            },
-            "boq_total_cost": {
-                k: round(
-                    boq_totals["Material"][k]
-                    + boq_totals["Labour"][k]
-                    + boq_totals["Machinery"][k],
-                    2
-                )
-                for k in ["min", "likely", "max"]
-            }
-        })
+class CostPipeline:
+    def __init__(self, bom_data: List[Dict]):
+        self.bom_data = bom_data
+        self.estimator = GeminiCostEstimator()
+        
+    def run(self):
+        logger.info("Starting Cost Prediction Engine...")
+        
+        # 1. Use provided BOM data
+        bom_data = self.bom_data
+        logger.info(f"Loaded {len(bom_data)} BOM items.")
+        
+        # 2. Batch Process
+        final_estimates = []
+        total_batches = math.ceil(len(bom_data) / BATCH_SIZE)
+        
+        for i in range(0, len(bom_data), BATCH_SIZE):
+            batch = bom_data[i : i + BATCH_SIZE]
+            
+            # Prepare minimal payload for AI to save tokens
+            ai_payload = []
+            for item in batch:
+                ai_payload.append({
+                    "wbs_id": item.get("wbs_id"),
+                    "work_item": item.get("work_item"),
+                    "material_name": item.get("material_name"),
+                    "quantity": item.get("quantity"),
+                    "unit": item.get("unit"),
+                    "material_id": item.get("material_id") # Context for local vs catalog
+                })
+            
+            logger.info(f"   ⚙️ Processing Batch {i//BATCH_SIZE + 1}/{total_batches} ({len(batch)} items)...")
+            
+            batch_results = self.estimator.estimate_batch(ai_payload)
+            
+            # Merge AI results back with original data (so we keep source_table, etc.)
+            # We match by wbs_id + materials_name or index essentially. 
+            # Since AI returns list in same order usually, we can zip, but key matching is safer.
+            # For simplicity in this v1, we assume 1:1 mapping order from AI.
+            
+            if len(batch_results) != len(batch):
+                logger.warning(f"   ⚠️ Mismatch in result count ({len(batch_results)} vs {len(batch)}). Using sequential mapping.")
+            
+            for original, result in zip(batch, batch_results):
+                merged = original.copy()
+                # Update with cost data
+                merged.update(result)
+                final_estimates.append(merged)
+                
+            time.sleep(1) # Rate limit politeness
 
-    # Calculate explainability metrics
-    overall_likely = (
-        project_totals["material"]["likely"]
-        + project_totals["labour"]["likely"]
-        + project_totals["machinery"]["likely"]
-    )
+        # 3. Return Detailed Estimates
+        logger.info("Cost estimation completed.")
+        return final_estimates
+        
+    def generate_summary(self, detailed_data: List[Dict]):
+        logger.info("📊 Generating Cost Summary...")
+        
+        total_project_cost = 0.0
+        wbs_summary = {}
+        
+        for item in detailed_data:
+            cost = item.get("grand_total", 0.0)
+            if isinstance(cost, (int, float)):
+                total_project_cost += cost
+                
+            wbs_id = item.get("wbs_id", "UNKNOWN")
+            if wbs_id not in wbs_summary:
+                wbs_summary[wbs_id] = {
+                    "wbs_id": wbs_id,
+                    "work_item": item.get("work_item", "Various"),
+                    "total_cost": 0.0,
+                    "items_count": 0
+                }
+            
+            wbs_summary[wbs_id]["total_cost"] += cost
+            wbs_summary[wbs_id]["items_count"] += 1
+            
+        summary_report = {
+            "project_total_cost": round(total_project_cost, 2),
+            "currency": "INR",
+            "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "wbs_breakdown": list(wbs_summary.values())
+        }
+        
+        with open(self.summary_path, 'w') as f:
+            json.dump(summary_report, f, indent=4)
+            
+        logger.info(f"✅ Summary saved to {self.summary_path}")
+        logger.info(f"💰 PROJECT TOTAL: ₹ {total_project_cost:,.2f}")
 
-    if overall_likely > 0:
-        explainability["material_share_pct"] = round(
-            (project_totals["material"]["likely"] / overall_likely) * 100, 2
-        )
-        explainability["labour_share_pct"] = round(
-            (project_totals["labour"]["likely"] / overall_likely) * 100, 2
-        )
-        explainability["dominant_cost_driver"] = (
-            "Material" if project_totals["material"]["likely"] >
-            project_totals["labour"]["likely"] else "Labour"
-        )
+# =========================================================
+# MAIN EXECUTION
+# =========================================================
 
-    # Compile final result
-    result = {
-        "project_cost": {
-            "material": project_totals["material"],
-            "labour": project_totals["labour"],
-            "machinery": project_totals["machinery"],
-            "overall": {
-                k: round(
-                    project_totals["material"][k]
-                    + project_totals["labour"][k]
-                    + project_totals["machinery"][k],
-                    2
-                )
-                for k in ["min", "likely", "max"]
-            }
-        },
-        "boq_items": boq_results,
-        "explainability": explainability
-    }
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:
+        # API mode: read from command line
+        try:
+            bom_data = json.loads(sys.argv[1])
+        except json.JSONDecodeError as e:
+            print(json.dumps({"error": f"Invalid JSON input: {e}"}))
+            sys.exit(1)
+    else:
+        # Standalone mode: read from file
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        INPUT_FILE = os.path.join(BASE_DIR, "bom_quantities_final.json")
+        if not os.path.exists(INPUT_FILE):
+            print(json.dumps({"error": f"'{INPUT_FILE}' not found."}))
+            sys.exit(1)
+        with open(INPUT_FILE, "r") as f:
+            bom_data = json.load(f)
 
-    return decimal_to_float(result)
+    # Run the pipeline
+    pipeline = CostPipeline(bom_data)
+    result = pipeline.run()
+    print(json.dumps(result))

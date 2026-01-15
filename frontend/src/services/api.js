@@ -135,8 +135,9 @@ export const boqAPI = {
   // Generate BOQ from floor plan and 2D layout images
   // Note: Backend currently processes one file at a time, so we're sending floor plan first
   // The layout file may need separate processing or backend update to handle both
-  generateFromImages: (floorPlanFile, layoutFile, projectInfo) => {
+  generateFromImages: (floorPlanFile, projectInfo) => {
     const formData = new FormData();
+    console.log(projectInfo);
     formData.append("file", floorPlanFile); // Backend expects 'file' for floorplan
     // meterPerPixel is required by backend - always send it
     formData.append("meterPerPixel", projectInfo.meterPerPixel || "0.01");

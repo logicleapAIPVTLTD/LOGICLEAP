@@ -88,31 +88,18 @@ export default function WBS({ setActiveView, initialItems = [] }) {
           parsed.data.length > 0
         ) {
           // Verify that saved results have valid WBS structure (from backend)
-          // Backend returns wbs as array of tasks with: stage, task_id, task, duration
+          // Backend returns items with stage_1_planning, stage_2_procurement, stage_3_execution, stage_4_qc, stage_5_billing
           const validResults = parsed.data.filter((item) => {
-            if (!item || !item.wbs) return false;
-            // Backend returns wbs as array of tasks
-            if (Array.isArray(item.wbs)) {
-              // Verify each task has required fields from backend
-              // Backend format: { stage, task_id, task, duration: { optimistic_hours, most_likely_hours, pessimistic_hours, expected_hours } }
-              return (
-                item.wbs.length > 0 &&
-                item.wbs.every(
-                  (task) =>
-                    task &&
-                    (task.task || task.task_name) &&
-                    task.duration &&
-                    typeof task.duration === "object" &&
-                    (task.duration.expected_hours != null ||
-                      task.duration.most_likely_hours != null)
-                )
-              );
-            }
-            // Or as object with stages (alternative format)
-            if (typeof item.wbs === "object") {
-              return Object.keys(item.wbs).length > 0;
-            }
-            return false;
+            if (!item) return false;
+            // Check for required stage fields from backend response
+            // Valid item must have at least wbs_id, boq_reference, and execution stage
+            return (
+              item.wbs_id &&
+              item.boq_reference &&
+              item.stage_3_execution &&
+              Array.isArray(item.stage_3_execution) &&
+              item.stage_3_execution.length > 0
+            );
           });
           if (validResults.length > 0) {
             // Only load if we have valid backend-generated results
@@ -150,76 +137,71 @@ export default function WBS({ setActiveView, initialItems = [] }) {
       // Map BOQ items to WBS generation format
       const mappedProjects = boqItems.map((item) => {
         // Extract work name from multiple possible fields
-        const work =
-          item.projectMaterial ||
-          item.work ||
-          item.work_name ||
-          item.description ||
-          item.scope_label ||
-          "Unknown Work";
+        // const work =
+        //   item.projectMaterial ||
+        //   item.work ||
+        //   item.work_name ||
+        //   item.description ||
+        //   item.scope_label ||
+        //   "Unknown Work";
 
-        // Extract quantities - handle both original format (qty_sqm, qty_sqft) and formatted format (quantity, length, width)
-        const length =
-          parseFloat(
-            item.length || item.qty_sqm || item.qtySqm || item.quantity || 0
-          ) || null;
-        const breadth =
-          parseFloat(item.width || item.qty_sqft || item.qtySqft || 0) || null;
+        // // Extract quantities - handle both original format (qty_sqm, qty_sqft) and formatted format (quantity, length, width)
+        // const length =
+        //   parseFloat(
+        //     item.length || item.qty_sqm || item.qtySqm || item.quantity || 0
+        //   ) || null;
+        // const breadth =
+        //   parseFloat(item.width || item.qty_sqft || item.qtySqft || 0) || null;
 
-        // Extract state and tier
-        const state = item.state || null;
-        const tier = item.tier || null;
+        // // Extract state and tier
+        // const state = item.state || null;
+        // const tier = item.tier || null;
+
+        // return {
+        //   work,
+        //   length,
+        //   breadth,
+        //   state,
+        //   tier,
+        // };
+
+        const originalData = item.originalData;
 
         return {
-          work,
-          length,
-          breadth,
-          state,
-          tier,
+          work_name: originalData.work_name,
+          description: originalData.description,
+          area: originalData.area,
+          unit: originalData.unit,
+          room_name: originalData.room_name,
         };
       });
 
       console.log("Batch WBS API Request:", { projects: mappedProjects });
-      const response = await generateWBSBatch({ projects: mappedProjects });
+      const response = await generateWBSBatch({ boq_items: mappedProjects });
       console.log("Batch WBS API Response:", response);
 
       if (!response.success) {
         throw new Error(response.error || "Batch generation failed");
       }
 
-      const successfulResults = (response.results || [])
-        .filter((r) => r.success && r.data)
-        .map((r) => r.data);
+      const successfulResults = response.data;
 
       console.log("Successful WBS Results:", successfulResults);
 
       // Only show results from backend - don't merge with old results
       // Filter to ensure only items with valid WBS data from backend are included
-      // Backend format: { wbs: [{ stage, task_id, task, duration: { optimistic_hours, most_likely_hours, pessimistic_hours, expected_hours } }] }
+      // Backend format: { wbs_id, boq_reference, stage_1_planning, stage_2_procurement, stage_3_execution, stage_4_qc, stage_5_billing }
       const validResults = successfulResults.filter((item) => {
-        if (!item || !item.wbs) return false;
-        // Backend returns wbs as array of tasks
-        if (Array.isArray(item.wbs)) {
-          // Verify each task has required fields from backend
-          // Backend format: { stage, task_id, task, duration: { optimistic_hours, most_likely_hours, pessimistic_hours, expected_hours } }
-          return (
-            item.wbs.length > 0 &&
-            item.wbs.every(
-              (task) =>
-                task &&
-                (task.task || task.task_name) &&
-                task.duration &&
-                typeof task.duration === "object" &&
-                (task.duration.expected_hours != null ||
-                  task.duration.most_likely_hours != null)
-            )
-          );
-        }
-        // Or as object with stages (alternative format)
-        if (typeof item.wbs === "object") {
-          return Object.keys(item.wbs).length > 0;
-        }
-        return false;
+        if (!item) return false;
+        // Check for required stage fields from backend response
+        // Valid item must have at least wbs_id, boq_reference, and execution stage
+        return (
+          item.wbs_id &&
+          item.boq_reference &&
+          item.stage_3_execution &&
+          Array.isArray(item.stage_3_execution) &&
+          item.stage_3_execution.length > 0
+        );
       });
 
       const normalizedData = {
@@ -284,96 +266,112 @@ export default function WBS({ setActiveView, initialItems = [] }) {
     const validBOQItems = boqArray.filter(
       (item) =>
         item &&
-        item.wbs &&
-        (Array.isArray(item.wbs) || typeof item.wbs === "object")
+        item.wbs_id &&
+        item.stage_3_execution &&
+        Array.isArray(item.stage_3_execution)
     );
 
     return validBOQItems
       .map((boqItem) => {
         const tasksByStage = {};
-        let wbsData = boqItem?.wbs;
 
-        const normalizeStageName = (name) => {
-          if (name === null || name === undefined) return "Unknown";
-          const raw = name.toString().trim().toLowerCase();
-          const numericStage = Number(raw);
-          const normalizedNumeric = Number.isFinite(numericStage)
-            ? numericStage.toString().replace(/\.0+$/, "")
-            : raw;
-          const key = normalizedNumeric || raw;
-          const stageMap = {
-            1: "Planning",
-            planning: "Planning",
-            plan: "Planning",
-            2: "Procurement",
-            procurement: "Procurement",
-            "ordering materials": "Procurement",
-            3: "Execution",
-            execution: "Execution",
-            exec: "Execution",
-            4: "QC",
-            qc: "QC",
-            "qc check": "QC",
-            5: "Billing",
-            billing: "Billing",
-          };
-          if (stageMap[key]) return stageMap[key];
-          if (stageMap[raw]) return stageMap[raw];
-          return raw ? raw.charAt(0).toUpperCase() + raw.slice(1) : "Unknown";
-        };
+        // Process execution stage from stage_3_execution array
+        if (
+          boqItem.stage_3_execution &&
+          Array.isArray(boqItem.stage_3_execution)
+        ) {
+          const executionTasks = boqItem.stage_3_execution.map((execItem) => {
+            // Handle both object format { step, activity, hours } and string format
+            const taskObj =
+              typeof execItem === "string"
+                ? { task_name: execItem }
+                : {
+                    task_name:
+                      execItem.activity || execItem.task_name || "Task",
+                  };
 
-        if (Array.isArray(wbsData)) {
-          wbsData = wbsData.reduce((acc, task) => {
-            const stageName = normalizeStageName(task.stage || "Unknown");
-            if (!acc[stageName]) acc[stageName] = [];
-            acc[stageName].push(task);
-            return acc;
-          }, {});
+            const hours = execItem.hours || 0;
+            const durationObj = {
+              expected_hours: hours,
+              optimistic_hours: hours * 0.8,
+              most_likely_hours: hours,
+              pessimistic_hours: hours * 1.2,
+            };
+
+            return {
+              task_id: `task-${Math.random().toString(36).substr(2, 9)}`,
+              task_name: taskObj.task_name,
+              duration: durationObj,
+              boq_text: boqItem.boq_reference,
+            };
+          });
+          tasksByStage["Execution"] = executionTasks;
         }
 
-        if (wbsData && typeof wbsData === "object") {
-          Object.entries(wbsData).forEach(([stageName, tasks]) => {
-            const tasksArray = Array.isArray(tasks) ? tasks : [];
-            const normalizedStageName = normalizeStageName(stageName);
+        // Process other stages from planning, procurement, qc, billing
+        if (
+          boqItem.stage_1_planning &&
+          Array.isArray(boqItem.stage_1_planning)
+        ) {
+          tasksByStage["Planning"] = boqItem.stage_1_planning.map((item) => ({
+            task_id: `task-${Math.random().toString(36).substr(2, 9)}`,
+            task_name: typeof item === "string" ? item : item.activity || item,
+            duration: {
+              expected_hours: 0,
+              optimistic_hours: 0,
+              most_likely_hours: 0,
+              pessimistic_hours: 0,
+            },
+            boq_text: boqItem.boq_reference,
+          }));
+        }
 
-            const mappedTasks = tasksArray.map((task) => {
-              const taskObj =
-                typeof task === "string" ? { task_name: task } : task;
+        if (
+          boqItem.stage_2_procurement &&
+          Array.isArray(boqItem.stage_2_procurement)
+        ) {
+          tasksByStage["Procurement"] = boqItem.stage_2_procurement.map(
+            (item) => ({
+              task_id: `task-${Math.random().toString(36).substr(2, 9)}`,
+              task_name:
+                typeof item === "string" ? item : item.activity || item,
+              duration: {
+                expected_hours: 0,
+                optimistic_hours: 0,
+                most_likely_hours: 0,
+                pessimistic_hours: 0,
+              },
+              boq_text: boqItem.boq_reference,
+            })
+          );
+        }
 
-              let durationObj = taskObj.duration;
-              if (!durationObj && taskObj.final_days) {
-                const hours = taskObj.final_days * 8;
-                durationObj = {
-                  expected_hours: hours,
-                  optimistic_hours: hours * 0.8,
-                  most_likely_hours: hours,
-                  pessimistic_hours: hours * 1.2,
-                };
-              }
+        if (boqItem.stage_4_qc && Array.isArray(boqItem.stage_4_qc)) {
+          tasksByStage["QC"] = boqItem.stage_4_qc.map((item) => ({
+            task_id: `task-${Math.random().toString(36).substr(2, 9)}`,
+            task_name: typeof item === "string" ? item : item.activity || item,
+            duration: {
+              expected_hours: 0,
+              optimistic_hours: 0,
+              most_likely_hours: 0,
+              pessimistic_hours: 0,
+            },
+            boq_text: boqItem.boq_reference,
+          }));
+        }
 
-              return {
-                task_id:
-                  taskObj.task_id ||
-                  taskObj.wbs_task_id ||
-                  `task-${Math.random().toString(36).substr(2, 9)}`,
-                task_name: taskObj.task_name || taskObj.task || task,
-                duration: durationObj,
-                boq_text:
-                  boqItem.boq_text ||
-                  boqItem.matched_work ||
-                  boqItem.projectMaterial,
-              };
-            });
-
-            if (!tasksByStage[normalizedStageName]) {
-              tasksByStage[normalizedStageName] = mappedTasks;
-            } else {
-              tasksByStage[normalizedStageName] = [
-                ...tasksByStage[normalizedStageName],
-                ...mappedTasks,
-              ];
-            }
-          });
+        if (boqItem.stage_5_billing && Array.isArray(boqItem.stage_5_billing)) {
+          tasksByStage["Billing"] = boqItem.stage_5_billing.map((item) => ({
+            task_id: `task-${Math.random().toString(36).substr(2, 9)}`,
+            task_name: typeof item === "string" ? item : item.activity || item,
+            duration: {
+              expected_hours: 0,
+              optimistic_hours: 0,
+              most_likely_hours: 0,
+              pessimistic_hours: 0,
+            },
+            boq_text: boqItem.boq_reference,
+          }));
         }
 
         // Only return items that have tasks after processing
@@ -404,13 +402,8 @@ export default function WBS({ setActiveView, initialItems = [] }) {
           Object.keys(boqItem.tasksByStage).length > 0
       )
       .forEach((boqItem) => {
-        // Extract work name from multiple possible fields
-        const workName =
-          boqItem.boq_text ||
-          boqItem.matched_work ||
-          boqItem.projectMaterial ||
-          boqItem.input_work ||
-          "Unknown Work";
+        // Extract work name from boq_reference (new format uses this field)
+        const workName = boqItem.boq_reference || "Unknown Work";
 
         // Normalize work name for grouping (case-insensitive, trimmed)
         // This ensures "False Ceiling Gypsum" and "false ceiling gypsum" are grouped together

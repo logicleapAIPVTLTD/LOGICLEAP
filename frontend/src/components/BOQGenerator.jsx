@@ -187,8 +187,13 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
       return;
     }
 
-    if (!floorPlanFile || !layoutFile) {
-      setError("Please upload both Floor Plan and 2D Layout images");
+    // if (!floorPlanFile || !layoutFile) {
+    //   setError("Please upload both Floor Plan and 2D Layout images");
+    //   return;
+    // }
+
+    if (!floorPlanFile) {
+      setError("Please upload Floor Plan images");
       return;
     }
 
@@ -214,9 +219,10 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
         meterPerPixel: meterPerPixel.toString(), // Ensure it's a string as expected by backend
       };
 
+      console.log(projectInfo);
+
       const response = await boqAPI.generateFromImages(
         floorPlanFile,
-        layoutFile,
         projectInfo
       );
 
@@ -228,8 +234,8 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
           boqArray = response.data;
           backendData = { boq: response.data };
         } else {
-          backendData = response.data;
           boqArray = response.data.boq || response.data.items || [];
+          backendData = response.data;
         }
 
         console.log("BOQ Array extracted:", boqArray);
@@ -256,6 +262,7 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
                 return {
                   itemNo: index + 1,
                   work: item.work_name || `Item ${index + 1}`,
+                  description: item.description,
                   space: item.room_name || "",
                   workCode: item.work_code || "",
                   quantity: areaValue,
@@ -387,7 +394,8 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
 
     // Convert generated BOQ items to the format expected by the app
     const formattedItems = generatedBOQ.map((item) => ({
-      projectMaterial: item.work || item.description || "Unknown Work",
+      projectMaterial: item.work || "Unknown Work",
+      description: item.description,
       state: STATE_TIER_MAP[formData.state]?.code || formData.state,
       tier: formData.tier,
       length: item.qtySqm || item.quantity || "",
@@ -397,6 +405,7 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
       rate: item.rate || "",
       workCode: item.workCode || "",
       space: item.space || "",
+      originalData: item.originalData,
     }));
 
     // Save to localStorage
@@ -664,7 +673,7 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
             </div>
 
             {/* 2D Layout Upload */}
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 2D Layout / Design Drawing{" "}
                 <span className="text-red-500">*</span>
@@ -714,7 +723,7 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
                   </div>
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {error && (
@@ -903,7 +912,7 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
                   Generated BOQ Results
                 </h3>
                 <p className="text-sm text-gray-600 mt-1">
-                  {backendData.total_rooms || 0} rooms detected •{" "}
+                  {/* {backendData.total_rooms || 0} rooms detected •{" "} */}
                   {generatedBOQ.length} BOQ items generated
                 </p>
               </div>

@@ -56,11 +56,11 @@ app.use("/api/boq", require("./routes/boqRoutes"));
 app.use("/api/wbs", require("./routes/wbsRoutes"));
 app.use("/api/bom", bomRoutes);
 app.use("/api/estimation", require("./routes/costEngineRoutes"));
-app.use("/api/floorplan", require("./routes/floorplanRoutes"));
-app.use(
-  "/api/continuous-learning",
-  require("./routes/continuousLearningRoutes")
-);
+// app.use("/api/floorplan", require("./routes/floorplanRoutes"));
+// app.use(
+//   "/api/continuous-learning",
+//   require("./routes/continuousLearningRoutes")
+// );
 app.use("/api/cost-engine", require("./routes/costEngineRoutes"));
 
 // 404 handler

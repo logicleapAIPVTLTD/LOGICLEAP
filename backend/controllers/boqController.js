@@ -630,13 +630,9 @@ const upload = multer({
   },
 });
 
-/**
- * Execute Python script and return parsed output
- * FIXED: Now properly handles both stdout and stderr
- */
-const executePythonScript = (mode, input) => {
+const executePythonScript = (mode, input, context = {}) => {
   return new Promise((resolve, reject) => {
-    const scriptPath = path.join(__dirname, "../python/boq_processor.py");
+    const scriptPath = path.join(__dirname, "../python/boq_engine_api.py");
 
     console.log(
       `🚀 Executing Python script: mode=${mode}, input=${
@@ -644,13 +640,13 @@ const executePythonScript = (mode, input) => {
       }`
     );
 
-    const python = spawn("python3", [scriptPath]);
+    const python = spawn("python", [scriptPath]);
 
     let stdout = "";
     let stderr = "";
 
-    // Send input data via stdin
-    const inputData = JSON.stringify({ mode, input });
+    // Send input data via stdin (include context for image processing)
+    const inputData = JSON.stringify({ mode, input, context });
     python.stdin.write(inputData);
     python.stdin.end();
 
@@ -789,8 +785,19 @@ const processFileToBOQ = async (req, res) => {
       });
     }
 
+    // Prepare context for image processing
+    let context = {};
+    if (mode === "3") {
+      // For images, we need project context
+      context = {
+        project_name: req.body.project_name || "Untitled Project",
+        location: req.body.location || "Unknown Location",
+        project_type: req.body.project_type || "General Construction",
+      };
+    }
+
     // Process the file
-    const result = await executePythonScript(mode, filePath);
+    const result = await executePythonScript(mode, filePath, context);
 
     // Clean up uploaded file
     try {
@@ -907,7 +914,7 @@ const getBOQStats = async (req, res) => {
  */
 const healthCheck = async (req, res) => {
   try {
-    const scriptPath = path.join(__dirname, "../python/boq_processor.py");
+    const scriptPath = path.join(__dirname, "../python/boq_engine_api.py");
 
     await fs.access(scriptPath);
 

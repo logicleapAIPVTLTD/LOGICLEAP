@@ -7,7 +7,8 @@ const {
 
 /**
  * @route   POST /api/wbs/generate
- * @desc    Generate WBS from single BOQ item
+ * @desc    Generate WBS for a single BOQ item
+ * @body    {work_name: string, description?: string, area?: number, unit?: string, room_name?: string}
  * @access  Public
  */
 router.post("/generate", generateWBS);
@@ -15,6 +16,7 @@ router.post("/generate", generateWBS);
 /**
  * @route   POST /api/wbs/batch
  * @desc    Generate WBS for multiple BOQ items
+ * @body    {boq_items: Array<{work_name: string, description?: string, area?: number, unit?: string, room_name?: string}>}
  * @access  Public
  */
 router.post("/batch", generateBatchWBS);

@@ -30,7 +30,7 @@ const Sidebar = ({
     <div
       className={`${
         sidebarOpen ? "w-56" : "w-16"
-      } bg-white border-r border-gray-200 transition-all duration-500 ease-in-out flex flex-col`}
+      } bg-white border-r border-gray-200 transition-all ease-in-out flex flex-col`}
     >
       {/* Logo */}
       <div className="p-2 border-b border-gray-200 flex items-center justify-between">

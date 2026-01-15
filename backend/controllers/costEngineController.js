@@ -1,313 +1,192 @@
 // backend/controllers/costEngineController.js
-const axios = require("axios");
+const { spawn } = require('child_process');
+const path = require('path');
 
-// Python cost engine service URL
-const COST_ENGINE_URL = process.env.COST_ENGINE_URL || "http://localhost:8001";
-
-class CostEngineController {
-  /**
-   * Get cost estimate for a project
-   * POST /api/cost-engine/estimate
-   */
-  async getCostEstimate(req, res) {
-    try {
-      const payload = req.body;
-
-      // Validate required fields
-      if (!payload.state_tier) {
-        return res.status(400).json({
-          success: false,
-          message: "state_tier is required",
-        });
+/**
+ * Execute Cost Engine script
+ */
+const executeCostScript = (bomData) => {
+  return new Promise((resolve, reject) => {
+    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const scriptPath = path.join(__dirname, '../python/cost_engine.py');
+    
+    const pythonProcess = spawn(pythonPath, [scriptPath, JSON.stringify(bomData)]);
+    
+    let dataBuffer = '';
+    let errorBuffer = '';
+    
+    pythonProcess.stdout.on('data', (data) => {
+      dataBuffer += data.toString();
+    });
+    
+    pythonProcess.stderr.on('data', (data) => {
+      errorBuffer += data.toString();
+      console.error(`Python Error: ${data}`);
+    });
+    
+    pythonProcess.on('close', (code) => {
+      if (code !== 0) {
+        reject(new Error(`Cost script exited with code ${code}: ${errorBuffer}`));
+        return;
       }
-
-      if (
-        !payload.boq_items ||
-        !Array.isArray(payload.boq_items) ||
-        payload.boq_items.length === 0
-      ) {
-        return res.status(400).json({
-          success: false,
-          message: "boq_items array is required and must not be empty",
-        });
+      
+      try {
+        const result = JSON.parse(dataBuffer);
+        resolve(result);
+      } catch (parseError) {
+        reject(new Error(`Failed to parse Cost output: ${parseError.message}`));
       }
+    });
+    
+    pythonProcess.on('error', (error) => {
+      reject(new Error(`Failed to start Python process: ${error.message}`));
+    });
+    
+    setTimeout(() => {
+      pythonProcess.kill();
+      reject(new Error('Cost script execution timeout'));
+    }, 300000); // 5 minutes timeout
+  });
+};
 
-      // Validate BOQ items structure
-      for (const boq of payload.boq_items) {
-        if (!boq.boq_id || !boq.boq_name || !boq.bom_items) {
-          return res.status(400).json({
-            success: false,
-            message: "Each BOQ item must have boq_id, boq_name, and bom_items",
-          });
-        }
+/**
+ * POST /api/cost-engine/estimate
+ * Generate cost estimate from BOM data
+ */
+const getCostEstimate = async (req, res) => {
+  try {
+    const { bomData } = req.body;
 
-        if (!Array.isArray(boq.bom_items) || boq.bom_items.length === 0) {
-          return res.status(400).json({
-            success: false,
-            message: `BOQ ${boq.boq_id} must have at least one BOM item`,
-          });
-        }
-
-        for (const bom of boq.bom_items) {
-          if (!bom.item_name || bom.quantity === undefined) {
-            return res.status(400).json({
-              success: false,
-              message: "Each BOM item must have item_name and quantity",
-            });
-          }
-        }
-      }
-
-      // Call Python cost engine service
-      const response = await axios.post(
-        `${COST_ENGINE_URL}/cost-estimate`,
-        payload,
-        {
-          headers: { "Content-Type": "application/json" },
-          timeout: 60000, // 60 second timeout for complex calculations
-        }
-      );
-
-      return res.status(200).json({
-        success: true,
-        message: "Cost estimate calculated successfully",
-        data: response.data,
-      });
-    } catch (error) {
-      console.error("Error getting cost estimate:", error.message);
-
-      if (error.response) {
-        // Python service returned an error
-        const status = error.response.status;
-        const errorMessage =
-          error.response.data.detail || "Error from cost engine service";
-
-        return res.status(status).json({
-          success: false,
-          message: errorMessage,
-          error: error.response.data,
-        });
-      } else if (error.code === "ECONNREFUSED") {
-        return res.status(503).json({
-          success: false,
-          message: "Cost engine service is unavailable",
-        });
-      } else if (error.code === "ETIMEDOUT") {
-        return res.status(504).json({
-          success: false,
-          message: "Cost calculation timed out",
-        });
-      }
-
-      return res.status(500).json({
+    // Validation
+    if (!bomData || !Array.isArray(bomData) || bomData.length === 0) {
+      return res.status(400).json({
         success: false,
-        message: "Internal server error",
-        error: error.message,
+        error: "BOM data is required and must be a non-empty array",
       });
     }
+
+    console.log(`Generating cost estimate for ${bomData.length} BOM items`);
+
+    const result = await executeCostScript(bomData);
+
+    return res.status(200).json({
+      success: true,
+      message: "Cost estimate generated successfully",
+      data: result,
+      summary: {
+        totalItems: result.length,
+      },
+    });
+  } catch (error) {
+    console.error("Error generating cost estimate:", error);
+    return res.status(500).json({
+      success: false,
+      error: error.message || "Internal server error",
+    });
   }
+};
 
-  /**
-   * Get cost estimate with additional processing
-   * POST /api/cost-engine/estimate/detailed
-   */
-  async getDetailedEstimate(req, res) {
-    try {
-      const payload = req.body;
+/**
+ * POST /api/cost-engine/estimate/detailed
+ * Generate detailed cost estimate
+ */
+const getDetailedEstimate = async (req, res) => {
+  // For now, same as getCostEstimate
+  return getCostEstimate(req, res);
+};
 
-      // Call cost engine
-      const response = await axios.post(
-        `${COST_ENGINE_URL}/cost-estimate`,
-        payload,
-        {
-          headers: { "Content-Type": "application/json" },
-          timeout: 60000,
-        }
-      );
+/**
+ * POST /api/cost-engine/estimate/batch
+ * Generate cost estimates for multiple BOMs
+ */
+const getBatchCostEstimate = async (req, res) => {
+  try {
+    const { bomList } = req.body;
 
-      const estimate = response.data;
-
-      // Add additional processing/metadata
-      const enhancedData = {
-        ...estimate,
-        metadata: {
-          calculated_at: new Date().toISOString(),
-          request_id:
-            req.headers["x-request-id"] || require("crypto").randomUUID(),
-          state_tier: payload.state_tier,
-          total_boq_items: payload.boq_items.length,
-          total_bom_items: payload.boq_items.reduce(
-            (sum, boq) => sum + boq.bom_items.length,
-            0
-          ),
-        },
-        summary: {
-          estimated_range: {
-            min: estimate.project_cost.overall.min,
-            max: estimate.project_cost.overall.max,
-            difference:
-              estimate.project_cost.overall.max -
-              estimate.project_cost.overall.min,
-          },
-          cost_breakdown_pct: {
-            material: estimate.explainability.material_share_pct,
-            labour: estimate.explainability.labour_share_pct,
-            machinery:
-              100 -
-              estimate.explainability.material_share_pct -
-              estimate.explainability.labour_share_pct,
-          },
-        },
-      };
-
-      return res.status(200).json({
-        success: true,
-        message: "Detailed cost estimate calculated successfully",
-        data: enhancedData,
+    // Validation
+    if (!bomList || !Array.isArray(bomList) || bomList.length === 0) {
+      return res.status(400).json({
+        success: false,
+        error: "BOM list is required and must be a non-empty array",
       });
-    } catch (error) {
-      console.error("Error getting detailed estimate:", error.message);
+    }
 
-      if (error.response) {
-        return res.status(error.response.status).json({
+    const results = [];
+
+    for (const bomData of bomList) {
+      try {
+        const result = await executeCostScript(bomData);
+        results.push({
+          success: true,
+          data: result,
+        });
+      } catch (error) {
+        results.push({
           success: false,
-          message:
-            error.response.data.detail || "Error from cost engine service",
-          error: error.response.data,
+          error: error.message,
         });
       }
-
-      return res.status(500).json({
-        success: false,
-        message: "Internal server error",
-        error: error.message,
-      });
     }
+
+    return res.status(200).json({
+      success: true,
+      message: "Batch cost estimates completed",
+      results: results,
+    });
+  } catch (error) {
+    console.error("Error in batch cost estimate:", error);
+    return res.status(500).json({
+      success: false,
+      error: error.message || "Internal server error",
+    });
   }
+};
 
-  /**
-   * Batch cost estimation
-   * POST /api/cost-engine/estimate/batch
-   */
-  async batchCostEstimate(req, res) {
-    try {
-      const { estimates } = req.body;
+/**
+ * GET /api/cost-engine/health
+ * Health check
+ */
+const checkHealth = async (req, res) => {
+  try {
+    const scriptPath = path.join(__dirname, "../python/cost_engine.py");
 
-      if (!Array.isArray(estimates) || estimates.length === 0) {
-        return res.status(400).json({
-          success: false,
-          message: "estimates array is required and must not be empty",
-        });
-      }
+    // Check if script exists
+    const fs = require('fs').promises;
+    await fs.access(scriptPath);
 
-      // Process all estimates in parallel
-      const results = await Promise.allSettled(
-        estimates.map((payload) =>
-          axios.post(`${COST_ENGINE_URL}/cost-estimate`, payload, {
-            headers: { "Content-Type": "application/json" },
-            timeout: 60000,
-          })
-        )
-      );
-
-      // Format results
-      const formattedResults = results.map((result, index) => {
-        if (result.status === "fulfilled") {
-          return {
-            success: true,
-            index,
-            data: result.value.data,
-          };
-        } else {
-          return {
-            success: false,
-            index,
-            error:
-              result.reason.response?.data?.detail || result.reason.message,
-          };
-        }
-      });
-
-      const successCount = formattedResults.filter((r) => r.success).length;
-      const failureCount = formattedResults.length - successCount;
-
-      return res.status(200).json({
-        success: true,
-        message: `Batch processing completed: ${successCount} succeeded, ${failureCount} failed`,
-        summary: {
-          total: formattedResults.length,
-          succeeded: successCount,
-          failed: failureCount,
-        },
-        results: formattedResults,
-      });
-    } catch (error) {
-      console.error("Error in batch cost estimate:", error.message);
-
-      return res.status(500).json({
-        success: false,
-        message: "Internal server error during batch processing",
-        error: error.message,
-      });
-    }
+    return res.status(200).json({
+      success: true,
+      message: "Cost engine service is healthy",
+      data: {
+        scriptPath: scriptPath,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      error: "Cost engine health check failed",
+      details: error.message,
+    });
   }
+};
 
-  /**
-   * Health check for cost engine service
-   * GET /api/cost-engine/health
-   */
-  async checkHealth(req, res) {
-    try {
-      const response = await axios.get(`${COST_ENGINE_URL}/`, {
-        timeout: 5000,
-      });
+/**
+ * GET /api/cost-engine/info
+ * Service info
+ */
+const getServiceInfo = async (req, res) => {
+  return res.status(200).json({
+    success: true,
+    service: "Cost Engine",
+    version: "1.0",
+    description: "AI-powered cost estimation for construction materials",
+  });
+};
 
-      return res.status(200).json({
-        success: true,
-        message: "Cost engine service is healthy",
-        data: response.data,
-      });
-    } catch (error) {
-      return res.status(503).json({
-        success: false,
-        message: "Cost engine service is unavailable",
-        error: error.message,
-      });
-    }
-  }
-
-  /**
-   * Get service info/docs
-   * GET /api/cost-engine/info
-   */
-  async getServiceInfo(req, res) {
-    try {
-      const response = await axios.get(`${COST_ENGINE_URL}/docs`, {
-        timeout: 5000,
-      });
-
-      return res.status(200).json({
-        success: true,
-        data: {
-          service: "Cost Engine API",
-          version: "2.2",
-          docs_url: `${COST_ENGINE_URL}/docs`,
-          description:
-            "AI Cost Engine with Deterministic Calculation and LLM Explainability",
-        },
-      });
-    } catch (error) {
-      return res.status(200).json({
-        success: true,
-        data: {
-          service: "Cost Engine API",
-          version: "2.2",
-          description:
-            "AI Cost Engine with Deterministic Calculation and LLM Explainability",
-        },
-      });
-    }
-  }
-}
-
-module.exports = new CostEngineController();
+module.exports = {
+  getCostEstimate,
+  getDetailedEstimate,
+  getBatchCostEstimate,
+  checkHealth,
+  getServiceInfo,
+};

@@ -10,27 +10,58 @@ import {
 import { bomAPI, estimationAPI } from "../services/api";
 
 const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItems, setSelectedItems] = useState([]); // Changed to array for multi-select
   const [bomResult, setBomResult] = useState([]); // Now stores { materialName, items: [] }[]
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [expandedMaterial, setExpandedMaterial] = useState(null);
   const [expandedGroups, setExpandedGroups] = useState({});
 
-  // Retrieve initial BOQ items from local storage
+  // Retrieve initial WBS results from local storage
+  const [wbsResults, setWbsResults] = useState(
+    JSON.parse(localStorage.getItem("wbsResults")) || null
+  );
+  const [projectDays, setProjectDays] = useState();
+
+  // Also keep BOQ items for backwards compatibility
   const [boqItems, setBoqItems] = useState(
     JSON.parse(localStorage.getItem("boqItems")) || []
   );
-  const [projectDays, setProjectDays] = useState();
 
   useEffect(() => {
     const handleStorageChange = () => {
       setBoqItems(JSON.parse(localStorage.getItem("boqItems")) || []);
+      // Also refresh WBS results if available
+      setWbsResults(JSON.parse(localStorage.getItem("wbsResults")) || null);
     };
 
     window.addEventListener("storage", handleStorageChange);
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
+
+  // Load WBS results on mount
+  useEffect(() => {
+    const savedWBS = localStorage.getItem("wbsResults");
+    if (savedWBS) {
+      try {
+        const parsed = JSON.parse(savedWBS);
+        if (parsed && parsed.success && Array.isArray(parsed.data)) {
+          setWbsResults(parsed);
+          // When WBS results are loaded, filter out any BOQ items from selectedItems
+          setSelectedItems((prev) => prev.filter((item) => item.wbs_id));
+        }
+      } catch (e) {
+        console.error("Error loading WBS results:", e);
+      }
+    }
+  }, []);
+
+  // When WBS results change, ensure selectedItems only contains WBS items
+  useEffect(() => {
+    if (wbsResults?.data && wbsResults.data.length > 0) {
+      setSelectedItems((prev) => prev.filter((item) => item.wbs_id));
+    }
+  }, [wbsResults]);
 
   useEffect(() => {
     const savedBOM = localStorage.getItem("bomResult");
@@ -117,28 +148,62 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
       return newGroups;
     });
   };
-  console.log(selectedItem);
-  const generateSingle = async () => {
-    if (!selectedItem) return;
+  // Toggle selection of an item (multi-select)
+  // Prioritize WBS items - only select WBS items when WBS results are available
+  const toggleItemSelection = (item) => {
+    setSelectedItems((prev) => {
+      // For WBS items, check by wbs_id
+      if (item.wbs_id) {
+        const isSelected = prev.some(
+          (selected) => selected.wbs_id === item.wbs_id
+        );
+        if (isSelected) {
+          // Remove if already selected
+          return prev.filter((selected) => selected.wbs_id !== item.wbs_id);
+        } else {
+          // Add if not selected - ensure we're adding the full WBS item
+          return [...prev, item];
+        }
+      } else {
+        // For BOQ items (fallback when no WBS results), check by projectMaterial and originalIndex
+        const isSelected = prev.some(
+          (selected) =>
+            selected.projectMaterial === item.projectMaterial &&
+            selected.originalIndex === item.originalIndex
+        );
+        if (isSelected) {
+          return prev.filter(
+            (selected) =>
+              !(
+                selected.projectMaterial === item.projectMaterial &&
+                selected.originalIndex === item.originalIndex
+              )
+          );
+        } else {
+          return [...prev, item];
+        }
+      }
+    });
+  };
+
+  const generateSelected = async () => {
+    if (!selectedItems || selectedItems.length === 0) {
+      setError("No items selected. Please select items to generate BOM.");
+      return;
+    }
 
     try {
       setLoading(true);
       setError(null);
 
-      // 1️ Generate BOM using bomAPI.predict
+      // 1️⃣ Generate BOM using bomAPI.predict with WBS objects
+      // Pass the selected WBS objects directly in boqData array
       const bomRes = await bomAPI.predict({
-        boqData: [
-          {
-            work_name: selectedItem.projectMaterial,
-            dimensions: {
-              area: [{ value: selectedItem.quantity, unit: selectedItem.unit }],
-            },
-          },
-        ],
+        boqData: selectedItems, // Use WBS objects directly from selectedItems
         projectDays: Number(projectDays),
       });
 
-      // Handle various possible backend response structures
+      // Handle new API response structure - array of BOM items
       const bomItems =
         bomRes.data?.data?.bom_items ||
         bomRes.data?.bom_items ||
@@ -146,230 +211,218 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
         bomRes.data ||
         [];
 
-      // Store as grouped by material
-      const materialResult = {
-        materialName: selectedItem.projectMaterial,
-        state: selectedItem.state,
-        tier: selectedItem.tier,
-        length: selectedItem.length,
-        width: selectedItem.width,
-        items: bomItems,
-      };
+      // Group BOM items by wbs_id (since multiple materials can belong to same WBS)
+      const bomItemsByWbsId = {};
+      if (Array.isArray(bomItems)) {
+        bomItems.forEach((bomItem) => {
+          const wbsId = bomItem.wbs_id;
+          if (!bomItemsByWbsId[wbsId]) {
+            bomItemsByWbsId[wbsId] = [];
+          }
+          bomItemsByWbsId[wbsId].push(bomItem);
+        });
+      }
 
-      // Merge with existing results (replace if same material exists)
+      // Map selected WBS items to their BOM results
+      const materialResults = selectedItems.map((selectedItem) => {
+        const wbsId = selectedItem.wbs_id;
+        const bomItemsForWbs = bomItemsByWbsId[wbsId] || [];
+
+        return {
+          wbs_id: wbsId,
+          materialName:
+            selectedItem.boq_reference ||
+            bomItemsForWbs[0]?.work_item ||
+            "Unknown Material",
+          work_item: bomItemsForWbs[0]?.work_item || selectedItem.boq_reference,
+          location: selectedItem.location,
+          original_qty: selectedItem.original_qty,
+          state: selectedItem.state,
+          tier: selectedItem.tier,
+          items: bomItemsForWbs, // Array of BOM items for this WBS
+        };
+      });
+
+      // Merge with existing results (replace if same wbs_id exists, otherwise add all)
       setBomResult((prev) => {
-        const existing = Array.isArray(prev)
-          ? prev.filter((p) => p.materialName !== selectedItem.projectMaterial)
-          : [];
-        const updated = [...existing, materialResult];
+        const existing = Array.isArray(prev) ? prev : [];
+        // Filter out any existing results with the same wbs_id as the new results
+        // For items without wbs_id, check by materialName and location combination
+        const filteredExisting = existing.filter((p) => {
+          return !materialResults.some((m) => {
+            // If both have wbs_id, match by wbs_id
+            if (m.wbs_id && p.wbs_id) {
+              return m.wbs_id === p.wbs_id;
+            }
+            // If no wbs_id, match by materialName and location
+            if (!m.wbs_id && !p.wbs_id) {
+              return (
+                m.materialName === p.materialName && m.location === p.location
+              );
+            }
+            return false;
+          });
+        });
+        // Add all new material results
+        const updated = [...filteredExisting, ...materialResults];
         localStorage.setItem("bomResult", JSON.stringify(updated));
         return updated;
       });
 
       // 2️⃣ Call COST ESTIMATION using estimationAPI.calculate
-      const estimationRes = await estimationAPI.calculate({
-        state_tier: selectedItem.state + "-" + selectedItem.tier,
-        boq_items: [
-          {
-            boq_id: "string",
-            boq_name: selectedItem.projectMaterial,
-            bom_items: bomItems.map((item) => ({
-              item_name: item.Item_Name,
-              quantity: item.Predicted_Quantity,
-            })),
-          },
-        ],
-      });
-
-      const estimationData =
-        estimationRes?.data?.data || estimationRes?.data || estimationRes;
-
-      // Store cost prediction grouped by material
-      const costPrediction = {
-        materialName: selectedItem.projectMaterial,
-        state: selectedItem.state,
-        tier: selectedItem.tier,
-        length: selectedItem.length,
-        width: selectedItem.width,
-        estimation: estimationData,
-      };
-
-      // Store in localStorage
-      const existingCosts = JSON.parse(
-        localStorage.getItem("costPredictions") || "[]"
-      );
-      const updatedCosts = existingCosts.filter(
-        (c) => c.materialName !== selectedItem.projectMaterial
-      );
-      updatedCosts.push(costPrediction);
-      localStorage.setItem("costPredictions", JSON.stringify(updatedCosts));
-
-      setPostResult(estimationData);
+      // This will be done in the next step as per your request
+      setError(null);
     } catch (err) {
-      setError(err.message || "Failed to generate BOM & Cost");
+      setError(err.message || "Failed to generate BOM");
+      console.error("BOM Generation Error:", err);
     } finally {
       setLoading(false);
     }
   };
 
-  const generateBatch = async () => {
+  // const generateBatch = async () => {
+  //   try {
+  //     setLoading(true);
+  //     setError(null);
+
+  //     // Use WBS results if available, otherwise fall back to BOQ items
+  //     const itemsToProcess = wbsResults?.data || boqItems;
+
+  //     if (!itemsToProcess || itemsToProcess.length === 0) {
+  //       setError("No items available to process");
+  //       return;
+  //     }
+
+  //     const allMaterialResults = [];
+  //     const bomFiles = [];
+
+  //     // Process each WBS result or BOQ item
+  //     for (const item of itemsToProcess) {
+  //       // For WBS format, use the item directly; for BOQ format, map to expected structure
+  //       const processItem = item.wbs_id
+  //         ? item // WBS format
+  //         : {
+  //             // BOQ format fallback
+  //             boq_reference: item.projectMaterial,
+  //             state: item.state,
+  //             tier: item.tier,
+  //             location: "N/A",
+  //             original_qty: item.quantity,
+  //           };
+
+  //       const res = await bomAPI.predict({
+  //         boqData: [processItem], // Pass as array with single WBS/mapped object
+  //         projectDays,
+  //       });
+
+  //       const bomItems =
+  //         res.data?.data?.bom_items ||
+  //         res.data?.bom_items ||
+  //         res.bom_items ||
+  //         res.data ||
+  //         [];
+
+  //       // Handle new API response structure - array of BOM items grouped by wbs_id
+  //       const bomItemsArray = Array.isArray(bomItems) ? bomItems : [];
+
+  //       // Store grouped by material (boq_reference for WBS, projectMaterial for BOQ)
+  //       const materialName =
+  //         processItem.boq_reference || processItem.projectMaterial;
+  //       const workItem = bomItemsArray[0]?.work_item || materialName;
+
+  //       allMaterialResults.push({
+  //         wbs_id: processItem.wbs_id || null,
+  //         materialName: materialName,
+  //         work_item: workItem,
+  //         state: processItem.state,
+  //         tier: processItem.tier,
+  //         location: processItem.location || "N/A",
+  //         original_qty: processItem.original_qty || processItem.quantity,
+  //         items: bomItemsArray, // Array of BOM items with new structure
+  //       });
+
+  //       const file =
+  //         res.data?.data?.bomFile || res.data?.bomFile || "predicted_bom.xlsx";
+
+  //       bomFiles.push(file);
+  //     }
+
+  //     // Merge with existing results (replace if same wbs_id exists, otherwise add all)
+  //     setBomResult((prev) => {
+  //       const existing = Array.isArray(prev) ? prev : [];
+  //       // Filter out any existing results with the same wbs_id as the new results
+  //       // For items without wbs_id, check by materialName and location combination
+  //       const filteredExisting = existing.filter((p) => {
+  //         return !allMaterialResults.some((m) => {
+  //           // If both have wbs_id, match by wbs_id
+  //           if (m.wbs_id && p.wbs_id) {
+  //             return m.wbs_id === p.wbs_id;
+  //           }
+  //           // If no wbs_id, match by materialName and location
+  //           if (!m.wbs_id && !p.wbs_id) {
+  //             return (
+  //               m.materialName === p.materialName && m.location === p.location
+  //             );
+  //           }
+  //           return false;
+  //         });
+  //       });
+  //       // Add all new material results
+  //       const updated = [...filteredExisting, ...allMaterialResults];
+  //       localStorage.setItem("bomResult", JSON.stringify(updated));
+  //       return updated;
+  //     });
+
+  //     // COST ESTIMATION (BATCH) - will be implemented in next step
+  //     setError(null);
+  //   } catch (err) {
+  //     setError(err.message || "Failed to generate batch BOM");
+  //     console.error("Batch BOM Generation Error:", err);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+  const handleCostPrediction = async () => {
+    if (!bomResult || bomResult.length === 0) {
+      setError("No BOM results available. Please generate BOM first.");
+      return;
+    }
+
     try {
       setLoading(true);
       setError(null);
 
-      const allMaterialResults = [];
-      const bomFiles = [];
+      // Flatten all BOM items from all results into a single array
+      const allBomItems = bomResult.flatMap((bom) => bom.items || []);
 
-      for (const item of boqItems) {
-        const res = await bomAPI.predict({
-          //   userWork: item.projectMaterial,
-          //   length: Number(item.length || 1),
-          //   breadth: Number(item.width || 1),
-          boqData: [
-            {
-              work_name: item.projectMaterial,
-              dimensions: {
-                length: [{ value: item.length, unit: item.unit }],
-              },
-            },
-          ],
-          projectDays,
-        });
+      // Format payload - filter out items with quantity 0
+      const payload = allBomItems.map((item) => ({
+        item_name: item.material_name || item.item_name,
+        quantity: item.quantity || 0,
+        unit: item.unit || "Unit",
+      }));
 
-        const bomItems =
-          res.data?.data?.bom_items ||
-          res.data?.bom_items ||
-          res.bom_items ||
-          res.data ||
-          [];
-
-        // Store grouped by material
-        allMaterialResults.push({
-          materialName: item.projectMaterial,
-          state: item.state,
-          tier: item.tier,
-          length: item.length,
-          width: item.width,
-          items: bomItems,
-        });
-
-        const file =
-          res.data?.data?.bomFile || res.data?.bomFile || "predicted_bom.xlsx";
-
-        bomFiles.push(file);
+      if (payload.length === 0) {
+        setError("No valid BOM items with quantity > 0 found.");
+        return;
       }
 
-      // SHOW BOM TABLE - grouped by material
-      setBomResult(allMaterialResults);
-      localStorage.setItem("bomResult", JSON.stringify(allMaterialResults));
+      const result = await estimationAPI.calculate({ bomData: payload });
 
-      // COST ESTIMATION (BATCH)
-      const estimationRes = await estimationAPI.calculate({
-        stateCode: boqItems[0]?.state,
-        cityTier: boqItems[0]?.tier,
-        bomFiles,
-      });
-
-      // Aggregate totals from all BOMs and store individually
-      const batchData =
-        estimationRes.data?.data || estimationRes.data || estimationRes;
-      const allCostPredictions = [];
-      const existingCosts = JSON.parse(
-        localStorage.getItem("costPredictions") || "[]"
-      );
-
-      if (Array.isArray(batchData)) {
-        // API returned array - map each result to corresponding material
-        batchData.forEach((res, idx) => {
-          if (boqItems[idx]) {
-            allCostPredictions.push({
-              materialName: boqItems[idx].projectMaterial,
-              state: boqItems[idx].state,
-              tier: boqItems[idx].tier,
-              length: boqItems[idx].length,
-              width: boqItems[idx].width,
-              estimation: res,
-            });
-          }
-        });
-
-        // If array length doesn't match, create entries for missing materials
-        if (batchData.length < boqItems.length) {
-          for (let idx = batchData.length; idx < boqItems.length; idx++) {
-            allCostPredictions.push({
-              materialName: boqItems[idx].projectMaterial,
-              state: boqItems[idx].state,
-              tier: boqItems[idx].tier,
-              length: boqItems[idx].length,
-              width: boqItems[idx].width,
-              estimation: null,
-            });
-          }
+      // Store the result in localStorage for POSTPredictor to use
+      if (result && result.data) {
+        localStorage.setItem("costPredictions", JSON.stringify(result.data));
+        // Also update postResult if needed
+        if (setPostResult) {
+          setPostResult(result);
         }
-
-        // Calculate aggregated total
-        let totalMin = 0,
-          totalLikely = 0,
-          totalMax = 0;
-        batchData.forEach((res) => {
-          if (res && res.grand_total) {
-            totalMin += res.grand_total.min || 0;
-            totalLikely += res.grand_total.likely || 0;
-            totalMax += res.grand_total.max || 0;
-          }
-        });
-
-        setPostResult({
-          ...batchData[0],
-          grand_total: {
-            min: totalMin,
-            likely: totalLikely,
-            max: totalMax,
-          },
-        });
-      } else {
-        // Single aggregated result - distribute to all materials or store for first
-        if (boqItems.length === 1) {
-          // Single material - store directly
-          allCostPredictions.push({
-            materialName: boqItems[0].projectMaterial,
-            state: boqItems[0].state,
-            tier: boqItems[0].tier,
-            length: boqItems[0].length,
-            width: boqItems[0].width,
-            estimation: batchData,
-          });
-        } else {
-          // Multiple materials but single result - store for all with same estimation
-          boqItems.forEach((item) => {
-            allCostPredictions.push({
-              materialName: item.projectMaterial,
-              state: item.state,
-              tier: item.tier,
-              length: item.length,
-              width: item.width,
-              estimation: batchData,
-            });
-          });
-        }
-        setPostResult(batchData);
+        // Navigate to post-predictor view
+        setActiveView("post-predictor");
       }
-
-      // Merge with existing costs (replace duplicates by material name, case-insensitive)
-      const mergedCosts = existingCosts.filter(
-        (c) =>
-          !allCostPredictions.some(
-            (newCost) =>
-              newCost.materialName?.toLowerCase() ===
-              c.materialName?.toLowerCase()
-          )
-      );
-      const finalCosts = [...mergedCosts, ...allCostPredictions];
-
-      // Store all cost predictions in localStorage
-      localStorage.setItem("costPredictions", JSON.stringify(finalCosts));
     } catch (err) {
-      setError(err.message || "Failed to generate batch BOM & estimation");
+      setError(err.message || "Failed to calculate cost estimation");
+      console.error("Cost Prediction Error:", err);
     } finally {
       setLoading(false);
     }
@@ -386,28 +439,35 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
       </div>
 
       {/* Generate Buttons */}
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap">
         <input
           className="flex-1 px-6 py-3 focus:outline-none rounded-lg disabled:bg-gray-400/20 border"
           type="number"
           placeholder="Enter number of days for this project"
-          disabled={boqItems.length === 0}
+          disabled={
+            boqItems.length === 0 &&
+            (!wbsResults?.data || wbsResults.data.length === 0)
+          }
           value={projectDays}
           onChange={(e) => setProjectDays(e.target.value)}
         />
         <button
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white rounded-lg shadow-sm transition-all duration-200 font-medium"
-          onClick={generateSingle}
-          disabled={!selectedItem || loading}
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white rounded-lg shadow-sm transition-all duration-200 font-medium whitespace-nowrap"
+          onClick={generateSelected}
+          disabled={selectedItems.length === 0 || loading}
         >
-          Generate BOM (Selected)
+          Generate BOM ({selectedItems.length} selected)
         </button>
         <button
-          onClick={generateBatch}
-          disabled={boqItems.length === 0 || loading}
-          className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white rounded-lg shadow-sm transition-all duration-200 font-medium"
+          // onClick={generateBatch}
+          disabled={
+            (boqItems.length === 0 &&
+              (!wbsResults?.data || wbsResults.data.length === 0)) ||
+            loading
+          }
+          className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white rounded-lg shadow-sm transition-all duration-200 font-medium whitespace-nowrap"
         >
-          Generate BOM for All ({boqItems.length})
+          Generate BOM for All ({wbsResults?.data?.length || boqItems.length})
         </button>
       </div>
 
@@ -427,25 +487,117 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
       )}
 
       {/* BOQ Items Section - Grouped by Work Name */}
-      {boqItems.length > 0 && (
-        <div className="bg-white border border-green-200 rounded-lg p-6 shadow-sm">
+      {/* Only show BOQ items if WBS results are not available */}
+      {boqItems.length > 0 &&
+        (!wbsResults?.data || wbsResults.data.length === 0) && (
+          <div className="bg-white border border-green-200 rounded-lg p-6 shadow-sm">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  BOQ Items ({boqItems.length})
+                </h3>
+                <p className="text-sm text-gray-600 mt-1">
+                  Click items to select multiple items for BOM generation
+                </p>
+              </div>
+            </div>
+
+            {/* Group BOQ items by work name */}
+            {(() => {
+              const groups = {};
+              boqItems.forEach((item, idx) => {
+                const workName =
+                  item.projectMaterial || item.work || "Unknown Work";
+                const normalizedName = workName.trim().toLowerCase();
+                if (!groups[normalizedName]) {
+                  groups[normalizedName] = [];
+                }
+                groups[normalizedName].push({ ...item, originalIndex: idx });
+              });
+
+              return (
+                <div className="space-y-3">
+                  {Object.entries(groups).map(([normalizedKey, items]) => {
+                    const workName =
+                      items[0].projectMaterial ||
+                      items[0].work ||
+                      "Unknown Work";
+                    return (
+                      <div
+                        key={normalizedKey}
+                        className="border border-green-200 rounded-lg overflow-hidden"
+                      >
+                        <div className="w-full flex items-center justify-between p-4 bg-green-50 hover:bg-green-100 transition-colors">
+                          <div className="flex items-center gap-3 flex-1">
+                            <div className="text-left">
+                              <p className="font-semibold text-gray-800 capitalize">
+                                {workName}
+                              </p>
+                              <p className="text-xs text-gray-600 mt-0.5">
+                                {items.length}{" "}
+                                {items.length === 1 ? "item" : "items"}
+                                {items[0]?.state &&
+                                  ` • State: ${items[0].state}`}
+                                {items[0]?.tier && ` • Tier: ${items[0].tier}`}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="px-3 py-1 bg-white text-green-700 rounded-full text-xs font-medium border border-green-200">
+                              {items.length}{" "}
+                              {items.length === 1 ? "item" : "items"}
+                            </span>
+                            {items.map((item, idx) => (
+                              <div
+                                key={idx}
+                                onClick={() => toggleItemSelection(item)}
+                                className={`p-2 border rounded cursor-pointer transition-all ${
+                                  selectedItems.some(
+                                    (s) =>
+                                      s.projectMaterial ===
+                                        item.projectMaterial &&
+                                      s.originalIndex === item.originalIndex
+                                  )
+                                    ? "border-blue-600 bg-blue-100"
+                                    : "border-gray-200 bg-white hover:border-green-300"
+                                }`}
+                                title="Click to select/deselect"
+                              >
+                                <p className="text-xs font-medium">
+                                  #{idx + 1}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })()}
+          </div>
+        )}
+
+      {/* WBS Results Section - If WBS results are available */}
+      {wbsResults?.data && wbsResults.data.length > 0 && (
+        <div className="bg-white border border-blue-200 rounded-lg p-6 shadow-sm">
           <div className="flex items-center justify-between mb-6">
             <div>
               <h3 className="text-xl font-semibold text-gray-800">
-                BOQ Items ({boqItems.length})
+                WBS Items ({wbsResults.data.length})
               </h3>
               <p className="text-sm text-gray-600 mt-1">
-                Select an item to generate BOM or generate for all
+                Click WBS items to select multiple items for BOM generation
               </p>
             </div>
           </div>
 
-          {/* Group BOQ items by work name */}
+          {/* Group WBS items by boq_reference */}
           {(() => {
             const groups = {};
-            boqItems.forEach((item, idx) => {
-              const workName =
-                item.projectMaterial || item.work || "Unknown Work";
+            wbsResults.data.forEach((item, idx) => {
+              const workName = item.boq_reference || "Unknown Work";
               const normalizedName = workName.trim().toLowerCase();
               if (!groups[normalizedName]) {
                 groups[normalizedName] = [];
@@ -456,44 +608,50 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
             return (
               <div className="space-y-3">
                 {Object.entries(groups).map(([normalizedKey, items]) => {
-                  const workName =
-                    items[0].projectMaterial || items[0].work || "Unknown Work";
+                  const workName = items[0].boq_reference || "Unknown Work";
                   return (
                     <div
                       key={normalizedKey}
-                      className="border border-green-200 rounded-lg overflow-hidden"
+                      className="border border-blue-200 rounded-lg overflow-hidden"
                     >
-                      <div className="w-full flex items-center justify-between p-4 bg-green-50 hover:bg-green-100 transition-colors">
+                      <div className="w-full flex items-center justify-between p-4 bg-blue-50 hover:bg-blue-100 transition-colors">
                         <div className="flex items-center gap-3 flex-1">
                           <div className="text-left">
                             <p className="font-semibold text-gray-800 capitalize">
                               {workName}
                             </p>
                             <p className="text-xs text-gray-600 mt-0.5">
-                              {items.length}{" "}
-                              {items.length === 1 ? "item" : "items"}
+                              Location: {items[0]?.location || "N/A"} • Qty:{" "}
+                              {items[0]?.original_qty || "N/A"}
                               {items[0]?.state && ` • State: ${items[0].state}`}
                               {items[0]?.tier && ` • Tier: ${items[0].tier}`}
                             </p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="px-3 py-1 bg-white text-green-700 rounded-full text-xs font-medium border border-green-200">
+                          <span className="px-3 py-1 bg-white text-blue-700 rounded-full text-xs font-medium border border-blue-200">
                             {items.length}{" "}
                             {items.length === 1 ? "item" : "items"}
                           </span>
                           {items.map((item, idx) => (
                             <div
-                              key={idx}
-                              onClick={() => setSelectedItem(item)}
+                              key={item.wbs_id || idx}
+                              onClick={() => {
+                                // Ensure we're passing the full WBS item object
+                                toggleItemSelection(item);
+                              }}
                               className={`p-2 border rounded cursor-pointer transition-all ${
-                                selectedItem === item
-                                  ? "border-green-600 bg-green-100"
-                                  : "border-gray-200 bg-white hover:border-green-300"
+                                selectedItems.some(
+                                  (s) => s.wbs_id === item.wbs_id
+                                )
+                                  ? "border-blue-600 bg-blue-100"
+                                  : "border-gray-200 bg-white hover:border-blue-300"
                               }`}
-                              title="Click to select"
+                              title="Click to select/deselect"
                             >
-                              <p className="text-xs font-medium">#{idx + 1}</p>
+                              <p className="text-xs font-medium">
+                                {item.wbs_id}
+                              </p>
                             </div>
                           ))}
                         </div>
@@ -511,17 +669,21 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
         <div className="bg-white border border-green-200 rounded-lg p-8 text-center">
           <Building2 className="w-12 h-12 text-gray-400 mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
-            No BOQ Items Found
+            No Items Found
           </h3>
           <p className="text-gray-600 mb-4">
-            Please generate BOQ items first before creating BOM.
+            {wbsResults?.data && wbsResults.data.length > 0
+              ? "Select WBS items above to generate BOM"
+              : "Please generate WBS/BOQ items first before creating BOM."}
           </p>
-          <button
-            onClick={() => setActiveView("boq-generator")}
-            className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-sm transition-all duration-200 font-medium"
-          >
-            Go to BOQ Generator →
-          </button>
+          {!wbsResults?.data || wbsResults.data.length === 0 ? (
+            <button
+              onClick={() => setActiveView("boq-generator")}
+              className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-sm transition-all duration-200 font-medium"
+            >
+              Go to BOQ Generator →
+            </button>
+          ) : null}
         </div>
       )}
 
@@ -565,13 +727,17 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
                       )}
                       <div className="text-left">
                         <p className="font-semibold text-gray-800 capitalize">
-                          {materialName}
+                          {materials[0]?.work_item || materialName}
                         </p>
                         <p className="text-xs text-gray-600 mt-0.5">
                           {materials.length}{" "}
                           {materials.length === 1
                             ? "BOM result"
                             : "BOM results"}
+                          {materials[0]?.wbs_id &&
+                            ` • WBS: ${materials[0].wbs_id}`}
+                          {materials[0]?.location &&
+                            ` • Location: ${materials[0].location}`}
                           {materials[0]?.state &&
                             ` • State: ${materials[0].state}`}
                           {materials[0]?.tier &&
@@ -615,16 +781,19 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
                           <div className="flex items-center justify-between mb-4 pb-3 border-b border-green-200">
                             <div>
                               <h4 className="font-bold text-base text-gray-800 capitalize">
-                                {materialName}
+                                {material.work_item || materialName}
                                 {materials.length > 1 && ` #${materialIdx + 1}`}
                               </h4>
                               <p className="text-sm text-gray-500 mt-1">
-                                {material.state && `State: ${material.state}`}
+                                <span className="font-medium">WBS ID:</span>{" "}
+                                {material.wbs_id || "N/A"}
+                                {material.location &&
+                                  ` • Location: ${material.location}`}
+                                {material.original_qty &&
+                                  ` • Qty: ${material.original_qty}`}
+                                {material.state &&
+                                  ` • State: ${material.state}`}
                                 {material.tier && ` • Tier: ${material.tier}`}
-                                {material.length &&
-                                  ` • Length: ${material.length}`}
-                                {material.width &&
-                                  ` • Width: ${material.width}`}
                               </p>
                             </div>
                             <span className="text-sm text-gray-600 bg-green-100 px-2 py-1 rounded">
@@ -640,13 +809,19 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
                                 <thead>
                                   <tr className="bg-gray-50 border-b border-green-200">
                                     <th className="p-2 text-left font-semibold text-gray-700 text-xs">
-                                      Item Name
+                                      Material Name
+                                    </th>
+                                    <th className="p-2 text-left font-semibold text-gray-700 text-xs">
+                                      Material ID
                                     </th>
                                     <th className="p-2 text-right font-semibold text-gray-700 text-xs">
                                       Quantity
                                     </th>
                                     <th className="p-2 text-left font-semibold text-gray-700 text-xs">
                                       Unit
+                                    </th>
+                                    <th className="p-2 text-left font-semibold text-gray-700 text-xs">
+                                      Source Table
                                     </th>
                                   </tr>
                                 </thead>
@@ -657,18 +832,24 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
                                       className="border-b border-green-100 hover:bg-green-50/30 transition-colors"
                                     >
                                       <td className="p-2 text-gray-800">
-                                        {item.Item_Name ||
-                                          item.item_name ||
-                                          "N/A"}
-                                      </td>
-                                      <td className="p-2 text-right text-gray-700">
-                                        {item.Predicted_Quantity ||
-                                          item.predicted_quantity ||
-                                          item.quantity ||
-                                          "N/A"}
+                                        {item.material_name || "N/A"}
                                       </td>
                                       <td className="p-2 text-gray-600">
-                                        {item.Unit || item.unit || "N/A"}
+                                        {item.material_id || "N/A"}
+                                      </td>
+                                      <td className="p-2 text-right text-gray-700 font-medium">
+                                        {item.quantity !== undefined &&
+                                        item.quantity !== null
+                                          ? item.quantity.toLocaleString()
+                                          : "N/A"}
+                                      </td>
+                                      <td className="p-2 text-gray-600">
+                                        {item.unit || "N/A"}
+                                      </td>
+                                      <td className="p-2 text-gray-600">
+                                        <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs">
+                                          {item.source_table || "N/A"}
+                                        </span>
                                       </td>
                                     </tr>
                                   ))}
@@ -694,11 +875,11 @@ const BOM = ({ setActiveView, setPostResult, postResult = null }) => {
           {/* Cost Prediction Button */}
           <div className="flex justify-end">
             <button
-              disabled={!postResult}
-              onClick={() => setActiveView("post-predictor")}
+              disabled={!bomResult || bomResult.length === 0 || loading}
+              onClick={handleCostPrediction}
               className="px-6 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white rounded-lg shadow-sm transition-all duration-200 font-medium"
             >
-              Cost Prediction →
+              {loading ? "Calculating..." : "Cost Prediction →"}
             </button>
           </div>
         </div>

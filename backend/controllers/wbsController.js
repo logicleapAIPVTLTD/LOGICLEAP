@@ -376,12 +376,12 @@ const path = require('path');
 /**
  * Execute Python WBS script and return results
  */
-const executePythonScript = (scriptArgs) => {
+const executePythonScript = (boqData) => {
   return new Promise((resolve, reject) => {
-    const pythonPath = process.env.PYTHON_PATH || 'python3';
-    const scriptPath = path.join(__dirname, '../python/wbs_api.py');
+    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const scriptPath = path.join(__dirname, '../python/wbs_engine.py');
     
-    const pythonProcess = spawn(pythonPath, [scriptPath, JSON.stringify(scriptArgs)]);
+    const pythonProcess = spawn(pythonPath, [scriptPath, JSON.stringify(boqData)]);
     
     let dataBuffer = '';
     let errorBuffer = '';
@@ -416,62 +416,39 @@ const executePythonScript = (scriptArgs) => {
     setTimeout(() => {
       pythonProcess.kill();
       reject(new Error('Python script execution timeout'));
-    }, 60000);
+    }, 120000); // 2 minutes timeout for AI processing
   });
 };
 
-/**
- * Transform Python response to frontend expected format
- */
-const transformResponse = (pythonResult) => {
-  return {
-    boq_text: pythonResult.matched_work || pythonResult.input_work,
-    projectMaterial: pythonResult.input_work,
-    industry: pythonResult.industry,
-    matched_work: pythonResult.matched_work,
-    match_type: pythonResult.match_type,
-    confidence: pythonResult.confidence,
-    state: pythonResult.state,
-    tier: pythonResult.tier,
-    state_factor: pythonResult.state_factor,
-    total_hours: pythonResult.total_hours,
-    wbs: pythonResult.wbs,
-    subcategory: pythonResult.industry
-  };
-};
 
 /**
  * POST /api/wbs/generate
- * Generate WBS for a single project
+ * Generate WBS for a single BOQ item
  */
 exports.generateWBS = async (req, res) => {
   try {
-    const { work, length, breadth, state, tier } = req.body;
+    const { work_name, description, area, unit, room_name } = req.body;
     
-    if (!work) {
+    if (!work_name) {
       return res.status(400).json({
         success: false,
-        error: 'Work/project description is required'
+        error: 'work_name is required'
       });
     }
     
-    const scriptArgs = {
-      mode: 'single',
-      work,
-      length: length || null,
-      breadth: breadth || null,
-      state: state || null,
-      tier: tier || null
-    };
+    const boqData = [{
+      work_name,
+      description: description || '',
+      area: area || 0,
+      unit: unit || '',
+      room_name: room_name || 'General'
+    }];
     
-    const result = await executePythonScript(scriptArgs);
-    
-    // Transform the response to match frontend expectations
-    const transformedResult = transformResponse(result);
+    const result = await executePythonScript(boqData);
     
     res.json({
       success: true,
-      data: transformedResult
+      data: result[0] // Return the first (and only) WBS item
     });
     
   } catch (error) {
@@ -485,57 +462,43 @@ exports.generateWBS = async (req, res) => {
 
 /**
  * POST /api/wbs/batch
- * Generate WBS for multiple projects
+ * Generate WBS for multiple BOQ items
  */
 exports.generateBatchWBS = async (req, res) => {
   try {
-    const { projects } = req.body;
+    const { boq_items } = req.body;
     
-    if (!Array.isArray(projects) || projects.length === 0) {
+    if (!Array.isArray(boq_items) || boq_items.length === 0) {
       return res.status(400).json({
         success: false,
-        error: 'Projects array is required and must not be empty'
+        error: 'boq_items array is required and must not be empty'
       });
     }
     
-    for (let i = 0; i < projects.length; i++) {
-      if (!projects[i].work) {
+    // Validate each BOQ item
+    for (let i = 0; i < boq_items.length; i++) {
+      if (!boq_items[i].work_name) {
         return res.status(400).json({
           success: false,
-          error: `Project at index ${i} is missing 'work' field`
+          error: `BOQ item at index ${i} is missing 'work_name' field`
         });
       }
     }
     
-    const scriptArgs = {
-      mode: 'batch',
-      projects: projects.map(p => ({
-        work: p.work,
-        length: p.length || null,
-        breadth: p.breadth || null,
-        state: p.state || null,
-        tier: p.tier || null
-      }))
-    };
+    // Prepare BOQ data
+    const boqData = boq_items.map(item => ({
+      work_name: item.work_name,
+      description: item.description || '',
+      area: item.area || 0,
+      unit: item.unit || '',
+      room_name: item.room_name || 'General'
+    }));
     
-    const result = await executePythonScript(scriptArgs);
-    
-    // Transform batch results
-    const transformedResults = result.batch_results.map(item => {
-      if (item.success && item.data) {
-        return {
-          success: true,
-          data: transformResponse(item.data)
-        };
-      }
-      return item;
-    });
+    const result = await executePythonScript(boqData);
     
     res.json({
       success: true,
-      results: transformedResults,
-      total: result.total,
-      successful: result.successful
+      data: result
     });
     
   } catch (error) {

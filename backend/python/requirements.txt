@@ -4,3 +4,7 @@ boto3
 pydantic
 python-multipart
 python-dotenv
+pandas
+pdfplumber
+python-docx
+google-genai

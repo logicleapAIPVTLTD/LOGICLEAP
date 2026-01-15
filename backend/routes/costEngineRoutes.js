@@ -57,6 +57,6 @@ router.post("/estimate/detailed", costEngineController.getDetailedEstimate);
  *            ]
  *          }
  */
-router.post("/estimate/batch", costEngineController.batchCostEstimate);
+router.post("/estimate/batch", costEngineController.getBatchCostEstimate);
 
 module.exports = router;

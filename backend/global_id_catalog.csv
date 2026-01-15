@@ -1,0 +1,339 @@
+MaterialID,ItemName,Unit,SourceTable
+E2.24,BOARD,NUMBER,sku_master_table
+O2.4,,,sku_master_table
+O1.1,,,sku_master_table
+E2.1,,,sku_master_table
+O3.4,,,sku_master_table
+G1.1,,,sku_master_table
+E2.4,,,sku_master_table
+E2.26,,,sku_master_table
+G1.4,,,sku_master_table
+E2.5,,,sku_master_table
+E1.234,PIPE FOR PLUMBING,METER,sku_master_table
+O2.1,,,sku_master_table
+O3.1,,,sku_master_table
+E2.2,,,sku_master_table
+G1.2,,,sku_master_table
+M1.1,,,sku_master_table
+O1.3,,,sku_master_table
+r12,board,nos,sku_master_table
+G1.5,,,sku_master_table
+E1.26,,,sku_master_table
+rt67,wood,nos,sku_master_table
+O3.2,,,sku_master_table
+G1.3,,,sku_master_table
+r.40,pipe,meter,sku_master_table
+G3.1,,,sku_master_table
+E2.23,PIPE FOR PLUMBING,METER,sku_master_table
+B1.8,,,sku_master_table
+E1.23,Bitumen used for flexible pavement road construction,tons,sku_master_table
+5,plumbing,5,sku_master_table
+E1.22,PIPE FOR PLUMBING,METER,sku_master_table
+O1.2,,,sku_master_table
+E1.25,,,sku_master_table
+E3.21,,,sku_master_table
+E2.27,,,sku_master_table
+E1.2-2909,,,sku_master_table
+E1.24,,,sku_master_table
+E1.27,,,sku_master_table
+E3.22,,,sku_master_table
+O2.3,,,sku_master_table
+E2.25,,,sku_master_table
+O3.5,,,sku_master_table
+e123,pipe,meter,sku_master_table
+O2.2,,,sku_master_table
+L5.2,,,sku_master_table
+E1.21,,,sku_master_table
+O4.1,,,sku_master_table
+M1.1-2410,,,sku_master_table
+G2.1,,,sku_master_table
+O3.3,,,sku_master_table
+e234,pipe,meter,sku_master_table
+E1.1-2909,,,sku_master_table
+e12,pipe,meter,sku_master_table
+E2.8,,,sku_master_table
+O1.4,,,sku_master_table
+c518d44c-9606-4b08-9843-e0722a477428,Light Fixture Installation,Unit,work_master
+aa9cd03b-3336-4c4f-9134-97d11233e55d,Water Draining,Unit,work_master
+15c215a0-a24c-487f-b9d6-f1e79425b7b2,Fire Alarm Installation,Unit,work_master
+92b0fc4e-1fdc-47bb-9fd8-26166ec83d2b,HVAC Maintenance,Unit,work_master
+b1152503-cac4-45bc-89dc-c4ac2cf3e5ba,Storm Water Drain,Unit,work_master
+6e708c4a-1bb9-41c5-98e3-441a4a93cb2c,Kota Stone Flooring,Unit,work_master
+88d6ce0b-2fe0-44f3-bc92-298d5055b2d6,Trial Run,Unit,work_master
+1edfb4dc-cab3-4f0c-ac14-1d118dfc8ef3,Underground Water Tank Cleaning,Unit,work_master
+97828a21-9380-447e-b602-5502bba14838,VRV VRF System Installation,Unit,work_master
+9bea67ef-66c1-4bfa-a41f-d379f4b5b9f7,Waterproof Plaster,Unit,work_master
+8e00e31b-08d0-4a83-bca6-166342e306f6,Compliance Audits,Unit,work_master
+be2b6bdb-6175-4466-920f-e451f682e38a,External Plaster,Unit,work_master
+8a91adde-f210-45b5-920d-244fa8bb173d,Civil Maintenance,Unit,work_master
+60f6f542-5c96-45a8-abc1-4a95dac2d48a,Vacuum Cleaning,Unit,work_master
+5a01e04b-ff4e-436c-9116-32fe17d37c97,Sump Cleaning,Unit,work_master
+1e3c9b62-f491-4105-884a-0d95499cf96e,IPS Flooring,Unit,work_master
+4ad14cd2-2abc-4d6a-826d-e77fbf4e2f78,Surface Wiring,Unit,work_master
+8f78cafd-ca2b-4705-a42a-55d552e96474,Water Supply Piping,Unit,work_master
+b86f8368-4b69-4fef-8fc5-b411bc5c9ee5,Wall Paneling,Unit,work_master
+82109bc7-93bb-4d68-8e8c-4f4706bd5a39,Grouting Work,Unit,work_master
+98df6f82-a576-4e85-98ac-04a0c9e134d4,Lacquer Finish,Unit,work_master
+2bd6744b-2642-40cc-ba5a-750c12998369,Design Consultancy,Unit,work_master
+0eaaa331-e15f-498a-91d7-d0f382ba560a,Aluminum Window Installation,Unit,work_master
+56f1abd1-b5f3-4470-9869-85cdf3282f33,Earthing Work,Unit,work_master
+1dd20dd6-dd5d-4005-9ae7-0a5c28d80646,False Ceiling Repair,Unit,work_master
+a22beaab-ba8e-48d4-b3e6-0fbd9c3b7fca,Excavation,Unit,work_master
+e85635ad-e58b-4891-8865-d1bff6d4aa09,Expansion Joint Treatment,Unit,work_master
+2a089216-e7e9-48d0-b4a0-c3d798cd5ecb,Retaining Wall,Unit,work_master
+0b307240-a68d-46bd-84c3-2eccfa8efb17,Ducting Work,Unit,work_master
+60e695a4-5422-4756-91e4-301ced895b68,Interlocking Tile Flooring,Unit,work_master
+4786a968-13ca-4a64-b09a-2100e597b05e,Miscellaneous Works,Unit,work_master
+5b428a3b-8c88-4499-ba34-096650b4bca3,Loading and Unloading,Unit,work_master
+1d554063-54ce-4f92-8d04-ddc164a6e049,Staircase Flooring,Unit,work_master
+626fba24-8449-45a4-ac4d-b70839b1cb65,Access Control Installation,Unit,work_master
+2c1c59dc-5f52-40af-81bc-b174b5d53b9c,Material Handling,Unit,work_master
+789b74b1-7396-4a51-b9ed-28b24bd11329,Internal Glass Cleaning,Unit,work_master
+f9f8de3a-819d-479e-9c3b-ff18527a867b,Voice Cabling,Unit,work_master
+08d2fd9c-f8e7-4e59-a4de-6b4974cd7e86,Sludge Removal,Unit,work_master
+0f3c0f2e-51f3-41bb-b9c1-440d72ad3f97,Carpet Flooring,Unit,work_master
+ecfd9b7e-78c0-4600-8279-29e9f2c6e601,Fixed Furniture,Unit,work_master
+ef46e243-29b9-4c43-86ec-a9668e0acee6,AC Drain Piping,Unit,work_master
+08224500-498b-4f85-b422-527559603c07,Flush Door Installation,Unit,work_master
+468efb21-b049-4895-b269-3d2b83b7f0a6,Podium Waterproofing,Unit,work_master
+08afdc8a-aab6-492a-a7f8-bcb7542607b5,Solar Panel Installation,Unit,work_master
+cc476706-43c2-46a8-a922-0ac3ef425001,Data Cabling,Unit,work_master
+2ac90a8d-69f3-4a7d-8835-7a9ab4fd6c70,Tank Refilling,Unit,work_master
+f6cbf72a-75da-431b-af04-048aea918660,Cabinet Work,Unit,work_master
+1745198b-fc61-4e60-bb21-c2ed09ac8d70,Water Quality Testing,Unit,work_master
+51c48904-afc2-4d8b-83ff-68c7c1abb996,Split AC Installation,Unit,work_master
+ddc5c3c3-8c23-4100-833d-cf7e9e8ab1d6,Cleaning Services,Unit,work_master
+c5b3143e-bdea-4a19-85e4-77dc81879cfa,Glass Partition,Unit,work_master
+41a9858c-3073-4bbe-a4d7-37cc75dffb2e,Sewer Line Construction,Unit,work_master
+f497ab01-3ca1-4a78-be7d-9db8a5a23609,RCC Beam,Unit,work_master
+679e0839-c96f-4f24-81ee-289f3bc660c6,Industrial Flooring,Unit,work_master
+780e8ef9-b008-4ff4-90f3-0cff1dbb2383,Partition Wall Masonry,Unit,work_master
+d3f01a88-47a0-4259-9a8d-e1deb39c2603,Annual Maintenance Contract,Unit,work_master
+b5871dab-f23b-431b-9f0f-6463221e12e4,Anti Fungal Coating,Unit,work_master
+a7e974c5-2811-4fd9-8340-6e082f859678,Inspection Services,Unit,work_master
+a6d6d5fe-2f75-4e55-8083-a2af0d411428,Fire Water Tank Cleaning,Unit,work_master
+9dffe7cb-a95c-486e-b548-f6536b8e51e1,SPC Flooring,Unit,work_master
+f72f1ebb-60f5-4da9-94e9-e1514e5e702e,False Ceiling Gypsum,Unit,work_master
+e18e30eb-e2ec-446f-8d94-5d585347284a,Cleaning Certification,Unit,work_master
+e6d7f102-2a78-4426-a490-ed1ecbed0094,Compound Wall,Unit,work_master
+a09ce403-c0bf-42e5-b782-c033dd9e1676,Engineered Wood Flooring,Unit,work_master
+7764bba3-fea1-43e2-bd89-2159ae20d61a,Snag List Clearance,Unit,work_master
+94199fa2-eed5-49a0-b635-4c7ab50d98b5,Electrical Chasing,Unit,work_master
+bb133c95-0a8e-4aa3-a564-659e33cda604,Testing and Commissioning,Unit,work_master
+8a3fcb6a-b7c5-4b13-8f11-214993436ad7,RCC Slab,Unit,work_master
+4d3c2f0b-1966-47fb-bbe7-249b9bad9f8e,Site Mobilization,Unit,work_master
+9d7a2ba9-a673-47f0-928b-5de64f64f958,Odor Removal,Unit,work_master
+35c3475e-63dc-41ad-a3c5-3109c1274114,Repainting Work,Unit,work_master
+54070a59-ca96-4fb4-9c8e-0a686dc05705,Glass Facade,Unit,work_master
+4b7eb48b-42cc-4ebc-9d4b-cdf6c3d06a44,Compliance Documentation,Unit,work_master
+b2293179-bbee-438f-8227-aa80a58a23c8,Demolition Work,Unit,work_master
+a2ce44b4-f57b-4ff2-8b45-8142abea8977,Wallpaper Installation,Unit,work_master
+3884fb8e-a241-40d4-9e9d-4a50b2ccb06d,PVC Ceiling,Unit,work_master
+fa754766-f354-42f4-b7e5-6c8d75a43f23,Paver Block Flooring,Unit,work_master
+693e8891-9c49-402b-b110-532b076b4934,Desilting,Unit,work_master
+4a83745d-a251-48c0-8fc0-b621cf17f7a5,Site Demobilization,Unit,work_master
+9441fca5-2358-4cc1-aeea-a73d38dd3209,Gypsum Partition,Unit,work_master
+794d1022-e4a0-42d0-84a2-74dd302cb909,Polish Work,Unit,work_master
+ee65e6a2-bcb1-41f4-aa05-eca54280c0fe,Aluminum Door Installation,Unit,work_master
+0a92bb50-a096-41c1-8532-7b9d51775457,Anti Skid Flooring,Unit,work_master
+d82d9b88-8742-4faf-a966-c715eca44f20,Wooden Door Installation,Unit,work_master
+0b07e111-44f3-401c-84c4-d0517608c9a7,Manual Scrubbing,Unit,work_master
+6d66a69a-cdaf-4835-976b-1ea27881ddea,Ventilation Arrangement,Unit,work_master
+3467e68e-ab2e-48fa-8cd7-2cae979ad817,Floor Polishing,Unit,work_master
+5d48ba47-9e60-49ff-811c-9e13456818d4,Liaison Work,Unit,work_master
+5516e036-7e7d-4ae1-b985-cc013c3162fb,Floor Scrubbing,Unit,work_master
+a54d304a-e548-4b0c-8a1b-99d539f38ee7,Urinal Installation,Unit,work_master
+c7b9bd04-27b3-47fe-8c52-e41049b3e970,RCC Roofing,Unit,work_master
+eda5c1c3-60b9-494e-8163-afe2b10ca11b,Epoxy Flooring,Unit,work_master
+c02554b5-6334-4b59-859a-c40d1c067dcf,RCC Staircase,Unit,work_master
+abbe9940-b6e1-4d92-8299-373ca64919f8,Septic Tank Construction,Unit,work_master
+dfc35690-acb9-4d58-9ab5-1d09d2d3d401,Acoustic Ceiling,Unit,work_master
+79b7818f-214a-479c-883e-061fc239ef17,Tremix Flooring,Unit,work_master
+1f391940-8bde-4965-8770-c69544e06128,Hacking Work,Unit,work_master
+8f986fb8-0086-400e-ac19-15a111766d69,Exhaust Fan Installation,Unit,work_master
+acb2d266-9c34-47ba-83d1-b1ace54e5e39,Anti Termite Treatment,Unit,work_master
+a07e59c6-ea2e-4aec-8e01-50b5b8a5f99f,Grid Ceiling,Unit,work_master
+ce20c59d-03d3-4c8f-a1f2-0fa3992f0e20,Soak Pit Construction,Unit,work_master
+63654955-54ad-41d4-ba43-2e6c1b32c3db,Post Construction Cleaning,Unit,work_master
+05f1bbad-5570-4fa8-9254-c7f12c93902b,Plumbing Repair,Unit,work_master
+e5686f48-7dc0-4edd-8e2f-7714376575ea,Boundary Wall Construction,Unit,work_master
+db9f5f65-a67a-47da-add1-1e37d52c53a6,Primer Coating,Unit,work_master
+a5f29b08-d92c-4086-a2b2-b34c360b974b,Final Inspection,Unit,work_master
+bbf4331b-944b-4265-a5d8-a246da90c1f3,Centering Work,Unit,work_master
+b62b6ce8-04e3-48fb-803e-22ba5950f6f1,False Ceiling POP,Unit,work_master
+ec773797-6d71-421d-a824-78cd08c24b47,Solid Block Masonry,Unit,work_master
+7a35d985-0592-40f8-b5ca-668c2791bde9,Signage Installation,Unit,work_master
+a275aaa0-bd5b-465c-a933-62118c5c6275,Ceiling Painting,Unit,work_master
+d8f418a6-a0aa-497e-a0af-b40b8350c75c,CP Fittings Installation,Unit,work_master
+291bd23c-882b-4573-b5df-0608868b7177,UPS Wiring,Unit,work_master
+2487b9ae-d2c9-41f1-8753-caeed1c09ac9,Crack Repair,Unit,work_master
+3a56da19-335c-4d6d-bf5e-6bf30cc6c46b,Authority Approvals,Unit,work_master
+1aa8cfe3-e071-4eb3-843c-d3dcbb9d1b44,AC Dismantling,Unit,work_master
+228b59d0-b612-4b6a-9d7c-2e622e61cc2d,Wooden Ceiling,Unit,work_master
+4bf76a72-3858-45c0-9163-2cea3a8b3c13,Kitchen Plumbing,Unit,work_master
+4fee3110-d7ed-4bbe-ade1-e4e5c65c3e1d,Electrical Maintenance,Unit,work_master
+59b45785-d28f-4963-a3c9-5aa0a7a810b0,Floor Protection Sheets,Unit,work_master
+6fa09099-3bbe-46b6-ba29-e1ca7cc1c14d,Industrial Cleaning,Unit,work_master
+920957c3-8206-42fd-bf7a-4e017fc24dbf,Housekeeping Services,Unit,work_master
+5a04b226-e98b-4766-9c8f-9d4b4a7668e8,RCC Footing,Unit,work_master
+8721d441-d75c-46e4-9876-07cc8e220a15,Wooden Door Installation,Unit,work_master
+9074d2d5-6798-4acd-a777-ab31079864b0,Ceiling Access Panel,Unit,work_master
+0ce09238-281c-439c-a1bb-c032952aab6f,LED Panel Installation,Unit,work_master
+d6ed7df4-4680-428f-860d-be2945d7ba07,Wooden Flooring,Unit,work_master
+19e00f5f-dcbf-4699-860d-555b68bcaf9b,Designer Paint Finish,Unit,work_master
+64fbae73-8995-4c2c-a503-da0dc27dfbf5,Internal Shifting,Unit,work_master
+9826b7a5-b4c0-4c2b-9453-1aacd9fecf1d,Leakage Rectification,Unit,work_master
+dc300707-6b32-47f7-b97e-47a68444c057,Tank Internal Coating,Unit,work_master
+501b6108-7868-4f5b-85f7-b77d0ea9e878,Glass Facade Cleaning,Unit,work_master
+5bb17f60-232e-4b67-ad8a-7ce8d4f63584,Wooden Wall Paneling,Unit,work_master
+514a89d7-f0ae-475c-be3c-456e22ec191e,Drainage Piping,Unit,work_master
+a22a01f5-bf84-4084-9bd0-6ff67808f1c7,Light Point Wiring,Unit,work_master
+976a1b50-4fd4-4f86-9ffb-564d379a11b6,Shop Drawing Preparation,Unit,work_master
+86786a7c-2b1f-404f-8ab3-a0ae3399a106,Ceramic Tile Flooring,Unit,work_master
+a3b9fe81-d30e-4270-a547-b5efbc86d720,ACP Partition,Unit,work_master
+7ef4457c-0393-46ce-b4a4-ae21f2dac650,Rolling Shutter Installation,Unit,work_master
+c0b4371f-7c33-445c-930e-264b3d83647d,Wooden Partition,Unit,work_master
+1a34d6e4-caf0-4e25-ba31-4f220f9fa075,Site Setup,Unit,work_master
+eea8a122-3a47-40d4-911f-ecb5da555707,Putty Application,Unit,work_master
+02bc6498-1941-4b65-be1e-3083370425ea,Precast Concrete Work,Unit,work_master
+8f765be6-3123-40b0-a4aa-e4d0356b99df,Inspection Charges,Unit,work_master
+493d6f20-4d82-4620-bc68-43b5d6f111dc,Gypsum Plaster,Unit,work_master
+50710731-a828-42ec-bb12-de49a95d6dfd,Coordination Drawings,Unit,work_master
+a2540b69-7b72-4cef-b75a-4a71d122884c,Room Cleaning,Unit,work_master
+e1004094-c746-4cf6-ac0b-3f83f6f76bca,Brick Partition,Unit,work_master
+c8ddfc2b-0236-4c34-87cb-9f4e18edc909,Security Grill Installation,Unit,work_master
+70321522-0ed8-4e8e-805a-ba6483bcda1d,Temporary Site Office,Unit,work_master
+0810f872-a4ce-4cb7-b4be-60778c234799,Common Area Cleaning,Unit,work_master
+f5fc573c-3b0e-49cf-9c18-4822afd4ecf4,Demountable Partition,Unit,work_master
+c6addaf2-cc69-4808-88af-31248e21ad88,Electrical Point Shifting,Unit,work_master
+72578355-9d03-424d-bd6b-f84b1fbe35cc,Laminate Flooring,Unit,work_master
+d9ad8d7c-22a7-4026-aebb-c19992590761,Gas Testing,Unit,work_master
+627f8490-b158-4c4c-9a79-3fff94174cdd,Texture Painting,Unit,work_master
+e72af957-a94f-469d-80a1-225cb2662ed9,Conduit Installation,Unit,work_master
+e48e860e-2a1e-41e0-8684-0ee68b3c411e,Distribution Board Installation,Unit,work_master
+37d274a7-a6d6-457d-afc3-7a5788101a02,PVC Wall Panels,Unit,work_master
+170c7306-0eb7-47c9-a88e-2e65a183af27,Dust Protection,Unit,work_master
+95c442f2-6193-4d9e-b092-3d3cafa9a23f,Paint Touch Up,Unit,work_master
+417c1c7c-cd06-4e0a-8e11-3f4178882c88,Chlorination,Unit,work_master
+7a5db597-632f-420f-8422-52bddab5e645,Barricading and Safety Fencing,Unit,work_master
+3647df2a-3bbe-44f1-8383-1f138a53bfeb,Tank Inspection,Unit,work_master
+5fddc112-fe3c-4b29-9a02-a88e32bc3e33,Switch Socket Installation,Unit,work_master
+9f3fee04-a85f-4b1f-93b8-5a317cdfbe39,Wall Cladding,Unit,work_master
+85e24df2-a3f6-47b1-8b02-556e07e0e9cd,Fire Fighting System Installation,Unit,work_master
+e3269d6c-c55c-455b-9d4d-15deb83e1499,Vertical Transportation,Unit,work_master
+d8505e2a-786a-4d92-8064-78d913810818,Rainwater Harvesting System,Unit,work_master
+c507921d-bc81-4be9-9264-a29d8d90d8a4,Electrical Repair,Unit,work_master
+1957d32c-2d89-41aa-bec0-69a4979e424a,Basement Waterproofing,Unit,work_master
+f971e5fc-40a2-4f2f-87f7-2e9076c94a9c,High Pressure Jet Cleaning,Unit,work_master
+a3ac67a9-3607-4508-b9c8-9d90af5aa991,Cement Flooring,Unit,work_master
+81a33805-5882-4c1c-8476-4ca849cdb136,Interior Painting,Unit,work_master
+83138485-aaad-4f17-b735-1db7ace5b965,Inverter Wiring,Unit,work_master
+536ebb5f-87e9-4f28-8d76-98caf174d94a,Shuttering Formwork,Unit,work_master
+450d75b8-8ecf-4b48-a413-54d8c05fc1db,As Built Drawings,Unit,work_master
+8235f411-59cb-4a7a-826d-d9394c33c6ec,Generator Maintenance,Unit,work_master
+b870becf-aba5-4717-b095-a995e2248dae,Core Cutting,Unit,work_master
+0cde6620-dc96-4693-882e-dbb4160cb287,Fire Rated Door Installation,Unit,work_master
+bf946ac8-1a9a-4248-a150-c712c9df50fa,Backfilling,Unit,work_master
+4cb10b3a-aad7-4c3c-b38c-52607d699b6f,Cove Ceiling,Unit,work_master
+63fc38cb-b42f-4a13-839c-d43d8b2cfdd5,Vitrified Tile Flooring,Unit,work_master
+26218dd2-a519-45c9-9bd0-a8d09ef9dada,CCTV Installation,Unit,work_master
+4a6c07b9-58bb-4053-baf8-eb831ad57886,Curtain Wall System,Unit,work_master
+b0c819a2-930a-475c-b4f1-57b0db56810a,Facade Glass Cleaning,Unit,work_master
+3720ff82-5bbe-445c-a7b9-cca1c733b9a9,Tile Replacement,Unit,work_master
+69f04250-c062-47dd-a293-aea514f039b7,Stone Masonry,Unit,work_master
+44356b07-2124-4aef-9231-9b2e6bb37745,Road Construction,Unit,work_master
+5e30e8f8-c788-4107-bd94-c9178e6c52f4,Metal Roofing,Unit,work_master
+59bde324-bcd4-45b4-bf29-bbea1eef6a9e,Compaction,Unit,work_master
+5ce6a7c4-0481-4683-b743-46fd5cbeeb71,Granite Flooring,Unit,work_master
+5dbebef2-bb38-43dd-b772-dbe105bea013,Damp Patch Treatment,Unit,work_master
+23571cdf-83ff-45a7-ab3c-f0ffdcdc9beb,AC Copper Piping,Unit,work_master
+0b4e1f9a-3783-4a4f-af11-ff1a894cebf5,Window Frame Installation,Unit,work_master
+f2570cf0-8f62-4f1a-a57b-a040ba7480e6,Plumbing Maintenance,Unit,work_master
+b8776a83-1c95-4b61-a168-d96ada5a85d0,Decorative Ceiling Work,Unit,work_master
+8cc6d6b9-830f-43f1-9771-cc294af69a77,Putty Repair Work,Unit,work_master
+d5976571-c241-4925-b444-8174d4889700,Lift Maintenance,Unit,work_master
+11a7dec4-5e24-43f4-aae3-391805b3b081,Fan Point Wiring,Unit,work_master
+ca6f87fd-8bf8-439b-8be0-a6d979a8cd92,Aluminum Partition,Unit,work_master
+5aceab72-fdda-42af-a254-8c3fd20efb65,Marble Flooring,Unit,work_master
+97314b3c-52ea-4b9c-b587-fc218624df80,Skirting Work,Unit,work_master
+54b9e315-2c59-4441-b3f0-9c5615a895c8,WC Installation,Unit,work_master
+f6256b6d-83c4-41e1-b15b-dbaf21ff332d,Inspection,Unit,work_master
+cd5c2d08-bad1-4437-9fc7-1c68e04dc68f,AAC Block Masonry,Unit,work_master
+73287481-abd9-4c52-968d-8bdfe6bcc958,Landscaping Work,Unit,work_master
+7f0861cd-c6c4-466a-a198-042f0c062626,Temporary Coverings,Unit,work_master
+6895dc10-bed3-466d-a5ce-f4703e414e9d,Office Cleaning,Unit,work_master
+0e330e6c-35fa-4cbb-bb9c-f09dda862f75,Rock Excavation,Unit,work_master
+e33d94dc-754c-4399-b76a-9ff6bc906f41,Vinyl Flooring,Unit,work_master
+bb69e5c8-59ef-429f-a0f1-24d0799da4f3,Internal Plaster,Unit,work_master
+307d87f1-7022-4979-9fcd-377de6f43e97,Footpath Construction,Unit,work_master
+f73e2204-da44-45cd-873d-d513cb123fd9,AAC Block Partition,Unit,work_master
+9c583322-1f4c-4d68-a95e-d926ed5c8652,Socket Point Wiring,Unit,work_master
+3cf81334-fdfc-4139-876e-7419dabdc3be,Cassette AC Installation,Unit,work_master
+42153e2c-9ae4-42d1-88bb-64906abfd2d8,CCTV Installation,Unit,work_master
+4350e481-4257-41fa-8bee-4a5ef64bfe99,Anti Bacterial Treatment,Unit,work_master
+24c3bec7-cecb-4c6d-8c9f-0a24cf62652d,Ceiling Insulation,Unit,work_master
+7f586053-da2d-44a9-b653-e4db22a5919e,Expansion Joint Sealing,Unit,work_master
+cd270e2f-2174-4204-8f7e-cb43f8dcfcc5,Site Leveling,Unit,work_master
+97e75778-4ee7-4dd6-a1c7-dc1991d6cc81,Kerb Stone Fixing,Unit,work_master
+33e58647-924c-4ea5-a50e-9758f2c5e0a5,AC Gas Charging,Unit,work_master
+693f506f-be44-44fc-9332-21deb5164b28,Contingency Items,Unit,work_master
+0f217d02-5644-4809-93ce-f9888b47c003,Overhead Water Tank Cleaning,Unit,work_master
+d38711c6-7417-4985-a499-0e82a50a2738,Furniture Installation,Unit,work_master
+1f66161f-435b-45a2-977a-b219e090a44c,Sanitary Fixture Installation,Unit,work_master
+41410006-7909-46fc-8252-bb604bcae959,Porcelain Tile Flooring,Unit,work_master
+4fee459f-56af-4fde-95b9-6c05ece0b921,Modular Kitchen,Unit,work_master
+6607e92e-299e-4e48-89b6-877c73799b4a,Brick Masonry,Unit,work_master
+d52244cb-bcac-441c-9cdd-f620ee881cc8,Window Glass Cleaning,Unit,work_master
+14e2316e-f4b3-4ef0-9b6d-23fdc7e8487b,Coffered Ceiling,Unit,work_master
+7e8fa73e-01ae-41b6-93d0-b08a9035f102,Hardware Installation,Unit,work_master
+0f567314-3e6a-4f7f-ab63-fce23b9a70d4,Wash Basin Installation,Unit,work_master
+960f9931-5e02-4f63-b40d-9ac9891909c6,PU Flooring,Unit,work_master
+d1831682-8a01-4bbc-ac2f-0a3012cfa50a,Exterior Painting,Unit,work_master
+deebe61b-ab0b-4792-8ac3-d3b4e53a8590,Safety Harness Setup,Unit,work_master
+c6b7216d-544c-4d0b-8d33-b4390fb512d1,Door Frame Installation,Unit,work_master
+8cecabb4-12e4-45d7-b8b8-d6547d22da8a,Window AC Installation,Unit,work_master
+e3ea0b10-cf15-4038-ae9e-5b62e208d862,Storage Unit Installation,Unit,work_master
+c4b87854-e536-4b4b-aea2-0dee4e0668a4,Ceiling Plaster,Unit,work_master
+8bdeee27-980f-4755-9472-359895cb8a3d,Protection of Finished Surfaces,Unit,work_master
+e529ce59-35be-4acd-8492-339addf9f726,Site Clearing,Unit,work_master
+3ebebb01-3876-4608-a09f-664a672e79ce,Concealed Wiring,Unit,work_master
+7def6bf1-3a68-4517-9a67-b179acbef6f7,Ventilation System Installation,Unit,work_master
+d4688665-5bb9-47fe-9ec7-bec969cfea47,Temporary Storage Facility,Unit,work_master
+a3fe57b5-9d58-4e1a-8158-5f2258264268,Sludge Disposal,Unit,work_master
+bbccecf7-94b0-4744-a5a5-a1e48c2b60c6,System Balancing,Unit,work_master
+2caac074-8189-460d-8cbd-cf38c3cae364,RCC Column,Unit,work_master
+624bbace-0ab8-4738-a1a7-23e5f59d4a30,Waterproof Coating,Unit,work_master
+fd08e7e7-f93d-4e78-9357-8f3853eb3bbe,Crack Filling,Unit,work_master
+0b6dff57-bd07-4b83-b509-159c642ccdc1,Floor Cleaning,Unit,work_master
+3d0a534b-369d-4b86-813c-f001c0a75860,Fire Rated Partition,Unit,work_master
+546266a2-939b-40bc-b11c-d4a7b84004a2,3D Wall Panels,Unit,work_master
+8562e7e0-1a2d-439a-9085-fb01f8d69276,Decorative Lighting Installation,Unit,work_master
+09e6e106-4b9e-4c4b-a7ee-9ca7834f7de7,Access Control System Installation,Unit,work_master
+abfa01b0-b909-407a-89c1-cdfe4c93079c,Enamel Painting,Unit,work_master
+0b150f84-5b85-43dd-a485-30c909c550be,Outdoor Unit Installation,Unit,work_master
+3047557c-763e-4866-af57-96ac6883f112,Toilet Waterproofing,Unit,work_master
+e8a22f40-507a-48c5-804d-d298abc3b6e6,Steel Door Installation,Unit,work_master
+bbcb1c0b-a65d-4053-b936-9746223762f7,UPVC Window Installation,Unit,work_master
+5f0a17e0-2ad6-45e3-8818-f729edb25949,Reporting and Documentation,Unit,work_master
+75db6b63-5dc6-4b4d-a295-ad8dcebb1670,Temporary Utilities Water Power,Unit,work_master
+72f18c7c-5344-4235-bedc-65daa78f18e4,Emergency Breakdown Service,Unit,work_master
+d11659b5-d42c-4428-ab94-3ca5364ded21,Washroom Cleaning,Unit,work_master
+b2b0d00e-288b-40fa-8253-6ee0cd784c9e,Industrial Storage Tank Cleaning,Unit,work_master
+89b3909f-b644-4df4-9ac5-4df400127bf2,Plumbing Testing,Unit,work_master
+4441a98e-829f-4d34-8aa2-6e588abfb0b5,Chemical Disinfection,Unit,work_master
+45478bde-281b-4876-a4a4-8af53aedfab8,Modular Wardrobe,Unit,work_master
+f09684e3-ecf3-40dd-bd6e-ec2f5b1fdcd9,Gate Installation,Unit,work_master
+6fc2c7f0-0c67-4790-bcbe-e838e7a1ddff,Preventive Maintenance,Unit,work_master
+222593ca-8db5-47a8-9ae0-98407a60ddb1,False Ceiling Metal,Unit,work_master
+c0628ba7-43de-4b12-9cb4-1193d5242edc,Bathroom Plumbing,Unit,work_master
+88b8f8be-969e-4877-979b-39f1b489e543,Shear Wall,Unit,work_master
+59816b82-7552-499b-ad9f-3ac156038632,Scaffolding Work,Unit,work_master
+7d21bcea-2abc-414a-a76e-432768d0c157,Plain Cement Concrete,Unit,work_master
+db33f82d-fdb3-46a3-9a31-409b1af0ea65,Furniture Polishing,Unit,work_master
+b779396f-8ce0-44d1-9cc6-2a4325373b0d,Project Handover,Unit,work_master
+916bc8ff-10cf-4c65-a3cd-ae4ca68ef322,Fire Alarm System Installation,Unit,work_master
+43e8424e-34ff-4c5c-a5f1-3fcbaa514b20,Lump Sum Charges,Unit,work_master
+7ab1b133-55b5-4e90-ac8d-d6d83863d5f9,Algae Removal,Unit,work_master
+30c50534-5733-4b65-a953-a4c567468559,Confined Space Entry Setup,Unit,work_master
+3e563ccd-41a1-4466-ad2b-ee200025dd37,Terrace Waterproofing,Unit,work_master
+1653ed42-018a-40a7-9e4d-0ec2d300bb8c,Sheet Roofing,Unit,work_master
