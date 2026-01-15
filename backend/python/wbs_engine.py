@@ -17,7 +17,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash")
 
 # Batch Size (Updated to 10 as requested)
-BATCH_SIZE = 10 
+BATCH_SIZE = 50
 
 if not GEMINI_API_KEY:
     print("Error: GEMINI_API_KEY not found in .env")
