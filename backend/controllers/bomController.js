@@ -182,7 +182,7 @@ const fs = require("fs").promises;
  */
 const executeBOMScript = (boqData, projectDays = 15) => {
   return new Promise((resolve, reject) => {
-    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const pythonPath = process.env.PYTHON_PATH || 'python3';
     const scriptPath = path.join(__dirname, '../python/bom_engine.py');
     
     const pythonProcess = spawn(pythonPath, [scriptPath, JSON.stringify(boqData)]);
@@ -301,7 +301,7 @@ const generateBOMFromSource = async (req, res) => {
 
     // Step 1: Generate BOQ first
     const boqScript = path.join(__dirname, "../python/boq_api.py");
-    const boqPython = spawn("python", [boqScript]);
+    const boqPython = spawn("python3", [boqScript]);
 
     const boqInput = JSON.stringify({
       mode: mode || "1",

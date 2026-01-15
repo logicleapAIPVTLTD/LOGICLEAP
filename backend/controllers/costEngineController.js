@@ -7,7 +7,7 @@ const path = require('path');
  */
 const executeCostScript = (bomData) => {
   return new Promise((resolve, reject) => {
-    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const pythonPath = process.env.PYTHON_PATH || 'python3';
     const scriptPath = path.join(__dirname, '../python/cost_engine.py');
     
     const pythonProcess = spawn(pythonPath, [scriptPath, JSON.stringify(bomData)]);

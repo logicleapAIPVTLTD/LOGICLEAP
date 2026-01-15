@@ -640,7 +640,7 @@ const executePythonScript = (mode, input, context = {}) => {
       }`
     );
 
-    const python = spawn("python", [scriptPath]);
+    const python = spawn("python3", [scriptPath]);
 
     let stdout = "";
     let stderr = "";
