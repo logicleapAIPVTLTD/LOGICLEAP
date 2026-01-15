@@ -63,8 +63,12 @@ def process_image_api(image_path: str, context: Dict[str, Any]) -> List[Dict]:
 
         return vision_engine.normalize_to_db(raw_ai_data)
     except RuntimeError as e:
-        # Vision not available
-        raise RuntimeError(f"Vision processing not available: {e}")
+        # Vision not available - return helpful error
+        error_msg = str(e)
+        if "Google GenAI not available" in error_msg:
+            raise RuntimeError(f"Vision processing not available: Google GenAI library not installed or API key not configured. Please ensure google-generativeai is installed and GEMINI_API_KEY is set.")
+        else:
+            raise RuntimeError(f"Vision processing not available: {e}")
 
 # =========================================================
 # MAIN ENTRY POINT
