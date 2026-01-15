@@ -11,13 +11,8 @@ try:
     import google.genai as genai
     GENAI_AVAILABLE = True
 except ImportError:
-    try:
-        import google.generativeai as genai
-        GENAI_AVAILABLE = True
-    except ImportError:
-        GENAI_AVAILABLE = False
-        genai = None
-        # logger.warning("⚠️ Google GenAI not available. Vision features will be disabled.")
+    GENAI_AVAILABLE = False
+    genai = None
 from difflib import get_close_matches
 from typing import List, Dict, Optional, Union
 from dotenv import load_dotenv
