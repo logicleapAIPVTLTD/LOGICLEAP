@@ -27,7 +27,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash")
 
 # UPDATED: Batch Size reduced to 5 for faster processing
-BATCH_SIZE = 50
+BATCH_SIZE = 25
 
 if GEMINI_API_KEY:
     pass  # Will configure in class
