@@ -32,22 +32,27 @@ except Exception as e:
 # API FUNCTIONS
 # =========================================================
 
-def process_text_api(text: str) -> List[Dict]:
+def process_text_api(text: str, context: Dict[str, Any] = None) -> List[Dict]:
     """Process text input and return BOQ data"""
     if not text or not text.strip():
         return []
-    return TextParser.process_text(text)
+    if context is None:
+        context = {"project_name": "Text Input", "project_type": "General", "location": "Unknown"}
+    return TextParser.process_text(text, context)
 
-def process_file_api(file_path: str) -> List[Dict]:
+def process_file_api(file_path: str, context: Dict[str, Any] = None) -> List[Dict]:
     """Process file input and return BOQ data"""
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
+    
+    if context is None:
+        context = {"project_name": "File Input", "project_type": "General", "location": "Unknown"}
 
     raw_text = extract_text_from_file(file_path)
     if not raw_text:
         return []
 
-    return TextParser.process_text(raw_text)
+    return TextParser.process_text(raw_text, context)
 
 def process_image_api(image_path: str, context: Dict[str, Any]) -> List[Dict]:
     """Process image input with context and return BOQ data"""
@@ -118,7 +123,7 @@ def main():
                 output_error("Missing 'input' text for mode 1")
                 return
             sys.stderr.write("📝 Processing raw text...\n")
-            final_data = process_text_api(user_input)
+            final_data = process_text_api(user_input, context)
             sys.stderr.write(f"✅ Text processing complete: {len(final_data)} items\n")
 
         # MODE 2: Document Processing
@@ -127,7 +132,7 @@ def main():
                 output_error("Missing 'input' file path for mode 2")
                 return
             sys.stderr.write(f"📄 Processing file: {user_input}\n")
-            final_data = process_file_api(user_input)
+            final_data = process_file_api(user_input, context)
             sys.stderr.write(f"✅ File processing complete: {len(final_data)} items\n")
 
         # MODE 3: Image Processing
