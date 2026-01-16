@@ -3,9 +3,17 @@ import json
 import logging
 import pdfplumber
 from docx import Document
-import google.genai as genai
 from typing import List, Dict, Any
 from dotenv import load_dotenv
+
+# Try to import the correct Google API
+try:
+    import google.generativeai as genai
+except ImportError:
+    try:
+        import google.genai as genai
+    except ImportError:
+        genai = None
 
 # =========================================================
 # 1. SETUP & CONFIGURATION
@@ -25,6 +33,10 @@ GEMINI_MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash")
 
 if not GEMINI_API_KEY:
     logger.error("❌ GEMINI_API_KEY not found in .env file.")
+    exit(1)
+
+if genai is None:
+    logger.error("❌ Google Generative AI package not installed")
     exit(1)
 
 genai.configure(api_key=GEMINI_API_KEY)
