@@ -248,31 +248,46 @@ const BOQGenerator = ({ setActiveView, setSelectedBOQItems }) => {
         const boqItems =
           Array.isArray(boqArray) && boqArray.length > 0
             ? boqArray.map((item, index) => {
-                const areaValue = item.area || 0;
-                const areaUnit = item.unit || "sqft";
+                // Handle both new format (qtySqm/qtySqft directly) and old format (area + unit)
                 let qtySqm = 0;
                 let qtySqft = 0;
-                if (areaUnit === "sqft") {
-                  qtySqft = areaValue;
-                  qtySqm = areaValue / 10.764;
-                } else if (areaUnit === "sqm") {
-                  qtySqm = areaValue;
-                  qtySqft = areaValue * 10.764;
+                let areaValue = item.quantity || item.area || 0;
+                let areaUnit = item.unit || "sqft";
+                
+                if (item.qtySqm !== undefined || item.qtySqft !== undefined) {
+                   qtySqm = parseFloat(item.qtySqm || 0);
+                   qtySqft = parseFloat(item.qtySqft || 0);
+                   
+                   // If quantity is missing but we have qtys, set it for display
+                   if (!areaValue) {
+                     areaValue = qtySqft;
+                     areaUnit = "sqft";
+                   }
+                } else {
+                    // Old fallback logic
+                    if (areaUnit === "sqft") {
+                      qtySqft = parseFloat(areaValue || 0);
+                      qtySqm = qtySqft / 10.764;
+                    } else if (areaUnit === "sqm") {
+                      qtySqm = parseFloat(areaValue || 0);
+                      qtySqft = qtySqm * 10.764;
+                    }
                 }
+
                 return {
-                  itemNo: index + 1,
-                  work: item.work_name || `Item ${index + 1}`,
-                  description: item.description,
-                  space: item.room_name || "",
-                  workCode: item.work_code || "",
+                  itemNo: item.itemNo || index + 1,
+                  work: item.work || item.work_name || `Item ${index + 1}`,
+                  description: item.description || "",
+                  space: item.space || item.room_name || "",
+                  workCode: item.workCode || item.work_code || "",
                   quantity: areaValue,
                   unit: areaUnit,
                   qtySqm: qtySqm,
                   qtySqft: qtySqft,
-                  rate: "",
-                  amount: "",
-                  areaSource: item.source || "",
-                  confidence: item.confidence || 0,
+                  rate: item.rate || "",
+                  amount: item.amount || "",
+                  areaSource: item.areaSource || item.source || "AI_GENERATED",
+                  confidence: item.confidence || 0.85,
                   // Preserve all original backend data
                   originalData: item,
                 };

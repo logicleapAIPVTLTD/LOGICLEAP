@@ -31,8 +31,8 @@ export default function WBS({ setActiveView, initialItems = [] }) {
         stored.length > 0
           ? stored
           : initialItems.length > 0
-          ? initialItems
-          : [];
+            ? initialItems
+            : [];
       const newItemsStr = JSON.stringify(newItems);
       const currentStr = JSON.stringify(boqItemsRef.current);
 
@@ -165,14 +165,16 @@ export default function WBS({ setActiveView, initialItems = [] }) {
         //   tier,
         // };
 
-        const originalData = item.originalData;
-
+        // Use normalized data from BOQGenerator
+        // BOQGenerator saves: projectMaterial (work), space, quantity, unit, description
         return {
-          work_name: originalData.work_name,
-          description: originalData.description,
-          area: originalData.area,
-          unit: originalData.unit,
-          room_name: originalData.room_name,
+          work_name: item.projectMaterial || item.work || "Unknown Work",
+          description: item.description || "",
+          area: item.quantity || 0,
+          unit: item.unit || "sqm",
+          room_name: item.space || "Unknown Space",
+          // Include other potential fields needed by backend
+          work_code: item.workCode || "",
         };
       });
 
@@ -286,9 +288,9 @@ export default function WBS({ setActiveView, initialItems = [] }) {
               typeof execItem === "string"
                 ? { task_name: execItem }
                 : {
-                    task_name:
-                      execItem.activity || execItem.task_name || "Task",
-                  };
+                  task_name:
+                    execItem.activity || execItem.task_name || "Task",
+                };
 
             const hours = execItem.hours || 0;
             const durationObj = {
@@ -503,11 +505,10 @@ export default function WBS({ setActiveView, initialItems = [] }) {
             <button
               onClick={handleGenerate}
               disabled={loading || boqItems.length === 0}
-              className={`px-6 py-3 rounded-lg shadow-sm transition-all duration-200 font-medium ${
-                loading || boqItems.length === 0
+              className={`px-6 py-3 rounded-lg shadow-sm transition-all duration-200 font-medium ${loading || boqItems.length === 0
                   ? "bg-gray-400 cursor-not-allowed text-white"
                   : "bg-green-600 hover:bg-green-700 text-white"
-              }`}
+                }`}
             >
               {loading ? "Generating WBS..." : "Generate WBS for All BOQ Items"}
             </button>
@@ -600,8 +601,8 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                               (item.qty_sqm || item.qtySqm
                                 ? "sqm"
                                 : item.qty_sqft || item.qtySqft
-                                ? "sqft"
-                                : "sqm");
+                                  ? "sqft"
+                                  : "sqm");
                             const length =
                               item.length || item.qty_sqm || item.qtySqm || "-";
                             const width =
@@ -698,10 +699,9 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                 {allTasksByBOQ.length} BOQ{" "}
                 {allTasksByBOQ.length === 1 ? "item" : "items"} processed
                 {Object.keys(groupedWBSResults).length > 0 &&
-                  ` • ${Object.keys(groupedWBSResults).length} ${
-                    Object.keys(groupedWBSResults).length === 1
-                      ? "work type"
-                      : "work types"
+                  ` • ${Object.keys(groupedWBSResults).length} ${Object.keys(groupedWBSResults).length === 1
+                    ? "work type"
+                    : "work types"
                   }`}
               </span>
             </div>
@@ -826,21 +826,19 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                         <h4 className="font-semibold text-gray-800 capitalize flex items-center gap-2">
                                           <Activity className="w-4 h-4 text-green-600" />
                                           <span
-                                            className={`w-2 h-2 rounded-full ${
-                                              hasTasks
+                                            className={`w-2 h-2 rounded-full ${hasTasks
                                                 ? "bg-green-500"
                                                 : "bg-gray-300"
-                                            }`}
+                                              }`}
                                           ></span>
                                           {stageName}
                                         </h4>
                                         <div className="flex items-center gap-3">
                                           <span
-                                            className={`text-xs px-2 py-1 rounded ${
-                                              hasTasks
+                                            className={`text-xs px-2 py-1 rounded ${hasTasks
                                                 ? "text-gray-600 bg-white"
                                                 : "text-gray-400 bg-gray-100"
-                                            }`}
+                                              }`}
                                           >
                                             {tasks.length}{" "}
                                             {tasks.length === 1
@@ -878,11 +876,11 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                                         <span className="font-semibold text-gray-800 ml-1">
                                                           {task.duration
                                                             ?.optimistic_hours !=
-                                                          null
+                                                            null
                                                             ? Number(
-                                                                task.duration
-                                                                  .optimistic_hours
-                                                              ).toFixed(2)
+                                                              task.duration
+                                                                .optimistic_hours
+                                                            ).toFixed(2)
                                                             : "N/A"}
                                                           h
                                                         </span>
@@ -894,11 +892,11 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                                         <span className="font-semibold text-gray-800 ml-1">
                                                           {task.duration
                                                             ?.most_likely_hours !=
-                                                          null
+                                                            null
                                                             ? Number(
-                                                                task.duration
-                                                                  .most_likely_hours
-                                                              ).toFixed(2)
+                                                              task.duration
+                                                                .most_likely_hours
+                                                            ).toFixed(2)
                                                             : "N/A"}
                                                           h
                                                         </span>
@@ -910,11 +908,11 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                                         <span className="font-semibold text-gray-800 ml-1">
                                                           {task.duration
                                                             ?.pessimistic_hours !=
-                                                          null
+                                                            null
                                                             ? Number(
-                                                                task.duration
-                                                                  .pessimistic_hours
-                                                              ).toFixed(2)
+                                                              task.duration
+                                                                .pessimistic_hours
+                                                            ).toFixed(2)
                                                             : "N/A"}
                                                           h
                                                         </span>
@@ -926,11 +924,11 @@ export default function WBS({ setActiveView, initialItems = [] }) {
                                                         <span className="font-bold text-green-700 ml-1">
                                                           {task.duration
                                                             ?.expected_hours !=
-                                                          null
+                                                            null
                                                             ? Number(
-                                                                task.duration
-                                                                  .expected_hours
-                                                              ).toFixed(2)
+                                                              task.duration
+                                                                .expected_hours
+                                                            ).toFixed(2)
                                                             : "N/A"}
                                                           h
                                                         </span>
