@@ -7,13 +7,14 @@ from typing import List, Dict, Any
 from dotenv import load_dotenv
 
 # Try to import the correct Google API
+import sys
+
 try:
-    import google.generativeai as genai
+    import google.genai as genai
+    GENAI_AVAILABLE = True
 except ImportError:
-    try:
-        import google.genai as genai
-    except ImportError:
-        genai = None
+    genai = None
+    GENAI_AVAILABLE = False
 
 # =========================================================
 # 1. SETUP & CONFIGURATION
@@ -35,12 +36,8 @@ if not GEMINI_API_KEY:
     logger.error("❌ GEMINI_API_KEY not found in .env file.")
     exit(1)
 
-if genai is None:
-    logger.error("❌ Google Generative AI package not installed")
-    exit(1)
-
-genai.configure(api_key=GEMINI_API_KEY)
-logger.info("✅ Google Generative AI configured")
+# Removed genai.configure() as it is not needed for the new SDK
+logger.info("✅ Google GenAI SDK loaded")
 
 # =========================================================
 # 2. BOQ IDENTIFICATION ENGINE
@@ -48,11 +45,21 @@ logger.info("✅ Google Generative AI configured")
 
 class BOQIdentificationEngine:
     def __init__(self):
-        self.model = genai.GenerativeModel(GEMINI_MODEL_NAME)
-        self.generation_config = genai.types.GenerationConfig(
-            temperature=0.1,
-            max_output_tokens=8192,
-        )
+        if GENAI_AVAILABLE and GEMINI_API_KEY:
+            try:
+                self.client = genai.Client(api_key=GEMINI_API_KEY)
+            except Exception as e:
+                logger.error(f"Failed to initialize AI Client: {e}")
+                self.client = None
+        else:
+            logger.error("AI Client or API Key missing")
+            self.client = None
+
+        # Config is now passed directly in generate_content
+        self.generation_config = {
+            "temperature": 0.1,
+            "max_output_tokens": 8192,
+        }
 
     def get_identification_prompt(self, context: Dict) -> str:
         p_type = context.get('project_type', 'Interior')
@@ -127,17 +134,60 @@ class BOQIdentificationEngine:
         logger.info(f"🧠 Generating Comprehensive BOQ for {context.get('project_type', 'Project')}...")
         
         try:
+            if not self.client:
+                logger.error("AI Client not initialized")
+                return []
+
             if is_image:
-                img_file = genai.upload_file(content)
+                # New SDK file upload
+                # Ensure content is a path
+                if not os.path.exists(content):
+                     logger.error(f"Image file not found: {content}")
+                     return []
+                     
+                with open(content, "rb") as f:
+                    image_bytes = f.read()
+
+                # For the new SDK, we can pass bytes directly or upload
+                # Passing image directly as bytes/part is often easier if supported, 
+                # but let's stick to the prompt structure.
+                # Actually, the new SDK makes it easy to pass PIL images or bytes.
+                # But to follow the upload pattern if large:
+                # For now let's assume we can pass the image content directly if small enough
+                # Or use the types.Part
+                
+                # Simplified: use the model's generate_content with the prompt and image
+                # The input 'content' is a file path string here.
+                
+                from google.genai import types
+                
+                # Create the prompt content
+                # We need to construct the 'contents' list correctly
+                
+                # Option 1: Upload file logic (client.files.upload)
+                # img_file = self.client.files.upload(file=content)
+                
+                # Option 2: Inline data (if supported and small). 
+                # Let's use the file path reading if we can't upload easily without checks.
+                # But client.files.upload is the direct replacement.
+                
+                # Upload the file
+                # The verify_import check ensured genai matches the new SDK
+                # client.files.upload is the method
+                
+                uploaded_file = self.client.files.upload(file=content)
                 logger.info(f"📤 Uploaded image: {content}")
-                response = self.model.generate_content(
-                    [img_file, sys_prompt], 
-                    generation_config=self.generation_config
+                
+                response = self.client.models.generate_content(
+                    model=GEMINI_MODEL_NAME,
+                    contents=[uploaded_file, sys_prompt],
+                    config=self.generation_config
                 )
             else:
-                response = self.model.generate_content(
-                    f"{sys_prompt}\n\nINPUT DATA:\n{content}", 
-                    generation_config=self.generation_config
+                response = self.client.models.generate_content(
+                    model=GEMINI_MODEL_NAME,
+                    contents=f"{sys_prompt}\n\nINPUT DATA:\n{content}", 
+                    config=self.generation_config
                 )
 
             raw_text = response.text.replace("```json", "").replace("```", "").strip()

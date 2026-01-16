@@ -2,10 +2,18 @@ import os
 import json
 import boto3
 import pandas as pd
-import google.genai as genai
+import pandas as pd
 import time
 import logging
 import math
+import sys
+
+try:
+    import google.genai as genai
+    GENAI_AVAILABLE = True
+except ImportError:
+    genai = None
+    GENAI_AVAILABLE = False
 from decimal import Decimal
 from typing import List, Dict
 from dotenv import load_dotenv
@@ -150,7 +158,16 @@ class GlobalCatalogLoader:
 
 class UniversalQuantityEngine:
     def __init__(self, catalog_df: pd.DataFrame):
-        self.client = genai.Client(api_key=GEMINI_API_KEY)
+        if GENAI_AVAILABLE and GEMINI_API_KEY:
+            try:
+                self.client = genai.Client(api_key=GEMINI_API_KEY)
+            except Exception as e:
+                logger.error(f"Failed to initialize AI Client: {e}")
+                self.client = None
+        else:
+             logger.error("AI Client or API Key missing")
+             self.client = None
+
         self.master_df = catalog_df.fillna("-")
         self.db_context = self.master_df[['MaterialID', 'ItemName', 'Unit']].to_csv(index=False)
 
@@ -206,6 +223,10 @@ class UniversalQuantityEngine:
             """
 
             try:
+                if not self.client:
+                     logger.error("AI Client not initialized, skipping batch")
+                     continue
+
                 response = self.client.models.generate_content(model=MODEL_NAME, contents=prompt)
                 clean_json = response.text.replace("```json", "").replace("```", "").strip()
                 mapped_results = json.loads(clean_json)
