@@ -3,7 +3,7 @@ import json
 import logging
 import pdfplumber
 from docx import Document
-import google.generativeai as genai
+import google.genai as genai
 from typing import List, Dict, Any
 from dotenv import load_dotenv
 
