@@ -2,7 +2,17 @@ import os
 import json
 import time
 import math
-import google.genai as genai
+import math
+import sys
+
+try:
+    import google.genai as genai
+    GENAI_AVAILABLE = True
+except ImportError:
+    print("Warning: google.genai module not found. AI features will be disabled.", file=sys.stderr)
+    genai = None
+    GENAI_AVAILABLE = False
+    
 from typing import List, Dict, Optional
 import sys
 
@@ -25,7 +35,14 @@ if not GEMINI_API_KEY:
 
 class WBSEngine:
     def __init__(self):
-        self.client = genai.Client(api_key=GEMINI_API_KEY)
+        if GENAI_AVAILABLE and GEMINI_API_KEY:
+            try:
+                self.client = genai.Client(api_key=GEMINI_API_KEY)
+            except Exception as e:
+                print(f"Warning: Failed to initialize GenAI client: {e}", file=sys.stderr)
+                self.client = None
+        else:
+            self.client = None
 
     def generate_wbs_batch(self, items_batch: List[Dict]) -> Dict[str, Dict]:
         """
@@ -41,6 +58,10 @@ class WBSEngine:
                 "qty": f"{item.get('area', 0)} {item.get('unit', '')}" 
             })
         
+        if not self.client:
+            print("AI Client not available. Skipping AI generation.", file=sys.stderr)
+            return {}
+
         print(f"Batching {len(batch_context)} items for 5-Stage Analysis...", end="", flush=True, file=sys.stderr)
 
         prompt = f"""
