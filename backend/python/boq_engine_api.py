@@ -147,13 +147,41 @@ def main():
 
 def output_success(data: List[Dict]) -> None:
     """Output successful result as JSON to stdout"""
+    # Transform data to match frontend expectations
+    transformed_data = []
+    for idx, item in enumerate(data):
+        # Extract area from Length and Width if available
+        length = item.get("Length", 0) or 0
+        width = item.get("Width", 0) or 0
+        area = length * width if length > 0 and width > 0 else 0
+        
+        # Calculate sqm and sqft
+        qty_sqft = area if area > 0 else 0
+        qty_sqm = qty_sqft / 10.764 if qty_sqft > 0 else 0
+        
+        transformed_item = {
+            "itemNo": idx + 1,
+            "space": item.get("State", "") or item.get("Room", ""),
+            "workCode": item.get("Tier", "") or "",
+            "work": item.get("Work", f"Item {idx + 1}"),
+            "description": item.get("Work", ""),
+            "qtySqm": qty_sqm,
+            "qtySqft": qty_sqft,
+            "areaSource": "AI_GENERATED",
+            "confidence": 0.85,  # Default confidence for AI-generated items
+            "quantity": item.get("Quantity", 1),
+            "unit": item.get("Unit", "sqft"),
+            "originalIndex": idx
+        }
+        transformed_data.append(transformed_item)
+    
     result = {
         "success": True,
-        "data": data,
-        "count": len(data)
+        "data": transformed_data,
+        "count": len(transformed_data)
     }
     print(json.dumps(result, indent=2))
-    sys.stderr.write(f"✅ Output sent: {len(data)} items\n")
+    sys.stderr.write(f"✅ Output sent: {len(transformed_data)} items\n")
 
 def output_error(message: str) -> None:
     """Output error as JSON to stdout"""
