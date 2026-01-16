@@ -25,22 +25,10 @@ GEMINI_MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash")
 
 if not GEMINI_API_KEY:
     logger.error("❌ GEMINI_API_KEY not found in .env file.")
-    GENAI_AVAILABLE = False
-else:
-    try:
-        genai.configure(api_key=GEMINI_API_KEY)
-        GENAI_AVAILABLE = True
-        logger.info("✅ Google Generative AI configured")
-    except Exception as e:
-        logger.error(f"❌ Failed to configure Gemini: {e}")
-        GENAI_AVAILABLE = False
+    exit(1)
 
-# Dummy data for compatibility
-data_layer = {}
-WORK_DF = {}
-ROOM_DF = {}
-WORK_NAMES = []
-WORK_MAP = {}
+genai.configure(api_key=GEMINI_API_KEY)
+logger.info("✅ Google Generative AI configured")
 
 # =========================================================
 # 2. BOQ IDENTIFICATION ENGINE
@@ -48,8 +36,6 @@ WORK_MAP = {}
 
 class BOQIdentificationEngine:
     def __init__(self):
-        if not GENAI_AVAILABLE:
-            raise RuntimeError("Google GenAI not available")
         self.model = genai.GenerativeModel(GEMINI_MODEL_NAME)
         self.generation_config = genai.types.GenerationConfig(
             temperature=0.1,

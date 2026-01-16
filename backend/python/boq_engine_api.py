@@ -13,14 +13,8 @@ from typing import Dict, List, Any
 # Import from the new boq_engine.py
 try:
     from boq_engine import (
-        TextParser,
-        VisionEngine,
-        extract_text_from_file,
-        data_layer,
-        WORK_DF,
-        ROOM_DF,
-        WORK_NAMES,
-        WORK_MAP
+        BOQIdentificationEngine,
+        extract_text_from_file
     )
     IMPORTS_OK = True
 except Exception as e:
@@ -38,7 +32,9 @@ def process_text_api(text: str, context: Dict[str, Any] = None) -> List[Dict]:
         return []
     if context is None:
         context = {"project_name": "Text Input", "project_type": "General", "location": "Unknown"}
-    return TextParser.process_text(text, context)
+    
+    engine = BOQIdentificationEngine()
+    return engine.process(text, context, is_image=False)
 
 def process_file_api(file_path: str, context: Dict[str, Any] = None) -> List[Dict]:
     """Process file input and return BOQ data"""
@@ -52,28 +48,19 @@ def process_file_api(file_path: str, context: Dict[str, Any] = None) -> List[Dic
     if not raw_text:
         return []
 
-    return TextParser.process_text(raw_text, context)
+    engine = BOQIdentificationEngine()
+    return engine.process(raw_text, context, is_image=False)
 
 def process_image_api(image_path: str, context: Dict[str, Any]) -> List[Dict]:
     """Process image input with context and return BOQ data"""
     if not os.path.exists(image_path):
         raise FileNotFoundError(f"Image not found: {image_path}")
 
-    try:
-        vision_engine = VisionEngine()
-        raw_ai_data = vision_engine.scan_image(image_path, context)
-
-        if not raw_ai_data:
-            return []
-
-        return vision_engine.normalize_to_db(raw_ai_data)
-    except RuntimeError as e:
-        # Vision not available - return helpful error
-        error_msg = str(e)
-        if "Google GenAI not available" in error_msg:
-            raise RuntimeError(f"Vision processing not available: Google GenAI library not installed or API key not configured. Please ensure google-generativeai is installed and GEMINI_API_KEY is set.")
-        else:
-            raise RuntimeError(f"Vision processing not available: {e}")
+    if context is None:
+        context = {"project_name": "Image Input", "project_type": "General", "location": "Unknown"}
+    
+    engine = BOQIdentificationEngine()
+    return engine.process(image_path, context, is_image=True)
 
 # =========================================================
 # MAIN ENTRY POINT
