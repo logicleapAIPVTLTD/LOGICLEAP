@@ -1,0 +1,59 @@
+bill_engine/
+├── backend/
+│   ├── main.py                # FastAPI Entry point
+│   ├── requirements.txt       # Dependencies
+│   └── services/
+│       ├── __init__.py
+│       ├── boq_service.py     # boq_engine.py
+│       ├── wbs_service.py     # wbs_engine.py
+│       ├── bom_service.py     # bom_engine.py
+│       └── cost_service.py    # cost_engine.py
+└── frontend/
+    ├── package.json
+    ├── tailwind.config.ts
+    ├── next.config.js
+    ├── app/
+    │   ├── layout.tsx
+    │   ├── page.tsx           # Main Logic Controller
+    │   └── globals.css
+    ├── components/
+    │   ├── Step1_ProjectDetails.tsx
+    │   ├── Step2_BOQEditor.tsx
+    │   ├── Step3_WBSView.tsx
+    │   ├── Step4_BOMView.tsx
+    │   └── Step5_CostView.tsx
+    └── store/
+        └── useStore.ts        # Zustand State (No Database)
+
+
+
+
+
+
+bill_engine/
+├── frontend/
+│   ├── app/
+│   │   ├── layout.tsx             # Global Font & Styles
+│   │   ├── page.tsx               # 🚀 High-End Startup Landing Page
+│   │   ├── dashboard/             # 🛠️ Main App Workspace
+│   │   │   ├── layout.tsx         # Navbar with Global API Key
+│   │   │   └── page.tsx           # Step Manager (The Engine)
+│   │   └── globals.css            # Tailwind Setup
+│   ├── components/
+│   │   ├── ui/                    # Reusable "Shadcn-style" components
+│   │   │   ├── Button.tsx
+│   │   │   ├── Input.tsx
+│   │   │   ├── GlassCard.tsx
+│   │   │   └── ApiKeyModal.tsx
+│   │   ├── landing/               # Landing Page Sections
+│   │   │   ├── Hero.tsx
+│   │   │   └── Features.tsx
+│   │   ├── steps/                 # The 5 Core Engines
+│   │   │   ├── Step1_Input.tsx
+│   │   │   ├── Step2_BOQ.tsx
+│   │   │   ├── Step3_WBS.tsx
+│   │   │   ├── Step4_BOM.tsx
+│   │   │   └── Step5_Cost.tsx
+│   └── store/
+│       └── useStore.ts            # IndexedDB State Management
+└── backend/                       # (Keep existing backend code)
