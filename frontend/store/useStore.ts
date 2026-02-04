@@ -44,7 +44,7 @@ export const useStore = create<AppState>()(
   persist(
     (set) => ({
       apiKey: '',
-      selectedModel: 'gemini-2.0-flash-exp',
+      selectedModel: 'gemini-2.5-flash-lite',
       step: 1,
       projectDetails: {},
       boqData: [],
