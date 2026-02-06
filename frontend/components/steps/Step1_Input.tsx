@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useStore } from '../../store/useStore';
 import axios from 'axios';
-import { Upload, Loader2, FileText, MapPin, Building, ArrowRight, X, Sparkles, Type } from 'lucide-react';
+import { Upload, Loader2, FileText, MapPin, Building, ArrowRight, X, Sparkles, Type, Droplet, Home } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const PROJECT_TYPES = ['Interior', 'Civil', 'Architecture', 'Commercial', 'Industrial', 'Landscape'];
+const PROJECT_TYPES = ['Interior', 'Tank Cleaning'];
 
 export default function Step1() {
   const { setProjectDetails, setBOQData, setStep, setLoading, isLoading, apiKey, selectedModel, projectDetails } = useStore();
@@ -41,6 +41,15 @@ export default function Step1() {
     finally { setLoading(false); }
   };
 
+  // Icon mapping for project types
+  const getProjectIcon = (type: string) => {
+    switch(type) {
+      case 'Interior': return <Home size={18} />;
+      case 'Tank Cleaning': return <Droplet size={18} />;
+      default: return <Building size={18} />;
+    }
+  };
+
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto py-6">
       
@@ -71,11 +80,31 @@ export default function Step1() {
             </div>
 
             <div className="space-y-2">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">Project Type</label>
-                <div className="grid grid-cols-2 gap-3">
+                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">Service Type</label>
+                <div className="grid grid-cols-1 gap-4">
                     {PROJECT_TYPES.map((t) => (
-                        <button key={t} onClick={() => setForm({...form, type: t})} className={`py-3 px-2 rounded-xl border transition-all flex flex-col items-center justify-center gap-1 ${form.type === t ? 'border-indigo-600 bg-indigo-50/50 text-indigo-700 shadow-sm ring-1 ring-indigo-100' : 'border-slate-200 hover:border-indigo-200 hover:bg-slate-50 text-slate-500'}`}>
-                            <span className="font-bold text-xs">{t}</span>
+                        <button 
+                            key={t} 
+                            onClick={() => setForm({...form, type: t})} 
+                            className={`py-4 px-5 rounded-xl border transition-all flex items-center gap-3 ${
+                                form.type === t 
+                                    ? 'border-indigo-600 bg-indigo-50/50 text-indigo-700 shadow-md ring-2 ring-indigo-100' 
+                                    : 'border-slate-200 hover:border-indigo-200 hover:bg-slate-50 text-slate-600'
+                            }`}
+                        >
+                            <div className={`p-2 rounded-lg ${
+                                form.type === t 
+                                    ? 'bg-indigo-100 text-indigo-700' 
+                                    : 'bg-slate-100 text-slate-500'
+                            }`}>
+                                {getProjectIcon(t)}
+                            </div>
+                            <div className="text-left flex-1">
+                                <span className="font-bold text-sm block">{t}</span>
+                                <span className="text-xs text-slate-400">
+                                    {t === 'Interior' ? 'Rooms, flooring, painting, etc.' : 'Water tank cleaning'}
+                                </span>
+                            </div>
                         </button>
                     ))}
                 </div>
@@ -109,7 +138,9 @@ export default function Step1() {
                 <motion.div key="text" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
                     <textarea 
                         value={textInput} onChange={(e) => setTextInput(e.target.value)}
-                        placeholder="Paste project description, dimensions, or rough notes here..."
+                        placeholder={form.type === 'Tank Cleaning' 
+                            ? "Describe tanks to clean: type (overhead/underground), capacity, dimensions, location..." 
+                            : "Paste project description, dimensions, or rough notes here..."}
                         className="w-full h-[200px] p-6 bg-slate-50 border border-slate-200 rounded-[24px] focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400 resize-none"
                     />
                 </motion.div>
