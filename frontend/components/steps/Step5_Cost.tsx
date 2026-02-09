@@ -12,7 +12,7 @@ export default function Step5() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div className="flex items-center gap-4">
             <button onClick={() => setStep(4)} className="p-3 bg-white border border-slate-200 hover:bg-slate-50 rounded-xl text-slate-500 transition-colors"><ArrowLeft size={20}/></button>
-            <div><h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Final Estimate</h1><p className="text-slate-500 mt-1 text-sm font-medium">Powered by <b>{selectedModel}</b> • {summary.city_tier} Market Data</p></div>
+            <div><h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Final Estimate</h1><p className="text-slate-500 mt-1 text-sm font-medium">Powered by <b>{selectedModel === 'gemini-2.5-flash-lite' ? 'Lite' : 'Base'}</b> • {summary.city_tier} Market Data</p></div>
         </div>
         <div className="flex gap-3">
             <button className="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-50 flex items-center gap-2 shadow-sm transition-all"><Printer size={18}/> Print</button>
