@@ -5,12 +5,11 @@ import { Key, RotateCcw, ChevronDown, Cpu, Zap, LogOut } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const MODELS = [
-  "gemini-2.5-flash-lite",
-  "gemini-2.5-flash"
-  // "gemini-2.5-pro",
-  // "gemini-3-pro-preview",
-  // "gemini-3-flash-preview"
+// 1. Define the mapping here
+const MODEL_OPTIONS = [
+  { id: "gemini-2.5-flash-lite", label: "Lite" },
+  { id: "gemini-2.5-flash", label: "Base" },
+  // { id: "gemini-2.5-pro", label: "Pro" },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -18,6 +17,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const [showKeyModal, setShowKeyModal] = useState(!apiKey);
   const [tempKey, setTempKey] = useState('');
   const [showModelMenu, setShowModelMenu] = useState(false);
+
+  // Helper to get the display label for the currently selected ID
+  const currentModelLabel = MODEL_OPTIONS.find(m => m.id === selectedModel)?.label || selectedModel;
 
   const handleSaveKey = () => {
     if (tempKey.length > 5) {
@@ -42,7 +44,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-blue-100/50 rounded-full blur-[100px] opacity-60" />
       </div>
 
-      {/* FIXED Full-Width Navbar (Solves Dislocation) */}
+      {/* FIXED Full-Width Navbar */}
       <nav className="fixed top-0 inset-x-0 z-50 h-16 bg-white/70 backdrop-blur-xl border-b border-white/50 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
           
@@ -93,7 +95,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 hover:border-indigo-300 transition-all text-slate-600 shadow-sm"
                 >
                     <Cpu size={14} className="text-indigo-500"/>
-                    <span className="max-w-[140px] truncate hidden sm:block">{selectedModel}</span>
+                    {/* 2. Display the 'label' instead of the ID */}
+                    <span className="max-w-[140px] truncate hidden sm:block">{currentModelLabel}</span>
                     <ChevronDown size={12} className={`transition-transform duration-200 ${showModelMenu ? 'rotate-180' : ''}`}/>
                 </button>
                 
@@ -103,17 +106,21 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         <div className="fixed inset-0 z-10" onClick={() => setShowModelMenu(false)}/>
                         <motion.div 
                             initial={{ opacity: 0, y: 8, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                            className="absolute top-full right-0 mt-2 w-60 bg-white rounded-xl shadow-xl border border-slate-100 z-20 overflow-hidden p-1"
+                            className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-slate-100 z-20 overflow-hidden p-1"
                         >
                             <div className="px-3 py-2 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Neural Engine</div>
-                            {MODELS.map(m => (
+                            {/* 3. Iterate over MODEL_OPTIONS */}
+                            {MODEL_OPTIONS.map((model) => (
                                 <button
-                                    key={m}
-                                    onClick={() => { setSelectedModel(m); setShowModelMenu(false); }}
-                                    className={`w-full text-left px-3 py-2 text-xs font-medium rounded-lg flex items-center justify-between transition-colors ${selectedModel === m ? 'bg-indigo-50 text-indigo-700' : 'hover:bg-slate-50 text-slate-600'}`}
+                                    key={model.id}
+                                    onClick={() => { setSelectedModel(model.id); setShowModelMenu(false); }}
+                                    className={`w-full text-left px-3 py-2 text-xs font-medium rounded-lg flex items-center justify-between transition-colors ${
+                                        selectedModel === model.id ? 'bg-indigo-50 text-indigo-700' : 'hover:bg-slate-50 text-slate-600'
+                                    }`}
                                 >
-                                    {m}
-                                    {selectedModel === m && <div className="w-1.5 h-1.5 rounded-full bg-indigo-600"/>}
+                                    {/* 4. Display the Label */}
+                                    {model.label}
+                                    {selectedModel === model.id && <div className="w-1.5 h-1.5 rounded-full bg-indigo-600"/>}
                                 </button>
                             ))}
                         </motion.div>
@@ -156,7 +163,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <Key size={24} />
               </div>
               <h2 className="text-2xl font-bold mb-2 text-slate-900 text-center">Authentication</h2>
-              <p className="text-slate-500 mb-6 text-sm text-center">Enter your Gemini API Key to activate the engine.</p>
+              <p className="text-slate-500 mb-6 text-sm text-center">Enter your API Key to activate the engine.</p>
               <input 
                   value={tempKey} onChange={(e) => setTempKey(e.target.value)} placeholder="sk-..." type="password"
                   className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl font-mono text-sm focus:ring-2 focus:ring-indigo-500 outline-none transition-all mb-4"
